@@ -1,0 +1,21 @@
+ALERT RULE DECISION, recorded 2026-10-30 (before any validation is run)
+
+Primary rule (validation): a quarter is an alert quarter if it contains at least one NEW published RADAR alert (numbered RADAR Alert or dated RADAR alert), with Scotland as scope and a drug-related subject. Calendar quarter of the issue date is used.
+- Updates to an existing alert do not count as new alerts (for example, nitazene alert 2023/04 version updates on 29 Mar 2023, 20 Nov 2023, 8 Jul 2024, 16 Jan 2025, 13 Mar 2025). They are a sensitivity check.
+- Non-drug alerts do not count (for example, the 2025 invasive Group A Streptococcus alert; the 2024 Glasgow counterfeit vodka food-standards alert).
+- Scope outside Scotland does not count (Northern Ireland, Ireland, England/Manchester).
+
+Secondary benchmark: RADAR intelligence reports with "Alert" in the Reason for Report field (export, 14 rows). Reported separately; not the primary measure.
+
+Confirmed published new alerts in the validation window (2022 Q3 to 2024 Q4) so far:
+- 2023 Q1: RADAR Alert 2023/04, nitazene-type drugs in Scotland, issued 24 Jan 2023.
+- 2023 Q3: RADAR bromazolam alert (listed as 2023/13 on the alert page), issued 5 Jul 2023.
+- 2024 Q2: RADAR Alert 2024/09, xylazine newly detected drug, issued 9 May 2024.
+
+Not confirmed as published alerts: export rows Aberdeen City (2022 Q4), Grampian (2022 Q4), Highland (2024 Q3). Excluded from the primary count; kept in the secondary benchmark.
+
+ENUMERATION CHECKED 2026-10-30: the alerts sections of the quarterly reports for April 2023, July 2023, January 2023, October 2024, April 2024 and January 2025 each list the same three current alerts (nitazenes, Jan 2023; bromazolam, Jul 2023; xylazine, May 2024). These sections show current alerts only, so alerts that were issued and later withdrawn would not appear. LIMITATION: the alert numbering (2023/04, 2023/13, 2024/09) implies other alerts were issued in the window that are not in any accessible list.
+
+EARLIER NOTE (superseded in part): the alert numbering (2023/04 in January, 2023/13 in July, 2024/09 in May) indicates more alerts than the three above. The list in the window is not yet complete. Validation must not run until the alert list is complete, using the alerts section of each quarterly report (Jan, Apr, Jul, Oct 2023; Jan, Apr, Jul, Oct 2024) plus the RADAR alerts index.
+
+Quarter flags for the primary rule, using the three confirmed alerts only: 2023 Q1 = 1, 2023 Q3 = 1, 2024 Q2 = 1, all other window quarters = 0. Known limitation: probable under-count, see LIMITATION above. Count = 3 of 10 quarters.

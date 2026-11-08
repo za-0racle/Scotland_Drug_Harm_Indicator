@@ -1,0 +1,19 @@
+FROZEN PARAMETERS, Individual 5 indicator (written before any model is fitted)
+Source of design values: the specification fixes the structure (models, windows, validation) but does NOT give numeric values. Numeric values are chosen from published design tables: lambda = 0.20 is a conventional EWMA default; L from Lucas and Saccucci (1990), zero-state table for in-control ARL 500; K and H from Montgomery (2019), Table 8-4 (k = 0.5, h = 4.77, ARL0 = 370). The ARL0 targets (500 for EWMA, 370 for CUSUM) are project choices, not spec values. Lecture notes give K = (delta/2)sigma.
+
+1. Baseline: negative binomial NB2 regression, log link, trend-only. Predictor: quarter index t (2017 Q1 = 0).
+   Fit window: 2017 Q1 to 2020 Q4 (16 quarters). Poisson fit on the same window as a sensitivity check.
+   Response: police_suspected_deaths (Police Scotland Total row).
+2. EWMA on standardised residuals: z_i = lambda * r_i + (1 - lambda) * z_(i-1), z_0 = 0.
+   Residual r_i = (y_i - mu_i) / sqrt(mu_i + alpha * mu_i^2), so the in-control standard deviation is 1 by construction.
+   lambda = 0.20. L = 2.962. ARL0 = 500 (Lucas and Saccucci 1990, zero-state, per their table).
+   Limits: +/- L * sqrt(lambda / (2 - lambda)) = +/- 0.987.
+   Note: this ARL0 (500) differs from the CUSUM ARL0 (370). The reason is that the EWMA design values in the table are given for ARL0 = 500, and 370 is not tabulated.
+3. CUSUM on substance share (primary series: share_opioids, RADAR forensic/Table 1 denominator):
+   calibration window 2022 Q1 to 2023 Q4 (8 quarters); holdout 2024 Q1 to 2024 Q4 (not examined until thresholds are written).
+   sigma = sample standard deviation of share_opioids over the calibration window; mu0 = mean over the same window.
+   K = 0.5 * sigma; H = 4.77 * sigma (ARL0 = 370 per Montgomery 2019, Table 8-4 at k = 0.5).
+   Lecture notes use H = 5 sigma as a rounded rule; the tabled design value 4.77 is used here.
+4. Validation: RADAR alert quarters, 2022 Q3 to 2024 Q4 (10 quarters, 5 alert quarters). No validation before the frozen rule is written.
+5. 2025 excluded from share analysis (no Table 1 denominator). 2025 counts may be used for EWMA out-of-sample only after step 2 is recorded.
+6. Alert count: 14 alert rows (QR2 = 2 corrected from 1). Source: radar_intelligence_reports_all.csv.

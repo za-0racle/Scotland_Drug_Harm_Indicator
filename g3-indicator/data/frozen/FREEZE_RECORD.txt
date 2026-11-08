@@ -1,0 +1,19 @@
+Frozen record, created 2026-10-29T19:01:42+00:00 UTC
+
+Shared inputs frozen for Week A (SHA-256):
+spec5/quarterly_input_table.csv  3230e57419dddf1f8029f2e23210802861ca93759dc93d7fe4c0c151bbfd7b5c
+Group3_Item2_Data/radar_intelligence_reports_all.csv  7216c9028c3eda955227590a336e60316545b5ee5e8edb0da672de5ed34159d2
+Group3_Item2_Data/police_suspected_drug_deaths_Jan2017-Dec2025.xlsx  587a5d47061f93872b5922dbfe724607a86fe59ee0a6ebe488859b87395cdddf
+Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv  ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df
+
+Change log:
+2026-10-29 (session): radar_alerts for 2022 Q4 (QR2) changed 1 -> 2, matching two alert rows in the intelligence file (Aberdeen City; Grampian). Table alert total 13 -> 14. Pre-correction copy: spec5/frozen/quarterly_input_table_pre_correction.csv
+
+No further confirmations are required from group members; decisions are approved and recorded here.
+
+Parameter file, written before the baseline was fitted:
+23e842186fe302e8600ffd9d9ef9768a353e1082b18d878570e4c3a2b1fbea48  PARAMETERS.txt (header corrected 2026-10-29; values unchanged)
+Baseline residuals (2017-2020 only, fit window):
+84bdd5aa670cb6e08a2c4734457ae0a839b7f2498e1aa917569a151df0c017c7  baseline_2017_2020_residuals.csv
+
+Alert rule decision (see ALERT_RULE_DECISION.txt, updated 2026-10-30): 4ca3fc327b7f59850a11b13a1f3e9a196aba1edda9e0a5ef772fd9a5eadcd558

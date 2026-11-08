@@ -1,0 +1,9 @@
+:root { --fg: #1b1f23; --bg: #ffffff; --muted: #5b6670; }
+@media (prefers-color-scheme: dark) {
+  :root { --fg: #e8edf2; --bg: #14181c; --muted: #9aa6b2; }
+}
+body { margin: 0; font-family: system-ui, sans-serif; color: var(--fg); background: var(--bg); }
+header, main { padding: 16px; max-width: 960px; margin: 0 auto; }
+h1 { font-size: 1.4rem; margin: 0 0 4px; }
+p { color: var(--muted); margin: 0; }
+canvas { width: 100%; max-height: 360px; }

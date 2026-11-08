@@ -1,0 +1,211 @@
+"Quarter","drug_name","measure","value"
+"Q4 2018","Opioids","Number",42
+"Q4 2018","Prescribable Benzodiazepines","Number",20
+"Q4 2018","Street Benzodiazepines","Number",22
+"Q4 2018","All Benzodiazepines","Number",34
+"Q4 2018","Dissociatives","Number",0
+"Q4 2018","Gabapentinoids","Number",23
+"Q4 2018","Stimulants","Number",19
+"Q1 2019","Opioids","Number",467
+"Q1 2019","Prescribable Benzodiazepines","Number",201
+"Q1 2019","Street Benzodiazepines","Number",263
+"Q1 2019","All Benzodiazepines","Number",375
+"Q1 2019","Dissociatives","Number",13
+"Q1 2019","Gabapentinoids","Number",198
+"Q1 2019","Stimulants","Number",175
+"Q2 2019","Opioids","Number",447
+"Q2 2019","Prescribable Benzodiazepines","Number",192
+"Q2 2019","Street Benzodiazepines","Number",249
+"Q2 2019","All Benzodiazepines","Number",360
+"Q2 2019","Dissociatives","Number",13
+"Q2 2019","Gabapentinoids","Number",197
+"Q2 2019","Stimulants","Number",184
+"Q3 2019","Opioids","Number",393
+"Q3 2019","Prescribable Benzodiazepines","Number",160
+"Q3 2019","Street Benzodiazepines","Number",230
+"Q3 2019","All Benzodiazepines","Number",319
+"Q3 2019","Dissociatives","Number",14
+"Q3 2019","Gabapentinoids","Number",174
+"Q3 2019","Stimulants","Number",178
+"Q4 2019","Opioids","Number",420
+"Q4 2019","Prescribable Benzodiazepines","Number",157
+"Q4 2019","Street Benzodiazepines","Number",258
+"Q4 2019","All Benzodiazepines","Number",344
+"Q4 2019","Dissociatives","Number",7
+"Q4 2019","Gabapentinoids","Number",194
+"Q4 2019","Stimulants","Number",148
+"Q1 2020","Opioids","Number",404
+"Q1 2020","Prescribable Benzodiazepines","Number",187
+"Q1 2020","Street Benzodiazepines","Number",210
+"Q1 2020","All Benzodiazepines","Number",325
+"Q1 2020","Dissociatives","Number",10
+"Q1 2020","Gabapentinoids","Number",175
+"Q1 2020","Stimulants","Number",159
+"Q2 2020","Opioids","Number",473
+"Q2 2020","Prescribable Benzodiazepines","Number",195
+"Q2 2020","Street Benzodiazepines","Number",351
+"Q2 2020","All Benzodiazepines","Number",432
+"Q2 2020","Dissociatives","Number",10
+"Q2 2020","Gabapentinoids","Number",215
+"Q2 2020","Stimulants","Number",239
+"Q3 2020","Opioids","Number",355
+"Q3 2020","Prescribable Benzodiazepines","Number",159
+"Q3 2020","Street Benzodiazepines","Number",226
+"Q3 2020","All Benzodiazepines","Number",321
+"Q3 2020","Dissociatives","Number",10
+"Q3 2020","Gabapentinoids","Number",161
+"Q3 2020","Stimulants","Number",161
+"Q4 2020","Opioids","Number",444
+"Q4 2020","Prescribable Benzodiazepines","Number",188
+"Q4 2020","Street Benzodiazepines","Number",316
+"Q4 2020","All Benzodiazepines","Number",413
+"Q4 2020","Dissociatives","Number",13
+"Q4 2020","Gabapentinoids","Number",193
+"Q4 2020","Stimulants","Number",173
+"Q1 2021","Opioids","Number",458
+"Q1 2021","Prescribable Benzodiazepines","Number",214
+"Q1 2021","Street Benzodiazepines","Number",306
+"Q1 2021","All Benzodiazepines","Number",420
+"Q1 2021","Dissociatives","Number",10
+"Q1 2021","Gabapentinoids","Number",191
+"Q1 2021","Stimulants","Number",176
+"Q2 2021","Opioids","Number",416
+"Q2 2021","Prescribable Benzodiazepines","Number",178
+"Q2 2021","Street Benzodiazepines","Number",289
+"Q2 2021","All Benzodiazepines","Number",374
+"Q2 2021","Dissociatives","Number",9
+"Q2 2021","Gabapentinoids","Number",227
+"Q2 2021","Stimulants","Number",189
+"Q3 2021","Opioids","Number",364
+"Q3 2021","Prescribable Benzodiazepines","Number",187
+"Q3 2021","Street Benzodiazepines","Number",197
+"Q3 2021","All Benzodiazepines","Number",306
+"Q3 2021","Dissociatives","Number",11
+"Q3 2021","Gabapentinoids","Number",159
+"Q3 2021","Stimulants","Number",153
+"Q4 2021","Opioids","Number",417
+"Q4 2021","Prescribable Benzodiazepines","Number",209
+"Q4 2021","Street Benzodiazepines","Number",231
+"Q4 2021","All Benzodiazepines","Number",362
+"Q4 2021","Dissociatives","Number",7
+"Q4 2021","Gabapentinoids","Number",190
+"Q4 2021","Stimulants","Number",161
+"Q1 2022","Opioids","Number",405
+"Q1 2022","Prescribable Benzodiazepines","Number",221
+"Q1 2022","Street Benzodiazepines","Number",203
+"Q1 2022","All Benzodiazepines","Number",346
+"Q1 2022","Dissociatives","Number",10
+"Q1 2022","Gabapentinoids","Number",180
+"Q1 2022","Stimulants","Number",170
+"Q2 2022","Opioids","Number",440
+"Q2 2022","Prescribable Benzodiazepines","Number",247
+"Q2 2022","Street Benzodiazepines","Number",173
+"Q2 2022","All Benzodiazepines","Number",348
+"Q2 2022","Dissociatives","Number",13
+"Q2 2022","Gabapentinoids","Number",171
+"Q2 2022","Stimulants","Number",200
+"Q3 2022","Opioids","Number",369
+"Q3 2022","Prescribable Benzodiazepines","Number",203
+"Q3 2022","Street Benzodiazepines","Number",111
+"Q3 2022","All Benzodiazepines","Number",264
+"Q3 2022","Dissociatives","Number",13
+"Q3 2022","Gabapentinoids","Number",162
+"Q3 2022","Stimulants","Number",165
+"Q4 2022","Opioids","Number",468
+"Q4 2022","Prescribable Benzodiazepines","Number",290
+"Q4 2022","Street Benzodiazepines","Number",194
+"Q4 2022","All Benzodiazepines","Number",370
+"Q4 2022","Dissociatives","Number",21
+"Q4 2022","Gabapentinoids","Number",209
+"Q4 2022","Stimulants","Number",222
+"Q1 2023","Opioids","Number",439
+"Q1 2023","Prescribable Benzodiazepines","Number",244
+"Q1 2023","Street Benzodiazepines","Number",185
+"Q1 2023","All Benzodiazepines","Number",344
+"Q1 2023","Dissociatives","Number",22
+"Q1 2023","Gabapentinoids","Number",213
+"Q1 2023","Stimulants","Number",205
+"Q2 2023","Opioids","Number",442
+"Q2 2023","Prescribable Benzodiazepines","Number",286
+"Q2 2023","Street Benzodiazepines","Number",180
+"Q2 2023","All Benzodiazepines","Number",369
+"Q2 2023","Dissociatives","Number",19
+"Q2 2023","Gabapentinoids","Number",217
+"Q2 2023","Stimulants","Number",250
+"Q3 2023","Opioids","Number",402
+"Q3 2023","Prescribable Benzodiazepines","Number",240
+"Q3 2023","Street Benzodiazepines","Number",175
+"Q3 2023","All Benzodiazepines","Number",340
+"Q3 2023","Dissociatives","Number",40
+"Q3 2023","Gabapentinoids","Number",194
+"Q3 2023","Stimulants","Number",233
+"Q4 2023","Opioids","Number",454
+"Q4 2023","Prescribable Benzodiazepines","Number",256
+"Q4 2023","Street Benzodiazepines","Number",194
+"Q4 2023","All Benzodiazepines","Number",371
+"Q4 2023","Dissociatives","Number",17
+"Q4 2023","Gabapentinoids","Number",192
+"Q4 2023","Stimulants","Number",255
+"Q1 2024","Opioids","Number",489
+"Q1 2024","Prescribable Benzodiazepines","Number",315
+"Q1 2024","Street Benzodiazepines","Number",180
+"Q1 2024","All Benzodiazepines","Number",398
+"Q1 2024","Dissociatives","Number",27
+"Q1 2024","Gabapentinoids","Number",193
+"Q1 2024","Stimulants","Number",260
+"Q2 2024","Opioids","Number",413
+"Q2 2024","Prescribable Benzodiazepines","Number",245
+"Q2 2024","Street Benzodiazepines","Number",167
+"Q2 2024","All Benzodiazepines","Number",331
+"Q2 2024","Dissociatives","Number",27
+"Q2 2024","Gabapentinoids","Number",164
+"Q2 2024","Stimulants","Number",239
+"Q3 2024","Opioids","Number",409
+"Q3 2024","Prescribable Benzodiazepines","Number",226
+"Q3 2024","Street Benzodiazepines","Number",131
+"Q3 2024","All Benzodiazepines","Number",300
+"Q3 2024","Dissociatives","Number",28
+"Q3 2024","Gabapentinoids","Number",163
+"Q3 2024","Stimulants","Number",208
+"Q4 2024","Opioids","Number",410
+"Q4 2024","Prescribable Benzodiazepines","Number",250
+"Q4 2024","Street Benzodiazepines","Number",117
+"Q4 2024","All Benzodiazepines","Number",304
+"Q4 2024","Dissociatives","Number",27
+"Q4 2024","Gabapentinoids","Number",175
+"Q4 2024","Stimulants","Number",230
+"Q1 2025","Opioids","Number",456
+"Q1 2025","Prescribable Benzodiazepines","Number",250
+"Q1 2025","Street Benzodiazepines","Number",104
+"Q1 2025","All Benzodiazepines","Number",308
+"Q1 2025","Dissociatives","Number",34
+"Q1 2025","Gabapentinoids","Number",174
+"Q1 2025","Stimulants","Number",222
+"Q2 2025","Opioids","Number",444
+"Q2 2025","Prescribable Benzodiazepines","Number",273
+"Q2 2025","Street Benzodiazepines","Number",98
+"Q2 2025","All Benzodiazepines","Number",318
+"Q2 2025","Dissociatives","Number",30
+"Q2 2025","Gabapentinoids","Number",153
+"Q2 2025","Stimulants","Number",274
+"Q3 2025","Opioids","Number",425
+"Q3 2025","Prescribable Benzodiazepines","Number",263
+"Q3 2025","Street Benzodiazepines","Number",91
+"Q3 2025","All Benzodiazepines","Number",308
+"Q3 2025","Dissociatives","Number",32
+"Q3 2025","Gabapentinoids","Number",158
+"Q3 2025","Stimulants","Number",284
+"Q4 2025","Opioids","Number",459
+"Q4 2025","Prescribable Benzodiazepines","Number",272
+"Q4 2025","Street Benzodiazepines","Number",74
+"Q4 2025","All Benzodiazepines","Number",306
+"Q4 2025","Dissociatives","Number",25
+"Q4 2025","Gabapentinoids","Number",168
+"Q4 2025","Stimulants","Number",300
+"Q1 2026","Opioids","Number",328
+"Q1 2026","Prescribable Benzodiazepines","Number",218
+"Q1 2026","Street Benzodiazepines","Number",97
+"Q1 2026","All Benzodiazepines","Number",271
+"Q1 2026","Dissociatives","Number",18
+"Q1 2026","Gabapentinoids","Number",138
+"Q1 2026","Stimulants","Number",194
