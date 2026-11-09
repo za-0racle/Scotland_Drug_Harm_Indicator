@@ -1,0 +1,19 @@
+area_code,area_name,area_type,valid_from,valid_to,source_dataset
+S08000015,NHS Ayrshire and Arran,health_board,2014-04-01,,nhs_health_board_codes_hb14_hb19.csv
+S08000016,NHS Borders,health_board,2014-04-01,,nhs_health_board_codes_hb14_hb19.csv
+S08000017,NHS Dumfries and Galloway,health_board,2014-04-01,,nhs_health_board_codes_hb14_hb19.csv
+S08000018,NHS Fife,health_board,2014-04-01,2018-02-01,nhs_health_board_codes_hb14_hb19.csv
+S08000019,NHS Forth Valley,health_board,2014-04-01,,nhs_health_board_codes_hb14_hb19.csv
+S08000020,NHS Grampian,health_board,2014-04-01,,nhs_health_board_codes_hb14_hb19.csv
+S08000021,NHS Greater Glasgow and Clyde,health_board,2014-04-01,2019-03-31,nhs_health_board_codes_hb14_hb19.csv
+S08000022,NHS Highland,health_board,2014-04-01,,nhs_health_board_codes_hb14_hb19.csv
+S08000023,NHS Lanarkshire,health_board,2014-04-01,2019-03-31,nhs_health_board_codes_hb14_hb19.csv
+S08000024,NHS Lothian,health_board,2014-04-01,,nhs_health_board_codes_hb14_hb19.csv
+S08000025,NHS Orkney,health_board,2014-04-01,,nhs_health_board_codes_hb14_hb19.csv
+S08000026,NHS Shetland,health_board,2014-04-01,,nhs_health_board_codes_hb14_hb19.csv
+S08000027,NHS Tayside,health_board,2014-04-01,2018-02-01,nhs_health_board_codes_hb14_hb19.csv
+S08000028,NHS Western Isles,health_board,2014-04-01,,nhs_health_board_codes_hb14_hb19.csv
+S08000029,NHS Fife,health_board,2018-02-02,,nhs_health_board_codes_hb14_hb19.csv
+S08000030,NHS Tayside,health_board,2018-02-02,,nhs_health_board_codes_hb14_hb19.csv
+S08000031,NHS Greater Glasgow and Clyde,health_board,2019-04-01,,nhs_health_board_codes_hb14_hb19.csv
+S08000032,NHS Lanarkshire,health_board,2019-04-01,,nhs_health_board_codes_hb14_hb19.csv

@@ -1,60 +1,89 @@
-import './style.css'
-import heroImg from './assets/hero.png'
-import javascriptLogo from './assets/javascript.svg'
-import viteLogo from './assets/vite.svg'
-import { setupCounter } from './counter.js'
+﻿import './style.css';
+import { getSupabase } from './supabase.js';
+import { datasets, loadDataset, describeDataset } from './database.js';
 
-document.querySelector('#app').innerHTML = `
-<section id="center">
-  <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${javascriptLogo}" class="framework" alt="JavaScript logo"/>
-    <img src="${viteLogo}" class="vite" alt="Vite logo" />
-  </div>
-  <div>
-    <h1>Get started</h1>
-    <p>Edit <code>src/main.js</code> and save to test <code>HMR</code></p>
-  </div>
-  <button id="counter" type="button" class="counter"></button>
-</section>
+const app = document.querySelector('#app');
+app.innerHTML = `<main>
+  <header><p class="eyebrow">Research database verification</p>
+  <h1>Scotland Drug Harm Indicator</h1>
+  <p>Live aggregate observations and research model outputs. Prototype; not a validated warning service.</p></header>
+  <p class="notice">Database read policies require manual review and approval. Empty responses do not confirm a successful data load.</p>
+  <button id="reload" type="button">Reload data</button>
+  <div id="datasets"></div>
+</main>`;
 
-<div class="ticks"></div>
+const previews = {
+  mortality: { title: 'Quarterly mortality', columns: [['year', 'Year'], ['quarter', 'Quarter'], ['suspected_deaths', 'Suspected deaths']] },
+  configurations: { title: 'Indicator configurations', columns: [['configuration_label', 'Configuration'], ['method', 'Method'], ['baseline_description', 'Baseline'], ['notes', 'Verification notes']] },
+  results: { title: 'Indicator results', columns: [['observation_year', 'Year'], ['observation_quarter', 'Quarter'], ['configuration', 'Configuration'], ['statistic_value', 'Statistic'], ['lower_limit', 'Lower limit'], ['upper_limit', 'Upper limit'], ['signal_flag', 'Signal']] },
+};
 
-<section id="next-steps">
-  <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
-    <ul>
-      <li>
-        <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src="${viteLogo}" alt="" />
-          Explore Vite
-        </a>
-      </li>
-      <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-          <img class="button-icon" src="${javascriptLogo}" alt="">
-          Learn more
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
-    <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
-    </ul>
-  </div>
-</section>
+function element(tag, text) {
+  const node = document.createElement(tag);
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
 
-<div class="ticks"></div>
-<section id="spacer"></section>
-`
+function render(section, key, result) {
+  section.replaceChildren(element('h2', previews[key].title));
+  section.dataset.state = result.state;
+  section.setAttribute('aria-busy', String(result.state === 'loading'));
+  const status = element('p', describeDataset(result));
+  status.setAttribute('role', 'status');
+  section.append(status);
+  if (result.state !== 'ready') return;
+  const wrapper = element('div');
+  wrapper.className = 'table-scroll';
+  wrapper.tabIndex = 0;
+  wrapper.setAttribute('role', 'region');
+  wrapper.setAttribute('aria-label', `${previews[key].title} preview`);
+  const table = element('table');
+  table.append(element('caption', `Preview: first ${Math.min(result.rows.length, 8)} of ${result.rows.length} returned records`));
+  const head = element('thead');
+  const headings = element('tr');
+  for (const [, label] of previews[key].columns) {
+    const th = element('th', label);
+    th.scope = 'col';
+    headings.append(th);
+  }
+  head.append(headings);
+  table.append(head);
+  const body = element('tbody');
+  for (const row of result.rows.slice(0, 8)) {
+    const tr = element('tr');
+    for (const [column] of previews[key].columns) {
+      let value = row[column];
+      if (column === 'configuration') value = value?.configuration_label ?? 'Label unavailable';
+      if (typeof value === 'boolean') value = value ? 'Yes' : 'No';
+      tr.append(element('td', value === null || value === undefined ? '—' : String(value)));
+    }
+    body.append(tr);
+  }
+  table.append(body);
+  wrapper.append(table);
+  section.append(wrapper);
+}
 
-setupCounter(document.querySelector('#counter'))
+async function init() {
+  const reload = document.querySelector('#reload');
+  reload.disabled = true;
+  const container = document.querySelector('#datasets');
+  container.replaceChildren();
+  let client;
+  let setupError;
+  try {
+    client = getSupabase();
+  } catch (error) {
+    setupError = error.message;
+  }
+  await Promise.all(Object.entries(datasets).map(async ([key, definition]) => {
+    const section = element('section');
+    container.append(section);
+    render(section, key, { state: 'loading', rows: [] });
+    const result = setupError ? { state: 'error', rows: [], message: setupError } : await loadDataset(client, definition);
+    render(section, key, result);
+  }));
+  reload.disabled = false;
+}
+document.querySelector('#reload').addEventListener('click', init);
+init();
