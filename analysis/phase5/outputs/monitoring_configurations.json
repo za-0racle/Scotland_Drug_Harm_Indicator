@@ -1,0 +1,56 @@
+{
+  "datasets": {
+    "mortality_quarterly": {
+      "windows": [
+        12,
+        16
+      ],
+      "primary_window": 16,
+      "basis": "calendar_quarter_legacy_10_day_adjustment"
+    },
+    "forensic_counts": {
+      "windows": [
+        12,
+        16
+      ],
+      "primary_window": 16,
+      "basis": "calendar_quarter"
+    },
+    "treatment_counts": {
+      "windows": [
+        12,
+        18
+      ],
+      "primary_window": 18,
+      "basis": "calendar_month"
+    },
+    "naloxone_weekly": {
+      "windows": [
+        52,
+        104
+      ],
+      "primary_window": 104,
+      "basis": "week_beginning_monday"
+    },
+    "assist_percentages": {
+      "windows": [],
+      "primary_window": null,
+      "basis": "source_study_period_not_calendar_quarter"
+    },
+    "frozen_forensic_shares": {
+      "windows": [],
+      "primary_window": null,
+      "basis": "calendar_quarter"
+    }
+  },
+  "thresholds": [
+    2.5,
+    3.0,
+    3.5
+  ],
+  "primary_threshold": 3.0,
+  "scale": "max(1.4826 * prior MAD, sqrt(max(prior median, 1)))",
+  "limits": "[max(0, median - threshold*scale), median + threshold*scale]; strict outside comparison",
+  "interpretation": "Exploratory robust screens; not calibrated p-values, prediction intervals, NB2/EWMA/CUSUM or validated warning rules",
+  "selection": "Pragmatic windows chosen before this run, not optimised against observed flags; all choices reported"
+}

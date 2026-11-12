@@ -1,0 +1,28 @@
+{
+  "observations": 50133,
+  "source_totals": 164,
+  "duplicate_keys": 0,
+  "quality_states": {
+    "observed": 50133
+  },
+  "sheet_vintage_rows": {
+    "2024 SUB1a": 7425,
+    "2024 SUB1b": 4335,
+    "2024 SUB2a": 9775,
+    "2024 SUB2b": 4454,
+    "2023 SUB1a": 6912,
+    "2023 SUB1b": 4048,
+    "2023 SUB2a": 9024,
+    "2023 SUB2b": 4160
+  },
+  "shared_vintage_cells": 24144,
+  "changed_shared_cells": 0,
+  "earlier_labels_absent_later": [],
+  "limitations": [
+    "Published zero is not verified absence",
+    "Absent label remains unavailable, never zero",
+    "No synonym merging or additive substance totals",
+    "Definition regime split at 2008",
+    "Registration year is not availability or occurrence date"
+  ]
+}

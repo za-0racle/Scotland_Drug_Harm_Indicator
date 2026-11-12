@@ -69,6 +69,11 @@ test('incomplete server-capped responses fail rather than claim a full load', as
   await assert.rejects(readDataset(client, datasets.mortality, 2), /incomplete response/);
 });
 
+test('empty page before the reported count is reached cannot report a successful partial load', async () => {
+  const client = fakeClient([{ data: [], count: 3 }]);
+  await assert.rejects(readDataset(client, datasets.mortality), /incomplete response/);
+});
+
 test('malformed responses and invalid pagination are rejected', async () => {
   await assert.rejects(readDataset(fakeClient([{ data: null }]), datasets.mortality), /invalid database response/);
   await assert.rejects(readDataset(fakeClient([]), datasets.mortality, 0), /Invalid page size/);

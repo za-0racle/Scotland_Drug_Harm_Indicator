@@ -1,0 +1,127 @@
+[
+  {
+    "scope": "Greenock",
+    "boundary": "locality",
+    "supported_indicators": [],
+    "greenock_inference": false,
+    "population_rates": "not_computed: compatible numerator/population-year/boundary join not verified",
+    "dashboard_contract": {
+      "required": [
+        "scope_label",
+        "boundary_type",
+        "period_start",
+        "period_end",
+        "source_cutoff",
+        "measurement",
+        "limitations"
+      ],
+      "missing_state": "No compatible local series available; wider-area context only"
+    },
+    "historical_trends_supported": false,
+    "descriptive_comparisons": "Only matching boundary, measurement and period; no cross-boundary rates",
+    "surveillance_context": "Historical wider-area context only; no locality attribution"
+  },
+  {
+    "scope": "Inverclyde",
+    "boundary": "council",
+    "supported_indicators": [],
+    "greenock_inference": false,
+    "population_rates": "not_computed: compatible numerator/population-year/boundary join not verified",
+    "dashboard_contract": {
+      "required": [
+        "scope_label",
+        "boundary_type",
+        "period_start",
+        "period_end",
+        "source_cutoff",
+        "measurement",
+        "limitations"
+      ],
+      "missing_state": "No compatible local series available; wider-area context only"
+    },
+    "historical_trends_supported": false,
+    "descriptive_comparisons": "Only matching boundary, measurement and period; no cross-boundary rates",
+    "surveillance_context": "Historical wider-area context only; no locality attribution",
+    "available_unintegrated_asset": {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_2024_data.xlsx",
+      "sheet": "Table_C1",
+      "verified_structure": "Inverclyde column; annual 2010–2024 registered drug misuse deaths, distinct from suspected deaths",
+      "status": "Metadata readiness only; no counts imported, no rates or dashboard implemented"
+    }
+  },
+  {
+    "scope": "K: Renfrewshire and Inverclyde",
+    "boundary": "police_division",
+    "supported_indicators": [
+      "legacy quarterly suspected deaths"
+    ],
+    "greenock_inference": false,
+    "population_rates": "not_computed: compatible numerator/population-year/boundary join not verified",
+    "dashboard_contract": {
+      "required": [
+        "scope_label",
+        "boundary_type",
+        "period_start",
+        "period_end",
+        "source_cutoff",
+        "measurement",
+        "limitations"
+      ],
+      "missing_state": "No compatible local series available; wider-area context only"
+    },
+    "historical_trends_supported": true,
+    "descriptive_comparisons": "Only matching boundary, measurement and period; no cross-boundary rates",
+    "surveillance_context": "Historical wider-area context only; no locality attribution"
+  },
+  {
+    "scope": "NHS Greater Glasgow and Clyde",
+    "boundary": "health_board",
+    "supported_indicators": [
+      "weekly ambulance naloxone",
+      "monthly treatment urine detections"
+    ],
+    "greenock_inference": false,
+    "population_rates": "not_computed: compatible numerator/population-year/boundary join not verified",
+    "dashboard_contract": {
+      "required": [
+        "scope_label",
+        "boundary_type",
+        "period_start",
+        "period_end",
+        "source_cutoff",
+        "measurement",
+        "limitations"
+      ],
+      "missing_state": "No compatible local series available; wider-area context only"
+    },
+    "historical_trends_supported": true,
+    "descriptive_comparisons": "Only matching boundary, measurement and period; no cross-boundary rates",
+    "surveillance_context": "Historical wider-area context only; no locality attribution"
+  },
+  {
+    "scope": "Scotland",
+    "boundary": "country",
+    "supported_indicators": [
+      "legacy quarterly suspected deaths",
+      "weekly ambulance naloxone",
+      "national forensic sample context"
+    ],
+    "greenock_inference": false,
+    "population_rates": "not_computed: compatible numerator/population-year/boundary join not verified",
+    "dashboard_contract": {
+      "required": [
+        "scope_label",
+        "boundary_type",
+        "period_start",
+        "period_end",
+        "source_cutoff",
+        "measurement",
+        "limitations"
+      ],
+      "missing_state": "No compatible local series available; wider-area context only"
+    },
+    "historical_trends_supported": true,
+    "descriptive_comparisons": "Only matching boundary, measurement and period; no cross-boundary rates",
+    "surveillance_context": "Historical wider-area context only; no locality attribution"
+  }
+]

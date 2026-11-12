@@ -1,0 +1,82 @@
+{
+  "observations": 8034,
+  "original_primary_flags": 47,
+  "model_statuses": {
+    "gamma_poisson": {
+      "insufficient_data": 2106,
+      "ok": 5764,
+      "unavailable_observation": 8
+    },
+    "nb2_moments": {
+      "insufficient_data": 2106,
+      "ok": 5764,
+      "unavailable_observation": 8
+    },
+    "seasonal_gamma_poisson": {
+      "insufficient_data": 3820,
+      "ok": 4050,
+      "unavailable_observation": 8
+    },
+    "trend_poisson": {
+      "insufficient_data": 2106,
+      "ok": 404,
+      "unavailable_observation": 8,
+      "not_applicable": 5360
+    }
+  },
+  "model_signals": {
+    "gamma_poisson": 240,
+    "nb2_moments": 40,
+    "seasonal_gamma_poisson": 151,
+    "trend_poisson": 48
+  },
+  "cross_source_candidates": 2256,
+  "compatibility": {
+    "compatible_contextual_evidence": 646,
+    "incompatible": 1592,
+    "unresolved_mapping": 18
+  },
+  "evidence_by_method": {
+    "phase5_robust": {
+      "compatible_context_states_unavailable": 277,
+      "no_joint_detected_signal_not_no_harm": 359,
+      "single_signal_with_unflagged_context": 10,
+      "no_compatible_cross_source_evidence": 1610
+    },
+    "nb2_moments": {
+      "compatible_context_states_unavailable": 277,
+      "no_joint_detected_signal_not_no_harm": 364,
+      "single_signal_with_unflagged_context": 5,
+      "no_compatible_cross_source_evidence": 1610
+    }
+  },
+  "original_runs": 44,
+  "sustained_original_runs": [
+    {
+      "dataset": "forensic_counts",
+      "indicator_id": "forensic:Street Benzodiazepines",
+      "geography": "Scotland forensic testing sample",
+      "period_basis": "calendar_quarter",
+      "method": "phase5_robust",
+      "configuration": "original_window=16;k=3",
+      "direction": "decrease",
+      "start": "2024 Q4",
+      "end": "2025 Q3",
+      "duration_periods": 4,
+      "classification": "sustained_statistical_run",
+      "peak_deviation": -3.568273695295536,
+      "deviation_unit": "robust_scale_units",
+      "peak_period": "2025 Q2",
+      "observation_ids": [
+        "81735d10425c3d5ca493",
+        "18c58f9e41ee45147f32",
+        "33e1852df0eb057071b9",
+        "dabeab1cc8383b0f192e"
+      ],
+      "scientific_status": "not_confirmed_toxicity_incident"
+    }
+  ],
+  "foi": "pending; no real records staged, external metrics unavailable",
+  "future_forecasts": "none issued",
+  "interpretation": "Retrospective exploratory comparison, no automatic method choice or operational warning validation"
+}

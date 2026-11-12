@@ -1,0 +1,255 @@
+{
+  "indicator_id": "nrs_registered_drug_misuse_deaths",
+  "geography": "Inverclyde",
+  "boundary_type": "council",
+  "source_data_cutoff": "2024-12-31",
+  "publication_date": "2025-09-02",
+  "analysis_as_of": "2026-11-10",
+  "historical_not_current": true,
+  "validated_annual_counts": [
+    {
+      "year": 2010,
+      "deaths": 17,
+      "source_cell": "T6"
+    },
+    {
+      "year": 2011,
+      "deaths": 20,
+      "source_cell": "T7"
+    },
+    {
+      "year": 2012,
+      "deaths": 13,
+      "source_cell": "T8"
+    },
+    {
+      "year": 2013,
+      "deaths": 10,
+      "source_cell": "T9"
+    },
+    {
+      "year": 2014,
+      "deaths": 17,
+      "source_cell": "T10"
+    },
+    {
+      "year": 2015,
+      "deaths": 16,
+      "source_cell": "T11"
+    },
+    {
+      "year": 2016,
+      "deaths": 20,
+      "source_cell": "T12"
+    },
+    {
+      "year": 2017,
+      "deaths": 23,
+      "source_cell": "T13"
+    },
+    {
+      "year": 2018,
+      "deaths": 24,
+      "source_cell": "T14"
+    },
+    {
+      "year": 2019,
+      "deaths": 33,
+      "source_cell": "T15"
+    },
+    {
+      "year": 2020,
+      "deaths": 33,
+      "source_cell": "T16"
+    },
+    {
+      "year": 2021,
+      "deaths": 16,
+      "source_cell": "T17"
+    },
+    {
+      "year": 2022,
+      "deaths": 29,
+      "source_cell": "T18"
+    },
+    {
+      "year": 2023,
+      "deaths": 26,
+      "source_cell": "T19"
+    },
+    {
+      "year": 2024,
+      "deaths": 25,
+      "source_cell": "T20"
+    }
+  ],
+  "latest": {
+    "indicator_id": "nrs_registered_drug_misuse_deaths",
+    "geography": "Inverclyde",
+    "boundary_type": "council",
+    "sex": "Persons",
+    "year": 2024,
+    "period_start": "2024-01-01",
+    "period_end": "2024-12-31",
+    "period_basis": "calendar_year_of_registration",
+    "observed_value": 25,
+    "unit": "deaths",
+    "source_sheet": "Table_C1",
+    "source_cell": "T20",
+    "source_raw_value": 25,
+    "quality_status": "observed",
+    "small_number_qualification": "Council annual counts fluctuate; percent changes are descriptive, not significant anomalies",
+    "source_path": "datasets/Group3_Item2_Data/nrs_drd_2024_data.xlsx",
+    "source_sha256": "9a38a4f55e1ce8a21ef4b3edf64981ac67b541460eff1ee5616224ea7f887381",
+    "source_url": "https://www.nrscotland.gov.uk/publications/drug-related-deaths-in-scotland-2024/",
+    "publication_date": "2025-09-02",
+    "source_data_cutoff": "2024-12-31",
+    "scientific_status": "historical_descriptive_research_not_warning",
+    "greenock_inference": false,
+    "previous_value": 26,
+    "annual_change": -1,
+    "annual_change_pct": -3.8461538461538463,
+    "direction": "decrease",
+    "one_death_pct_of_previous": 3.8461538461538463,
+    "interpretation": "Descriptive exact-period count comparison, not risk change or an anomaly",
+    "rolling_method": "Trailing complete annual windows including labelled current year; no future years",
+    "reference_3y": 16,
+    "change_3y": 9,
+    "change_3y_pct": 56.25,
+    "reference_5y": 33,
+    "change_5y": -8,
+    "change_5y_pct": -24.242424242424242,
+    "reference_10y": 17,
+    "change_10y": 8,
+    "change_10y_pct": 47.05882352941177,
+    "rolling_3y_mean": 26.666666666666668,
+    "rolling_3y_complete": true,
+    "rolling_5y_mean": 25.8,
+    "rolling_5y_complete": true,
+    "change_since_2010": 8,
+    "change_since_2010_pct": 47.05882352941177
+  },
+  "matched_scotland_latest": {
+    "indicator_id": "nrs_registered_drug_misuse_deaths",
+    "geography": "Scotland",
+    "boundary_type": "country",
+    "sex": "Persons",
+    "year": 2024,
+    "period_start": "2024-01-01",
+    "period_end": "2024-12-31",
+    "period_basis": "calendar_year_of_registration",
+    "observed_value": 1017,
+    "unit": "deaths",
+    "source_sheet": "Table_C1",
+    "source_cell": "C20",
+    "source_raw_value": 1017,
+    "quality_status": "observed",
+    "small_number_qualification": "National total includes local counts; comparison is not independent",
+    "source_path": "datasets/Group3_Item2_Data/nrs_drd_2024_data.xlsx",
+    "source_sha256": "9a38a4f55e1ce8a21ef4b3edf64981ac67b541460eff1ee5616224ea7f887381",
+    "source_url": "https://www.nrscotland.gov.uk/publications/drug-related-deaths-in-scotland-2024/",
+    "publication_date": "2025-09-02",
+    "source_data_cutoff": "2024-12-31",
+    "scientific_status": "historical_descriptive_research_not_warning",
+    "greenock_inference": false,
+    "previous_value": 1172,
+    "annual_change": -155,
+    "annual_change_pct": -13.225255972696246,
+    "direction": "decrease",
+    "one_death_pct_of_previous": 0.08532423208191127,
+    "interpretation": "Descriptive exact-period count comparison, not risk change or an anomaly",
+    "rolling_method": "Trailing complete annual windows including labelled current year; no future years",
+    "reference_3y": 1330,
+    "change_3y": -313,
+    "change_3y_pct": -23.533834586466167,
+    "reference_5y": 1280,
+    "change_5y": -263,
+    "change_5y_pct": -20.546875,
+    "reference_10y": 614,
+    "change_10y": 403,
+    "change_10y_pct": 65.63517915309447,
+    "rolling_3y_mean": 1080.0,
+    "rolling_3y_complete": true,
+    "rolling_5y_mean": 1181.8,
+    "rolling_5y_complete": true,
+    "change_since_2010": 532,
+    "change_since_2010_pct": 109.69072164948453
+  },
+  "extrema": {
+    "Inverclyde": {
+      "lowest_count": 10,
+      "lowest_years": [
+        2013
+      ],
+      "highest_count": 33,
+      "highest_years": [
+        2019,
+        2020
+      ],
+      "reference_scope": "Full frozen 2010–2024 descriptive history, not a prospective baseline"
+    },
+    "Scotland": {
+      "lowest_count": 485,
+      "lowest_years": [
+        2010
+      ],
+      "highest_count": 1339,
+      "highest_years": [
+        2020
+      ],
+      "reference_scope": "Full frozen 2010–2024 descriptive history, not a prospective baseline"
+    }
+  },
+  "nonoverlapping_five_year_blocks": {
+    "early_period": "2010–2014",
+    "early_total": 77,
+    "early_annual_mean": 15.4,
+    "late_period": "2020–2024",
+    "late_total": 129,
+    "late_annual_mean": 25.8,
+    "change_in_annual_mean": 10.4,
+    "change_pct": 67.53246753246754
+  },
+  "different_direction_years": [
+    2015,
+    2020,
+    2022,
+    2023
+  ],
+  "latest_published_rate_comparison": {
+    "period_label": "2020 - 2024",
+    "period_start": "2020-01-01",
+    "period_end": "2024-12-31",
+    "inverclyde_rate": 35.6,
+    "inverclyde_lower95": 29.3,
+    "inverclyde_upper95": 41.8,
+    "scotland_rate": 22.5,
+    "scotland_lower95": 21.9,
+    "scotland_upper95": 23.1,
+    "rate_difference": 13.100000000000001,
+    "descriptive_rate_ratio": 1.5822222222222222,
+    "unit": "published_age_standardised_deaths_per_100000",
+    "standard_population": "2013 European Standard Population",
+    "source_rows": [
+      683,
+      666
+    ],
+    "source_sha256": "9a38a4f55e1ce8a21ef4b3edf64981ac67b541460eff1ee5616224ea7f887381",
+    "interpretation": "Ratio of rounded NRS five-year ASRs, not annual crude risk or a significance test; areas nested, periods overlap"
+  },
+  "local_anomaly_feasibility": {
+    "status": "not_estimated_insufficient_validation_support",
+    "observations": 15,
+    "reason": "Sparse annual 10–33 counts with trend and one revised vintage. A ten-year reference leaves only five targets; no externally validated local event labels or chosen annual null model.",
+    "interpretation": "Peaks, changes and published rate intervals are descriptive; none is a statistically detected anomaly or warning"
+  },
+  "limitations": [
+    "Council outcomes cannot be assigned to Greenock",
+    "Counts are registrations, not exact event dates or all drug-attributable harm",
+    "NRS exclusions, classification and toxicology ascertainment can affect historical comparisons",
+    "No annual local crude rate or population-adjusted risk inferred from counts",
+    "Published five-year ASRs/intervals are imported, not independently recomputed; overlapping periods and nested geographies are dependent",
+    "Frozen 2024 vintage is not the latest NRS edition; no later counts appended",
+    "No model-generated local warning, causal substance inference or FOI-alert validation"
+  ]
+}

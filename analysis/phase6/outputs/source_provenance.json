@@ -1,0 +1,21 @@
+{
+  "source_sha256": "9a38a4f55e1ce8a21ef4b3edf64981ac67b541460eff1ee5616224ea7f887381",
+  "source_url": "https://www.nrscotland.gov.uk/publications/drug-related-deaths-in-scotland-2024/",
+  "methodology_url": "https://www.nrscotland.gov.uk/media/lfzm3pbu/drug-related-deaths-methodology-annex.pdf",
+  "publication_date": "2025-09-02",
+  "reviewed_on": "2026-11-10",
+  "provider": "National Records of Scotland",
+  "indicator_id": "nrs_registered_drug_misuse_deaths",
+  "definition": "Registered deaths meeting the NRS drug misuse definition: selected mental/behavioural drug-use ICD-10 causes, or specified poisoning causes with a controlled drug present; NRS exclusions apply. Not all drug poisonings or Police Scotland suspected deaths.",
+  "definition_cells": "Definitions!A5:A8; Table_C1!A1:A2",
+  "geographic_allocation": "NRS-assigned council area in Table_C1; no locality allocation or GIS boundary crosswalk inferred",
+  "territorial_qualification": "Workbook cover describes deaths occurring in Scotland, including persons usually resident outside Scotland; do not assert resident-only local incidence",
+  "rates": "Table_C4, Notes note 1 and note 9: published five-year ASR, 2013 ESP, revised population vintages; annual council denominator absent",
+  "rate_vintage_note": "Notes note 9 records rebased 2011–2022 populations and revised 2023 estimates; no attempt to recompute with a different population vintage",
+  "revisions": "Frozen 2024 publication vintage; later NRS editions may revise counts/rates. Not the latest release; no later observations appended",
+  "cross_checks": [
+    "30 Persons counts checked against male+female cells where observed",
+    "15 Scotland totals matched Table_1",
+    "22 five-year totals matched complete C1 windows"
+  ]
+}

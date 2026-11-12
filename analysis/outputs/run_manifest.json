@@ -1,0 +1,93 @@
+{
+  "data": {
+    "data_cutoff": "2025 Q4",
+    "first_period": "2017 Q1",
+    "geography": "Scotland national total",
+    "observations": 36,
+    "outcome": "Police Scotland suspected drug deaths",
+    "source_url": "https://www.gov.scot/publications/suspected-drug-deaths-scotland-october-december-2025/",
+    "sources": {
+      "datasets/Group3_Item2_Data/police_suspected_drug_deaths_Jan2017-Dec2025.xlsx": "587a5d47061f93872b5922dbfe724607a86fe59ee0a6ebe488859b87395cdddf",
+      "g3-indicator/public/data/quarterly_input_table.json": "8436af4ad079e45bf1d673c0f35cf32c9e2e57e43081ff57f7c8da08ee1d7ddf"
+    },
+    "validation": "36 counts and period headers exactly match source workbook; no interpolation"
+  },
+  "evaluation_end": "2025 Q4",
+  "evaluation_kind": "Retrospective rolling-origin evaluation on the current frozen vintage; historical publication vintages unavailable",
+  "evaluation_start": "2023 Q1",
+  "executed_at_utc": "2026-11-09T10:53:16+00:00",
+  "model_selection": {
+    "limitation": "Model selection and reported performance use the same 12 origins; no independent post-selection test set. Scores are exploratory, not clinical or operational validation.",
+    "min_training_quarters": 24,
+    "ranking": [
+      "naive",
+      "nb2_trend",
+      "ses",
+      "seasonal_naive"
+    ],
+    "selected_metrics": {
+      "coverage80": 0.9166666666666666,
+      "coverage95": 1.0,
+      "eligible_for_selection": true,
+      "evaluated_origins": 12,
+      "failed_origins": [],
+      "interval_score95": 183.80631173982832,
+      "mae": 21.583333333333332,
+      "mae_skill_vs_naive": 0.0,
+      "mae_skill_vs_seasonal_naive": 0.3290155440414507,
+      "mase": 0.44961535333188546,
+      "mean_width95": 183.80631173982832,
+      "model": "naive",
+      "rmse": 31.234329404252197,
+      "rmsse": 0.54623079521805,
+      "scaled_origins": 12
+    },
+    "selected_model": "naive",
+    "selection_rule": "Lowest expanding-window one-step MAE among models completing every common origin; RMSE then predefined model order break ties; final-fit failure falls back in that order",
+    "training_window_reason": "24 quarters provide six annual cycles, with 12 common test origins. This pragmatic choice limits parameter estimation risk; it is not evidence of adequacy or validation."
+  },
+  "model_version": "phase2-1.0.0",
+  "newer_data_review": {
+    "checked_on": "2026-11-09",
+    "decision": "Do not issue a current future-dated forecast in Phase 2. Preserve the verified 2017 Q1-2025 Q4 series and label 2026 Q1 as an elapsed-period projection.",
+    "latest_release_verified": "PHS RADAR quarterly report, October 2026; published 27 October 2026",
+    "newer_official_report_available": true,
+    "runtime_network_access": false,
+    "sources": [
+      "https://www.gov.scot/collections/suspected-drug-deaths-in-scotland/",
+      "https://www.publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-quarterly-report/rapid-action-drug-alerts-and-response-radar-quarterly-report-october-2026/main-points/",
+      "https://www.publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-quarterly-report/rapid-action-drug-alerts-and-response-radar-quarterly-report-july-2026/harm-indicators/suspected-drug-deaths/"
+    ],
+    "unresolved": "Newer RADAR releases contain suspected-death indicators, but publication periods, Police Scotland reporting-system changes and revisions require source-level harmonisation before extending this frozen quarterly series. No newer values were imported or inferred."
+  },
+  "output_hashes": {
+    "diagnostics.json": "b0b57889c7fad28a5b6712a3e6ff5730d12812a13239c4a481811adb41f5401c",
+    "forecast.csv": "263b39b2b79a2d361835a844509e3685b732b4138d7ed76d94dedcf5e89d0521",
+    "forecast.json": "d1e28adf528bd7f93bae20a74896144372d807efd3fae838753a673d604774df",
+    "model_metrics.csv": "63f67d5969700b570d737279c3b841343f475f98a66f518ecc2cf5cf2129937d",
+    "model_metrics.json": "acaa7b3a8c39f21be58266fa5affd4109f0f1f2d0730170f98766cbe67954c49",
+    "rolling_origin_predictions.csv": "28ba9526cc934519f4c5d7c1bb7730bcfe727a15116e4dcb51d2971da5d4a38a",
+    "selected_model.json": "1ee42122891ea3ec964b628f76dabf8de690ebcaec4e87bf2210b4f704b55957",
+    "validated_mortality.csv": "8466413fae42235d90b117e437b8e0bb0db58d2cbaa314d8f95efb82882a8868"
+  },
+  "packages": {
+    "numpy": "2.5.4",
+    "openpyxl": "3.1.5",
+    "pandas": "3.1.1",
+    "pytest": "9.2.0",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0"
+  },
+  "python": "3.14.7",
+  "source_code_hashes": {
+    "analysis/__init__.py": "e633bf901556ce100f2d9f64b3797c0d75be7c0e6a65c6c538002415707f73c4",
+    "analysis/backtesting.py": "c360a08d6abe546c8284703849fb7a5b28f278b0115602aebe14c6276ad0a3c6",
+    "analysis/data.py": "dafe623aec28724c67e0bbc153196e3419eb8e4de72d9c89a35f5a1587b69d7c",
+    "analysis/group3_indicator_computation.py": "d90f790f79ecc6ee30354e07517ad52d882f99455dfafcb55ea0ce2475b2cd5e",
+    "analysis/models.py": "6290b22fb18a4ae18c4ccd489e9f15b7a12a224ec9c89566fae0cbe569a3e921",
+    "analysis/newer_data_review.json": "e1e44a7a2ac3445e037475a02cf80e4a37e5bfa7d3a29863fc7565675d6bf572",
+    "analysis/requirements.txt": "b578c83166d8a8f47284a4aa2cdc93cb1713216d8413a34257da8cb8e1440303",
+    "analysis/run.py": "55fa5075f62b7ee9dc9b3c10d1346f926a0f8f5264ab5217413192f7a2f0c7da"
+  },
+  "uncertainty": "Approximate model-specific one-step observation intervals; NB2 excludes parameter uncertainty; Gaussian baselines/SES assume stable errors. Evaluate empirical coverage; do not interpret control limits as forecast intervals."
+}

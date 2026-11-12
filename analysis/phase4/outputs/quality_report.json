@@ -1,0 +1,80 @@
+{
+  "suppressed_mortality_quarters": [
+    {
+      "geography": "L: Argyll & West Dunbartonshire",
+      "period": "2017 Q4"
+    },
+    {
+      "geography": "N: Highlands & Islands",
+      "period": "2017 Q1"
+    },
+    {
+      "geography": "N: Highlands & Islands",
+      "period": "2018 Q1"
+    },
+    {
+      "geography": "N: Highlands & Islands",
+      "period": "2019 Q2"
+    },
+    {
+      "geography": "V: Dumfries & Galloway",
+      "period": "2017 Q1"
+    },
+    {
+      "geography": "V: Dumfries & Galloway",
+      "period": "2017 Q4"
+    },
+    {
+      "geography": "V: Dumfries & Galloway",
+      "period": "2018 Q1"
+    },
+    {
+      "geography": "V: Dumfries & Galloway",
+      "period": "2019 Q2"
+    }
+  ],
+  "excluded_incomplete_annual_totals": [
+    {
+      "geography": "L: Argyll & West Dunbartonshire",
+      "year": 2017,
+      "reason": "At least one quarter missing/suppressed; no total inferred"
+    },
+    {
+      "geography": "N: Highlands & Islands",
+      "year": 2017,
+      "reason": "At least one quarter missing/suppressed; no total inferred"
+    },
+    {
+      "geography": "N: Highlands & Islands",
+      "year": 2018,
+      "reason": "At least one quarter missing/suppressed; no total inferred"
+    },
+    {
+      "geography": "N: Highlands & Islands",
+      "year": 2019,
+      "reason": "At least one quarter missing/suppressed; no total inferred"
+    },
+    {
+      "geography": "V: Dumfries & Galloway",
+      "year": 2017,
+      "reason": "At least one quarter missing/suppressed; no total inferred"
+    },
+    {
+      "geography": "V: Dumfries & Galloway",
+      "year": 2018,
+      "reason": "At least one quarter missing/suppressed; no total inferred"
+    },
+    {
+      "geography": "V: Dumfries & Galloway",
+      "year": 2019,
+      "reason": "At least one quarter missing/suppressed; no total inferred"
+    }
+  ],
+  "missing_source_naloxone_moving_averages": 32,
+  "incomplete_naloxone_week_start_months": 0,
+  "assist_exact_dates_unavailable": true,
+  "assist_shortened_period": "Q9",
+  "frozen_share_denominator_review": "84 arithmetic checks passed; independent original Table 1 extraction lineage remains unresolved",
+  "calendar_month_naloxone_incidence": "Not calculated; weekly counts cannot be split into exact calendar months",
+  "new_anomaly_or_alert_results": "Not implemented or generated in Phase 4"
+}

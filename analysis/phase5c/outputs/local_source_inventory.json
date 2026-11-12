@@ -1,0 +1,17 @@
+{
+  "reviewed_assets": {
+    "datasets/Group3_Item2_Data/nrs_drd_2024_data.xlsx": "9a38a4f55e1ce8a21ef4b3edf64981ac67b541460eff1ee5616224ea7f887381",
+    "datasets/Group3_Item2_Data/ndrdd_data_tables_2021-2022.xlsx": "35d2a450181695173c5d14acf2360ed6ccf2c7afd0720a389f3da4725636bb7b",
+    "datasets/Group3_Item2_Data/nhs_scotland_population_estimates_hb2019.csv": "7312bc0c99edee524fec043fe5cf496d9201927995ae18106ee39ba0a9c55897",
+    "datasets/Additional_Group3_Item2_Data/treatment_group_sdmd_council.csv": "e19fd00bd688a2a82f6161762cd2d0372fe0715f6bdc6ea72cf1a3702d1ef39d",
+    "datasets/Group3_Item2_Data/sas_foi_215-26_naloxone.xls": "37df5aa83ea086677b2e1bd36d5ddb42137fe8117cc7b542c4b0aa559f2219d9"
+  },
+  "findings": [
+    "NRS Table_C1 has annual registered drug misuse deaths and an Inverclyde column; no council counts imported",
+    "Health-board population file covers 1981–2025, not a verified police-division denominator",
+    "SDMD NumberAssessed is not a urine-test denominator",
+    "Naloxone FOI .xls is binary OLE format; not parsed by the existing openpyxl environment",
+    "NDRDD historical workbook is not an ASSIST study denominator source"
+  ],
+  "scope": "Metadata inspection only; these assets are not additional model observations"
+}

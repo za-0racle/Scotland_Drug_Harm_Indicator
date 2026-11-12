@@ -1,0 +1,2 @@
+# Additional Phase 9 plotting dependency; existing analysis environment retained.
+matplotlib==3.11.2

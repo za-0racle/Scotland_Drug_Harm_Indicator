@@ -1,0 +1,480 @@
+[
+  {
+    "dataset": "assist_percentages",
+    "source_id": "radar_toxicology_assist.csv",
+    "source_path": "datasets/Group3_Item2_Data/radar_toxicology_assist.csv",
+    "source_sha256": "24271e65477c153230dd2efa0f50c0a4878fa42bd74fd814f8313065abfcd2a8",
+    "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+    "indicator_definitions": [
+      "assist:Benzodiazepine",
+      "assist:Cannabinoid",
+      "assist:Gabapentin/Pregabalin",
+      "assist:Opioid",
+      "assist:Other",
+      "assist:Stimulant"
+    ],
+    "units": [
+      "percent"
+    ],
+    "substances": [
+      "Benzodiazepine",
+      "Cannabinoid",
+      "Gabapentin/Pregabalin",
+      "Opioid",
+      "Other",
+      "Stimulant"
+    ],
+    "geographies": [
+      "ASSIST participating emergency-department sample"
+    ],
+    "period_basis": "source_study_period_not_calendar_quarter",
+    "geographic_scope_metadata": [
+      {
+        "raw_name": "ASSIST participating emergency-department sample",
+        "name": "ASSIST participating emergency-department sample",
+        "boundary": "unresolved"
+      }
+    ],
+    "first_period": "Q4 May23- Aug23",
+    "last_period": "Q15 Feb26- May26",
+    "source_data_cutoff": "Q15 Feb26- May26",
+    "publication_date": null,
+    "reporting_lag": "Unknown for this saved vintage; observation age is not publication lag",
+    "source_population": "ASSIST participating emergency-department sample",
+    "denominator": "No compatible testing/sample/exposure denominators in imported CSV",
+    "completeness": {
+      "observations": 72,
+      "missing": 0,
+      "states": {
+        "insufficient_data": 72
+      }
+    },
+    "possible_dependence": "Counts and frozen forensic shares share testing lineage; other sources may share people/cases; independence not established",
+    "limitations": "Selected emergency-department cohort, not population prevalence; categories overlap; sample denominators unavailable; Q9 recruitment shortened; no pooled percentages or calendar-quarter reassignment.",
+    "boundary_rule": "National testing samples, police divisions, boards and unknown areas retained separately"
+  },
+  {
+    "dataset": "forensic_counts",
+    "source_id": "radar_toxicology_forensic_2018-2026.csv",
+    "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+    "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+    "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+    "indicator_definitions": [
+      "forensic:All Benzodiazepines",
+      "forensic:Dissociatives",
+      "forensic:Gabapentinoids",
+      "forensic:Opioids",
+      "forensic:Prescribable Benzodiazepines",
+      "forensic:Stimulants",
+      "forensic:Street Benzodiazepines"
+    ],
+    "units": [
+      "detection_count"
+    ],
+    "substances": [
+      "All Benzodiazepines",
+      "Dissociatives",
+      "Gabapentinoids",
+      "Opioids",
+      "Prescribable Benzodiazepines",
+      "Stimulants",
+      "Street Benzodiazepines"
+    ],
+    "geographies": [
+      "Scotland forensic testing sample"
+    ],
+    "period_basis": "calendar_quarter",
+    "geographic_scope_metadata": [
+      {
+        "raw_name": "Scotland forensic testing sample",
+        "name": "Scotland",
+        "boundary": "national_testing_sample"
+      }
+    ],
+    "first_period": "2018 Q4",
+    "last_period": "2026 Q1",
+    "source_data_cutoff": "2026-03-31",
+    "publication_date": null,
+    "reporting_lag": "Unknown for this saved vintage; observation age is not publication lag",
+    "source_population": "Scotland forensic testing sample",
+    "denominator": "No compatible testing/sample/exposure denominators in imported CSV",
+    "completeness": {
+      "observations": 210,
+      "missing": 0,
+      "states": {
+        "insufficient_data": 112,
+        "no_detected_anomaly": 87,
+        "statistically_unusual_observation": 11
+      }
+    },
+    "possible_dependence": "Counts and frozen forensic shares share testing lineage; other sources may share people/cases; independence not established",
+    "limitations": "Overlapping substance categories; detections are not causal deaths; testing/sample changes and absent denominators preclude prevalence estimates.",
+    "boundary_rule": "National testing samples, police divisions, boards and unknown areas retained separately"
+  },
+  {
+    "dataset": "frozen_forensic_shares",
+    "source_id": "quarterly_input_table.json",
+    "source_path": "g3-indicator/public/data/quarterly_input_table.json",
+    "source_sha256": "8436af4ad079e45bf1d673c0f35cf32c9e2e57e43081ff57f7c8da08ee1d7ddf",
+    "source_url": "",
+    "indicator_definitions": [
+      "frozen_forensic_share:All Benzodiazepines",
+      "frozen_forensic_share:Dissociatives",
+      "frozen_forensic_share:Gabapentinoids",
+      "frozen_forensic_share:Opioids",
+      "frozen_forensic_share:Prescribable Benzodiazepines",
+      "frozen_forensic_share:Stimulants",
+      "frozen_forensic_share:Street Benzodiazepines"
+    ],
+    "units": [
+      "percent"
+    ],
+    "substances": [
+      "All Benzodiazepines",
+      "Dissociatives",
+      "Gabapentinoids",
+      "Opioids",
+      "Prescribable Benzodiazepines",
+      "Stimulants",
+      "Street Benzodiazepines"
+    ],
+    "geographies": [
+      "Scotland forensic testing sample"
+    ],
+    "period_basis": "calendar_quarter",
+    "geographic_scope_metadata": [
+      {
+        "raw_name": "Scotland forensic testing sample",
+        "name": "Scotland",
+        "boundary": "national_testing_sample"
+      }
+    ],
+    "first_period": "2022 Q1",
+    "last_period": "2024 Q4",
+    "source_data_cutoff": "2024-12-31",
+    "publication_date": null,
+    "reporting_lag": "Unknown for this saved vintage; observation age is not publication lag",
+    "source_population": "Scotland forensic testing sample",
+    "denominator": "Original arithmetic-checked numerator/denominator in frozen input; independent lineage unresolved",
+    "completeness": {
+      "observations": 84,
+      "missing": 0,
+      "states": {
+        "insufficient_data": 84
+      }
+    },
+    "possible_dependence": "Counts and frozen forensic shares share testing lineage; other sources may share people/cases; independence not established",
+    "limitations": "Frozen 2022-2024 Table 1 denominator only; arithmetic verified, independent extraction lineage unresolved; rounded original shares retained; overlapping substance detections, not mutually exclusive proportions.",
+    "boundary_rule": "National testing samples, police divisions, boards and unknown areas retained separately"
+  },
+  {
+    "dataset": "mortality_quarterly",
+    "source_id": "police_suspected_drug_deaths_Jan2017-Dec2025.xlsx",
+    "source_path": "datasets/Group3_Item2_Data/police_suspected_drug_deaths_Jan2017-Dec2025.xlsx",
+    "source_sha256": "587a5d47061f93872b5922dbfe724607a86fe59ee0a6ebe488859b87395cdddf",
+    "source_url": "https://www.gov.scot/publications/suspected-drug-deaths-scotland-october-december-2025/",
+    "indicator_definitions": [
+      "suspected_deaths"
+    ],
+    "units": [
+      "count"
+    ],
+    "substances": [],
+    "geographies": [
+      "A: North East",
+      "C: Forth Valley",
+      "D: Tayside",
+      "E: Edinburgh City",
+      "G: Greater Glasgow",
+      "J: The Lothians & Scottish Borders",
+      "K: Renfrewshire and Inverclyde",
+      "L: Argyll & West Dunbartonshire",
+      "N: Highlands & Islands",
+      "P: Fife",
+      "Q: Lanarkshire",
+      "Scotland national total",
+      "U: Ayrshire",
+      "V: Dumfries & Galloway"
+    ],
+    "period_basis": "calendar_quarter_legacy_10_day_adjustment",
+    "geographic_scope_metadata": [
+      {
+        "raw_name": "A: North East",
+        "name": "A: North East",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "C: Forth Valley",
+        "name": "C: Forth Valley",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "D: Tayside",
+        "name": "D: Tayside",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "E: Edinburgh City",
+        "name": "E: Edinburgh City",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "G: Greater Glasgow",
+        "name": "G: Greater Glasgow",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "J: The Lothians & Scottish Borders",
+        "name": "J: The Lothians & Scottish Borders",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "K: Renfrewshire and Inverclyde",
+        "name": "K: Renfrewshire and Inverclyde",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "L: Argyll & West Dunbartonshire",
+        "name": "L: Argyll & West Dunbartonshire",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "N: Highlands & Islands",
+        "name": "N: Highlands & Islands",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "P: Fife",
+        "name": "P: Fife",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "Q: Lanarkshire",
+        "name": "Q: Lanarkshire",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "Scotland national total",
+        "name": "Scotland",
+        "boundary": "country"
+      },
+      {
+        "raw_name": "U: Ayrshire",
+        "name": "U: Ayrshire",
+        "boundary": "police_division"
+      },
+      {
+        "raw_name": "V: Dumfries & Galloway",
+        "name": "V: Dumfries & Galloway",
+        "boundary": "police_division"
+      }
+    ],
+    "first_period": "2017 Q1",
+    "last_period": "2025 Q4",
+    "source_data_cutoff": "2025-12-31",
+    "publication_date": "2026-03-17",
+    "reporting_lag": "Unknown for this saved vintage; observation age is not publication lag",
+    "source_population": "Separate national and regional operational aggregates",
+    "denominator": "No compatible testing/sample/exposure denominators in imported CSV",
+    "completeness": {
+      "observations": 504,
+      "missing": 8,
+      "states": {
+        "insufficient_data": 240,
+        "no_detected_anomaly": 253,
+        "statistically_unusual_observation": 3,
+        "unavailable_analysis": 8
+      }
+    },
+    "possible_dependence": "Counts and frozen forensic shares share testing lineage; other sources may share people/cases; independence not established",
+    "limitations": "Provisional originally suspected deaths, legacy ten-day timing adjustment; police divisions are not councils or Greenock; x suppression retained; no significance test.",
+    "boundary_rule": "National testing samples, police divisions, boards and unknown areas retained separately"
+  },
+  {
+    "dataset": "naloxone_weekly",
+    "source_id": "radar_sas_naloxone_weekly_by_board.csv",
+    "source_path": "datasets/Group3_Item2_Data/radar_sas_naloxone_weekly_by_board.csv",
+    "source_sha256": "6f653b7b12c92e92175f09a2fb358ddb110991314a5b6e7489cf414c5f680235",
+    "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+    "indicator_definitions": [
+      "ambulance_naloxone_activity"
+    ],
+    "units": [
+      "incident_count"
+    ],
+    "substances": [],
+    "geographies": [
+      "NHS Ayrshire & Arran",
+      "NHS Borders",
+      "NHS Dumfries & Galloway",
+      "NHS Fife",
+      "NHS Forth Valley",
+      "NHS Grampian",
+      "NHS Greater Glasgow & Clyde",
+      "NHS Highland",
+      "NHS Lanarkshire",
+      "NHS Lothian",
+      "NHS Orkney",
+      "NHS Shetland",
+      "NHS Tayside",
+      "NHS Western Isles",
+      "Scotland",
+      "Unknown"
+    ],
+    "period_basis": "week_beginning_monday",
+    "geographic_scope_metadata": [
+      {
+        "raw_name": "NHS Ayrshire & Arran",
+        "name": "NHS Ayrshire & Arran",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Borders",
+        "name": "NHS Borders",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Dumfries & Galloway",
+        "name": "NHS Dumfries & Galloway",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Fife",
+        "name": "NHS Fife",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Forth Valley",
+        "name": "NHS Forth Valley",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Grampian",
+        "name": "NHS Grampian",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Greater Glasgow & Clyde",
+        "name": "NHS Greater Glasgow and Clyde",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Highland",
+        "name": "NHS Highland",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Lanarkshire",
+        "name": "NHS Lanarkshire",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Lothian",
+        "name": "NHS Lothian",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Orkney",
+        "name": "NHS Orkney",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Shetland",
+        "name": "NHS Shetland",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Tayside",
+        "name": "NHS Tayside",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "NHS Western Isles",
+        "name": "NHS Western Isles",
+        "boundary": "health_board"
+      },
+      {
+        "raw_name": "Scotland",
+        "name": "Scotland",
+        "boundary": "country"
+      },
+      {
+        "raw_name": "Unknown",
+        "name": "Unknown",
+        "boundary": "unknown"
+      }
+    ],
+    "first_period": "2018-01-01",
+    "last_period": "2026-05-25",
+    "source_data_cutoff": "2026-05-31",
+    "publication_date": null,
+    "reporting_lag": "Unknown for this saved vintage; observation age is not publication lag",
+    "source_population": "Separate national and regional operational aggregates",
+    "denominator": "No compatible testing/sample/exposure denominators in imported CSV",
+    "completeness": {
+      "observations": 7024,
+      "missing": 0,
+      "states": {
+        "insufficient_data": 1664,
+        "no_detected_anomaly": 5327,
+        "statistically_unusual_observation": 33
+      }
+    },
+    "possible_dependence": "Counts and frozen forensic shares share testing lineage; other sources may share people/cases; independence not established",
+    "limitations": "Ambulance naloxone activity, not take-home supply or direct overdose/toxicity incidence; national/Unknown/board rows must not be summed together; 52-week change is not exact calendar-year matching.",
+    "boundary_rule": "National testing samples, police divisions, boards and unknown areas retained separately"
+  },
+  {
+    "dataset": "treatment_counts",
+    "source_id": "radar_toxicology_treatment_glasgow.csv",
+    "source_path": "datasets/Group3_Item2_Data/radar_toxicology_treatment_glasgow.csv",
+    "source_sha256": "401b52c928b3d560476e91efac8e2d114c9777e790aa2e9fedd873a2e38d90e0",
+    "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+    "indicator_definitions": [
+      "treatment:Benzodiazepines",
+      "treatment:Dissociatives",
+      "treatment:Gabapentinoids",
+      "treatment:Opioids (excluding treatment opioids)",
+      "treatment:Stimulants"
+    ],
+    "units": [
+      "detection_count"
+    ],
+    "substances": [
+      "Benzodiazepines",
+      "Dissociatives",
+      "Gabapentinoids",
+      "Opioids (excluding treatment opioids)",
+      "Stimulants"
+    ],
+    "geographies": [
+      "NHS Greater Glasgow and Clyde"
+    ],
+    "period_basis": "calendar_month",
+    "geographic_scope_metadata": [
+      {
+        "raw_name": "NHS Greater Glasgow and Clyde",
+        "name": "NHS Greater Glasgow and Clyde",
+        "boundary": "health_board"
+      }
+    ],
+    "first_period": "2023-12",
+    "last_period": "2026-03",
+    "source_data_cutoff": "2026-03-31",
+    "publication_date": null,
+    "reporting_lag": "Unknown for this saved vintage; observation age is not publication lag",
+    "source_population": "NHS Greater Glasgow and Clyde",
+    "denominator": "No compatible testing/sample/exposure denominators in imported CSV",
+    "completeness": {
+      "observations": 140,
+      "missing": 0,
+      "states": {
+        "insufficient_data": 90,
+        "no_detected_anomaly": 50
+      }
+    },
+    "possible_dependence": "Counts and frozen forensic shares share testing lineage; other sources may share people/cases; independence not established",
+    "limitations": "Treatment urine samples, not community prevalence; testing volume/selection may change; categories overlap and exclude treatment opioids in the source opioid category.",
+    "boundary_rule": "National testing samples, police divisions, boards and unknown areas retained separately"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "workbook": "datasets/Group3_Item2_Data/nrs_drd_deaths_by_individual_substance.xlsx",
+    "sheet": "SUB1a",
+    "header_cell": "A8",
+    "first_year": 2000,
+    "last_year": 2024,
+    "description": "Table SUB1a - Substances which were reported or implicated in drug misuse deaths, Scotland, 2000 to 2024 Number of times that the name of each drug (or other substance) was mentioned for the drug misuse deaths that were registered in each year. Up to 2007, the counts include drugs or substances which were reported for the deaths (possibly including some that were not implicated in some deaths).  From 2008, the counts only include drugs or substances which were implicated in, or potentially contributed to, the cause of death. The break in the timeseries is indicated by the shorthand [b]. This worksheet contains one table. Back to table of contents",
+    "publication_date": "2025-09-02",
+    "source_sha256": "cbfe64721062dea1218512d71a8e9143934d4ffb25ee568a3a65406dba1f9785"
+  },
+  {
+    "workbook": "datasets/Group3_Item2_Data/nrs_drd_deaths_by_individual_substance.xlsx",
+    "sheet": "SUB1b",
+    "header_cell": "A6",
+    "first_year": 2008,
+    "last_year": 2024,
+    "description": "Table SUB1b - Substances which were present in drug misuse deaths, Scotland, 2008 to 2024 Number of times that the name of each drug (or other substance) was mentioned for the drug misuse deaths that were registered in each year. Only includes drugs or substances which were present in the body but which were NOT considered to have had any direct contribution to the death This worksheet contains one table. Back to table of contents",
+    "publication_date": "2025-09-02",
+    "source_sha256": "cbfe64721062dea1218512d71a8e9143934d4ffb25ee568a3a65406dba1f9785"
+  },
+  {
+    "workbook": "datasets/Group3_Item2_Data/nrs_drd_deaths_by_individual_substance.xlsx",
+    "sheet": "SUB2a",
+    "header_cell": "A8",
+    "first_year": 2000,
+    "last_year": 2024,
+    "description": "Table SUB2a - Substances which were reported or implicated in drug poisoning deaths, Scotland, 2000 to 2024 Number of times that the name of each drug (or other substance) was mentioned for the drug poisoning deaths that were registered in each year. Up to 2007, the counts include drugs or substances which were reported for the deaths (possibly including some that were not implicated in some deaths).  From 2008, the counts only include drugs or substances which were implicated in, or potentially contributed to, the cause of death. The break in the timeseries is indicated by the shorthand [b]. This worksheet contains one table. Back to table of contents",
+    "publication_date": "2025-09-02",
+    "source_sha256": "cbfe64721062dea1218512d71a8e9143934d4ffb25ee568a3a65406dba1f9785"
+  },
+  {
+    "workbook": "datasets/Group3_Item2_Data/nrs_drd_deaths_by_individual_substance.xlsx",
+    "sheet": "SUB2b",
+    "header_cell": "A6",
+    "first_year": 2008,
+    "last_year": 2024,
+    "description": "Table SUB2b - Substances which were present in drug poisoning deaths, Scotland, 2008 to 2024 Number of times that the name of each drug (or other substance) was mentioned for the drug poisoning deaths that were registered in each year. Only includes drugs or substances which were present in the body but which were NOT considered to have had any direct contribution to the death This worksheet contains one table. Back to table of contents",
+    "publication_date": "2025-09-02",
+    "source_sha256": "cbfe64721062dea1218512d71a8e9143934d4ffb25ee568a3a65406dba1f9785"
+  },
+  {
+    "workbook": "datasets/Group3_Item2_Data/nrs_drd_2023_sub1.xlsx",
+    "sheet": "SUB1a",
+    "header_cell": "A6",
+    "first_year": 2000,
+    "last_year": 2023,
+    "description": "Table SUB1a - Substances which were reported or implicated in drug misuse deaths, Scotland, 2000 to 2023 Number of times that the name of each drug (or other substance) was mentioned for the drug misuse deaths that were registered in each year. Up to 2007, the counts include drugs or substances which were reported for the deaths (possibly including some that were not implicated in some deaths).  From 2008, the counts only include drugs or substances which were implicated in, or potentially contributed to, the cause of death. The break in the timeseries is indicated by the shorthand [b].",
+    "publication_date": "2024-08-20",
+    "source_sha256": "7c07cf3ea5ee311783d257c24953077295a525a0823dff14c50d0d3d9d6f5ca7"
+  },
+  {
+    "workbook": "datasets/Group3_Item2_Data/nrs_drd_2023_sub1.xlsx",
+    "sheet": "SUB1b",
+    "header_cell": "A4",
+    "first_year": 2008,
+    "last_year": 2023,
+    "description": "Table SUB1b - Substances which were present in drug misuse deaths, Scotland, 2008 to 2023 Number of times that the name of each drug (or other substance) was mentioned for the drug misuse deaths that were registered in each year. Only includes drugs or substances which were present in the body but which were NOT considered to have had any direct contribution to the death",
+    "publication_date": "2024-08-20",
+    "source_sha256": "7c07cf3ea5ee311783d257c24953077295a525a0823dff14c50d0d3d9d6f5ca7"
+  },
+  {
+    "workbook": "datasets/Group3_Item2_Data/nrs_drd_2023_sub2.xlsx",
+    "sheet": "SUB2a",
+    "header_cell": "A6",
+    "first_year": 2000,
+    "last_year": 2023,
+    "description": "Table SUB2a - Substances which were reported or implicated in drug poisoning deaths, Scotland, 2000 to 2023 Number of times that the name of each drug (or other substance) was mentioned for the drug poisoning deaths that were registered in each year. Up to 2007, the counts include drugs or substances which were reported for the deaths (possibly including some that were not implicated in some deaths).  From 2008, the counts only include drugs or substances which were implicated in, or potentially contributed to, the cause of death. The break in the timeseries is indicated by the shorthand [b].",
+    "publication_date": "2024-08-20",
+    "source_sha256": "2aae86192bd3dc7a38e820d23d29cf26fc7a6847e81c62efa369fad2a9048e7a"
+  },
+  {
+    "workbook": "datasets/Group3_Item2_Data/nrs_drd_2023_sub2.xlsx",
+    "sheet": "SUB2b",
+    "header_cell": "A4",
+    "first_year": 2008,
+    "last_year": 2023,
+    "description": "Table SUB2b - Substances which were present in drug poisoning deaths, Scotland, 2008 to 2023 Number of times that the name of each drug (or other substance) was mentioned for the drug poisoning deaths that were registered in each year. Only includes drugs or substances which were present in the body but which were NOT considered to have had any direct contribution to the death",
+    "publication_date": "2024-08-20",
+    "source_sha256": "2aae86192bd3dc7a38e820d23d29cf26fc7a6847e81c62efa369fad2a9048e7a"
+  }
+]

@@ -1,5 +1,7 @@
 # Public research integration review — 9 November 2026
 
+Historical pre-approval review. Phase 1 subsequently confirmed anonymous read access to these three tables; see `dashboard-phase-1.md`. The pending-approval statements below describe the earlier stage. Do not reapply the historical migration automatically.
+
 Status: local implementation complete; proposed migration NOT applied. No deployment or production permission/data changes are authorized by this document.
 
 ## Reviewed live scope

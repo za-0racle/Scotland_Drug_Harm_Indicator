@@ -1,0 +1,37 @@
+{
+  "version": "phase5c-1.0.0",
+  "input_format": "JSON response object and records array; document extraction is a human-reviewed upstream step",
+  "fields": [
+    "issuer",
+    "official_alert_id",
+    "issue_date",
+    "publication_date",
+    "event_date_start",
+    "event_date_end",
+    "detection_date",
+    "date_precision",
+    "substances",
+    "geographic_scope",
+    "alert_category",
+    "description",
+    "source_locator",
+    "revision_status",
+    "withdrawal_status",
+    "record_version",
+    "supersedes_record_id",
+    "missingness_notes"
+  ],
+  "response_fields": [
+    "request_reference",
+    "received_date",
+    "source_sha256",
+    "completeness",
+    "coverage",
+    "limitations"
+  ],
+  "status": "FOI response pending; no real alert records staged",
+  "raw_preservation": "Keep original response/attachments immutable, hashes and extraction page/row locators; do not publish private descriptions",
+  "unknown_values": "null plus missingness_notes; unknown dates are not inferred",
+  "revisions": "Separate versions and parent references; updates are not automatically new alerts",
+  "metrics_gate": "Always false in this phase, including syntactically valid complete responses; independent scientific review and predefined protocol required"
+}

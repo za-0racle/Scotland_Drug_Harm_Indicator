@@ -1,0 +1,86 @@
+[
+  {
+    "type": "original_official_issue",
+    "date": "2023-01-24",
+    "subject": "Nitazene-type drugs",
+    "scope": "Scotland dissemination",
+    "reference": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-alert-nitazenes/rapid-action-drug-alerts-and-response-radar-alert-nitazenes-version-20/public-health-alert-for-action-nitazene-type-drugs-in-scotland/"
+  },
+  {
+    "type": "nitazene_alert_update",
+    "date": "2023-03-29",
+    "subject": "Nitazene alert version 1.1",
+    "scope": "Scotland dissemination",
+    "reference": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-alert-nitazenes/rapid-action-drug-alerts-and-response-radar-alert-nitazenes-version-20/public-health-alert-for-action-nitazene-type-drugs-in-scotland/"
+  },
+  {
+    "type": "original_official_issue",
+    "date": "2023-07-05",
+    "subject": "Bromazolam",
+    "scope": "Scotland dissemination",
+    "reference": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-quarterly-report/rapid-action-drug-alerts-and-response-radar-quarterly-report-october-2023/"
+  },
+  {
+    "type": "nitazene_alert_update",
+    "date": "2023-11-20",
+    "subject": "Nitazene alert version 1.2",
+    "scope": "Scotland dissemination",
+    "reference": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-alert-nitazenes/rapid-action-drug-alerts-and-response-radar-alert-nitazenes-version-20/public-health-alert-for-action-nitazene-type-drugs-in-scotland/"
+  },
+  {
+    "type": "original_official_issue",
+    "date": "2024-05-09",
+    "subject": "Xylazine",
+    "scope": "Scotland dissemination",
+    "reference": "https://publichealthscotland.scot/news/2024/may/radar-alert-issued-on-new-synthetic-drug-xylazine/"
+  },
+  {
+    "type": "nitazene_alert_update",
+    "date": "2024-07-08",
+    "subject": "Nitazene alert version 1.3",
+    "scope": "Scotland dissemination",
+    "reference": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-alert-nitazenes/rapid-action-drug-alerts-and-response-radar-alert-nitazenes-version-20/public-health-alert-for-action-nitazene-type-drugs-in-scotland/"
+  },
+  {
+    "type": "source_publication",
+    "date": "2024-08-20",
+    "subject": "NRS edition through registration year 2023",
+    "scope": "Scotland",
+    "reference": "workbook Cover_sheet"
+  },
+  {
+    "type": "nitazene_alert_update",
+    "date": "2025-01-16",
+    "subject": "Nitazene alert version 1.4",
+    "scope": "Scotland dissemination",
+    "reference": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-alert-nitazenes/rapid-action-drug-alerts-and-response-radar-alert-nitazenes-version-20/public-health-alert-for-action-nitazene-type-drugs-in-scotland/"
+  },
+  {
+    "type": "nitazene_alert_update",
+    "date": "2025-08-12",
+    "subject": "Nitazene alert version 2.0",
+    "scope": "Scotland dissemination",
+    "reference": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-alert-nitazenes/rapid-action-drug-alerts-and-response-radar-alert-nitazenes-version-20/public-health-alert-for-action-nitazene-type-drugs-in-scotland/"
+  },
+  {
+    "type": "source_publication",
+    "date": "2025-09-02",
+    "subject": "NRS edition through registration year 2024",
+    "scope": "Scotland",
+    "reference": "https://www.nrscotland.gov.uk/publications/drug-related-deaths-in-scotland-2024/"
+  },
+  {
+    "type": "later_alert_version",
+    "date": "2026-02-05",
+    "subject": "New benzodiazepines / medetomidine version 2.0",
+    "scope": "Scotland dissemination",
+    "reference": "https://publichealthscotland.scot/news/2026/february/phs-urges-caution-following-reports-of-increased-harm-from-changes-in-scotland-s-drug-supply/"
+  },
+  {
+    "type": "page_last_update_not_first_issue",
+    "date": "2026-07-14",
+    "subject": "New benzodiazepines / medetomidine page updates",
+    "scope": "Scotland dissemination",
+    "reference": "See verified links in analysis/early_warning_feasibility/FEASIBILITY_REPORT.md"
+  }
+]

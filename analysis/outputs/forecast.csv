@@ -1,0 +1,2 @@
+model,forecast_origin,target_period,horizon_quarters,issued_at_utc,interpretation,geography,outcome,predicted,lower80,upper80,lower95,upper95,interval_method,diagnostics,warnings
+naive,2025 Q4,2026 Q1,1,2026-11-09T10:53:16+00:00,"Elapsed-period, data-cutoff-based forecast; not a current future prediction",Scotland national total,Police Scotland suspected drug deaths,248.0,190.48337947455357,305.5166205254464,160.0359197607262,335.9640802392738,Gaussian one-step random-walk errors; training differences; lower bound clipped at zero,{},[]

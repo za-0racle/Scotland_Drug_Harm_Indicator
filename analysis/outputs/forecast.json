@@ -1,0 +1,18 @@
+{
+  "diagnostics": {},
+  "forecast_origin": "2025 Q4",
+  "geography": "Scotland national total",
+  "horizon_quarters": 1,
+  "interpretation": "Elapsed-period, data-cutoff-based forecast; not a current future prediction",
+  "interval_method": "Gaussian one-step random-walk errors; training differences; lower bound clipped at zero",
+  "issued_at_utc": "2026-11-09T10:53:16+00:00",
+  "lower80": 190.48337947455357,
+  "lower95": 160.0359197607262,
+  "model": "naive",
+  "outcome": "Police Scotland suspected drug deaths",
+  "predicted": 248.0,
+  "target_period": "2026 Q1",
+  "upper80": 305.5166205254464,
+  "upper95": 335.9640802392738,
+  "warnings": []
+}

@@ -1,0 +1,64 @@
+{
+  "classifications": {
+    "insufficient_data": 2262,
+    "no_detected_anomaly": 5717,
+    "statistically_unusual_observation": 47,
+    "unavailable_analysis": 8
+  },
+  "dataset_classifications": {
+    "mortality_quarterly": {
+      "insufficient_data": 240,
+      "no_detected_anomaly": 253,
+      "statistically_unusual_observation": 3,
+      "unavailable_analysis": 8
+    },
+    "forensic_counts": {
+      "insufficient_data": 112,
+      "no_detected_anomaly": 87,
+      "statistically_unusual_observation": 11
+    },
+    "treatment_counts": {
+      "insufficient_data": 90,
+      "no_detected_anomaly": 50
+    },
+    "naloxone_weekly": {
+      "insufficient_data": 1664,
+      "no_detected_anomaly": 5327,
+      "statistically_unusual_observation": 33
+    },
+    "assist_percentages": {
+      "insufficient_data": 72
+    },
+    "frozen_forensic_shares": {
+      "insufficient_data": 84
+    }
+  },
+  "reasons": {
+    "Incomplete prior window: missing/suppressed periods or insufficient history": 2106,
+    "Strict outside-threshold comparison; exploratory count screen, not a p-value or forecast interval": 5764,
+    "Observation missing or suppressed; never imputed": 8,
+    "Unknown sample denominators, unequal study periods and only 12 observations per series; no binomial or calendar-quarter model": 72,
+    "Only 12 historical quarters, unresolved independent denominator lineage; original CUSUM left unchanged": 84
+  },
+  "historical_evidence_classes": {
+    "insufficient_evidence": 2270,
+    "no_detected_signal": 5717,
+    "single_indicator_signal": 47
+  },
+  "sensitivity_stability": {
+    "insufficient_data": 1168,
+    "no_signal_in_eligible_choices": 6495,
+    "choice_sensitive": 198,
+    "all_choices_same_direction_signal": 17
+  },
+  "current_assessment": "insufficient_evidence: stale cutoffs and unknown publication vintages; no current warning",
+  "limitations": [
+    "No seasonal/trend adjustment, testing-volume/exposure adjustment or as-published vintages",
+    "Serial correlation, overlapping windows, repeated comparisons and sample changes may produce flags",
+    "Count-scale floor is a pragmatic safeguard, not a fitted count distribution; low-count screens may be conservative",
+    "No reference event set: signal frequency is not false-positive rate, sensitivity, specificity or lead time",
+    "Exact domains/geographies/periods prevent cross-source corroboration in these inputs; absence of support is not absence of harm",
+    "ASSIST and frozen shares are not forced into new statistical models; no private RADAR narratives read",
+    "All findings retrospective; historical flags are not confirmed public health alerts"
+  ]
+}

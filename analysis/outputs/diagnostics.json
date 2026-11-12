@@ -1,0 +1,453 @@
+[
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2022 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2022 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 44.48080021418014,
+      "smoothing_level": 0.4534230102801692
+    },
+    "model": "ses",
+    "origin": "2022 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.01790007419423515,
+      "intercept": 5.730399101850671,
+      "scaled_trend": 0.024305041949845913
+    },
+    "model": "nb2_trend",
+    "origin": "2022 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2023 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2023 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 43.702699063749165,
+      "smoothing_level": 0.44866703807437064
+    },
+    "model": "ses",
+    "origin": "2023 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.017171166447925625,
+      "intercept": 5.734865058202766,
+      "scaled_trend": 0.011327583700701764
+    },
+    "model": "nb2_trend",
+    "origin": "2023 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2023 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2023 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 42.89186935248358,
+      "smoothing_level": 0.4518985619509547
+    },
+    "model": "ses",
+    "origin": "2023 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.01643283474924247,
+      "intercept": 5.737539838917349,
+      "scaled_trend": 0.003398918671785303
+    },
+    "model": "nb2_trend",
+    "origin": "2023 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2023 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2023 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 42.04344821433687,
+      "smoothing_level": 0.4543956334084992
+    },
+    "model": "ses",
+    "origin": "2023 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.015753144928885406,
+      "intercept": 5.740198258349322,
+      "scaled_trend": -0.004805289914478267
+    },
+    "model": "nb2_trend",
+    "origin": "2023 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2023 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2023 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 41.22705187375833,
+      "smoothing_level": 0.4545155924984069
+    },
+    "model": "ses",
+    "origin": "2023 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.015134451018506337,
+      "intercept": 5.743053260340856,
+      "scaled_trend": -0.013935510311965098
+    },
+    "model": "nb2_trend",
+    "origin": "2023 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2024 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2024 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 40.701408629690135,
+      "smoothing_level": 0.45883887305871657
+    },
+    "model": "ses",
+    "origin": "2024 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.014545246693486417,
+      "intercept": 5.7403792385197825,
+      "scaled_trend": -0.006046308454895349
+    },
+    "model": "nb2_trend",
+    "origin": "2024 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2024 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2024 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 40.61417967172279,
+      "smoothing_level": 0.4388792438313115
+    },
+    "model": "ses",
+    "origin": "2024 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.014502618868471161,
+      "intercept": 5.748880950235478,
+      "scaled_trend": -0.03290929075387228
+    },
+    "model": "nb2_trend",
+    "origin": "2024 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2024 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2024 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 40.814067883057255,
+      "smoothing_level": 0.4579213259271772
+    },
+    "model": "ses",
+    "origin": "2024 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.01518513120587163,
+      "intercept": 5.761423551881517,
+      "scaled_trend": -0.07319540449117243
+    },
+    "model": "nb2_trend",
+    "origin": "2024 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2024 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2024 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 40.652626780714435,
+      "smoothing_level": 0.4987164311433323
+    },
+    "model": "ses",
+    "origin": "2024 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.016074687862731408,
+      "intercept": 5.7748213476837265,
+      "scaled_trend": -0.11724403885972444
+    },
+    "model": "nb2_trend",
+    "origin": "2024 Q4",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2025 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2025 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 41.2512758987851,
+      "smoothing_level": 0.42704309505156235
+    },
+    "model": "ses",
+    "origin": "2025 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.01562616830994906,
+      "intercept": 5.770347911683722,
+      "scaled_trend": -0.10700212069733171
+    },
+    "model": "nb2_trend",
+    "origin": "2025 Q1",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2025 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2025 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 40.78449057526327,
+      "smoothing_level": 0.4323203640636665
+    },
+    "model": "ses",
+    "origin": "2025 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.015107527719245445,
+      "intercept": 5.768171845737596,
+      "scaled_trend": -0.10347513782635752
+    },
+    "model": "nb2_trend",
+    "origin": "2025 Q2",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "origin": "2025 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "seasonal_naive",
+    "origin": "2025 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "residual_scale": 40.16886826695414,
+      "smoothing_level": 0.4348022671292917
+    },
+    "model": "ses",
+    "origin": "2025 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {
+      "converged": true,
+      "dispersion": 0.014589387776206848,
+      "intercept": 5.767678647663739,
+      "scaled_trend": -0.10499357602945003
+    },
+    "model": "nb2_trend",
+    "origin": "2025 Q3",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "diagnostics": {},
+    "model": "naive",
+    "stage": "full_data_fit",
+    "status": "ok",
+    "warnings": []
+  }
+]

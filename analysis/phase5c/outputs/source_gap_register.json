@@ -1,0 +1,82 @@
+[
+  {
+    "gap": "forensic_denominator",
+    "affected_analysis": "Forensic counts cannot establish positivity/prevalence",
+    "potential_official_source": "Original forensic laboratory quarterly tested-sample totals and panel metadata",
+    "available_workaround": "Historical frozen shares only, not extended beyond 2024",
+    "status": "unresolved",
+    "interpretation_consequence": "No denominator or annual-to-quarter conversion inferred"
+  },
+  {
+    "gap": "treatment_denominator",
+    "affected_analysis": "Treatment detection counts depend on tests/cohort",
+    "potential_official_source": "PHS RADAR / NHS GG&C laboratory urine-test counts by month and category",
+    "available_workaround": "Compare recorded counts with explicit testing-exposure caveat",
+    "status": "unresolved",
+    "interpretation_consequence": "SDMD treatment assessment counts are a different outcome and cannot supply this denominator"
+  },
+  {
+    "gap": "assist_periods_samples",
+    "affected_analysis": "ASSIST percentages lack exact interval and sample size",
+    "potential_official_source": "PHS ASSIST study period recruitment dates and tested n, by site/panel",
+    "available_workaround": "Keep source study labels and explicit insufficient_data",
+    "status": "unresolved",
+    "interpretation_consequence": "Rounded percentages do not uniquely determine n; no reverse-engineering"
+  },
+  {
+    "gap": "category_panel_changes",
+    "affected_analysis": "Broad substance groups overlap and tests may change",
+    "potential_official_source": "Laboratory panel/version metadata and PHS technical notes",
+    "available_workaround": "Explicit mapping dictionary, unmatched/overlap status and no sum of categories",
+    "status": "partially_resolved",
+    "interpretation_consequence": "Engineering mappings do not establish temporal panel equivalence"
+  },
+  {
+    "gap": "naloxone_recording",
+    "affected_analysis": "Weekly counts may cross a recording-system change",
+    "potential_official_source": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-quarterly-report/rapid-action-drug-alerts-and-response-radar-quarterly-report-january-2025/",
+    "available_workaround": "Mark April 2024 rollout context; do not splice or adjust counts",
+    "status": "partially_resolved",
+    "interpretation_consequence": "Official January 2025 continuity notes identify rollout; board dates/effect magnitude still unknown"
+  },
+  {
+    "gap": "mortality_vintage",
+    "affected_analysis": "Legacy and Databelt definitions/revisions may differ",
+    "potential_official_source": "analysis/phase3/official_source_review.json; Police Scotland methodology",
+    "available_workaround": "Keep frozen legacy vintage; no later incompatible append",
+    "status": "unresolved",
+    "interpretation_consequence": "Registered NRS deaths are not a replacement suspected-death numerator"
+  },
+  {
+    "gap": "publication_dates",
+    "affected_analysis": "Historical warning availability cannot be reconstructed",
+    "potential_official_source": "Original release archives and extract manifests by source",
+    "available_workaround": "Keep unknown dates; retrospective comparisons only",
+    "status": "unresolved",
+    "interpretation_consequence": "January 2025 report publication date does not date the saved 2026 CSV vintage"
+  },
+  {
+    "gap": "geographic_population",
+    "affected_analysis": "No verified Greenock series or compatible rate join",
+    "potential_official_source": "NRS council tables/population boundary metadata; local aggregate release if available",
+    "available_workaround": "Wider-area labels and dashboard no-local-data state",
+    "status": "partially_resolved",
+    "interpretation_consequence": "Health-board populations and council treatment counts cannot normalise police-division deaths"
+  },
+  {
+    "gap": "foi_alert_reference",
+    "affected_analysis": "No complete external alert reference",
+    "potential_official_source": "Pending PHS FOI response",
+    "available_workaround": "Local staging validator, quarantine, no-alert negatives forbidden, metrics gate closed",
+    "status": "unresolved",
+    "interpretation_consequence": "No real response received or staged"
+  },
+  {
+    "gap": "blocked_public_download",
+    "affected_analysis": "New aggregate vintage not acquired",
+    "potential_official_source": "analysis/phase3/acquire_radar.mjs and official PHS dashboard",
+    "available_workaround": "Continue saved supported data; source-level harmonisation required",
+    "status": "unresolved",
+    "interpretation_consequence": "Earlier approval-review limit not bypassed or retried"
+  }
+]

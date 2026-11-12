@@ -1,0 +1,10 @@
+{
+  "reviewed_on": "2026-11-10",
+  "source_url": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-quarterly-report/rapid-action-drug-alerts-and-response-radar-quarterly-report-january-2025/",
+  "published": "2025-01-28",
+  "located_section": "Data sources and limitations / Naloxone administration by Scottish Ambulance Service / Continuity of data",
+  "verified_finding": "A new clinical recording IT system began rollout in April 2024; no board-specific effect size is established here.",
+  "consequence": "Treat as potential measurement break, not evidence of changed toxicity. Seasonal behaviour is also described in that report.",
+  "limitations": "This documents the report, not a checksum of its live HTML or the original 2026 CSV extraction. No dataset download attempted.",
+  "statistical_reference": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.nbinom.html"
+}

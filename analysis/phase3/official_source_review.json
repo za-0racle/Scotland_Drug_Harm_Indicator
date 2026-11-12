@@ -1,0 +1,25 @@
+{
+  "reviewed_on": "2026-11-09",
+  "source_publication_date": "2026-10-27",
+  "source_data_acquired_by_phs": "2026-09-07",
+  "official_report": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-quarterly-report/rapid-action-drug-alerts-and-response-radar-quarterly-report-october-2026/about-this-release/printversion",
+  "suspected_deaths_section": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-quarterly-report/rapid-action-drug-alerts-and-response-radar-quarterly-report-october-2026/harm-indicators/suspected-drug-deaths/",
+  "linked_dashboard": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+  "legacy_definition": "https://www.gov.scot/publications/suspected-drug-deaths-scotland-october-december-2025/pages/7/",
+  "verified_report_totals": [
+    {"start": "2026-06-01", "end": "2026-08-30", "value": 232, "basis": "13 weeks; not calendar Q3"},
+    {"start": "2026-03-02", "end": "2026-05-31", "value": 320, "basis": "previous 13 weeks; not calendar Q1/Q2"},
+    {"start": "2026-06-01", "end": "2026-08-31", "value": 234, "basis": "June-August calendar months; not calendar Q3"}
+  ],
+  "monthly_counts": {"2026-06": 70, "2026-07": 88, "2026-08": 76},
+  "weekly_chart_coverage": ["2024-05-27", "2026-08-30"],
+  "dashboard_advertised_coverage": ["2016-12-25", "2026-08-30"],
+  "definition": "Police Scotland operational suspected deaths, not registered confirmed drug-related deaths. Databelt records from January 2025 supersede manual reporting and may be revised retrospectively.",
+  "legacy_difference": "The legacy quarterly series retains originally suspected cases and applies a ten-day adjustment to approximate registration timing. Equivalence with the Databelt time basis/retention rules has not been established.",
+  "revision_policy": "Latest RADAR update supersedes prior figures; provisional cases may be added after COPFS receipt or further investigation. No quantitative overlap revision comparison was possible.",
+  "dashboard_inspection": "Rendered live dashboard confirmed update 27 October 2026, weekly display, police-division June-August/March-May/December-February periods and national/area download controls. Search cache incorrectly showed July, so live inspection was used.",
+  "download_status": "not_acquired",
+  "download_blocker": "Automatic approval review could not complete due to a usage limit. The acquisition command was not executed and was not retried.",
+  "compatibility_decision": "Do not append these reporting-window totals to frozen calendar quarters. Do not calculate independent evaluation errors or coverage without exact compatible outcomes. No model reselection or current forecasts.",
+  "source_snapshot_status": "Web/browser inspection and attributed audit transcription only; no raw download or checksummed HTML snapshot acquired. acquire_radar.mjs is prepared but unexecuted."
+}

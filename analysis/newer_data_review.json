@@ -1,0 +1,13 @@
+{
+  "checked_on": "2026-11-09",
+  "newer_official_report_available": true,
+  "latest_release_verified": "PHS RADAR quarterly report, October 2026; published 27 October 2026",
+  "sources": [
+    "https://www.gov.scot/collections/suspected-drug-deaths-in-scotland/",
+    "https://www.publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-quarterly-report/rapid-action-drug-alerts-and-response-radar-quarterly-report-october-2026/main-points/",
+    "https://www.publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-quarterly-report/rapid-action-drug-alerts-and-response-radar-quarterly-report-july-2026/harm-indicators/suspected-drug-deaths/"
+  ],
+  "decision": "Do not issue a current future-dated forecast in Phase 2. Preserve the verified 2017 Q1-2025 Q4 series and label 2026 Q1 as an elapsed-period projection.",
+  "unresolved": "Newer RADAR releases contain suspected-death indicators, but publication periods, Police Scotland reporting-system changes and revisions require source-level harmonisation before extending this frozen quarterly series. No newer values were imported or inferred.",
+  "runtime_network_access": false
+}

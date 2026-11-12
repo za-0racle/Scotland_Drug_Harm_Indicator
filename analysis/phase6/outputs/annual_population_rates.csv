@@ -1,0 +1,16 @@
+geography,boundary_type,year,indicator_id,deaths,population,rate_per_100000,status,reason
+Inverclyde,council,2010,nrs_registered_drug_misuse_deaths,17,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2011,nrs_registered_drug_misuse_deaths,20,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2012,nrs_registered_drug_misuse_deaths,13,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2013,nrs_registered_drug_misuse_deaths,10,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2014,nrs_registered_drug_misuse_deaths,17,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2015,nrs_registered_drug_misuse_deaths,16,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2016,nrs_registered_drug_misuse_deaths,20,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2017,nrs_registered_drug_misuse_deaths,23,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2018,nrs_registered_drug_misuse_deaths,24,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2019,nrs_registered_drug_misuse_deaths,33,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2020,nrs_registered_drug_misuse_deaths,33,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2021,nrs_registered_drug_misuse_deaths,16,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2022,nrs_registered_drug_misuse_deaths,29,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2023,nrs_registered_drug_misuse_deaths,26,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected
+Inverclyde,council,2024,nrs_registered_drug_misuse_deaths,25,,,unavailable_compatible_council_denominator,No verified same-year council population and allocation compatibility; health-board denominator rejected

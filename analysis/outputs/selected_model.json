@@ -1,0 +1,30 @@
+{
+  "limitation": "Model selection and reported performance use the same 12 origins; no independent post-selection test set. Scores are exploratory, not clinical or operational validation.",
+  "min_training_quarters": 24,
+  "ranking": [
+    "naive",
+    "nb2_trend",
+    "ses",
+    "seasonal_naive"
+  ],
+  "selected_metrics": {
+    "coverage80": 0.9166666666666666,
+    "coverage95": 1.0,
+    "eligible_for_selection": true,
+    "evaluated_origins": 12,
+    "failed_origins": [],
+    "interval_score95": 183.80631173982832,
+    "mae": 21.583333333333332,
+    "mae_skill_vs_naive": 0.0,
+    "mae_skill_vs_seasonal_naive": 0.3290155440414507,
+    "mase": 0.44961535333188546,
+    "mean_width95": 183.80631173982832,
+    "model": "naive",
+    "rmse": 31.234329404252197,
+    "rmsse": 0.54623079521805,
+    "scaled_origins": 12
+  },
+  "selected_model": "naive",
+  "selection_rule": "Lowest expanding-window one-step MAE among models completing every common origin; RMSE then predefined model order break ties; final-fit failure falls back in that order",
+  "training_window_reason": "24 quarters provide six annual cycles, with 12 common test origins. This pragmatic choice limits parameter estimation risk; it is not evidence of adequacy or validation."
+}

@@ -1,0 +1,60 @@
+{
+  "version": "phase4-1.0.0",
+  "executed_at_utc": "2026-11-10T01:13:49.285090+00:00",
+  "analysis_as_of": "2026-11-10",
+  "baseline_manifest_sha256": "41d619571be4b1cf2ebedb167272b7ada3f6e12a73602ab7469072a63e222a27",
+  "sources": {
+    "datasets/Group3_Item2_Data/police_suspected_drug_deaths_Jan2017-Dec2025.xlsx": {
+      "sha256": "587a5d47061f93872b5922dbfe724607a86fe59ee0a6ebe488859b87395cdddf",
+      "publisher": "Police Scotland",
+      "url": "https://www.gov.scot/publications/suspected-drug-deaths-scotland-october-december-2025/"
+    },
+    "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv": {
+      "sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+      "publisher": "Public Health Scotland",
+      "url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/"
+    },
+    "g3-indicator/public/data/quarterly_input_table.json": {
+      "sha256": "8436af4ad079e45bf1d673c0f35cf32c9e2e57e43081ff57f7c8da08ee1d7ddf",
+      "publisher": null,
+      "url": null
+    },
+    "datasets/Group3_Item2_Data/radar_toxicology_assist.csv": {
+      "sha256": "24271e65477c153230dd2efa0f50c0a4878fa42bd74fd814f8313065abfcd2a8",
+      "publisher": "Public Health Scotland",
+      "url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/"
+    },
+    "datasets/Group3_Item2_Data/radar_toxicology_treatment_glasgow.csv": {
+      "sha256": "401b52c928b3d560476e91efac8e2d114c9777e790aa2e9fedd873a2e38d90e0",
+      "publisher": "Public Health Scotland",
+      "url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/"
+    },
+    "datasets/Group3_Item2_Data/radar_sas_naloxone_weekly_by_board.csv": {
+      "sha256": "6f653b7b12c92e92175f09a2fb358ddb110991314a5b6e7489cf414c5f680235",
+      "publisher": "Public Health Scotland",
+      "url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/"
+    }
+  },
+  "supporting_source_hashes": {
+    "group3_data_sources_import.csv": "6f5e6aac11c86f275fda01dc64385af6fc450e8a2fd7fd46ccc9d191767c5a70"
+  },
+  "code_hashes": {
+    "analysis/phase4/__init__.py": "a0ef79380a256f16d15445954e86e34a9e0785fb74b9ac07bca857b5a1227d5f",
+    "analysis/phase4/run.py": "b03a2ad0ece84ee35a06b78baf92f1a320bb6dc5e6ec5a2ecd79221b01f68adf",
+    "analysis/phase4/trends.py": "a30ab30c7339a18dead39387a271a302f3f96ec0684be5139768c66bb7732618"
+  },
+  "methods": "Descriptive exact-period changes and full-window means; no p-values, anomaly thresholds, risk scores, cross-source pooling or model reselection.",
+  "publication": "Local outputs only; not approved for Supabase publication or public UI.",
+  "output_hashes": {
+    "assist_percentages.csv": "3985a2f7abe34068a4535c5d9a2598c266c5e39a8446f8dff2fe4bfd90544cc0",
+    "findings.json": "d2b52689d5c978c6376ac83a20bcf08d7ad13ce104b27a2d6ffae157cd176346",
+    "forensic_counts.csv": "6a67e3f4c964c00d49ca260955141dc7ab1d83c63fccde3711fdfeedd3ef6063",
+    "frozen_forensic_shares.csv": "5a15c044f5c538b627ec34b9c278c2c0868f98183afb6920c78fdc25be009653",
+    "mortality_annual.csv": "8da97b0ce5d7524019dd4c82ca4174fd9f68ede28522344fa6333557d54c36f6",
+    "mortality_quarterly.csv": "efab0ed13958aba94b647ace3a771dfef2605e58ec47c8de4d1cd1bf92f3be75",
+    "naloxone_week_start_month.csv": "fe919f33407a4af4b67708008cdaa8716dd08b075d10a73483d439b8d65085a4",
+    "naloxone_weekly.csv": "23e8c54fc42fd13c772c4fdb11268acbdb62b0562c0598ce49b035a8de7bec70",
+    "quality_report.json": "9f48cd19cf631fcd5bd43eba94e885620f8ad28c1681221a5d801a837399caed",
+    "treatment_counts.csv": "8ddf44fc8bb5dc5569fca13aa6e877f3bd0e45c61993e68864c0f789639c0a48"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "interpretation": "Evidence scopes, not interchangeable GIS polygons or a population allocation crosswalk",
+  "levels": [
+    {
+      "scope": "Greenock",
+      "boundary_type": "locality",
+      "role": "focus_locality_no_direct_series",
+      "direct_observations": 0,
+      "finding": "No Greenock-specific mortality/toxicity outcome is inferred",
+      "source": null
+    },
+    {
+      "scope": "Inverclyde",
+      "boundary_type": "council",
+      "role": "direct_case_study",
+      "direct_observations": 15,
+      "finding": "Annual registered drug misuse deaths and published five-year ASRs",
+      "source": "Table_C1 / Table_C4"
+    },
+    {
+      "scope": "K: Renfrewshire and Inverclyde",
+      "boundary_type": "police_division",
+      "role": "wider_context_only",
+      "finding": "Legacy quarterly suspected deaths, separate indicator and boundary",
+      "source": "analysis/phase4/outputs/mortality_quarterly.csv"
+    },
+    {
+      "scope": "NHS Greater Glasgow and Clyde",
+      "boundary_type": "health_board",
+      "role": "wider_context_only",
+      "finding": "Weekly ambulance naloxone and monthly treatment urine detections, not council outcomes",
+      "source": "analysis/phase4/outputs/naloxone_weekly.csv; treatment_counts.csv"
+    },
+    {
+      "scope": "Scotland",
+      "boundary_type": "country",
+      "role": "matched_registered_national_comparator",
+      "direct_observations": 15,
+      "finding": "Same C1 registered definition and C4 published ASR; national total includes Inverclyde",
+      "source": "Table_C1 / Table_C4"
+    }
+  ],
+  "rules": [
+    "Always display scope/boundary/indicator/period and vintage",
+    "Never downscale wider-area counts or rates to Greenock",
+    "Never merge registered and suspected deaths or use a health-board population for a council",
+    "No implied substance-specific toxicity mechanism from all-drug registered counts"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "sources": {
+    "datasets/Group3_Item2_Data/police_suspected_drug_deaths_Jan2017-Dec2025.xlsx": {
+      "sha256": "587a5d47061f93872b5922dbfe724607a86fe59ee0a6ebe488859b87395cdddf",
+      "publisher": "Police Scotland",
+      "url": "https://www.gov.scot/publications/suspected-drug-deaths-scotland-october-december-2025/"
+    },
+    "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv": {
+      "sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+      "publisher": "Public Health Scotland",
+      "url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/"
+    },
+    "g3-indicator/public/data/quarterly_input_table.json": {
+      "sha256": "8436af4ad079e45bf1d673c0f35cf32c9e2e57e43081ff57f7c8da08ee1d7ddf",
+      "publisher": null,
+      "url": null
+    },
+    "datasets/Group3_Item2_Data/radar_toxicology_assist.csv": {
+      "sha256": "24271e65477c153230dd2efa0f50c0a4878fa42bd74fd814f8313065abfcd2a8",
+      "publisher": "Public Health Scotland",
+      "url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/"
+    },
+    "datasets/Group3_Item2_Data/radar_toxicology_treatment_glasgow.csv": {
+      "sha256": "401b52c928b3d560476e91efac8e2d114c9777e790aa2e9fedd873a2e38d90e0",
+      "publisher": "Public Health Scotland",
+      "url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/"
+    },
+    "datasets/Group3_Item2_Data/radar_sas_naloxone_weekly_by_board.csv": {
+      "sha256": "6f653b7b12c92e92175f09a2fb358ddb110991314a5b6e7489cf414c5f680235",
+      "publisher": "Public Health Scotland",
+      "url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/"
+    }
+  },
+  "phase4_manifest_sha256": "9ab22cdc696798d70d860d98bce5e9c34236f79874a42b6b4343e7655ffb82cd",
+  "analysis_as_of": "2026-11-10",
+  "access": "Local saved aggregates only; no network or database",
+  "radar_context": "Not analysed: narrative privacy and non-calendar reporting compatibility unresolved",
+  "publication": "No public output, RLS change, migration, deployment or UI integration"
+}

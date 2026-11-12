@@ -28,7 +28,7 @@ export async function readDataset(client, definition, pageSize = 500) {
     if (!Array.isArray(data)) throw new Error(`${definition.table}: invalid database response.`);
     rows.push(...data);
     // Count also handles a server page cap smaller than the requested range.
-    if (data.length === 0 || (count !== null && count !== undefined && rows.length >= count)) break;
+    if (count !== null && count !== undefined && rows.length >= count) break;
     if (data.length < pageSize) {
       if (count !== null && count !== undefined && rows.length < count) {
         throw new Error(`${definition.table}: incomplete response; server page limit is smaller than requested.`);
@@ -52,7 +52,7 @@ export async function loadDataset(client, definition) {
 export function describeDataset(result) {
   if (result.state === 'loading') return 'Loading records…';
   if (result.state === 'error') return `Supabase error: ${result.message}`;
-  if (result.state === 'empty') return '0 accessible records. The table may be empty or RLS may be withholding rows. Read policies are pending manual approval.';
+  if (result.state === 'empty') return '0 accessible records. The table may be empty or RLS may be withholding rows. Check the approved read policies and data availability.';
   const missingLabels = result.rows.filter(row => 'configuration' in row && !row.configuration?.configuration_label).length;
   return `${result.rows.length} records returned.${missingLabels ? ` ${missingLabels} configuration labels are unavailable; check configuration read access.` : ''}`;
 }
