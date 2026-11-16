@@ -1,0 +1,116 @@
+{
+  "checked_at_utc": "2026-11-12T12:04:58.167840+00:00",
+  "credential_scope": "existing publishable/anon only",
+  "tables": {
+    "data_sources": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "mortality_quarterly": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified",
+      "access": "read unavailable",
+      "error_type": "DatabaseError"
+    },
+    "forensic_toxicology": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "assist_toxicology": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "radar_intelligence": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "radar_alerts": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "naloxone_activity": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "population_estimates": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "geographic_areas": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "indicator_configurations": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified",
+      "access": "read unavailable",
+      "error_type": "DatabaseError"
+    },
+    "indicator_results": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified",
+      "access": "read unavailable",
+      "error_type": "DatabaseError"
+    }
+  },
+  "metadata": {},
+  "limitations": [
+    "PostgREST visibility is not a complete database catalog.",
+    "Successful reads do not prove policy definitions, keys, indexes or constraints."
+  ]
+}

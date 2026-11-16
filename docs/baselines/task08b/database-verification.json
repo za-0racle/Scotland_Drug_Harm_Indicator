@@ -1,0 +1,330 @@
+{
+  "checked_at_utc": "2026-11-12T12:08:54.575837+00:00",
+  "credential_scope": "existing publishable/anon only",
+  "tables": {
+    "data_sources": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "mortality_quarterly": {
+      "existence": "verified accessible through read-only PostgREST",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified",
+      "records": 36,
+      "projected_columns": [
+        "year",
+        "quarter",
+        "suspected_deaths"
+      ],
+      "ordered_value_fingerprint": "f3c6e921e8ba533fae9347b76c33d788b49cbc019547c9f1b42d81a892c4f14d",
+      "observed_types": {
+        "year": [
+          "int"
+        ],
+        "quarter": [
+          "int"
+        ],
+        "suspected_deaths": [
+          "int"
+        ]
+      },
+      "candidate_key": [
+        "year",
+        "quarter"
+      ],
+      "candidate_key_duplicates": 0,
+      "access": "SELECT succeeded; policy definition unverified"
+    },
+    "forensic_toxicology": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "assist_toxicology": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "radar_intelligence": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "radar_alerts": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "naloxone_activity": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "population_estimates": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "geographic_areas": {
+      "existence": "unverified",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified"
+    },
+    "indicator_configurations": {
+      "existence": "verified accessible through read-only PostgREST",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified",
+      "records": 4,
+      "projected_columns": [
+        "configuration_id",
+        "indicator_name",
+        "configuration_label",
+        "method",
+        "baseline_description",
+        "rolling_window_quarters",
+        "lambda_value",
+        "limit_multiplier",
+        "lower_limit",
+        "upper_limit",
+        "cusum_k_sigma",
+        "cusum_h_sigma",
+        "notes"
+      ],
+      "ordered_value_fingerprint": "871cb7a34e94daf47de8941b36eda71bea1af5c6fd25b998970058c1b4dab326",
+      "observed_types": {
+        "configuration_id": [
+          "int"
+        ],
+        "indicator_name": [
+          "str"
+        ],
+        "configuration_label": [
+          "str"
+        ],
+        "method": [
+          "str"
+        ],
+        "baseline_description": [
+          "str"
+        ],
+        "rolling_window_quarters": [
+          "NoneType",
+          "int"
+        ],
+        "lambda_value": [
+          "NoneType",
+          "float"
+        ],
+        "limit_multiplier": [
+          "NoneType",
+          "float"
+        ],
+        "lower_limit": [
+          "NoneType"
+        ],
+        "upper_limit": [
+          "NoneType"
+        ],
+        "cusum_k_sigma": [
+          "NoneType",
+          "float"
+        ],
+        "cusum_h_sigma": [
+          "NoneType",
+          "float"
+        ],
+        "notes": [
+          "str"
+        ]
+      },
+      "candidate_key": [
+        "configuration_id"
+      ],
+      "candidate_key_duplicates": 0,
+      "access": "SELECT succeeded; policy definition unverified",
+      "configuration_identities": [
+        {
+          "configuration_id": 1,
+          "indicator_name": "Mortality EWMA",
+          "configuration_label": "Rolling NB2 - 8 quarters",
+          "method": "NB2-EWMA",
+          "baseline_description": "Rolling trend-only NB2 model using eight prior quarters",
+          "rolling_window_quarters": 8,
+          "lambda_value": 0.2,
+          "limit_multiplier": 2.962,
+          "lower_limit": null,
+          "upper_limit": null,
+          "cusum_k_sigma": null,
+          "cusum_h_sigma": null
+        },
+        {
+          "configuration_id": 2,
+          "indicator_name": "Mortality EWMA",
+          "configuration_label": "Rolling NB2 - 12 quarters",
+          "method": "NB2-EWMA",
+          "baseline_description": "Rolling trend-only NB2 model using twelve prior quarters",
+          "rolling_window_quarters": 12,
+          "lambda_value": 0.2,
+          "limit_multiplier": 2.962,
+          "lower_limit": null,
+          "upper_limit": null,
+          "cusum_k_sigma": null,
+          "cusum_h_sigma": null
+        },
+        {
+          "configuration_id": 3,
+          "indicator_name": "Mortality EWMA",
+          "configuration_label": "Rolling NB2 - 16 quarters",
+          "method": "NB2-EWMA",
+          "baseline_description": "Rolling trend-only NB2 model using sixteen prior quarters",
+          "rolling_window_quarters": 16,
+          "lambda_value": 0.2,
+          "limit_multiplier": 2.962,
+          "lower_limit": null,
+          "upper_limit": null,
+          "cusum_k_sigma": null,
+          "cusum_h_sigma": null
+        },
+        {
+          "configuration_id": 4,
+          "indicator_name": "Opioid-share CUSUM",
+          "configuration_label": "Frozen opioid-share CUSUM",
+          "method": "CUSUM",
+          "baseline_description": "Forensic opioid-involvement share; baseline requires verification",
+          "rolling_window_quarters": null,
+          "lambda_value": null,
+          "limit_multiplier": null,
+          "lower_limit": null,
+          "upper_limit": null,
+          "cusum_k_sigma": 0.5,
+          "cusum_h_sigma": 4.77
+        }
+      ]
+    },
+    "indicator_results": {
+      "existence": "verified accessible through read-only PostgREST",
+      "columns": "unverified",
+      "primary_keys": "unverified",
+      "foreign_keys": "unverified",
+      "unique_constraints": "unverified",
+      "indexes": "unverified",
+      "read_policy_definitions": "unverified",
+      "records": 76,
+      "projected_columns": [
+        "result_id",
+        "configuration_id",
+        "observation_year",
+        "observation_quarter",
+        "statistic_value",
+        "lower_limit",
+        "upper_limit",
+        "signal_flag",
+        "cusum_positive",
+        "cusum_negative",
+        "computation_reference"
+      ],
+      "ordered_value_fingerprint": "8808f8da097dd86c1919715f966a120a711af6ff339b21fbb3a598a6162ecefd",
+      "observed_types": {
+        "result_id": [
+          "int"
+        ],
+        "configuration_id": [
+          "int"
+        ],
+        "observation_year": [
+          "int"
+        ],
+        "observation_quarter": [
+          "int"
+        ],
+        "statistic_value": [
+          "float"
+        ],
+        "lower_limit": [
+          "float",
+          "int"
+        ],
+        "upper_limit": [
+          "float"
+        ],
+        "signal_flag": [
+          "bool"
+        ],
+        "cusum_positive": [
+          "NoneType",
+          "float"
+        ],
+        "cusum_negative": [
+          "NoneType",
+          "int"
+        ],
+        "computation_reference": [
+          "str"
+        ]
+      },
+      "candidate_key": [
+        "configuration_id",
+        "observation_year",
+        "observation_quarter"
+      ],
+      "candidate_key_duplicates": 0,
+      "access": "SELECT succeeded; policy definition unverified",
+      "configuration_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "signal_count": 1
+    }
+  },
+  "metadata": {
+    "status": "unavailable",
+    "http_status": 401
+  },
+  "limitations": [
+    "PostgREST visibility is not a complete database catalog.",
+    "Successful reads do not prove policy definitions, keys, indexes or constraints."
+  ]
+}

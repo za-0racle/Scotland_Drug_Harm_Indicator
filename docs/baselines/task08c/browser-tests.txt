@@ -1,0 +1,57 @@
+node.exe : [WebServer] INFO:     Started server process [27004]
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([WebServer] INF...process [27004]:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[WebServer] (node:31496) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:30936) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 35 tests using 1 worker
+
+(node:27760) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 e2e\acceptance.spec.js:4:1 › all eight sections, keyboard access and no direct database requests (20.0s)
+  ok  2 e2e\acceptance.spec.js:22:1 › same-boundary comparison retains two areas and bounded pagination (4.6s)
+  ok  3 e2e\acceptance.spec.js:40:1 › Inverclyde exports match selected scope and dates; failure clears stale export (7.9s)
+  ok  4 e2e\acceptance.spec.js:48:1 › empty, malformed, unavailable and slow transport responses have explicit states (4.5s)
+  ok  5 e2e\acceptance.spec.js:59:1 › Supabase outage is visible independently of available research artifacts (3.8s)
+  ok  6 e2e\comparison-studio.spec.js:3:1 › dedicated studio supports area alignment, exports, quick dialog, alias and responsive keyboard navigation (5.8s)
+  ok  7 e2e\comparison-studio.spec.js:11:1 › category comparisons retain source units, irregular periods and unsupported states (3.1s)
+  ok  8 e2e\comparison-studio.spec.js:17:1 › comparison errors support retry and late responses cannot restore obsolete results (2.1s)
+  ok  9 e2e\comparison.spec.js:2:1 › comparison modal uses actual API data, exports both areas and restores focus (3.5s)
+  ok 10 e2e\comparison.spec.js:19:1 › comparison errors support retry and changed selections clear stale results (2.9s)
+  ok 11 e2e\comparison.spec.js:29:1 › single-area scopes explain incompatibility; empty comparison has no chart or export (3.0s)
+  ok 12 e2e\dashboard.spec.js:2:1 › backend-connected navigation, real geographic coverage and historical evidence (32.7s)
+  ok 13 e2e\dashboard.spec.js:28:1 › mobile layout and backend errors remain explicit (2.7s)
+  ok 14 e2e\dashboard.spec.js:38:1 › API changes alter visible observations, without application mock data (1.9s)
+  ok 15 e2e\geography.spec.js:3:1 › registered council evidence, published context, profile, coverage and responsive keyboard access (12.4s)
+  ok 16 e2e\geography.spec.js:10:1 › police and health-board rankings and same-boundary peers preserve units and study/locality states (11.0s)
+  ok 17 e2e\geography.spec.js:17:1 › source and published-rate failures stay independent and never fabricate replacement evidence (4.5s)
+  ok 18 e2e\local-api.spec.js:3:1 › configured local browser port proxies JSON and renders real police and board observations (5.1s)
+  ok 19 e2e\local-api.spec.js:17:1 › empty registry gives explicit error and refresh retries full bootstrap (4.2s)
+  ok 20 e2e\mortality.spec.js:3:1 › quarterly mortality, source controls, ranking, table search, export and responsive layouts (5.3s)
+  ok 21 e2e\mortality.spec.js:16:1 › registered source resets incompatible boundaries and never invents quarters or geographic peers (2.9s)
+  ok 22 e2e\mortality.spec.js:26:1 › unavailable quarterly source remains explicit while annual source is independently accessible (1.6s)
+  ok 23 e2e\overview.spec.js:3:1 › verified overview, mortality year selection, source disclosures and responsive screenshots (4.5s)
+  ok 24 e2e\overview.spec.js:17:1 › forecast failure is explicit while independently verified overview sections remain usable (5.1s)
+  ok 25 e2e\overview.spec.js:23:1 › mortality failure does not fabricate zero counts or hide the saved forecast (3.5s)
+PHASE8_PRESENTATION {"initialMs":1346,"areaMs":381,"contrast":[{"selector":".platform-header h1","ratio":15.328417894601541},{"selector":".platform-header p","ratio":6.419804822239283},{"selector":".notice","ratio":6.388040463586872},{"selector":"#platform-nav a","ratio":13.69337657654989},{"selector":"#refresh-api","ratio":15.328417894601541},{"selector":"#api-status","ratio":6.015076345537946},{"selector":".platform-footer","ratio":6.015076345537946}],"note":"Single local warmed-server observations; no service-level or full accessibility certification"}
+  ok 26 e2e\presentation.spec.js:2:1 › presentation timings, sampled contrast and accessible controls (3.5s)
+  ok 27 e2e\shell.spec.js:3:1 › white and gold shell, collapse, legacy links, completed screens and comparison focus (4.6s)
+  ok 28 e2e\shell.spec.js:23:1 › mobile drawer contains keyboard focus, closes with Escape, and layout reflows (4.7s)
+  ok 29 e2e\substance.spec.js:2:1 › source exploration, drawer, exports and responsive evidence (5.9s)
+  ok 30 e2e\substance.spec.js:13:1 › unavailable source clears old evidence and another source loads independently (1.9s)
+  ok 31 e2e\usability.spec.js:2:1 › first-time overview explains mortality without technical records (5.6s)
+  ok 32 e2e\usability.spec.js:10:1 › shared dependencies preserve valid choices, reset defaults and explain comparison (2.7s)
+  ok 33 e2e\usability.spec.js:22:1 › advanced and verification panels close on Escape without clearing filters (4.0s)
+  ok 34 e2e\usability.spec.js:35:1 › forecast, source details and mobile do not imply unsupported controls (1.6s)
+  ok 35 e2e\usability.spec.js:41:1 › unequal ASSIST study periods do not offer unsupported calendar filters (1.8s)
+
+  35 passed (3.5m)

@@ -1,0 +1,148 @@
+[
+  {
+    "resource": "mortality_trends",
+    "fields": [
+      "source_sha256",
+      "indicator_id",
+      "geography",
+      "period_basis",
+      "period"
+    ],
+    "records": 504,
+    "missing_key_records": 0,
+    "duplicate_keys": 0,
+    "ordered_identity_fingerprint": "5eb59e33c1856d30ecc0e9590f7d7334f5026d3411e74283267748a36f2d3678"
+  },
+  {
+    "resource": "forensic",
+    "fields": [
+      "source_sha256",
+      "indicator_id",
+      "geography",
+      "period_basis",
+      "period"
+    ],
+    "records": 210,
+    "missing_key_records": 0,
+    "duplicate_keys": 0,
+    "ordered_identity_fingerprint": "23dfb04b3d429c5fe80b7419ce97736ab18dc393944229e19c954c4dfb42db9c"
+  },
+  {
+    "resource": "assist",
+    "fields": [
+      "source_sha256",
+      "indicator_id",
+      "geography",
+      "period_basis",
+      "period"
+    ],
+    "records": 72,
+    "missing_key_records": 0,
+    "duplicate_keys": 0,
+    "ordered_identity_fingerprint": "8e0dfe19f23653ba435e8e67ca18b49e6ea5f9ff309a3f0c9e82681eda1ae51a"
+  },
+  {
+    "resource": "treatment",
+    "fields": [
+      "source_sha256",
+      "indicator_id",
+      "geography",
+      "period_basis",
+      "period"
+    ],
+    "records": 140,
+    "missing_key_records": 0,
+    "duplicate_keys": 0,
+    "ordered_identity_fingerprint": "4dbe38eee7a58a467ee742894b1013294cd21c1d1df85618fa33cd72703c07f8"
+  },
+  {
+    "resource": "naloxone",
+    "fields": [
+      "source_sha256",
+      "indicator_id",
+      "geography",
+      "period_basis",
+      "period"
+    ],
+    "records": 7024,
+    "missing_key_records": 0,
+    "duplicate_keys": 0,
+    "ordered_identity_fingerprint": "76b10e10b5b3de476aa1dca548903916dd976139867039b0533989550f963335"
+  },
+  {
+    "resource": "annual",
+    "fields": [
+      "source_sha256",
+      "indicator_id",
+      "geography",
+      "year"
+    ],
+    "records": 30,
+    "missing_key_records": 0,
+    "duplicate_keys": 0,
+    "ordered_identity_fingerprint": "c9bbd2daf7af1ba1f2542dc48a9e232928e4cabe802198661ec83c45325c1999"
+  },
+  {
+    "resource": "enhanced",
+    "fields": [
+      "observation_id",
+      "method",
+      "window"
+    ],
+    "records": 31512,
+    "missing_key_records": 0,
+    "duplicate_keys": 0,
+    "ordered_identity_fingerprint": "6d3c88398c4a8cb9303172c2ba372474d95441c749c0873c10a6de81fa319953"
+  },
+  {
+    "resource": "diagnostics",
+    "fields": [
+      "observation_id",
+      "method",
+      "window"
+    ],
+    "records": 16032,
+    "missing_key_records": 0,
+    "duplicate_keys": 0,
+    "ordered_identity_fingerprint": "208873da936e42cba631306f7be0313a5e4db0ca6320ae29be288f4d213efa1f"
+  },
+  {
+    "resource": "rates",
+    "fields": [
+      "geography",
+      "period_start",
+      "period_end",
+      "source_sha256"
+    ],
+    "records": 22,
+    "missing_key_records": 0,
+    "duplicate_keys": 0,
+    "ordered_identity_fingerprint": "553f8995a6b48e750f55c23a42008a22c921d5359c864224ecb27609ccbbd4cb"
+  },
+  {
+    "resource": "backtest",
+    "fields": [
+      "model",
+      "origin",
+      "target",
+      "horizon"
+    ],
+    "records": 48,
+    "missing_key_records": 0,
+    "duplicate_keys": 0,
+    "ordered_identity_fingerprint": "91141f2ea97314f4bde3263fe3cad9b63bb3e90e2b942521aaa38c5cbe0c2cdf"
+  },
+  {
+    "resource": "forecast",
+    "fields": [
+      "model",
+      "forecast_origin",
+      "target_period",
+      "horizon_quarters"
+    ],
+    "records": 1,
+    "missing_key_records": 0,
+    "duplicate_keys": 0,
+    "ordered_identity_fingerprint": "d1ee8350389434c80cee9207e5134b982ac9c1ab9fc57d37acba5482574816b5"
+  }
+]

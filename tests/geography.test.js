@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validateGeography,geographicRanking,geographicSelection,geographicProfile,geographicCoverage,coveragePage,publishedRates,mapState,boundaryLabel,sourcesForBoundary,geographicSource} from '../src/platform/geography-data.js';
+import {validateGeography,geographicRanking,geographicSelection,geographicProfile,geographicCoverage,coveragePage,publishedRates,mapState,boundaryLabel,sourcesForBoundary,geographicSource,geographyClassForBoundary} from '../src/platform/geography-data.js';
 import {verifyDefinitions,comparisonTable} from '../src/platform/comparison-data.js';
 import {prepareChart} from '../src/platform/chart-data.js';
 const area=(id='a',boundary='police_division')=>({geography_id:id,name:'Area '+id,boundary_type:boundary,resources:['mortality_trends'],indicators:['suspected_deaths'],available:true});
@@ -18,3 +18,18 @@ test('published rates retain exact five-year windows, standard population, inter
 test('geographic source loading rejects registry mismatches and fetches every weekly page',async()=>{const registry=[{geography_id:'a',name:'Area a',boundary_type:'health_board',available:true,resources:['naloxone'],indicators:['ambulance_naloxone_activity']}];let calls=0;const result=await geographicSource(async()=>{const day=++calls===1?'2024-01-01':'2024-01-08';return{state:'ready',total:2,data:[row('a',day,0,{boundary_type:'health_board',indicator_id:'ambulance_naloxone_activity',unit:'incident_count',period_basis:'week_beginning_monday',period_start:day,period_end:calls===1?'2024-01-07':'2024-01-14'})],metadata:{artifact_sha256:'h'}};},'naloxone',registry);assert.equal(calls,2);assert.equal(result.data.length,2);});
 
 test('backend registry names validate source-label aliases without inventing a crosswalk',()=>{const registered={...area('national','country'),name:'Scotland'};validateGeography([row('national','2024 Q1',1,{name:'Scotland',geography:'Scotland national total',boundary_type:'country'})],'police',[registered]);assert.throws(()=>validateGeography([row('national','2024 Q1',1,{name:'Other',geography:'Scotland national total',boundary_type:'country'})],'police',[registered]),/Unverified/);});
+
+test('naloxone classes come from registry boundaries and exclude non-boards before ranking',async()=>{
+ const labels=[['board-a','NHS Ayrshire & Arran','health_board','nhs_board',0],['board-b','NHS Borders','health_board','nhs_board',3],['national','Scotland','country','national',4],['unknown','Unknown','unknown','unknown',1]];
+ const registry=labels.map(([geography_id,name,boundary_type])=>({geography_id,name,boundary_type,resources:['naloxone'],indicators:['ambulance_naloxone_activity'],available:true}));
+ assert.deepEqual(labels.map(([,name,boundary])=>geographyClassForBoundary(boundary,name)),['nhs_board','nhs_board','national','unknown']);
+ const original=labels.map(([geography_id,geography,boundary_type,,observed_value])=>({geography_id,geography,boundary_type,indicator_id:'ambulance_naloxone_activity',unit:'incident_count',period_basis:'week_beginning_monday',source_id:'sas',source_path:'sas.csv',source_sha256:'h',period:'2024-01-01',period_start:'2024-01-01',period_end:'2024-01-07',observed_value}));
+ const result=await geographicSource(async(_path,params)=>({state:'ready',offset:params.offset,limit:params.limit,total:original.length,data:original,metadata:{artifact_sha256:'h'}}),'naloxone',registry);
+ assert.deepEqual(result.data.map(r=>r.geography_class),['nhs_board','nhs_board','national','unknown']);
+ assert.equal(result.data[2].geography_display,'National Aggregate — Scotland');
+ assert.equal(original.every(r=>!Object.hasOwn(r,'geography_class')),true);
+ const selection=geographicSelection(result.data,{boundary:'health_board',indicator:'ambulance_naloxone_activity',area:'board-a',from:'2024-01-01',to:'2024-01-01'});
+ assert.deepEqual(selection.rows.map(r=>r.geography_class),['nhs_board','nhs_board']);
+ const ranking=geographicRanking(result.data,{boundary:'health_board',indicator:'ambulance_naloxone_activity',period:'2024-01-01'});
+ assert.deepEqual(ranking.rows.map(r=>r.geography),['NHS Borders','NHS Ayrshire & Arran']);
+});

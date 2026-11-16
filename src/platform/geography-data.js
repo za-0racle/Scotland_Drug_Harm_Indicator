@@ -2,6 +2,9 @@
 import {completeSubstances,substanceSources} from './substance-data.js';
 import {completeComparison,verifyDefinitions,comparisonRange} from './comparison-data.js';
 import {periodInfo,periodSlots,prepareChart,seriesKey} from './chart-data.js';
+import {completeAnalyticalMortality} from './mortality-adapter.js';
+// Explicit source-level rollback: change to 'legacy'; never retry on validation failure.
+export const geographicPoliceContract='v1';
 export const geographicSources={
  nrs:{...mortalitySources.nrs,resource:'annual',unit:'deaths',basis:'calendar_year_of_registration'},
  police:{...mortalitySources.police,resource:'mortality_trends',unit:'count',basis:'calendar_quarter_legacy_10_day_adjustment'},
@@ -10,28 +13,35 @@ export const geographicSources={
 };
 export const boundaryLabel=boundary=>({council:'Local authority / council',police_division:'Police Scotland division',health_board:'NHS health board',country:'Scotland national total',locality:'Locality',national_testing_sample:'National forensic testing sample (not a territorial boundary)',study_sample:'ASSIST study sample (not a territorial boundary)',unknown:'Unassigned geography (not a region)'}[boundary]??boundary);
 export const mapState={state:'unavailable',message:'Map unavailable: no verified boundary geometry or geographic crosswalk is integrated with these observations. API geographic identifiers identify evidence scopes; they are not polygons. No decorative or inferred regions are drawn.'};
+export const geographyClassForBoundary=(boundary,name)=>boundary==='health_board'?'nhs_board':boundary==='country'&&name==='Scotland'?'national':boundary==='unknown'&&name==='Unknown'?'unknown':null;
+const classForBoundary={health_board:'nhs_board',country:'national',unknown:'unknown'};
+const belongsToNaloxoneBoundary=(row,boundary)=>row.indicator_id!=='ambulance_naloxone_activity'||row.geography_class===classForBoundary[boundary];
 export function sourcesForBoundary(registry,boundary){return Object.entries(geographicSources).filter(([,spec])=>registry.some(area=>area.boundary_type===boundary&&area.resources?.includes(spec.resource))).map(([id])=>id);}
 export function validateGeography(rows,source,registry){
  const spec=geographicSources[source];if(!spec)throw Error('Unknown geographic source.');const seen=new Set();
  for(const row of rows){const area=registry.find(a=>a.geography_id===row.geography_id);
   if(!area||area.boundary_type!==row.boundary_type||area.name!==(row.name??row.geography)||!area.resources?.includes(spec.resource)||!area.indicators?.includes(row.indicator_id)||row.unit!==spec.unit||row.period_basis!==spec.basis||!row.source_sha256||!row.source_path)throw Error('Unverified geographic identity, source, indicator, units or reporting definition.');
   if(spec.indicator&&row.indicator_id!==spec.indicator)throw Error('Incompatible geographic indicator.');
+  if(source==='naloxone'&&!geographyClassForBoundary(area.boundary_type,area.name))throw Error('Naloxone geography is not classified by the approved registry.');
   if(row.observed_value!=null&&(!Number.isFinite(row.observed_value)||row.observed_value<0||(row.unit!=='percent'&&!Number.isInteger(row.observed_value))||(row.unit==='percent'&&row.observed_value>100)))throw Error('Invalid geographic observation.');
   if(source==='naloxone'&&(periodInfo(row).kind!=='week'||row.period!==row.period_start||new Date(row.period_end+'T00:00:00Z').getTime()-new Date(row.period_start+'T00:00:00Z').getTime()!==6*86400000))throw Error('Unverified weekly reporting boundaries.');
   const key=seriesKey(row)+periodInfo(row).key;if(seen.has(key))throw Error('Duplicate geographic observation.');seen.add(key);
  }
  prepareChart(rows);
 }
-export async function geographicSource(api,source,registry){
- let result;if(['police','nrs'].includes(source))result=await completeMortality(api,source);else if(['forensic','assist','treatment'].includes(source))result=await completeSubstances(api,source);else if(source==='naloxone')result=await completeComparison(api,'/naloxone/activity');else throw Error('Unknown geographic source.');
- if(!['ready','empty'].includes(result.state))throw Error(result.message||'Geographic source unavailable.');validateGeography(result.data,source,registry);return result;
+export async function geographicSource(api,source,registry,{policeContract=geographicPoliceContract}={}){
+ if(!['v1','legacy'].includes(policeContract))throw Error('Unknown explicit police contract selection.');
+ let result;if(source==='police'&&policeContract==='v1')result=await completeAnalyticalMortality(api);else if(['police','nrs'].includes(source))result=await completeMortality(api,source);else if(['forensic','assist','treatment'].includes(source))result=await completeSubstances(api,source);else if(source==='naloxone')result=await completeComparison(api,'/naloxone/activity');else throw Error('Unknown geographic source.');
+ if(!['ready','empty'].includes(result.state))throw Error(result.message||'Geographic source unavailable.');validateGeography(result.data,source,registry);
+ if(source==='naloxone')return{...result,data:result.data.map(row=>{const area=registry.find(item=>item.geography_id===row.geography_id);const geography_class=geographyClassForBoundary(area.boundary_type,area.name);return{...row,geography_class,geography_display:geography_class==='national'?'National Aggregate — Scotland':geography_class==='unknown'?'Unknown':area.name};})};
+ return result;
 }
 export function geographicSelection(rows,{boundary,indicator,area,from,to}){
- const compatible=rows.filter(r=>r.boundary_type===boundary&&r.indicator_id===indicator),range=comparisonRange(compatible,from,to);
+ const compatible=rows.filter(r=>r.boundary_type===boundary&&r.indicator_id===indicator&&belongsToNaloxoneBoundary(r,boundary)),range=comparisonRange(compatible,from,to);
  return{...range,areaRows:range.rows.filter(r=>r.geography_id===area).sort((a,b)=>{const x=periodInfo(a).order,y=periodInfo(b).order;return typeof x==='number'&&typeof y==='number'?x-y:String(x).localeCompare(String(y));})};
 }
 export function geographicRanking(rows,{boundary,indicator,period}){
- const selected=rows.filter(r=>r.boundary_type===boundary&&r.indicator_id===indicator&&periodInfo(r).key===period);verifyDefinitions(selected);
+ const selected=rows.filter(r=>r.boundary_type===boundary&&r.indicator_id===indicator&&belongsToNaloxoneBoundary(r,boundary)&&periodInfo(r).key===period);verifyDefinitions(selected);
  if(new Set(selected.map(r=>r.geography_id)).size!==selected.length)throw Error('Duplicate geographic ranking rows.');
  const available=selected.filter(r=>Number.isFinite(r.observed_value)).sort((a,b)=>b.observed_value-a.observed_value||a.geography.localeCompare(b.geography));
  return{state:available.length>=2&&!['unknown','locality','study_sample','national_testing_sample','country'].includes(boundary)?'ready':'unavailable',rows:available,missing:selected.filter(r=>r.observed_value==null),period,message:'Fewer than two compatible territorial areas have observed values at this boundary and reporting period. National totals, samples and unassigned records are not peer regions. No boundary substitution or population-risk ranking is made.',label:'Raw source observations; counts are not population-adjusted risk.'};

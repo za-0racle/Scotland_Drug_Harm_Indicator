@@ -1,0 +1,810 @@
+{
+  "health": {
+    "http_status": 200,
+    "body": {
+      "state": "ready",
+      "kind": "metadata",
+      "data": [
+        {
+          "api": "ok",
+          "database": "checked separately by overview; not implied healthy",
+          "research_prototype": true
+        }
+      ],
+      "total": 1,
+      "offset": 0,
+      "limit": 100,
+      "metadata": {},
+      "message": ""
+    }
+  },
+  "geographies": {
+    "http_status": 200,
+    "body": {
+      "state": "ready",
+      "kind": "metadata",
+      "data": [
+        {
+          "geography_id": "council-3ecdbf4a0ff3",
+          "name": "Inverclyde",
+          "boundary_type": "council",
+          "resources": [
+            "annual"
+          ],
+          "indicators": [
+            "nrs_registered_drug_misuse_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "country-a246670dbf76",
+          "name": "Scotland",
+          "boundary_type": "country",
+          "resources": [
+            "annual",
+            "mortality_trends",
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity",
+            "nrs_registered_drug_misuse_deaths",
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-00ec1f226d9e",
+          "name": "NHS Borders",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-1b999f32fba3",
+          "name": "NHS Forth Valley",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-222f8bed5c7d",
+          "name": "NHS Greater Glasgow and Clyde",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone",
+            "treatment"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity",
+            "treatment:Benzodiazepines",
+            "treatment:Dissociatives",
+            "treatment:Gabapentinoids",
+            "treatment:Opioids (excluding treatment opioids)",
+            "treatment:Stimulants"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-2b3b59e3ae6f",
+          "name": "NHS Shetland",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-38654083cff2",
+          "name": "NHS Lothian",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-4893db875aa3",
+          "name": "NHS Lanarkshire",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-5945b291e44c",
+          "name": "NHS Ayrshire & Arran",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-673d784e6069",
+          "name": "NHS Highland",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-7f446d2ba8da",
+          "name": "NHS Western Isles",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-9169590bd4e2",
+          "name": "NHS Dumfries & Galloway",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-a1aadf55a1c1",
+          "name": "NHS Grampian",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-c0e91405c234",
+          "name": "NHS Orkney",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-ce0b64b8f0cf",
+          "name": "NHS Tayside",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "health_board-dc42c6c0276c",
+          "name": "NHS Fife",
+          "boundary_type": "health_board",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "locality-658b803d2fbf",
+          "name": "Greenock",
+          "boundary_type": "locality",
+          "resources": [],
+          "indicators": [],
+          "available": false,
+          "limitation": "No compatible Greenock-specific series; wider-area outcomes cannot be attributed to this locality"
+        },
+        {
+          "geography_id": "national_testing_sample-201309ca38dc",
+          "name": "Scotland forensic testing sample",
+          "boundary_type": "national_testing_sample",
+          "resources": [
+            "forensic"
+          ],
+          "indicators": [
+            "forensic:All Benzodiazepines",
+            "forensic:Dissociatives",
+            "forensic:Gabapentinoids",
+            "forensic:Opioids",
+            "forensic:Prescribable Benzodiazepines",
+            "forensic:Stimulants",
+            "forensic:Street Benzodiazepines"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-082ff7f7598d",
+          "name": "U: Ayrshire",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-122fb6ace418",
+          "name": "A: North East",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-82b0c62f778d",
+          "name": "L: Argyll & West Dunbartonshire",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-9717e9c5d6d8",
+          "name": "Q: Lanarkshire",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-a6f527775c32",
+          "name": "G: Greater Glasgow",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-a7d76a0ca49e",
+          "name": "D: Tayside",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-acbfe6130e6b",
+          "name": "E: Edinburgh City",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-b10b37092350",
+          "name": "P: Fife",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-ba1f2346f3ed",
+          "name": "K: Renfrewshire and Inverclyde",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-c883e38ba7b2",
+          "name": "N: Highlands & Islands",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-d4fc3849469e",
+          "name": "V: Dumfries & Galloway",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-f8557cb3bff2",
+          "name": "C: Forth Valley",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "police_division-ff361d5d55a3",
+          "name": "J: The Lothians & Scottish Borders",
+          "boundary_type": "police_division",
+          "resources": [
+            "mortality_trends"
+          ],
+          "indicators": [
+            "suspected_deaths"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "study_sample-998aab21ba43",
+          "name": "ASSIST participating emergency-department sample",
+          "boundary_type": "study_sample",
+          "resources": [
+            "assist"
+          ],
+          "indicators": [
+            "assist:Benzodiazepine",
+            "assist:Cannabinoid",
+            "assist:Gabapentin/Pregabalin",
+            "assist:Opioid",
+            "assist:Other",
+            "assist:Stimulant"
+          ],
+          "available": true
+        },
+        {
+          "geography_id": "unknown-b764cdc0eab7",
+          "name": "Unknown",
+          "boundary_type": "unknown",
+          "resources": [
+            "naloxone"
+          ],
+          "indicators": [
+            "ambulance_naloxone_activity"
+          ],
+          "available": true
+        }
+      ],
+      "total": 33,
+      "offset": 0,
+      "limit": 33,
+      "metadata": {},
+      "message": ""
+    }
+  },
+  "indicators": {
+    "http_status": 200,
+    "body": {
+      "state": "ready",
+      "kind": "metadata",
+      "data": [
+        {
+          "indicator_id": "suspected_deaths",
+          "resource": "mortality_trends",
+          "unit": "count",
+          "period_basis": "calendar_quarter_legacy_10_day_adjustment",
+          "categories": []
+        },
+        {
+          "indicator_id": "forensic:Opioids",
+          "resource": "forensic",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "categories": [
+            "Opioids"
+          ]
+        },
+        {
+          "indicator_id": "forensic:Prescribable Benzodiazepines",
+          "resource": "forensic",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "categories": [
+            "Prescribable Benzodiazepines"
+          ]
+        },
+        {
+          "indicator_id": "forensic:Street Benzodiazepines",
+          "resource": "forensic",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "categories": [
+            "Street Benzodiazepines"
+          ]
+        },
+        {
+          "indicator_id": "forensic:All Benzodiazepines",
+          "resource": "forensic",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "categories": [
+            "All Benzodiazepines"
+          ]
+        },
+        {
+          "indicator_id": "forensic:Dissociatives",
+          "resource": "forensic",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "categories": [
+            "Dissociatives"
+          ]
+        },
+        {
+          "indicator_id": "forensic:Gabapentinoids",
+          "resource": "forensic",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "categories": [
+            "Gabapentinoids"
+          ]
+        },
+        {
+          "indicator_id": "forensic:Stimulants",
+          "resource": "forensic",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "categories": [
+            "Stimulants"
+          ]
+        },
+        {
+          "indicator_id": "assist:Benzodiazepine",
+          "resource": "assist",
+          "unit": "percent",
+          "period_basis": "source_study_period_not_calendar_quarter",
+          "categories": [
+            "Benzodiazepine"
+          ]
+        },
+        {
+          "indicator_id": "assist:Cannabinoid",
+          "resource": "assist",
+          "unit": "percent",
+          "period_basis": "source_study_period_not_calendar_quarter",
+          "categories": [
+            "Cannabinoid"
+          ]
+        },
+        {
+          "indicator_id": "assist:Gabapentin/Pregabalin",
+          "resource": "assist",
+          "unit": "percent",
+          "period_basis": "source_study_period_not_calendar_quarter",
+          "categories": [
+            "Gabapentin/Pregabalin"
+          ]
+        },
+        {
+          "indicator_id": "assist:Opioid",
+          "resource": "assist",
+          "unit": "percent",
+          "period_basis": "source_study_period_not_calendar_quarter",
+          "categories": [
+            "Opioid"
+          ]
+        },
+        {
+          "indicator_id": "assist:Other",
+          "resource": "assist",
+          "unit": "percent",
+          "period_basis": "source_study_period_not_calendar_quarter",
+          "categories": [
+            "Other"
+          ]
+        },
+        {
+          "indicator_id": "assist:Stimulant",
+          "resource": "assist",
+          "unit": "percent",
+          "period_basis": "source_study_period_not_calendar_quarter",
+          "categories": [
+            "Stimulant"
+          ]
+        },
+        {
+          "indicator_id": "treatment:Benzodiazepines",
+          "resource": "treatment",
+          "unit": "detection_count",
+          "period_basis": "calendar_month",
+          "categories": [
+            "Benzodiazepines"
+          ]
+        },
+        {
+          "indicator_id": "treatment:Dissociatives",
+          "resource": "treatment",
+          "unit": "detection_count",
+          "period_basis": "calendar_month",
+          "categories": [
+            "Dissociatives"
+          ]
+        },
+        {
+          "indicator_id": "treatment:Gabapentinoids",
+          "resource": "treatment",
+          "unit": "detection_count",
+          "period_basis": "calendar_month",
+          "categories": [
+            "Gabapentinoids"
+          ]
+        },
+        {
+          "indicator_id": "treatment:Opioids (excluding treatment opioids)",
+          "resource": "treatment",
+          "unit": "detection_count",
+          "period_basis": "calendar_month",
+          "categories": [
+            "Opioids (excluding treatment opioids)"
+          ]
+        },
+        {
+          "indicator_id": "treatment:Stimulants",
+          "resource": "treatment",
+          "unit": "detection_count",
+          "period_basis": "calendar_month",
+          "categories": [
+            "Stimulants"
+          ]
+        },
+        {
+          "indicator_id": "ambulance_naloxone_activity",
+          "resource": "naloxone",
+          "unit": "incident_count",
+          "period_basis": "week_beginning_monday",
+          "categories": []
+        },
+        {
+          "indicator_id": "nrs_registered_drug_misuse_deaths",
+          "resource": "annual",
+          "unit": "deaths",
+          "period_basis": "calendar_year_of_registration",
+          "categories": []
+        }
+      ],
+      "total": 21,
+      "offset": 0,
+      "limit": 100,
+      "metadata": {},
+      "message": ""
+    }
+  },
+  "methodology": {
+    "http_status": 200,
+    "body": {
+      "state": "ready",
+      "kind": "metadata",
+      "data": [
+        {
+          "research_prototype": true,
+          "foi": "Pending; missing alerts never mean no official alert",
+          "methods": [
+            "Prior-only robust median/MAD count screen",
+            "Conditional Gamma–Poisson, NB2 moments, seasonal and trend comparators",
+            "Historical-origin naive forecasting",
+            "NRS registered annual counts and published five-year age-standardised rates"
+          ],
+          "limitations": [
+            "No PHS endorsement or operational validation",
+            "No Greenock outcomes inferred",
+            "Count detections are not prevalence; naloxone is not confirmed overdose incidence",
+            "Frozen vintages are not current conditions"
+          ],
+          "gaps": [
+            {
+              "gap": "forensic_denominator",
+              "affected_analysis": "Forensic counts cannot establish positivity/prevalence",
+              "potential_official_source": "Original forensic laboratory quarterly tested-sample totals and panel metadata",
+              "available_workaround": "Historical frozen shares only, not extended beyond 2024",
+              "status": "unresolved",
+              "interpretation_consequence": "No denominator or annual-to-quarter conversion inferred"
+            },
+            {
+              "gap": "treatment_denominator",
+              "affected_analysis": "Treatment detection counts depend on tests/cohort",
+              "potential_official_source": "PHS RADAR / NHS GG&C laboratory urine-test counts by month and category",
+              "available_workaround": "Compare recorded counts with explicit testing-exposure caveat",
+              "status": "unresolved",
+              "interpretation_consequence": "SDMD treatment assessment counts are a different outcome and cannot supply this denominator"
+            },
+            {
+              "gap": "assist_periods_samples",
+              "affected_analysis": "ASSIST percentages lack exact interval and sample size",
+              "potential_official_source": "PHS ASSIST study period recruitment dates and tested n, by site/panel",
+              "available_workaround": "Keep source study labels and explicit insufficient_data",
+              "status": "unresolved",
+              "interpretation_consequence": "Rounded percentages do not uniquely determine n; no reverse-engineering"
+            },
+            {
+              "gap": "category_panel_changes",
+              "affected_analysis": "Broad substance groups overlap and tests may change",
+              "potential_official_source": "Laboratory panel/version metadata and PHS technical notes",
+              "available_workaround": "Explicit mapping dictionary, unmatched/overlap status and no sum of categories",
+              "status": "partially_resolved",
+              "interpretation_consequence": "Engineering mappings do not establish temporal panel equivalence"
+            },
+            {
+              "gap": "naloxone_recording",
+              "affected_analysis": "Weekly counts may cross a recording-system change",
+              "potential_official_source": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-quarterly-report/rapid-action-drug-alerts-and-response-radar-quarterly-report-january-2025/",
+              "available_workaround": "Mark April 2024 rollout context; do not splice or adjust counts",
+              "status": "partially_resolved",
+              "interpretation_consequence": "Official January 2025 continuity notes identify rollout; board dates/effect magnitude still unknown"
+            },
+            {
+              "gap": "mortality_vintage",
+              "affected_analysis": "Legacy and Databelt definitions/revisions may differ",
+              "potential_official_source": "analysis/phase3/official_source_review.json; Police Scotland methodology",
+              "available_workaround": "Keep frozen legacy vintage; no later incompatible append",
+              "status": "unresolved",
+              "interpretation_consequence": "Registered NRS deaths are not a replacement suspected-death numerator"
+            },
+            {
+              "gap": "publication_dates",
+              "affected_analysis": "Historical warning availability cannot be reconstructed",
+              "potential_official_source": "Original release archives and extract manifests by source",
+              "available_workaround": "Keep unknown dates; retrospective comparisons only",
+              "status": "unresolved",
+              "interpretation_consequence": "January 2025 report publication date does not date the saved 2026 CSV vintage"
+            },
+            {
+              "gap": "geographic_population",
+              "affected_analysis": "No verified Greenock series or compatible rate join",
+              "potential_official_source": "NRS council tables/population boundary metadata; local aggregate release if available",
+              "available_workaround": "Wider-area labels and dashboard no-local-data state",
+              "status": "partially_resolved",
+              "interpretation_consequence": "Health-board populations and council treatment counts cannot normalise police-division deaths"
+            },
+            {
+              "gap": "foi_alert_reference",
+              "affected_analysis": "No complete external alert reference",
+              "potential_official_source": "Pending PHS FOI response",
+              "available_workaround": "Local staging validator, quarantine, no-alert negatives forbidden, metrics gate closed",
+              "status": "unresolved",
+              "interpretation_consequence": "No real response received or staged"
+            },
+            {
+              "gap": "blocked_public_download",
+              "affected_analysis": "New aggregate vintage not acquired",
+              "potential_official_source": "analysis/phase3/acquire_radar.mjs and official PHS dashboard",
+              "available_workaround": "Continue saved supported data; source-level harmonisation required",
+              "status": "unresolved",
+              "interpretation_consequence": "Earlier approval-review limit not bypassed or retried"
+            }
+          ]
+        }
+      ],
+      "total": 1,
+      "offset": 0,
+      "limit": 100,
+      "metadata": {},
+      "message": ""
+    }
+  },
+  "validation/status": {
+    "http_status": 200,
+    "body": {
+      "state": "ready",
+      "kind": "metadata",
+      "data": [
+        {
+          "foi_status": "pending",
+          "external_alert_metrics": "unavailable",
+          "prospective_validation": false,
+          "internal_robustness": "Parameter/model sensitivity only; not external event validation",
+          "official_alerts": "Not populated or inferred from missing records",
+          "operational_warning_service": false
+        }
+      ],
+      "total": 1,
+      "offset": 0,
+      "limit": 100,
+      "metadata": {},
+      "message": ""
+    }
+  },
+  "reports": {
+    "http_status": 200,
+    "body": {
+      "state": "ready",
+      "kind": "metadata",
+      "data": [
+        {
+          "title": "Geographic case study",
+          "resource": "case_study"
+        },
+        {
+          "title": "Count-model comparison",
+          "resource": "model_metrics"
+        },
+        {
+          "title": "Source quality gaps",
+          "resource": "gaps"
+        },
+        {
+          "title": "Historical forecast",
+          "resource": "forecast"
+        }
+      ],
+      "total": 4,
+      "offset": 0,
+      "limit": 100,
+      "metadata": {},
+      "message": ""
+    }
+  }
+}

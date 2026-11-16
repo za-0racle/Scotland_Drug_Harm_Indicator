@@ -83,3 +83,13 @@ Final browser outcome and screenshot evidence are appended after execution.
 
 ## Remaining limitations
 No geometry/crosswalk or official identifier-to-polygon mapping is admitted. Only Inverclyde council and Scotland have integrated NRS geographic data; other councils and Greenock do not gain synthetic outcomes. Comparable denominators are not available for annual local crude rates. Health-board activity/detection measures and selected toxicology cohorts do not measure community prevalence or confirmed overdose incidence. Published ASRs retain their historical source vintage and overlapping-window/nested-area limitations. Coverage is limited to the existing approved sources, not every Scottish geographic measure. First load retrieves complete approved histories to establish coverage; table pages do not limit analysis. A failed geographic registry bootstrap remains an explicit shell error rather than a fabricated fallback. The existing localhost:5173 service was not repaired or replaced by this task.
+
+## Final outcome and screenshots
+The final full browser suite passed: **35 passed, 0 failed (6.6 minutes)**. The main application was checked from its production build; the explicit localhost API tests used the isolated port 55173. All 83 frontend tests and the production build passed as recorded above.
+
+Final screenshot artifacts, captured with reduced motion and visually inspected:
+- Desktop, 1440 × 1100 viewport: `test-results/task08-geography-desktop.png`
+- Tablet, 900 × 1000 viewport: `test-results/task08-geography-tablet.png`
+- Mobile, 390 × 844 viewport: `test-results/task08-geography-mobile.png`
+
+Responsive assertions verify no document-wide horizontal overflow; tables retain their own scrolling. Drawer focus, reverse-Tab wrapping, Escape dismissal and focus restoration pass. No required Task 08 implementation work remains. Work stopped after Geographic Explorer; later analytical screens were only visited by existing regression tests.

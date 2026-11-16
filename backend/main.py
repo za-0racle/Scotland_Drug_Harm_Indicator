@@ -11,6 +11,8 @@ from backend.schemas import Envelope,Filters
 from backend.services.platform import PlatformService,QueryError
 from backend.repositories.artifacts import ArtifactError,CATALOG
 from backend.repositories.supabase import DatabaseError
+from backend.api.mortality_v1 import router as mortality_v1_router
+from backend.api.forensic_v1 import router as forensic_v1_router
 
 logger=logging.getLogger('research_api')
 
@@ -18,6 +20,8 @@ logger=logging.getLogger('research_api')
 def create_app(service=None,settings=None):
     app=FastAPI(title='Scotland Drug Harm Intelligence — research API',version='1.0.0')
     app.state.service=service or PlatformService();settings=settings or Settings.load()
+    app.include_router(mortality_v1_router)
+    app.include_router(forensic_v1_router)
     app.add_middleware(CORSMiddleware,allow_origins=list(settings.origins),allow_methods=['GET'],allow_headers=['Accept','Content-Type'],allow_credentials=False)
 
     @app.exception_handler(QueryError)
@@ -71,6 +75,18 @@ def create_app(service=None,settings=None):
 
     @app.get('/api/v1/monitoring/results',response_model=Envelope)
     def monitoring(filters:Annotated[Filters,Query()]):return app.state.service.db('indicator_results',filters)
+
+    @app.get('/api/v1/database/v1/data-sources',response_model=Envelope)
+    def database_sources(filters:Annotated[Filters,Query()]):
+        return app.state.service.database_snapshot('data_sources',filters)
+
+    @app.get('/api/v1/database/v1/geographic-areas',response_model=Envelope)
+    def database_geographic_areas(filters:Annotated[Filters,Query()]):
+        return app.state.service.database_snapshot('geographic_areas',filters)
+
+    @app.get('/api/v1/database/v1/naloxone-activity',response_model=Envelope)
+    def database_naloxone_activity(filters:Annotated[Filters,Query()]):
+        return app.state.service.database_snapshot('naloxone_activity',filters)
 
     routes={'sources/gaps':'gaps','sources':'registry','mortality/annual':'annual','toxicology/forensic':'forensic','toxicology/assist':'assist','toxicology/treatment':'treatment',
             'naloxone/activity':'naloxone','anomalies/runs':'runs','anomalies/models':'model_metrics',

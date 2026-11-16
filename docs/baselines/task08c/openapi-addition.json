@@ -1,0 +1,724 @@
+{
+  "path": {
+    "get": {
+      "tags": [
+        "Analytical contract v1"
+      ],
+      "summary": "Mortality Trends V1",
+      "operationId": "mortality_trends_v1_api_v1_analytical_v1_mortality_trends_get",
+      "parameters": [
+        {
+          "name": "offset",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "integer",
+            "maximum": 1000000,
+            "minimum": 0,
+            "default": 0,
+            "title": "Offset"
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "integer",
+            "maximum": 1000,
+            "minimum": 1,
+            "default": 100,
+            "title": "Limit"
+          }
+        },
+        {
+          "name": "expected_collection",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Collection"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MortalityPage"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "schemas": {
+    "ArtifactDefinition": {
+      "properties": {
+        "resource": {
+          "type": "string",
+          "const": "mortality_trends",
+          "title": "Resource"
+        },
+        "analytical_version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Analytical Version"
+        },
+        "artifact_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Artifact Sha256"
+        },
+        "source_path": {
+          "type": "string",
+          "const": "analysis/phase4/outputs/mortality_quarterly.csv",
+          "title": "Source Path"
+        },
+        "provenance_manifest": {
+          "type": "string",
+          "const": "analysis/phase4/outputs/run_manifest.json",
+          "title": "Provenance Manifest"
+        },
+        "storage": {
+          "type": "string",
+          "const": "approved_local_artifact",
+          "title": "Storage"
+        },
+        "executed_at_utc": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Executed At Utc"
+        },
+        "limitations": {
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "type": "array",
+          "title": "Limitations"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "resource",
+        "analytical_version",
+        "artifact_sha256",
+        "source_path",
+        "provenance_manifest",
+        "storage",
+        "executed_at_utc",
+        "limitations"
+      ],
+      "title": "ArtifactDefinition"
+    },
+    "GeographyScope": {
+      "properties": {
+        "geography_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Geography Id"
+        },
+        "canonical_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Canonical Name"
+        },
+        "original_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Original Name"
+        },
+        "boundary_type": {
+          "type": "string",
+          "enum": [
+            "country",
+            "police_division"
+          ],
+          "title": "Boundary Type"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "geography_id",
+        "canonical_name",
+        "original_name",
+        "boundary_type"
+      ],
+      "title": "GeographyScope"
+    },
+    "IndicatorDefinition": {
+      "properties": {
+        "indicator_id": {
+          "type": "string",
+          "const": "suspected_deaths",
+          "title": "Indicator Id"
+        },
+        "definition": {
+          "type": "string",
+          "const": "Police Scotland provisional originally suspected drug deaths; not NRS registered deaths or population-adjusted risk.",
+          "title": "Definition"
+        },
+        "unit": {
+          "type": "string",
+          "const": "count",
+          "title": "Unit"
+        },
+        "period_basis": {
+          "type": "string",
+          "const": "calendar_quarter_legacy_10_day_adjustment",
+          "title": "Period Basis"
+        },
+        "original_reporting_qualification": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Original Reporting Qualification"
+        },
+        "scientific_status": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Scientific Status"
+        },
+        "calculation_method": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Calculation Method"
+        },
+        "year_comparison_basis": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Year Comparison Basis"
+        },
+        "rolling_periods": {
+          "type": "integer",
+          "exclusiveMinimum": 0.0,
+          "title": "Rolling Periods"
+        },
+        "reference_periods": {
+          "type": "integer",
+          "exclusiveMinimum": 0.0,
+          "title": "Reference Periods"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "indicator_id",
+        "definition",
+        "unit",
+        "period_basis",
+        "original_reporting_qualification",
+        "scientific_status",
+        "calculation_method",
+        "year_comparison_basis",
+        "rolling_periods",
+        "reference_periods"
+      ],
+      "title": "IndicatorDefinition"
+    },
+    "MortalityObservation": {
+      "properties": {
+        "observation_id": {
+          "type": "string",
+          "pattern": "^mortality-observation:v1:[0-9a-f]{64}$",
+          "title": "Observation Id"
+        },
+        "geography": {
+          "$ref": "#/components/schemas/GeographyScope"
+        },
+        "period": {
+          "$ref": "#/components/schemas/Quarter"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0.0
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "availability_status": {
+          "type": "string",
+          "enum": [
+            "observed",
+            "missing_or_suppressed"
+          ],
+          "title": "Availability Status"
+        },
+        "research_context": {
+          "$ref": "#/components/schemas/ResearchContext"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "observation_id",
+        "geography",
+        "period",
+        "value",
+        "availability_status",
+        "research_context"
+      ],
+      "title": "MortalityObservation"
+    },
+    "MortalityPage": {
+      "properties": {
+        "contract_version": {
+          "type": "string",
+          "const": "mortality-trends/1.0.0",
+          "title": "Contract Version",
+          "default": "mortality-trends/1.0.0"
+        },
+        "source": {
+          "$ref": "#/components/schemas/SourceDefinition"
+        },
+        "indicator": {
+          "$ref": "#/components/schemas/IndicatorDefinition"
+        },
+        "artifact": {
+          "$ref": "#/components/schemas/ArtifactDefinition"
+        },
+        "research_metadata": {
+          "$ref": "#/components/schemas/ResearchMetadata"
+        },
+        "pagination": {
+          "$ref": "#/components/schemas/Pagination"
+        },
+        "observations": {
+          "items": {
+            "$ref": "#/components/schemas/MortalityObservation"
+          },
+          "type": "array",
+          "title": "Observations"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "source",
+        "indicator",
+        "artifact",
+        "research_metadata",
+        "pagination",
+        "observations"
+      ],
+      "title": "MortalityPage"
+    },
+    "Pagination": {
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0.0,
+          "title": "Total"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0.0,
+          "title": "Offset"
+        },
+        "limit": {
+          "type": "integer",
+          "maximum": 1000.0,
+          "minimum": 1.0,
+          "title": "Limit"
+        },
+        "returned": {
+          "type": "integer",
+          "minimum": 0.0,
+          "title": "Returned"
+        },
+        "next_offset": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0.0
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Next Offset"
+        },
+        "page_is_complete_collection": {
+          "type": "boolean",
+          "title": "Page Is Complete Collection"
+        },
+        "collection_token": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Collection Token"
+        },
+        "ordering": {
+          "type": "string",
+          "const": "original_artifact_row_order",
+          "title": "Ordering",
+          "default": "original_artifact_row_order"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "total",
+        "offset",
+        "limit",
+        "returned",
+        "next_offset",
+        "page_is_complete_collection",
+        "collection_token"
+      ],
+      "title": "Pagination"
+    },
+    "Quarter": {
+      "properties": {
+        "year": {
+          "type": "integer",
+          "maximum": 2100.0,
+          "minimum": 1900.0,
+          "title": "Year"
+        },
+        "quarter": {
+          "type": "integer",
+          "maximum": 4.0,
+          "minimum": 1.0,
+          "title": "Quarter"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Label"
+        },
+        "ordinal": {
+          "type": "integer",
+          "title": "Ordinal"
+        },
+        "period_start": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Period Start"
+        },
+        "period_end": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Period End"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "year",
+        "quarter",
+        "label",
+        "ordinal",
+        "period_start",
+        "period_end"
+      ],
+      "title": "Quarter"
+    },
+    "ResearchContext": {
+      "properties": {
+        "share_of_national_pct": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Share Of National Pct"
+        },
+        "previous_value": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0.0
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Previous Value"
+        },
+        "period_change": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Period Change"
+        },
+        "period_change_pct": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Period Change Pct"
+        },
+        "year_reference_value": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0.0
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Year Reference Value"
+        },
+        "year_change_pct": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Year Change Pct"
+        },
+        "rolling_average": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Rolling Average"
+        },
+        "historical_reference_mean": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Historical Reference Mean"
+        },
+        "reference_change_pct": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Reference Change Pct"
+        },
+        "direction": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Direction"
+        },
+        "percentage_point_change": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Percentage Point Change"
+        },
+        "comparison_status": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Comparison Status"
+        },
+        "publication_lag_days": {
+          "type": "integer",
+          "minimum": 0.0,
+          "title": "Publication Lag Days"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "share_of_national_pct",
+        "previous_value",
+        "period_change",
+        "period_change_pct",
+        "year_reference_value",
+        "year_change_pct",
+        "rolling_average",
+        "historical_reference_mean",
+        "reference_change_pct",
+        "direction",
+        "percentage_point_change",
+        "comparison_status",
+        "publication_lag_days"
+      ],
+      "title": "ResearchContext",
+      "description": "Existing frozen descriptive fields, carried unchanged; never recomputed."
+    },
+    "ResearchMetadata": {
+      "properties": {
+        "analysis_as_of": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Analysis As Of"
+        },
+        "data_age_days": {
+          "type": "integer",
+          "minimum": 0.0,
+          "title": "Data Age Days"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "analysis_as_of",
+        "data_age_days"
+      ],
+      "title": "ResearchMetadata"
+    },
+    "SourceDefinition": {
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Id"
+        },
+        "source_version": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Version"
+        },
+        "source_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Path"
+        },
+        "source_url": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Url"
+        },
+        "publication_date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Publication Date"
+        },
+        "publication_status": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Publication Status"
+        },
+        "source_data_cutoff": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Source Data Cutoff"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "source_id",
+        "source_version",
+        "source_path",
+        "source_url",
+        "publication_date",
+        "publication_status",
+        "source_data_cutoff"
+      ],
+      "title": "SourceDefinition"
+    }
+  }
+}

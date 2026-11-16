@@ -1,0 +1,361 @@
+{
+  "task08b_original_files": 293,
+  "unchanged_since_task08b": 290,
+  "changed_since_task08b": [
+    "backend/main.py",
+    "src/api/client.js",
+    "src/platform/geography-data.js"
+  ],
+  "task08d_existing_application_changes": [
+    "src/api/client.js",
+    "src/platform/geography-data.js"
+  ],
+  "task08c_integration_unchanged": true,
+  "previous_task_files_checked": 42,
+  "previous_task_files_changed": [],
+  "manifest_matches": 85,
+  "manifest_checks": [
+    {
+      "path": "analysis/outputs/diagnostics.json",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/forecast.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/forecast.json",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/model_metrics.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/model_metrics.json",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/rolling_origin_predictions.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/selected_model.json",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/validated_mortality.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/assist_percentages.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/findings.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/forensic_counts.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/frozen_forensic_shares.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/mortality_annual.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/mortality_quarterly.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/naloxone_week_start_month.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/naloxone_weekly.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/quality_report.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/treatment_counts.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/anomaly_results.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/evidence_assessments.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/FINDINGS.md",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/monitoring_configurations.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/quality_report.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/sensitivity_results.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/signal_frequencies.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/source_provenance.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/cross_source_candidates.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/cross_source_evidence.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/enhanced_model_results.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/foi_staging_specification.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/geographic_evidence.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/local_source_inventory.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/model_evaluation_metrics.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/observation_index.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/official_source_review.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/robustness_comparisons.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/signal_runs.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/source_compatibility_registry.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/source_gap_register.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/statistical_diagnostics.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/summary.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/zero_baseline_review.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/annual_population_rates.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/dashboard_data_contract.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/data_quality_report.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/geographic_evidence_hierarchy.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/inverclyde_trends.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/published_five_year_rates.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/published_rate_comparisons.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/registered_scotland_comparisons.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/research_findings.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/RESEARCH_FINDINGS.md",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/scotland_trends.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/source_provenance.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/validated_geographic_observations.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/annual_changes.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/broad_category_context.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/communication_chronology.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/definition_comparisons.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/findings.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/observations.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/quality_report.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/selected_substance_results.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/source_metadata.json",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/source_totals.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/substance_inventory.csv",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/vintage_comparisons.csv",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/naloxone_programme_q4_2022_tables.xlsx",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/naloxone_programme_q4_2025_tables.xlsx",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/ndrdd_data_tables_2021-2022.xlsx",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nhs_health_board_codes_hb14_hb19.csv",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nhs_scotland_population_estimates_hb2019.csv",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_2023_extra_tables.xlsx",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_2023_sub1.xlsx",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_2023_sub2.xlsx",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_2024_additional_tables.xlsx",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_2024_data.xlsx",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_deaths_by_individual_substance.xlsx",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/police_suspected_drug_deaths_Jan2017-Dec2025.xlsx",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/radar_intelligence_reports_all.csv",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/radar_sas_naloxone_weekly_by_board.csv",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/radar_toxicology_assist.csv",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/radar_toxicology_treatment_glasgow.csv",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/sas_foi_215-26_naloxone.xls",
+      "match": true
+    }
+  ],
+  "unexpected_changes": [],
+  "generated_files": "Builds, screenshots, bytecode and test scratch are excluded; no research recalculation."
+}

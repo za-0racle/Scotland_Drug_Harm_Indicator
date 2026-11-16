@@ -7,6 +7,13 @@ from backend.repositories.artifacts import ArtifactRepository,ArtifactError,CATA
 from backend.repositories.supabase import SupabaseRepository,DatabaseError
 
 BASE=['mortality_trends','forensic','assist','treatment','naloxone','annual']
+HEALTH_BOARD_LABELS=frozenset({
+    'NHS Ayrshire & Arran','NHS Ayrshire and Arran','NHS Borders','NHS Dumfries & Galloway',
+    'NHS Dumfries and Galloway','NHS Fife','NHS Forth Valley','NHS Grampian',
+    'NHS Greater Glasgow & Clyde','NHS Greater Glasgow and Clyde','NHS Highland',
+    'NHS Lanarkshire','NHS Lothian','NHS Orkney','NHS Shetland','NHS Tayside',
+    'NHS Western Isles',
+})
 
 
 class QueryError(Exception):pass
@@ -16,8 +23,15 @@ def geography(name,boundary=None):
     if name in ('Scotland','Scotland national total'):name='Scotland';boundary='country'
     elif name in ('NHS Greater Glasgow & Clyde','NHS Greater Glasgow and Clyde'):name='NHS Greater Glasgow and Clyde';boundary='health_board'
     elif not boundary:
-        boundary='health_board' if name.startswith('NHS ') else 'police_division' if ': ' in name else 'national_testing_sample' if name=='Scotland forensic testing sample' else 'study_sample' if name.startswith('ASSIST') else 'unknown'
+        boundary='health_board' if name in HEALTH_BOARD_LABELS else 'police_division' if ': ' in name else 'national_testing_sample' if name=='Scotland forensic testing sample' else 'study_sample' if name.startswith('ASSIST') else 'unknown'
     return dict(geography_id=boundary+'-'+hashlib.sha256(name.encode()).hexdigest()[:12],name=name,boundary_type=boundary)
+
+
+def geography_class(area):
+    if area.get('boundary_type')=='health_board':return 'nhs_board'
+    if area.get('boundary_type')=='country' and area.get('name')=='Scotland':return 'national'
+    if area.get('boundary_type')=='unknown' and area.get('name')=='Unknown':return 'unknown'
+    return None
 
 
 class PlatformService:
@@ -110,6 +124,37 @@ class PlatformService:
         return Envelope(state='ready' if rows else 'empty',kind='database_observation',data=rows[filters.offset:filters.offset+filters.limit],total=len(rows),offset=filters.offset,limit=filters.limit,
                         metadata=dict(table=table,storage='Supabase REST via server-side anon credential',analytical_version=None,limitations=['Existing RLS preserved; empty access does not establish no observations','Only reviewed mortality/configuration/result tables queried']),
                         message='' if rows else 'No accessible rows: table may be empty or RLS may withhold rows; not a successful data load')
+
+    def database_snapshot(self,table,filters):
+        if table not in ('data_sources','geographic_areas','naloxone_activity'):
+            raise QueryError('Database resource is outside the approved read-only scope')
+        rows,total=self.database.read_page(table,filters.offset,filters.limit)
+        metadata=dict(resource=table,storage='live Supabase read-only snapshot',database_contract_version='database-v1',
+                      returned= len(rows),limitations=['Live database representation; distinct from frozen Phase 4/5 analytical artifacts'])
+        if table=='naloxone_activity':
+            sources,source_total=self.database.read_page('data_sources',0,100)
+            matches=[item for item in sources if item['dataset_name']=='radar_sas_naloxone_weekly_by_board.csv']
+            if source_total>len(sources) or len(matches)!=1:
+                raise DatabaseError('Naloxone source provenance is unavailable or ambiguous')
+            source=matches[0]
+            metadata.update(source_id=source['source_id'],source_dataset=source['dataset_name'],
+                            source_sha256=source['source_sha256'],source_url=source.get('source_url'))
+            for row in rows:
+                area=geography(row['reported_board'])
+                registered=self.registry.get(area['geography_id'])
+                category=geography_class(registered or {})
+                if not registered or not registered.get('available') or 'naloxone' not in registered.get('resources',[]) or category not in ('nhs_board','national','unknown'):
+                    raise DatabaseError('Naloxone geography does not match the approved source registry')
+                row.update(geography_id=area['geography_id'],boundary_type=registered['boundary_type'],
+                           geography_class=category,
+                           geography_display='National Aggregate — Scotland' if category=='national' else
+                               'Unknown' if category=='unknown' else registered['name'])
+        elif table=='geographic_areas':
+            for row in rows:
+                row['geography_class']={'health_board':'nhs_board','country':'national','unknown':'unknown'}.get(row['area_type'])
+        return Envelope(state='ready' if rows else 'empty',kind='database_observation',data=rows,total=total,
+                        offset=filters.offset,limit=filters.limit,metadata=metadata,
+                        message='' if rows else 'No accessible rows: the result may be empty or RLS may withhold rows')
 
     def overview(self):
         summary=self.artifacts.load('summary')[0][0]

@@ -1,0 +1,55 @@
+node.exe : [WebServer] INFO:     Started server process [6044]
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([WebServer] INF... process [6044]:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[WebServer] (node:18240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:14348) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:29952) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 e2e\mortality-adapter.spec.js:8:1 › Geographic police feed pins full history and preserves exact JSON/CSV exports and mobile profile focus (12.7s)
+(node:31728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 e2e\mortality-adapter.spec.js:24:1 › invalid analytical contract is unavailable without legacy fallback; independent sources and retry survive (10.0s)
+  ok 3 e2e\mortality-adapter.spec.js:32:1 › Mortality Analytics remains legacy and late Geographic responses cannot replace another screen (2.9s)
+
+
+  1) e2e\mortality-adapter.spec.js:8:1 › Geographic police feed pins full history and preserves exact JSON/CSV exports and mobile profile focus 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      17 |  const csvDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export area history CSV',exact:true}).click();const csv=await readFile(await(await csvDownload).path(),'utf8');expect(csv).toBe(mortalityCsv(expected,json.metadata));
+      18 |  await page.locator('#geo-from').selectOption('2023 Q1');await expect(page.locator('#geo-trend')).toContainText('2023 Q1');
+    > 19 |  await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+         |                                                                                                                                       ^
+      20 |  await page.locator('#geo-profile').click();await expect(page.locator('.geo-drawer')).toBeVisible();await page.keyboard.press('Escape');await expect(page.locator('#geo-profile')).toBeFocused();
+      21 |  await page.screenshot({path:'test-results/task08d-police-mobile.png',fullPage:true});
+      22 | });
+        at C:\Users\User\Desktop\WEB PROJECT\Scotland_Drug_Harm_Indicator\e2e\mortality-adapter.spec.js:19:135
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\mortality-adapter-Geograph-8bc93-ts-and-mobile-profile-focus\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\mortality-adapter-Geograph-8bc93-ts-and-mobile-profile-focus\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\mortality-adapter-Geograph-8bc93-ts-and-mobile-profile-focus\error-context.md
+
+  1 failed
+    e2e\mortality-adapter.spec.js:8:1 › Geographic police feed pins full history and preserves exact JSON/CSV exports and mobile profile focus 
+  2 passed (47.2s)

@@ -1,0 +1,29 @@
+{
+  "post_change_equivalence": {
+    "mortality": {
+      "response_bytes_match": true,
+      "fixture_json_matches": true,
+      "canonical_payload_bytes_match": true,
+      "collection_token_match": true,
+      "observation_identities_match": 504,
+      "category_identities_match": 0,
+      "page_sequence_bytes_match": true,
+      "page_count_limit_73": 7
+    },
+    "forensic": {
+      "response_bytes_match": true,
+      "fixture_json_matches": true,
+      "canonical_payload_bytes_match": true,
+      "collection_token_match": true,
+      "observation_identities_match": 210,
+      "category_identities_match": 7,
+      "page_sequence_bytes_match": true,
+      "page_count_limit_73": 3
+    }
+  },
+  "preservation": {
+    "source_research_manifests": 85,
+    "prior_evidence_files": 72,
+    "frozen_source_and_artifact_hashes": 3
+  }
+}

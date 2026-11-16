@@ -1,0 +1,31 @@
+{
+  "capture": "pre-Task-08H frontend adapters evaluated against Task 08D/08F fixtures",
+  "mortality": {
+    "observations": 504,
+    "null_values": 8,
+    "observation_ids_sha256": "a3de5dfdbd9c83f7e4007537da01ed6679f2a72f392ae42d1fc2cde6602284c0",
+    "presentation_sha256": "410f853525108f9a9bf1c22db52155d8156ae921dfc9abee98f9f1ea9b3bea4e",
+    "selected_area_json_sha256": "1978906d240d57fd58dbf3789c1507898e2c1f76e55f39408402deac8e9de716",
+    "selected_area_json_bytes": 81061,
+    "source_artifact_sha256": "efab0ed13958aba94b647ace3a771dfef2605e58ec47c8de4d1cd1bf92f3be75",
+    "fixture_response_sha256": "984e968121a48f2c6107f70369ad02591a06de7ee1b51ed3bee0529c61a86238"
+  },
+  "forensic": {
+    "observations": 210,
+    "null_values": 0,
+    "zero_values": 1,
+    "observation_ids_sha256": "c56484f31335a1f940cbde5fac9af4338ddeded2561d2af2caa556bce288db2f",
+    "category_ids_sha256": "b9af88506f28b34ab44df90d8efed7e3bd681b40367f785f6b870f4564c3824d",
+    "presentation_sha256": "969e142bca66efccf572eb929fc52a965a0057b59ba7b6d961db7d4e22918de1",
+    "screen_csv_sha256": "ee91fd04a1f8caf0963053cc2eb16b7f6cec576daaccccb669fc0af72e2bc1f7",
+    "screen_csv_bytes": 629860,
+    "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+    "artifact_sha256": "6a67e3f4c964c00d49ca260955141dc7ab1d83c63fccde3711fdfeedd3ef6063",
+    "fixture_response_sha256": "19482ea39087b93a57c96ef8118f0a86c7a94531c58a631957d96580e26b51ad"
+  },
+  "independent_expected": {
+    "mortality_ordered_fingerprint": "ebb982939b748578caec331bd3edf3849e8e0867202e594c4b86d69deb655174",
+    "forensic_ordered_fingerprint": "279211b429f4a2827f0722673fd45874ba0bff2fed41a31de1855ad2c5c79cc0",
+    "forensic_screen_csv_sha256": "ee91fd04a1f8caf0963053cc2eb16b7f6cec576daaccccb669fc0af72e2bc1f7"
+  }
+}

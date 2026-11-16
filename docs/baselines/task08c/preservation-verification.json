@@ -1,0 +1,533 @@
+{
+  "original_protected_files": 293,
+  "original_files_unchanged": 292,
+  "changed_existing_files": [
+    "backend/main.py"
+  ],
+  "permitted_integration_changes": [
+    "backend/main.py"
+  ],
+  "unexpected_changes": [],
+  "new_application_files": [
+    "backend/api/mortality_v1.py",
+    "backend/schemas/mortality_v1.py",
+    "backend/services/mortality_adapter.py",
+    "backend/tests/test_mortality_adapter.py"
+  ],
+  "task08b_files": 26,
+  "task08b_unchanged": true,
+  "manifest_matches": 85,
+  "manifest_checks": [
+    {
+      "path": "analysis/outputs/diagnostics.json",
+      "expected": "b0b57889c7fad28a5b6712a3e6ff5730d12812a13239c4a481811adb41f5401c",
+      "actual": "b0b57889c7fad28a5b6712a3e6ff5730d12812a13239c4a481811adb41f5401c",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/forecast.csv",
+      "expected": "263b39b2b79a2d361835a844509e3685b732b4138d7ed76d94dedcf5e89d0521",
+      "actual": "263b39b2b79a2d361835a844509e3685b732b4138d7ed76d94dedcf5e89d0521",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/forecast.json",
+      "expected": "d1e28adf528bd7f93bae20a74896144372d807efd3fae838753a673d604774df",
+      "actual": "d1e28adf528bd7f93bae20a74896144372d807efd3fae838753a673d604774df",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/model_metrics.csv",
+      "expected": "63f67d5969700b570d737279c3b841343f475f98a66f518ecc2cf5cf2129937d",
+      "actual": "63f67d5969700b570d737279c3b841343f475f98a66f518ecc2cf5cf2129937d",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/model_metrics.json",
+      "expected": "acaa7b3a8c39f21be58266fa5affd4109f0f1f2d0730170f98766cbe67954c49",
+      "actual": "acaa7b3a8c39f21be58266fa5affd4109f0f1f2d0730170f98766cbe67954c49",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/rolling_origin_predictions.csv",
+      "expected": "28ba9526cc934519f4c5d7c1bb7730bcfe727a15116e4dcb51d2971da5d4a38a",
+      "actual": "28ba9526cc934519f4c5d7c1bb7730bcfe727a15116e4dcb51d2971da5d4a38a",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/selected_model.json",
+      "expected": "1ee42122891ea3ec964b628f76dabf8de690ebcaec4e87bf2210b4f704b55957",
+      "actual": "1ee42122891ea3ec964b628f76dabf8de690ebcaec4e87bf2210b4f704b55957",
+      "match": true
+    },
+    {
+      "path": "analysis/outputs/validated_mortality.csv",
+      "expected": "8466413fae42235d90b117e437b8e0bb0db58d2cbaa314d8f95efb82882a8868",
+      "actual": "8466413fae42235d90b117e437b8e0bb0db58d2cbaa314d8f95efb82882a8868",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/assist_percentages.csv",
+      "expected": "3985a2f7abe34068a4535c5d9a2598c266c5e39a8446f8dff2fe4bfd90544cc0",
+      "actual": "3985a2f7abe34068a4535c5d9a2598c266c5e39a8446f8dff2fe4bfd90544cc0",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/findings.json",
+      "expected": "d2b52689d5c978c6376ac83a20bcf08d7ad13ce104b27a2d6ffae157cd176346",
+      "actual": "d2b52689d5c978c6376ac83a20bcf08d7ad13ce104b27a2d6ffae157cd176346",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/forensic_counts.csv",
+      "expected": "6a67e3f4c964c00d49ca260955141dc7ab1d83c63fccde3711fdfeedd3ef6063",
+      "actual": "6a67e3f4c964c00d49ca260955141dc7ab1d83c63fccde3711fdfeedd3ef6063",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/frozen_forensic_shares.csv",
+      "expected": "5a15c044f5c538b627ec34b9c278c2c0868f98183afb6920c78fdc25be009653",
+      "actual": "5a15c044f5c538b627ec34b9c278c2c0868f98183afb6920c78fdc25be009653",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/mortality_annual.csv",
+      "expected": "8da97b0ce5d7524019dd4c82ca4174fd9f68ede28522344fa6333557d54c36f6",
+      "actual": "8da97b0ce5d7524019dd4c82ca4174fd9f68ede28522344fa6333557d54c36f6",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/mortality_quarterly.csv",
+      "expected": "efab0ed13958aba94b647ace3a771dfef2605e58ec47c8de4d1cd1bf92f3be75",
+      "actual": "efab0ed13958aba94b647ace3a771dfef2605e58ec47c8de4d1cd1bf92f3be75",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/naloxone_week_start_month.csv",
+      "expected": "fe919f33407a4af4b67708008cdaa8716dd08b075d10a73483d439b8d65085a4",
+      "actual": "fe919f33407a4af4b67708008cdaa8716dd08b075d10a73483d439b8d65085a4",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/naloxone_weekly.csv",
+      "expected": "23e8c54fc42fd13c772c4fdb11268acbdb62b0562c0598ce49b035a8de7bec70",
+      "actual": "23e8c54fc42fd13c772c4fdb11268acbdb62b0562c0598ce49b035a8de7bec70",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/quality_report.json",
+      "expected": "9f48cd19cf631fcd5bd43eba94e885620f8ad28c1681221a5d801a837399caed",
+      "actual": "9f48cd19cf631fcd5bd43eba94e885620f8ad28c1681221a5d801a837399caed",
+      "match": true
+    },
+    {
+      "path": "analysis/phase4/outputs/treatment_counts.csv",
+      "expected": "8ddf44fc8bb5dc5569fca13aa6e877f3bd0e45c61993e68864c0f789639c0a48",
+      "actual": "8ddf44fc8bb5dc5569fca13aa6e877f3bd0e45c61993e68864c0f789639c0a48",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/anomaly_results.csv",
+      "expected": "8ffff732a4f734c658d9edab95ebc4612e70bb98c8f5a40c8b167532d55e7372",
+      "actual": "8ffff732a4f734c658d9edab95ebc4612e70bb98c8f5a40c8b167532d55e7372",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/evidence_assessments.json",
+      "expected": "b40722d0088084b2ad484b258634d440b8ceab3c5a15ba1cd46a0943a64c8d9b",
+      "actual": "b40722d0088084b2ad484b258634d440b8ceab3c5a15ba1cd46a0943a64c8d9b",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/FINDINGS.md",
+      "expected": "7e9678ad15be4baf2fb2162bdbf46696110d519daa1ac9a9f1ae1693996da253",
+      "actual": "7e9678ad15be4baf2fb2162bdbf46696110d519daa1ac9a9f1ae1693996da253",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/monitoring_configurations.json",
+      "expected": "c779172a237db13cbd0ab888b50ddf16a4df158f5ffe51f5ff9ad42fb72c84aa",
+      "actual": "c779172a237db13cbd0ab888b50ddf16a4df158f5ffe51f5ff9ad42fb72c84aa",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/quality_report.json",
+      "expected": "648d854a215d863162f22b652598270dc24f9f639f973608485f4c0b4d0bb6b1",
+      "actual": "648d854a215d863162f22b652598270dc24f9f639f973608485f4c0b4d0bb6b1",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/sensitivity_results.csv",
+      "expected": "50ebdf1a727d3db9ebce04edfb591aa35851e186d2a434b2db69892296213a64",
+      "actual": "50ebdf1a727d3db9ebce04edfb591aa35851e186d2a434b2db69892296213a64",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/signal_frequencies.json",
+      "expected": "ce40d2c73e3ebd565ba2206a9ed423106146f8bb727b0058f220c3962ab0b15a",
+      "actual": "ce40d2c73e3ebd565ba2206a9ed423106146f8bb727b0058f220c3962ab0b15a",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5/outputs/source_provenance.json",
+      "expected": "6505f519530a034c9e2cad39442100ce79f499c394dccebb8e0310a0068fa01f",
+      "actual": "6505f519530a034c9e2cad39442100ce79f499c394dccebb8e0310a0068fa01f",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/cross_source_candidates.json",
+      "expected": "bf9b5d7d835251e6f5087469a86a5758e6ab7b9e66a78a3bdc08d0421517197d",
+      "actual": "bf9b5d7d835251e6f5087469a86a5758e6ab7b9e66a78a3bdc08d0421517197d",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/cross_source_evidence.json",
+      "expected": "09c3465a7fc09c6fb2b51b4be162b4ca4413b7f1b3e5596a93c20f450e422012",
+      "actual": "09c3465a7fc09c6fb2b51b4be162b4ca4413b7f1b3e5596a93c20f450e422012",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/enhanced_model_results.csv",
+      "expected": "c091d460dd8a9c49753323491755f292adbb1ffb1bb49ba2dbddef6d80590359",
+      "actual": "c091d460dd8a9c49753323491755f292adbb1ffb1bb49ba2dbddef6d80590359",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/foi_staging_specification.json",
+      "expected": "7f435012f2799198fe1cd818389556fc6729441a52acededb9d51f596e65eeba",
+      "actual": "7f435012f2799198fe1cd818389556fc6729441a52acededb9d51f596e65eeba",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/geographic_evidence.json",
+      "expected": "944e540f7b79160b37a34deaeaeb2e44651e0b1b81d1c97fe78dd31e07c5897f",
+      "actual": "944e540f7b79160b37a34deaeaeb2e44651e0b1b81d1c97fe78dd31e07c5897f",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/local_source_inventory.json",
+      "expected": "ce948b2157083d8a3afd9958148a7ac845a859c15836c3e6f110e648a41e9f24",
+      "actual": "ce948b2157083d8a3afd9958148a7ac845a859c15836c3e6f110e648a41e9f24",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/model_evaluation_metrics.csv",
+      "expected": "00d167a93bfe9add0c72b3c7d5981aea1603f79fb44a5d04ed067c334a7e8dee",
+      "actual": "00d167a93bfe9add0c72b3c7d5981aea1603f79fb44a5d04ed067c334a7e8dee",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/observation_index.csv",
+      "expected": "c7e83ff6423aa5d7ad6a36c165ee78328dd1a596ddd099d4d856708d77ec7ce5",
+      "actual": "c7e83ff6423aa5d7ad6a36c165ee78328dd1a596ddd099d4d856708d77ec7ce5",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/official_source_review.json",
+      "expected": "365e5979e069132cae957585d275162f95d699a9c5c96123c8085ad517f827b8",
+      "actual": "365e5979e069132cae957585d275162f95d699a9c5c96123c8085ad517f827b8",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/robustness_comparisons.csv",
+      "expected": "fe83385ab302fafb3c7ff036992ad48f76fd455ba84fbb75f1970425283c2ac7",
+      "actual": "fe83385ab302fafb3c7ff036992ad48f76fd455ba84fbb75f1970425283c2ac7",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/signal_runs.json",
+      "expected": "8b7b38df6639437c6eaeab428178361a58a54a67a4cad4eff2553ad50701aba9",
+      "actual": "8b7b38df6639437c6eaeab428178361a58a54a67a4cad4eff2553ad50701aba9",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/source_compatibility_registry.json",
+      "expected": "21ce312452895895f9baffbc840af8c4510362ec62605ea8b17fdd28f93e037a",
+      "actual": "21ce312452895895f9baffbc840af8c4510362ec62605ea8b17fdd28f93e037a",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/source_gap_register.json",
+      "expected": "ce51b69980f2ebe8330db79d77b649eb324c6cfe25272a29498ecc454f3af8a5",
+      "actual": "ce51b69980f2ebe8330db79d77b649eb324c6cfe25272a29498ecc454f3af8a5",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/statistical_diagnostics.csv",
+      "expected": "bc6c8398799e0bd3a399080ae7f37b2c4b61724e885b0014b1cc91f868ac201e",
+      "actual": "bc6c8398799e0bd3a399080ae7f37b2c4b61724e885b0014b1cc91f868ac201e",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/summary.json",
+      "expected": "2e3143ced65ebb25ccc71b144706ab8d76654e43f8bb666bd7a62af08fc7e459",
+      "actual": "2e3143ced65ebb25ccc71b144706ab8d76654e43f8bb666bd7a62af08fc7e459",
+      "match": true
+    },
+    {
+      "path": "analysis/phase5c/outputs/zero_baseline_review.json",
+      "expected": "43b78b5f3619ae9f0703524c369fd9ea67059cb5b689095865aa0aa45c84e809",
+      "actual": "43b78b5f3619ae9f0703524c369fd9ea67059cb5b689095865aa0aa45c84e809",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/annual_population_rates.csv",
+      "expected": "37ac96c1e4fcc34c66dd51ebdc6943a96527d09da0e56cd19ec6e32ffacb0c36",
+      "actual": "37ac96c1e4fcc34c66dd51ebdc6943a96527d09da0e56cd19ec6e32ffacb0c36",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/dashboard_data_contract.json",
+      "expected": "da4a88f40bcc6771cb4a60b633c033bf31eb0986987dc046e8abec703713315b",
+      "actual": "da4a88f40bcc6771cb4a60b633c033bf31eb0986987dc046e8abec703713315b",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/data_quality_report.json",
+      "expected": "fa9d7a365267dda908991cb202cee97758b4f5424fb502e07c17f062187c99d3",
+      "actual": "fa9d7a365267dda908991cb202cee97758b4f5424fb502e07c17f062187c99d3",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/geographic_evidence_hierarchy.json",
+      "expected": "9fbe4bf64e00d4b561274bed4a8133038ef7cd475636a8eed103e9484fa66c9d",
+      "actual": "9fbe4bf64e00d4b561274bed4a8133038ef7cd475636a8eed103e9484fa66c9d",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/inverclyde_trends.csv",
+      "expected": "7411f6f3f00775dc6b7e6b21254571410c855bff4e58b09ff4e747c3c063baf0",
+      "actual": "7411f6f3f00775dc6b7e6b21254571410c855bff4e58b09ff4e747c3c063baf0",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/published_five_year_rates.csv",
+      "expected": "f5982b36885c7a18bcd1802cf5b64109cba1dd409a1721c78b4e301de7e4c401",
+      "actual": "f5982b36885c7a18bcd1802cf5b64109cba1dd409a1721c78b4e301de7e4c401",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/published_rate_comparisons.csv",
+      "expected": "8ab5e227f66fe49e21d6e0e008215d1bfb3b8d671c37f5b02c964be0f6e23dd2",
+      "actual": "8ab5e227f66fe49e21d6e0e008215d1bfb3b8d671c37f5b02c964be0f6e23dd2",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/registered_scotland_comparisons.csv",
+      "expected": "c7a155a8c631848f9a3bbd4f050c93ad449fd0e78a143adbf08e50acffd7e369",
+      "actual": "c7a155a8c631848f9a3bbd4f050c93ad449fd0e78a143adbf08e50acffd7e369",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/research_findings.json",
+      "expected": "b37d2147182ecb12ce1b7b375eafac2916562355e805a4ed5a4f6f2212959dfe",
+      "actual": "b37d2147182ecb12ce1b7b375eafac2916562355e805a4ed5a4f6f2212959dfe",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/RESEARCH_FINDINGS.md",
+      "expected": "63d9426364f9f6124adccf7f07a22fe42865ac2893edb574e1df546ff871dabe",
+      "actual": "63d9426364f9f6124adccf7f07a22fe42865ac2893edb574e1df546ff871dabe",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/scotland_trends.csv",
+      "expected": "53e89ee2cc9d47bb990bf24b4c26558715bf5af583cc32ce089af5418d81e5e8",
+      "actual": "53e89ee2cc9d47bb990bf24b4c26558715bf5af583cc32ce089af5418d81e5e8",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/source_provenance.json",
+      "expected": "5bdcbed605db7672e8f4c3297dea16b873928a54e6bbdf56bc0535a164e9219c",
+      "actual": "5bdcbed605db7672e8f4c3297dea16b873928a54e6bbdf56bc0535a164e9219c",
+      "match": true
+    },
+    {
+      "path": "analysis/phase6/outputs/validated_geographic_observations.csv",
+      "expected": "c7e0fb4b7cbcc2c4baa15be0466f2a48f007dd6381022ee746bed849ca1a3ac3",
+      "actual": "c7e0fb4b7cbcc2c4baa15be0466f2a48f007dd6381022ee746bed849ca1a3ac3",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/annual_changes.csv",
+      "expected": "6c3a3ccebccfc05d394e032e35c0c59565f366059d5a514bc9f1c0a709188d45",
+      "actual": "6c3a3ccebccfc05d394e032e35c0c59565f366059d5a514bc9f1c0a709188d45",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/broad_category_context.json",
+      "expected": "ef7db00776ecdb4f4cf1d2de8b76b3e4b938da5b1e191374f281c54fa8edcacc",
+      "actual": "ef7db00776ecdb4f4cf1d2de8b76b3e4b938da5b1e191374f281c54fa8edcacc",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/communication_chronology.json",
+      "expected": "32a970f409a19d673e7ddad3e7742b01a536ebc29897d17681c32a413d6e2a8b",
+      "actual": "32a970f409a19d673e7ddad3e7742b01a536ebc29897d17681c32a413d6e2a8b",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/definition_comparisons.csv",
+      "expected": "013a7defcf4732cf6dcbe2d34bd22ddbac50ffcc6601ea10ad3ba33fd8c51d6d",
+      "actual": "013a7defcf4732cf6dcbe2d34bd22ddbac50ffcc6601ea10ad3ba33fd8c51d6d",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/findings.json",
+      "expected": "3eb14cfecbc0567f7819b4acaa2878b3b28fc9cb92725c681e2d9578d0ca70b1",
+      "actual": "3eb14cfecbc0567f7819b4acaa2878b3b28fc9cb92725c681e2d9578d0ca70b1",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/observations.csv",
+      "expected": "09d2033911c177016cbef95dc586e0fa2015b6cf1a328b2696f626beba6d5956",
+      "actual": "09d2033911c177016cbef95dc586e0fa2015b6cf1a328b2696f626beba6d5956",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/quality_report.json",
+      "expected": "5e962d218ef4a8230d2ed4ad57ccdf4052434b045412442f40ee646c04befc7e",
+      "actual": "5e962d218ef4a8230d2ed4ad57ccdf4052434b045412442f40ee646c04befc7e",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/selected_substance_results.json",
+      "expected": "f161098d0a389ac62b873c8193e4f40d3304bcda810214590f6a5700b8ad73fc",
+      "actual": "f161098d0a389ac62b873c8193e4f40d3304bcda810214590f6a5700b8ad73fc",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/source_metadata.json",
+      "expected": "e767c498701416e900d07da50356796f05e498dc1c7a85ab837300ed48bb61b5",
+      "actual": "e767c498701416e900d07da50356796f05e498dc1c7a85ab837300ed48bb61b5",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/source_totals.csv",
+      "expected": "d30d33dbe26505588abcb67b7728d88d81d8a54fdf847561ebfe4e705752ebe9",
+      "actual": "d30d33dbe26505588abcb67b7728d88d81d8a54fdf847561ebfe4e705752ebe9",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/substance_inventory.csv",
+      "expected": "e890fc5eb2697e21783dfa96dac3002d6c48214ac8cd2e8b4261e2d5e1a998c3",
+      "actual": "e890fc5eb2697e21783dfa96dac3002d6c48214ac8cd2e8b4261e2d5e1a998c3",
+      "match": true
+    },
+    {
+      "path": "analysis/phase9_emerging_substances/outputs/vintage_comparisons.csv",
+      "expected": "09eedaf13b0fcb690fbe3c4d97b5b43233a5442cdc54b3d57494138fd0a3b129",
+      "actual": "09eedaf13b0fcb690fbe3c4d97b5b43233a5442cdc54b3d57494138fd0a3b129",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/naloxone_programme_q4_2022_tables.xlsx",
+      "expected": "4f8e5b1be1ff471a150e3af1eecff2f8bddae950b1139820f92ffcd97995a172",
+      "actual": "4f8e5b1be1ff471a150e3af1eecff2f8bddae950b1139820f92ffcd97995a172",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/naloxone_programme_q4_2025_tables.xlsx",
+      "expected": "d260bd822c79e28e9e008ea01c887e014d87f781431f07b1ffd47c9396665442",
+      "actual": "d260bd822c79e28e9e008ea01c887e014d87f781431f07b1ffd47c9396665442",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/ndrdd_data_tables_2021-2022.xlsx",
+      "expected": "35d2a450181695173c5d14acf2360ed6ccf2c7afd0720a389f3da4725636bb7b",
+      "actual": "35d2a450181695173c5d14acf2360ed6ccf2c7afd0720a389f3da4725636bb7b",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nhs_health_board_codes_hb14_hb19.csv",
+      "expected": "da823e0c3a2c04ca7582f9d2ab6f64ee246ca1656d45295f5aab8d8423112306",
+      "actual": "da823e0c3a2c04ca7582f9d2ab6f64ee246ca1656d45295f5aab8d8423112306",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nhs_scotland_population_estimates_hb2019.csv",
+      "expected": "7312bc0c99edee524fec043fe5cf496d9201927995ae18106ee39ba0a9c55897",
+      "actual": "7312bc0c99edee524fec043fe5cf496d9201927995ae18106ee39ba0a9c55897",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_2023_extra_tables.xlsx",
+      "expected": "902e5d059fdb92be7b5cddad110816a5cb18627a4c418b6c19b1218e7e9eaf96",
+      "actual": "902e5d059fdb92be7b5cddad110816a5cb18627a4c418b6c19b1218e7e9eaf96",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_2023_sub1.xlsx",
+      "expected": "7c07cf3ea5ee311783d257c24953077295a525a0823dff14c50d0d3d9d6f5ca7",
+      "actual": "7c07cf3ea5ee311783d257c24953077295a525a0823dff14c50d0d3d9d6f5ca7",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_2023_sub2.xlsx",
+      "expected": "2aae86192bd3dc7a38e820d23d29cf26fc7a6847e81c62efa369fad2a9048e7a",
+      "actual": "2aae86192bd3dc7a38e820d23d29cf26fc7a6847e81c62efa369fad2a9048e7a",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_2024_additional_tables.xlsx",
+      "expected": "502a3523041d55be2e1613069ac8c79fe01f1e71a2ad8505397a79b90d08d08b",
+      "actual": "502a3523041d55be2e1613069ac8c79fe01f1e71a2ad8505397a79b90d08d08b",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_2024_data.xlsx",
+      "expected": "9a38a4f55e1ce8a21ef4b3edf64981ac67b541460eff1ee5616224ea7f887381",
+      "actual": "9a38a4f55e1ce8a21ef4b3edf64981ac67b541460eff1ee5616224ea7f887381",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/nrs_drd_deaths_by_individual_substance.xlsx",
+      "expected": "cbfe64721062dea1218512d71a8e9143934d4ffb25ee568a3a65406dba1f9785",
+      "actual": "cbfe64721062dea1218512d71a8e9143934d4ffb25ee568a3a65406dba1f9785",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/police_suspected_drug_deaths_Jan2017-Dec2025.xlsx",
+      "expected": "587a5d47061f93872b5922dbfe724607a86fe59ee0a6ebe488859b87395cdddf",
+      "actual": "587a5d47061f93872b5922dbfe724607a86fe59ee0a6ebe488859b87395cdddf",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/radar_intelligence_reports_all.csv",
+      "expected": "7216c9028c3eda955227590a336e60316545b5ee5e8edb0da672de5ed34159d2",
+      "actual": "7216c9028c3eda955227590a336e60316545b5ee5e8edb0da672de5ed34159d2",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/radar_sas_naloxone_weekly_by_board.csv",
+      "expected": "6f653b7b12c92e92175f09a2fb358ddb110991314a5b6e7489cf414c5f680235",
+      "actual": "6f653b7b12c92e92175f09a2fb358ddb110991314a5b6e7489cf414c5f680235",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/radar_toxicology_assist.csv",
+      "expected": "24271e65477c153230dd2efa0f50c0a4878fa42bd74fd814f8313065abfcd2a8",
+      "actual": "24271e65477c153230dd2efa0f50c0a4878fa42bd74fd814f8313065abfcd2a8",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+      "expected": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+      "actual": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/radar_toxicology_treatment_glasgow.csv",
+      "expected": "401b52c928b3d560476e91efac8e2d114c9777e790aa2e9fedd873a2e38d90e0",
+      "actual": "401b52c928b3d560476e91efac8e2d114c9777e790aa2e9fedd873a2e38d90e0",
+      "match": true
+    },
+    {
+      "path": "datasets/Group3_Item2_Data/sas_foi_215-26_naloxone.xls",
+      "expected": "37df5aa83ea086677b2e1bd36d5ddb42137fe8117cc7b542c4b0aa559f2219d9",
+      "actual": "37df5aa83ea086677b2e1bd36d5ddb42137fe8117cc7b542c4b0aa559f2219d9",
+      "match": true
+    }
+  ],
+  "notes": "main.py only adds the versioned router import/registration. No research file exception is permitted; generated outputs/scratch are excluded."
+}

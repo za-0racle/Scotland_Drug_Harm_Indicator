@@ -1,0 +1,7 @@
+{
+  "baseline": "Task 08D immutable legacy fixture passed through the unchanged legacy CSV exporter",
+  "rows": 36,
+  "bytes": 112036,
+  "sha256": "83713a4f71428d5e3f426c99cfc024f11149f03352ad5357b66a4a6a1dc79623",
+  "source_fixture_sha256": "4ef2662277166e25ec4ce7296ff68c620383382f28862eba32f19bde1b5ac866"
+}

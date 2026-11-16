@@ -1,0 +1,8 @@
+{
+  "captured_at_utc": "2026-11-12T12:05:57.721373+00:00",
+  "resources": 28,
+  "manifest_checks": 85,
+  "manifest_matches": 85,
+  "api_verification": "In-process production PlatformService pagination plus ASGI metadata/OpenAPI GETs; not deployed HTTP availability.",
+  "fingerprints": "SHA-256; ordered JSON projection, sorted keys, compact separators, UTF-8. CSV record fingerprints retain original strings. Numeric projections do not refit models."
+}

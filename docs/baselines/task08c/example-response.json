@@ -1,0 +1,87 @@
+{
+  "contract_version": "mortality-trends/1.0.0",
+  "source": {
+    "source_id": "police_suspected_drug_deaths_Jan2017-Dec2025.xlsx",
+    "source_version": "587a5d47061f93872b5922dbfe724607a86fe59ee0a6ebe488859b87395cdddf",
+    "source_path": "datasets/Group3_Item2_Data/police_suspected_drug_deaths_Jan2017-Dec2025.xlsx",
+    "source_url": "https://www.gov.scot/publications/suspected-drug-deaths-scotland-october-december-2025/",
+    "publication_date": "2026-03-17",
+    "publication_status": "verified_vintage_date_not_first_release",
+    "source_data_cutoff": "2025-12-31"
+  },
+  "indicator": {
+    "indicator_id": "suspected_deaths",
+    "definition": "Police Scotland provisional originally suspected drug deaths; not NRS registered deaths or population-adjusted risk.",
+    "unit": "count",
+    "period_basis": "calendar_quarter_legacy_10_day_adjustment",
+    "original_reporting_qualification": "Provisional originally suspected deaths, legacy ten-day timing adjustment; police divisions are not councils or Greenock; x suppression retained; no significance test.",
+    "scientific_status": "descriptive_research_only_not_anomaly_or_alert",
+    "calculation_method": "Adjacent exact-period differences; percent change only for nonzero reference; complete-window arithmetic means; no inference or significance test",
+    "year_comparison_basis": "same_calendar_period_previous_year",
+    "rolling_periods": 4,
+    "reference_periods": 8
+  },
+  "artifact": {
+    "resource": "mortality_trends",
+    "analytical_version": "phase4-1.0.0",
+    "artifact_sha256": "efab0ed13958aba94b647ace3a771dfef2605e58ec47c8de4d1cd1bf92f3be75",
+    "source_path": "analysis/phase4/outputs/mortality_quarterly.csv",
+    "provenance_manifest": "analysis/phase4/outputs/run_manifest.json",
+    "storage": "approved_local_artifact",
+    "executed_at_utc": "2026-11-10T01:13:49.285090+00:00",
+    "limitations": [
+      "Frozen retrospective research output; not live conditions or a validated warning",
+      "Source periods, populations, geographies and measurement definitions must remain distinct"
+    ]
+  },
+  "research_metadata": {
+    "analysis_as_of": "2026-11-10",
+    "data_age_days": 314
+  },
+  "pagination": {
+    "total": 504,
+    "offset": 0,
+    "limit": 1,
+    "returned": 1,
+    "next_offset": 1,
+    "page_is_complete_collection": false,
+    "collection_token": "f8dfefd52958a19e275bf1e055aa5e0b2b3f540afa6a392687c759a79373568f",
+    "ordering": "original_artifact_row_order"
+  },
+  "observations": [
+    {
+      "observation_id": "mortality-observation:v1:56595b0527830da273e0fdc934e59f784139bd653b128cc65110de0f50bce9aa",
+      "geography": {
+        "geography_id": "police_division-122fb6ace418",
+        "canonical_name": "A: North East",
+        "original_name": "A: North East",
+        "boundary_type": "police_division"
+      },
+      "period": {
+        "year": 2017,
+        "quarter": 1,
+        "label": "2017 Q1",
+        "ordinal": 8068,
+        "period_start": "2017-01-01",
+        "period_end": "2017-03-31"
+      },
+      "value": 18,
+      "availability_status": "observed",
+      "research_context": {
+        "share_of_national_pct": 8.108108108108109,
+        "previous_value": null,
+        "period_change": null,
+        "period_change_pct": null,
+        "year_reference_value": null,
+        "year_change_pct": null,
+        "rolling_average": null,
+        "historical_reference_mean": null,
+        "reference_change_pct": null,
+        "direction": "unavailable",
+        "percentage_point_change": null,
+        "comparison_status": "missing_reference",
+        "publication_lag_days": 3273
+      }
+    }
+  ]
+}

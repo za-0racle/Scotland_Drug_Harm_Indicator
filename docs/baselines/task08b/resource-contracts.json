@@ -1,0 +1,3552 @@
+[
+  {
+    "resource": "mortality_trends",
+    "metadata": {
+      "resource": "mortality_trends",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase4-1.0.0",
+      "executed_at_utc": "2026-11-10T01:13:49.285090+00:00",
+      "artifact_sha256": "efab0ed13958aba94b647ace3a771dfef2605e58ec47c8de4d1cd1bf92f3be75",
+      "source_path": "analysis/phase4/outputs/mortality_quarterly.csv",
+      "provenance_manifest": "analysis/phase4/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 504,
+    "api_records": 504,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "analysis_as_of",
+      "boundary_type",
+      "calculation_method",
+      "comparison_status",
+      "data_age_days",
+      "direction",
+      "geography",
+      "geography_id",
+      "historical_reference_mean",
+      "indicator_id",
+      "limitations",
+      "name",
+      "observed_value",
+      "ordinal",
+      "percentage_point_change",
+      "period",
+      "period_basis",
+      "period_change",
+      "period_change_pct",
+      "period_end",
+      "period_start",
+      "previous_value",
+      "publication_date",
+      "publication_lag_days",
+      "publication_status",
+      "quality_status",
+      "quarter",
+      "reference_change_pct",
+      "reference_periods",
+      "rolling_average",
+      "rolling_periods",
+      "scientific_status",
+      "share_of_national_pct",
+      "source_data_cutoff",
+      "source_geography",
+      "source_id",
+      "source_path",
+      "source_sha256",
+      "source_url",
+      "unit",
+      "year",
+      "year_change_pct",
+      "year_comparison_basis",
+      "year_reference_value"
+    ],
+    "ordered_response_fingerprint": "ebb982939b748578caec331bd3edf3849e8e0867202e594c4b86d69deb655174",
+    "numeric_field_projection_fingerprint": "ad9394406bad93281457c7ab80ae70bdc80791c7cbacf223177f985396e11541",
+    "numeric_projection_fields": [
+      "data_age_days",
+      "historical_reference_mean",
+      "observed_value",
+      "ordinal",
+      "period_change",
+      "period_change_pct",
+      "previous_value",
+      "publication_lag_days",
+      "quarter",
+      "reference_change_pct",
+      "reference_periods",
+      "rolling_average",
+      "rolling_periods",
+      "share_of_national_pct",
+      "year",
+      "year_change_pct",
+      "year_reference_value"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography",
+      "period",
+      "year",
+      "quarter"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "analysis_as_of": 0,
+      "boundary_type": 0,
+      "calculation_method": 0,
+      "comparison_status": 0,
+      "data_age_days": 0,
+      "direction": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "historical_reference_mean": 136,
+      "indicator_id": 0,
+      "limitations": 0,
+      "name": 0,
+      "observed_value": 8,
+      "ordinal": 0,
+      "percentage_point_change": 504,
+      "period": 0,
+      "period_basis": 0,
+      "period_change": 27,
+      "period_change_pct": 27,
+      "period_end": 0,
+      "period_start": 0,
+      "previous_value": 22,
+      "publication_date": 0,
+      "publication_lag_days": 0,
+      "publication_status": 0,
+      "quality_status": 0,
+      "quarter": 0,
+      "reference_change_pct": 136,
+      "reference_periods": 0,
+      "rolling_average": 64,
+      "rolling_periods": 0,
+      "scientific_status": 0,
+      "share_of_national_pct": 44,
+      "source_data_cutoff": 0,
+      "source_geography": 0,
+      "source_id": 0,
+      "source_path": 0,
+      "source_sha256": 0,
+      "source_url": 0,
+      "unit": 0,
+      "year": 0,
+      "year_change_pct": 66,
+      "year_comparison_basis": 0,
+      "year_reference_value": 64
+    },
+    "definitions": {
+      "unit": [
+        "\"count\""
+      ],
+      "period_basis": [
+        "\"calendar_quarter_legacy_10_day_adjustment\""
+      ],
+      "boundary_type": [
+        "\"country\"",
+        "\"police_division\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"A: North East\"",
+        "\"C: Forth Valley\"",
+        "\"D: Tayside\"",
+        "\"E: Edinburgh City\"",
+        "\"G: Greater Glasgow\"",
+        "\"J: The Lothians & Scottish Borders\"",
+        "\"K: Renfrewshire and Inverclyde\"",
+        "\"L: Argyll & West Dunbartonshire\"",
+        "\"N: Highlands & Islands\"",
+        "\"P: Fife\"",
+        "\"Q: Lanarkshire\"",
+        "\"Scotland national total\"",
+        "\"U: Ayrshire\"",
+        "\"V: Dumfries & Galloway\""
+      ],
+      "source_id": [
+        "\"police_suspected_drug_deaths_Jan2017-Dec2025.xlsx\""
+      ],
+      "indicator_id": [
+        "\"suspected_deaths\""
+      ],
+      "quality_status": [
+        "\"missing_or_suppressed\"",
+        "\"observed\""
+      ],
+      "publication_date": [
+        "\"2026-03-17\""
+      ],
+      "source_data_cutoff": [
+        "\"2025-12-31\""
+      ]
+    }
+  },
+  {
+    "resource": "forensic",
+    "metadata": {
+      "resource": "forensic",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase4-1.0.0",
+      "executed_at_utc": "2026-11-10T01:13:49.285090+00:00",
+      "artifact_sha256": "6a67e3f4c964c00d49ca260955141dc7ab1d83c63fccde3711fdfeedd3ef6063",
+      "source_path": "analysis/phase4/outputs/forensic_counts.csv",
+      "provenance_manifest": "analysis/phase4/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 210,
+    "api_records": 210,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "analysis_as_of",
+      "boundary_type",
+      "calculation_method",
+      "comparison_status",
+      "data_age_days",
+      "direction",
+      "geography",
+      "geography_id",
+      "historical_reference_mean",
+      "indicator_id",
+      "limitations",
+      "name",
+      "observed_value",
+      "ordinal",
+      "percentage_point_change",
+      "period",
+      "period_basis",
+      "period_change",
+      "period_change_pct",
+      "period_end",
+      "period_start",
+      "previous_value",
+      "publication_date",
+      "publication_lag_days",
+      "publication_status",
+      "quality_status",
+      "reference_change_pct",
+      "reference_periods",
+      "rolling_average",
+      "rolling_periods",
+      "scientific_status",
+      "source_data_cutoff",
+      "source_geography",
+      "source_id",
+      "source_path",
+      "source_sha256",
+      "source_url",
+      "unit",
+      "within_source_period_dense_rank",
+      "year_change_pct",
+      "year_comparison_basis",
+      "year_reference_value"
+    ],
+    "ordered_response_fingerprint": "279211b429f4a2827f0722673fd45874ba0bff2fed41a31de1855ad2c5c79cc0",
+    "numeric_field_projection_fingerprint": "52263d96c5020cfa500eb2225fbcdddeb8c5a7becae14ebffc00e33c7b498013",
+    "numeric_projection_fields": [
+      "data_age_days",
+      "historical_reference_mean",
+      "observed_value",
+      "ordinal",
+      "period_change",
+      "period_change_pct",
+      "previous_value",
+      "reference_change_pct",
+      "reference_periods",
+      "rolling_average",
+      "rolling_periods",
+      "within_source_period_dense_rank",
+      "year_change_pct",
+      "year_reference_value"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography",
+      "period"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "analysis_as_of": 0,
+      "boundary_type": 0,
+      "calculation_method": 0,
+      "comparison_status": 0,
+      "data_age_days": 0,
+      "direction": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "historical_reference_mean": 56,
+      "indicator_id": 0,
+      "limitations": 0,
+      "name": 0,
+      "observed_value": 0,
+      "ordinal": 0,
+      "percentage_point_change": 210,
+      "period": 0,
+      "period_basis": 0,
+      "period_change": 7,
+      "period_change_pct": 8,
+      "period_end": 0,
+      "period_start": 0,
+      "previous_value": 7,
+      "publication_date": 210,
+      "publication_lag_days": 210,
+      "publication_status": 0,
+      "quality_status": 0,
+      "reference_change_pct": 56,
+      "reference_periods": 0,
+      "rolling_average": 21,
+      "rolling_periods": 0,
+      "scientific_status": 0,
+      "source_data_cutoff": 0,
+      "source_geography": 0,
+      "source_id": 0,
+      "source_path": 0,
+      "source_sha256": 0,
+      "source_url": 0,
+      "unit": 0,
+      "within_source_period_dense_rank": 0,
+      "year_change_pct": 29,
+      "year_comparison_basis": 0,
+      "year_reference_value": 28
+    },
+    "definitions": {
+      "unit": [
+        "\"detection_count\""
+      ],
+      "period_basis": [
+        "\"calendar_quarter\""
+      ],
+      "boundary_type": [
+        "\"national_testing_sample\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"Scotland forensic testing sample\""
+      ],
+      "source_id": [
+        "\"radar_toxicology_forensic_2018-2026.csv\""
+      ],
+      "indicator_id": [
+        "\"forensic:All Benzodiazepines\"",
+        "\"forensic:Dissociatives\"",
+        "\"forensic:Gabapentinoids\"",
+        "\"forensic:Opioids\"",
+        "\"forensic:Prescribable Benzodiazepines\"",
+        "\"forensic:Stimulants\"",
+        "\"forensic:Street Benzodiazepines\""
+      ],
+      "quality_status": [
+        "\"observed\""
+      ],
+      "publication_date": [
+        "null"
+      ],
+      "source_data_cutoff": [
+        "\"2026-03-31\""
+      ]
+    }
+  },
+  {
+    "resource": "assist",
+    "metadata": {
+      "resource": "assist",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase4-1.0.0",
+      "executed_at_utc": "2026-11-10T01:13:49.285090+00:00",
+      "artifact_sha256": "3985a2f7abe34068a4535c5d9a2598c266c5e39a8446f8dff2fe4bfd90544cc0",
+      "source_path": "analysis/phase4/outputs/assist_percentages.csv",
+      "provenance_manifest": "analysis/phase4/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 72,
+    "api_records": 72,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "analysis_as_of",
+      "boundary_type",
+      "calculation_method",
+      "comparison_status",
+      "data_age_days",
+      "direction",
+      "geography",
+      "geography_id",
+      "historical_reference_mean",
+      "indicator_id",
+      "limitations",
+      "name",
+      "observed_value",
+      "ordinal",
+      "percentage_point_change",
+      "period",
+      "period_basis",
+      "period_change",
+      "period_change_pct",
+      "period_end",
+      "period_start",
+      "previous_value",
+      "publication_date",
+      "publication_lag_days",
+      "publication_status",
+      "quality_status",
+      "quality_status_detail",
+      "reference_change_pct",
+      "reference_periods",
+      "rolling_average",
+      "rolling_periods",
+      "scientific_status",
+      "source_data_cutoff",
+      "source_geography",
+      "source_id",
+      "source_path",
+      "source_sha256",
+      "source_url",
+      "study_period",
+      "unit",
+      "within_source_period_dense_rank",
+      "year_change_pct",
+      "year_comparison_basis",
+      "year_reference_value"
+    ],
+    "ordered_response_fingerprint": "fd60d20c6e156437a646cba112cf8eda0cbd81fba4b2ac347b546067f47e41c8",
+    "numeric_field_projection_fingerprint": "2dd9f8562816f3ef34fedb77cefba2dae6d22e35a9fdf6bf33ee07a60775daec",
+    "numeric_projection_fields": [
+      "observed_value",
+      "ordinal",
+      "percentage_point_change",
+      "period_change",
+      "period_change_pct",
+      "previous_value",
+      "study_period",
+      "within_source_period_dense_rank"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography",
+      "period"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "analysis_as_of": 0,
+      "boundary_type": 0,
+      "calculation_method": 0,
+      "comparison_status": 0,
+      "data_age_days": 72,
+      "direction": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "historical_reference_mean": 72,
+      "indicator_id": 0,
+      "limitations": 0,
+      "name": 0,
+      "observed_value": 0,
+      "ordinal": 0,
+      "percentage_point_change": 6,
+      "period": 0,
+      "period_basis": 0,
+      "period_change": 6,
+      "period_change_pct": 6,
+      "period_end": 72,
+      "period_start": 72,
+      "previous_value": 6,
+      "publication_date": 72,
+      "publication_lag_days": 72,
+      "publication_status": 0,
+      "quality_status": 0,
+      "quality_status_detail": 0,
+      "reference_change_pct": 72,
+      "reference_periods": 72,
+      "rolling_average": 72,
+      "rolling_periods": 72,
+      "scientific_status": 0,
+      "source_data_cutoff": 0,
+      "source_geography": 0,
+      "source_id": 0,
+      "source_path": 0,
+      "source_sha256": 0,
+      "source_url": 0,
+      "study_period": 0,
+      "unit": 0,
+      "within_source_period_dense_rank": 0,
+      "year_change_pct": 72,
+      "year_comparison_basis": 0,
+      "year_reference_value": 72
+    },
+    "definitions": {
+      "unit": [
+        "\"percent\""
+      ],
+      "period_basis": [
+        "\"source_study_period_not_calendar_quarter\""
+      ],
+      "boundary_type": [
+        "\"study_sample\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"ASSIST participating emergency-department sample\""
+      ],
+      "source_id": [
+        "\"radar_toxicology_assist.csv\""
+      ],
+      "indicator_id": [
+        "\"assist:Benzodiazepine\"",
+        "\"assist:Cannabinoid\"",
+        "\"assist:Gabapentin/Pregabalin\"",
+        "\"assist:Opioid\"",
+        "\"assist:Other\"",
+        "\"assist:Stimulant\""
+      ],
+      "quality_status": [
+        "\"observed\""
+      ],
+      "publication_date": [
+        "null"
+      ],
+      "source_data_cutoff": [
+        "\"Q15 Feb26- May26\""
+      ]
+    }
+  },
+  {
+    "resource": "treatment",
+    "metadata": {
+      "resource": "treatment",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase4-1.0.0",
+      "executed_at_utc": "2026-11-10T01:13:49.285090+00:00",
+      "artifact_sha256": "8ddf44fc8bb5dc5569fca13aa6e877f3bd0e45c61993e68864c0f789639c0a48",
+      "source_path": "analysis/phase4/outputs/treatment_counts.csv",
+      "provenance_manifest": "analysis/phase4/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 140,
+    "api_records": 140,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "analysis_as_of",
+      "boundary_type",
+      "calculation_method",
+      "comparison_status",
+      "data_age_days",
+      "direction",
+      "geography",
+      "geography_id",
+      "historical_reference_mean",
+      "indicator_id",
+      "limitations",
+      "name",
+      "observed_value",
+      "ordinal",
+      "percentage_point_change",
+      "period",
+      "period_basis",
+      "period_change",
+      "period_change_pct",
+      "period_end",
+      "period_start",
+      "previous_value",
+      "publication_date",
+      "publication_lag_days",
+      "publication_status",
+      "quality_status",
+      "reference_change_pct",
+      "reference_periods",
+      "rolling_average",
+      "rolling_periods",
+      "sample_type",
+      "scientific_status",
+      "source_data_cutoff",
+      "source_geography",
+      "source_id",
+      "source_path",
+      "source_sha256",
+      "source_url",
+      "unit",
+      "within_source_period_dense_rank",
+      "year_change_pct",
+      "year_comparison_basis",
+      "year_reference_value"
+    ],
+    "ordered_response_fingerprint": "d3c73ff0ab21f412bf361ed3591eec92e4d9c4a345c141af8a5339d5c8ed0852",
+    "numeric_field_projection_fingerprint": "5169ba1442ab05d18cdfc3cf1e9b85671cd2699ff7409efc86d4bfed0ef591bc",
+    "numeric_projection_fields": [
+      "data_age_days",
+      "historical_reference_mean",
+      "observed_value",
+      "ordinal",
+      "period_change",
+      "period_change_pct",
+      "previous_value",
+      "reference_change_pct",
+      "reference_periods",
+      "rolling_average",
+      "rolling_periods",
+      "within_source_period_dense_rank",
+      "year_change_pct",
+      "year_reference_value"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography",
+      "period"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "analysis_as_of": 0,
+      "boundary_type": 0,
+      "calculation_method": 0,
+      "comparison_status": 0,
+      "data_age_days": 0,
+      "direction": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "historical_reference_mean": 60,
+      "indicator_id": 0,
+      "limitations": 0,
+      "name": 0,
+      "observed_value": 0,
+      "ordinal": 0,
+      "percentage_point_change": 140,
+      "period": 0,
+      "period_basis": 0,
+      "period_change": 5,
+      "period_change_pct": 5,
+      "period_end": 0,
+      "period_start": 0,
+      "previous_value": 5,
+      "publication_date": 140,
+      "publication_lag_days": 140,
+      "publication_status": 0,
+      "quality_status": 0,
+      "reference_change_pct": 60,
+      "reference_periods": 0,
+      "rolling_average": 10,
+      "rolling_periods": 0,
+      "sample_type": 0,
+      "scientific_status": 0,
+      "source_data_cutoff": 0,
+      "source_geography": 0,
+      "source_id": 0,
+      "source_path": 0,
+      "source_sha256": 0,
+      "source_url": 0,
+      "unit": 0,
+      "within_source_period_dense_rank": 0,
+      "year_change_pct": 60,
+      "year_comparison_basis": 0,
+      "year_reference_value": 60
+    },
+    "definitions": {
+      "unit": [
+        "\"detection_count\""
+      ],
+      "period_basis": [
+        "\"calendar_month\""
+      ],
+      "boundary_type": [
+        "\"health_board\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"NHS Greater Glasgow and Clyde\""
+      ],
+      "source_id": [
+        "\"radar_toxicology_treatment_glasgow.csv\""
+      ],
+      "indicator_id": [
+        "\"treatment:Benzodiazepines\"",
+        "\"treatment:Dissociatives\"",
+        "\"treatment:Gabapentinoids\"",
+        "\"treatment:Opioids (excluding treatment opioids)\"",
+        "\"treatment:Stimulants\""
+      ],
+      "quality_status": [
+        "\"observed\""
+      ],
+      "publication_date": [
+        "null"
+      ],
+      "source_data_cutoff": [
+        "\"2026-03-31\""
+      ]
+    }
+  },
+  {
+    "resource": "naloxone",
+    "metadata": {
+      "resource": "naloxone",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase4-1.0.0",
+      "executed_at_utc": "2026-11-10T01:13:49.285090+00:00",
+      "artifact_sha256": "23e8c54fc42fd13c772c4fdb11268acbdb62b0562c0598ce49b035a8de7bec70",
+      "source_path": "analysis/phase4/outputs/naloxone_weekly.csv",
+      "provenance_manifest": "analysis/phase4/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 7024,
+    "api_records": 7024,
+    "pages": 8,
+    "complete": true,
+    "fields": [
+      "analysis_as_of",
+      "boundary_type",
+      "calculation_method",
+      "comparison_status",
+      "data_age_days",
+      "direction",
+      "geography",
+      "geography_id",
+      "historical_reference_mean",
+      "indicator_id",
+      "limitations",
+      "name",
+      "observed_value",
+      "ordinal",
+      "percentage_point_change",
+      "period",
+      "period_basis",
+      "period_change",
+      "period_change_pct",
+      "period_end",
+      "period_start",
+      "previous_value",
+      "publication_date",
+      "publication_lag_days",
+      "publication_status",
+      "quality_status",
+      "quality_status_detail",
+      "reference_change_pct",
+      "reference_periods",
+      "reported_moving_average",
+      "rolling_average",
+      "rolling_periods",
+      "scientific_status",
+      "source_data_cutoff",
+      "source_geography",
+      "source_id",
+      "source_path",
+      "source_sha256",
+      "source_url",
+      "unit",
+      "year_change_pct",
+      "year_comparison_basis",
+      "year_reference_value"
+    ],
+    "ordered_response_fingerprint": "5dd64f758a4fde77bb4c24f38fefcc16d519de508e37d6984f59ca8d9be48629",
+    "numeric_field_projection_fingerprint": "8b5618ee6fb37c7eb0b9a12d60c1f59717d898988984f73e28f1ec6651d897b1",
+    "numeric_projection_fields": [
+      "data_age_days",
+      "historical_reference_mean",
+      "observed_value",
+      "ordinal",
+      "period_change",
+      "period_change_pct",
+      "previous_value",
+      "reference_change_pct",
+      "reference_periods",
+      "reported_moving_average",
+      "rolling_average",
+      "rolling_periods",
+      "year_change_pct",
+      "year_reference_value"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography",
+      "period"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "analysis_as_of": 0,
+      "boundary_type": 0,
+      "calculation_method": 0,
+      "comparison_status": 0,
+      "data_age_days": 0,
+      "direction": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "historical_reference_mean": 832,
+      "indicator_id": 0,
+      "limitations": 0,
+      "name": 0,
+      "observed_value": 0,
+      "ordinal": 0,
+      "percentage_point_change": 7024,
+      "period": 0,
+      "period_basis": 0,
+      "period_change": 16,
+      "period_change_pct": 1700,
+      "period_end": 0,
+      "period_start": 0,
+      "previous_value": 16,
+      "publication_date": 7024,
+      "publication_lag_days": 7024,
+      "publication_status": 0,
+      "quality_status": 0,
+      "quality_status_detail": 0,
+      "reference_change_pct": 832,
+      "reference_periods": 0,
+      "reported_moving_average": 32,
+      "rolling_average": 48,
+      "rolling_periods": 0,
+      "scientific_status": 0,
+      "source_data_cutoff": 0,
+      "source_geography": 0,
+      "source_id": 0,
+      "source_path": 0,
+      "source_sha256": 0,
+      "source_url": 0,
+      "unit": 0,
+      "year_change_pct": 2315,
+      "year_comparison_basis": 0,
+      "year_reference_value": 832
+    },
+    "definitions": {
+      "unit": [
+        "\"incident_count\""
+      ],
+      "period_basis": [
+        "\"week_beginning_monday\""
+      ],
+      "boundary_type": [
+        "\"country\"",
+        "\"health_board\"",
+        "\"unknown\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"NHS Ayrshire & Arran\"",
+        "\"NHS Borders\"",
+        "\"NHS Dumfries & Galloway\"",
+        "\"NHS Fife\"",
+        "\"NHS Forth Valley\"",
+        "\"NHS Grampian\"",
+        "\"NHS Greater Glasgow & Clyde\"",
+        "\"NHS Highland\"",
+        "\"NHS Lanarkshire\"",
+        "\"NHS Lothian\"",
+        "\"NHS Orkney\"",
+        "\"NHS Shetland\"",
+        "\"NHS Tayside\"",
+        "\"NHS Western Isles\"",
+        "\"Scotland\"",
+        "\"Unknown\""
+      ],
+      "source_id": [
+        "\"radar_sas_naloxone_weekly_by_board.csv\""
+      ],
+      "indicator_id": [
+        "\"ambulance_naloxone_activity\""
+      ],
+      "quality_status": [
+        "\"observed\""
+      ],
+      "publication_date": [
+        "null"
+      ],
+      "source_data_cutoff": [
+        "\"2026-05-31\""
+      ]
+    }
+  },
+  {
+    "resource": "anomalies",
+    "metadata": {
+      "resource": "anomalies",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5-1.0.0",
+      "executed_at_utc": "2026-11-10T01:25:15.194379+00:00",
+      "artifact_sha256": "8ffff732a4f734c658d9edab95ebc4612e70bb98c8f5a40c8b167532d55e7372",
+      "source_path": "analysis/phase5/outputs/anomaly_results.csv",
+      "provenance_manifest": "analysis/phase5/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 8034,
+    "api_records": 8034,
+    "pages": 9,
+    "complete": true,
+    "fields": [
+      "analysis_as_of",
+      "baseline_estimate",
+      "baseline_mad",
+      "boundary_type",
+      "classification",
+      "data_age_days",
+      "dataset",
+      "evidence_domain",
+      "expected_reference_observations",
+      "geography",
+      "geography_id",
+      "indicator_id",
+      "limitations",
+      "lower_threshold",
+      "method",
+      "name",
+      "observed_value",
+      "ordinal",
+      "period",
+      "period_basis",
+      "period_end",
+      "period_start",
+      "publication_date",
+      "publication_lag_days",
+      "publication_status",
+      "quality_status",
+      "quality_status_detail",
+      "reason",
+      "reference_completeness",
+      "reference_end",
+      "reference_observations",
+      "reference_start",
+      "robust_score",
+      "scale",
+      "scale_floor_active",
+      "signal_direction",
+      "source_data_cutoff",
+      "source_geography",
+      "source_id",
+      "source_path",
+      "source_sha256",
+      "source_url",
+      "substance_category",
+      "temporal_status",
+      "threshold",
+      "unit",
+      "upper_threshold",
+      "window"
+    ],
+    "ordered_response_fingerprint": "09123f8ad233e482c0c67f687ae3a2c9df32f58db4e84fec3c0610973c0cbeba",
+    "numeric_field_projection_fingerprint": "e5b0e6480b96291ca036bb218ca227e04f966790e6d41a4902a77f3953f9f6fa",
+    "numeric_projection_fields": [
+      "baseline_estimate",
+      "baseline_mad",
+      "data_age_days",
+      "expected_reference_observations",
+      "lower_threshold",
+      "observed_value",
+      "ordinal",
+      "publication_lag_days",
+      "reference_completeness",
+      "reference_observations",
+      "robust_score",
+      "scale",
+      "threshold",
+      "upper_threshold",
+      "window"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography",
+      "period",
+      "method",
+      "window"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "analysis_as_of": 0,
+      "baseline_estimate": 2270,
+      "baseline_mad": 2270,
+      "boundary_type": 0,
+      "classification": 0,
+      "data_age_days": 72,
+      "dataset": 0,
+      "evidence_domain": 0,
+      "expected_reference_observations": 156,
+      "geography": 0,
+      "geography_id": 0,
+      "indicator_id": 0,
+      "limitations": 0,
+      "lower_threshold": 2270,
+      "method": 0,
+      "name": 0,
+      "observed_value": 8,
+      "ordinal": 0,
+      "period": 0,
+      "period_basis": 0,
+      "period_end": 72,
+      "period_start": 72,
+      "publication_date": 7530,
+      "publication_lag_days": 7530,
+      "publication_status": 0,
+      "quality_status": 0,
+      "quality_status_detail": 854,
+      "reason": 0,
+      "reference_completeness": 156,
+      "reference_end": 198,
+      "reference_observations": 0,
+      "reference_start": 2246,
+      "robust_score": 2270,
+      "scale": 2270,
+      "scale_floor_active": 2270,
+      "signal_direction": 0,
+      "source_data_cutoff": 0,
+      "source_geography": 0,
+      "source_id": 0,
+      "source_path": 0,
+      "source_sha256": 0,
+      "source_url": 84,
+      "substance_category": 7528,
+      "temporal_status": 0,
+      "threshold": 156,
+      "unit": 0,
+      "upper_threshold": 2270,
+      "window": 156
+    },
+    "definitions": {
+      "unit": [
+        "\"count\"",
+        "\"detection_count\"",
+        "\"incident_count\"",
+        "\"percent\""
+      ],
+      "period_basis": [
+        "\"calendar_month\"",
+        "\"calendar_quarter\"",
+        "\"calendar_quarter_legacy_10_day_adjustment\"",
+        "\"source_study_period_not_calendar_quarter\"",
+        "\"week_beginning_monday\""
+      ],
+      "boundary_type": [
+        "\"country\"",
+        "\"health_board\"",
+        "\"national_testing_sample\"",
+        "\"police_division\"",
+        "\"study_sample\"",
+        "\"unknown\""
+      ],
+      "method": [
+        "\"not_estimated\"",
+        "\"prior_complete_window_median_MAD_count_floor\""
+      ],
+      "window": [
+        "104",
+        "16",
+        "18",
+        "null"
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"A: North East\"",
+        "\"ASSIST participating emergency-department sample\"",
+        "\"C: Forth Valley\"",
+        "\"D: Tayside\"",
+        "\"E: Edinburgh City\"",
+        "\"G: Greater Glasgow\"",
+        "\"J: The Lothians & Scottish Borders\"",
+        "\"K: Renfrewshire and Inverclyde\"",
+        "\"L: Argyll & West Dunbartonshire\"",
+        "\"N: Highlands & Islands\"",
+        "\"NHS Ayrshire & Arran\"",
+        "\"NHS Borders\"",
+        "\"NHS Dumfries & Galloway\"",
+        "\"NHS Fife\"",
+        "\"NHS Forth Valley\"",
+        "\"NHS Grampian\"",
+        "\"NHS Greater Glasgow & Clyde\"",
+        "\"NHS Greater Glasgow and Clyde\"",
+        "\"NHS Highland\"",
+        "\"NHS Lanarkshire\"",
+        "\"NHS Lothian\"",
+        "\"NHS Orkney\"",
+        "\"NHS Shetland\"",
+        "\"NHS Tayside\"",
+        "\"NHS Western Isles\"",
+        "\"P: Fife\"",
+        "\"Q: Lanarkshire\"",
+        "\"Scotland forensic testing sample\"",
+        "\"Scotland national total\"",
+        "\"Scotland\"",
+        "\"U: Ayrshire\"",
+        "\"Unknown\"",
+        "\"V: Dumfries & Galloway\""
+      ],
+      "source_id": [
+        "\"police_suspected_drug_deaths_Jan2017-Dec2025.xlsx\"",
+        "\"quarterly_input_table.json\"",
+        "\"radar_sas_naloxone_weekly_by_board.csv\"",
+        "\"radar_toxicology_assist.csv\"",
+        "\"radar_toxicology_forensic_2018-2026.csv\"",
+        "\"radar_toxicology_treatment_glasgow.csv\""
+      ],
+      "indicator_id": [
+        "\"ambulance_naloxone_activity\"",
+        "\"assist:Benzodiazepine\"",
+        "\"assist:Cannabinoid\"",
+        "\"assist:Gabapentin/Pregabalin\"",
+        "\"assist:Opioid\"",
+        "\"assist:Other\"",
+        "\"assist:Stimulant\"",
+        "\"forensic:All Benzodiazepines\"",
+        "\"forensic:Dissociatives\"",
+        "\"forensic:Gabapentinoids\"",
+        "\"forensic:Opioids\"",
+        "\"forensic:Prescribable Benzodiazepines\"",
+        "\"forensic:Stimulants\"",
+        "\"forensic:Street Benzodiazepines\"",
+        "\"frozen_forensic_share:All Benzodiazepines\"",
+        "\"frozen_forensic_share:Dissociatives\"",
+        "\"frozen_forensic_share:Gabapentinoids\"",
+        "\"frozen_forensic_share:Opioids\"",
+        "\"frozen_forensic_share:Prescribable Benzodiazepines\"",
+        "\"frozen_forensic_share:Stimulants\"",
+        "\"frozen_forensic_share:Street Benzodiazepines\"",
+        "\"suspected_deaths\"",
+        "\"treatment:Benzodiazepines\"",
+        "\"treatment:Dissociatives\"",
+        "\"treatment:Gabapentinoids\"",
+        "\"treatment:Opioids (excluding treatment opioids)\"",
+        "\"treatment:Stimulants\""
+      ],
+      "substance_category": [
+        "\"All Benzodiazepines\"",
+        "\"Benzodiazepine\"",
+        "\"Benzodiazepines\"",
+        "\"Cannabinoid\"",
+        "\"Dissociatives\"",
+        "\"Gabapentin/Pregabalin\"",
+        "\"Gabapentinoids\"",
+        "\"Opioid\"",
+        "\"Opioids (excluding treatment opioids)\"",
+        "\"Opioids\"",
+        "\"Other\"",
+        "\"Prescribable Benzodiazepines\"",
+        "\"Stimulant\"",
+        "\"Stimulants\"",
+        "\"Street Benzodiazepines\"",
+        "null"
+      ],
+      "quality_status": [
+        "\"missing_or_suppressed\"",
+        "\"observed\""
+      ],
+      "publication_date": [
+        "\"2026-03-17\"",
+        "null"
+      ],
+      "source_data_cutoff": [
+        "\"2024-12-31\"",
+        "\"2025-12-31\"",
+        "\"2026-03-31\"",
+        "\"2026-05-31\"",
+        "\"Q15 Feb26- May26\""
+      ]
+    }
+  },
+  {
+    "resource": "sensitivity",
+    "metadata": {
+      "resource": "sensitivity",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5-1.0.0",
+      "executed_at_utc": "2026-11-10T01:25:15.194379+00:00",
+      "artifact_sha256": "50ebdf1a727d3db9ebce04edfb591aa35851e186d2a434b2db69892296213a64",
+      "source_path": "analysis/phase5/outputs/sensitivity_results.csv",
+      "provenance_manifest": "analysis/phase5/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 7878,
+    "api_records": 7878,
+    "pages": 8,
+    "complete": true,
+    "fields": [
+      "attempted_choices",
+      "boundary_type",
+      "dataset",
+      "eligible_choices",
+      "geography",
+      "geography_id",
+      "indicator_id",
+      "missing_or_short_window_choices",
+      "name",
+      "period",
+      "period_basis",
+      "primary_classification",
+      "primary_direction",
+      "signal_choices",
+      "signal_fraction",
+      "source_geography",
+      "stability"
+    ],
+    "ordered_response_fingerprint": "66aaac9dee0923ea52807a7121875f1382dce3ab5a4ca38f28b6248123df2330",
+    "numeric_field_projection_fingerprint": "2a24726523c5bc46585e7747116b77cfa654c0079f2dec290a9f02ffc98d53d6",
+    "numeric_projection_fields": [
+      "attempted_choices",
+      "eligible_choices",
+      "missing_or_short_window_choices",
+      "signal_choices",
+      "signal_fraction"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography",
+      "period"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "attempted_choices": 0,
+      "boundary_type": 0,
+      "dataset": 0,
+      "eligible_choices": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "indicator_id": 0,
+      "missing_or_short_window_choices": 0,
+      "name": 0,
+      "period": 0,
+      "period_basis": 0,
+      "primary_classification": 0,
+      "primary_direction": 0,
+      "signal_choices": 0,
+      "signal_fraction": 1168,
+      "source_geography": 0,
+      "stability": 0
+    },
+    "definitions": {
+      "period_basis": [
+        "\"calendar_month\"",
+        "\"calendar_quarter\"",
+        "\"calendar_quarter_legacy_10_day_adjustment\"",
+        "\"week_beginning_monday\""
+      ],
+      "boundary_type": [
+        "\"country\"",
+        "\"health_board\"",
+        "\"national_testing_sample\"",
+        "\"police_division\"",
+        "\"unknown\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"A: North East\"",
+        "\"C: Forth Valley\"",
+        "\"D: Tayside\"",
+        "\"E: Edinburgh City\"",
+        "\"G: Greater Glasgow\"",
+        "\"J: The Lothians & Scottish Borders\"",
+        "\"K: Renfrewshire and Inverclyde\"",
+        "\"L: Argyll & West Dunbartonshire\"",
+        "\"N: Highlands & Islands\"",
+        "\"NHS Ayrshire & Arran\"",
+        "\"NHS Borders\"",
+        "\"NHS Dumfries & Galloway\"",
+        "\"NHS Fife\"",
+        "\"NHS Forth Valley\"",
+        "\"NHS Grampian\"",
+        "\"NHS Greater Glasgow & Clyde\"",
+        "\"NHS Greater Glasgow and Clyde\"",
+        "\"NHS Highland\"",
+        "\"NHS Lanarkshire\"",
+        "\"NHS Lothian\"",
+        "\"NHS Orkney\"",
+        "\"NHS Shetland\"",
+        "\"NHS Tayside\"",
+        "\"NHS Western Isles\"",
+        "\"P: Fife\"",
+        "\"Q: Lanarkshire\"",
+        "\"Scotland forensic testing sample\"",
+        "\"Scotland national total\"",
+        "\"Scotland\"",
+        "\"U: Ayrshire\"",
+        "\"Unknown\"",
+        "\"V: Dumfries & Galloway\""
+      ],
+      "indicator_id": [
+        "\"ambulance_naloxone_activity\"",
+        "\"forensic:All Benzodiazepines\"",
+        "\"forensic:Dissociatives\"",
+        "\"forensic:Gabapentinoids\"",
+        "\"forensic:Opioids\"",
+        "\"forensic:Prescribable Benzodiazepines\"",
+        "\"forensic:Stimulants\"",
+        "\"forensic:Street Benzodiazepines\"",
+        "\"suspected_deaths\"",
+        "\"treatment:Benzodiazepines\"",
+        "\"treatment:Dissociatives\"",
+        "\"treatment:Gabapentinoids\"",
+        "\"treatment:Opioids (excluding treatment opioids)\"",
+        "\"treatment:Stimulants\""
+      ]
+    }
+  },
+  {
+    "resource": "enhanced",
+    "metadata": {
+      "resource": "enhanced",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5c-1.0.0",
+      "executed_at_utc": "2026-11-10T01:59:46.871541+00:00",
+      "artifact_sha256": "c091d460dd8a9c49753323491755f292adbb1ffb1bb49ba2dbddef6d80590359",
+      "source_path": "analysis/phase5c/outputs/enhanced_model_results.csv",
+      "provenance_manifest": "analysis/phase5c/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 31512,
+    "api_records": 31512,
+    "pages": 32,
+    "complete": true,
+    "fields": [
+      "boundary_type",
+      "covered95",
+      "covered99",
+      "dataset",
+      "diagnostic_interpretation",
+      "direction",
+      "dispersion",
+      "error",
+      "geography",
+      "geography_id",
+      "half_window_mean_change",
+      "indicator_id",
+      "interpretation",
+      "interval_score95",
+      "lag1_correlation",
+      "linear_slope",
+      "lower95",
+      "lower99",
+      "mean",
+      "method",
+      "name",
+      "negative_log_score",
+      "notes",
+      "observation_id",
+      "observed_value",
+      "ordinal",
+      "period",
+      "period_basis",
+      "poisson_expected_zero",
+      "predicted",
+      "reference_end",
+      "reference_start",
+      "seasonal_lag_correlation",
+      "signal",
+      "source_geography",
+      "source_path",
+      "source_sha256",
+      "status",
+      "upper95",
+      "upper99",
+      "variance",
+      "window",
+      "zero_fraction"
+    ],
+    "ordered_response_fingerprint": "827bc119d7db386c5b4fa39028149894975ae1680abc025e200be7a8856600a1",
+    "numeric_field_projection_fingerprint": "c7c511f7dee632277d27a96964fafe3267736fcf72cee2cb57d863212b13bc8d",
+    "numeric_projection_fields": [
+      "dispersion",
+      "error",
+      "half_window_mean_change",
+      "interval_score95",
+      "lag1_correlation",
+      "linear_slope",
+      "lower95",
+      "lower99",
+      "mean",
+      "negative_log_score",
+      "observation_id",
+      "observed_value",
+      "ordinal",
+      "poisson_expected_zero",
+      "predicted",
+      "seasonal_lag_correlation",
+      "upper95",
+      "upper99",
+      "variance",
+      "window",
+      "zero_fraction"
+    ],
+    "candidate_identity_fields": [
+      "observation_id",
+      "indicator_id",
+      "geography",
+      "period",
+      "method",
+      "window"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "boundary_type": 0,
+      "covered95": 15530,
+      "covered99": 15530,
+      "dataset": 0,
+      "diagnostic_interpretation": 15480,
+      "direction": 15530,
+      "dispersion": 15480,
+      "error": 15530,
+      "geography": 0,
+      "geography_id": 0,
+      "half_window_mean_change": 15480,
+      "indicator_id": 0,
+      "interpretation": 0,
+      "interval_score95": 15530,
+      "lag1_correlation": 15480,
+      "linear_slope": 15480,
+      "lower95": 15530,
+      "lower99": 15530,
+      "mean": 15480,
+      "method": 0,
+      "name": 0,
+      "negative_log_score": 15530,
+      "notes": 0,
+      "observation_id": 0,
+      "observed_value": 32,
+      "ordinal": 0,
+      "period": 0,
+      "period_basis": 0,
+      "poisson_expected_zero": 15480,
+      "predicted": 15530,
+      "reference_end": 168,
+      "reference_start": 10024,
+      "seasonal_lag_correlation": 15480,
+      "signal": 15530,
+      "source_geography": 0,
+      "source_path": 0,
+      "source_sha256": 0,
+      "status": 0,
+      "upper95": 15530,
+      "upper99": 15530,
+      "variance": 15480,
+      "window": 0,
+      "zero_fraction": 15480
+    },
+    "definitions": {
+      "period_basis": [
+        "\"calendar_month\"",
+        "\"calendar_quarter\"",
+        "\"calendar_quarter_legacy_10_day_adjustment\"",
+        "\"week_beginning_monday\""
+      ],
+      "boundary_type": [
+        "\"country\"",
+        "\"health_board\"",
+        "\"national_testing_sample\"",
+        "\"police_division\"",
+        "\"unknown\""
+      ],
+      "method": [
+        "\"gamma_poisson\"",
+        "\"nb2_moments\"",
+        "\"seasonal_gamma_poisson\"",
+        "\"trend_poisson\""
+      ],
+      "window": [
+        "104",
+        "16",
+        "18",
+        "208"
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"A: North East\"",
+        "\"C: Forth Valley\"",
+        "\"D: Tayside\"",
+        "\"E: Edinburgh City\"",
+        "\"G: Greater Glasgow\"",
+        "\"J: The Lothians & Scottish Borders\"",
+        "\"K: Renfrewshire and Inverclyde\"",
+        "\"L: Argyll & West Dunbartonshire\"",
+        "\"N: Highlands & Islands\"",
+        "\"NHS Ayrshire & Arran\"",
+        "\"NHS Borders\"",
+        "\"NHS Dumfries & Galloway\"",
+        "\"NHS Fife\"",
+        "\"NHS Forth Valley\"",
+        "\"NHS Grampian\"",
+        "\"NHS Greater Glasgow & Clyde\"",
+        "\"NHS Greater Glasgow and Clyde\"",
+        "\"NHS Highland\"",
+        "\"NHS Lanarkshire\"",
+        "\"NHS Lothian\"",
+        "\"NHS Orkney\"",
+        "\"NHS Shetland\"",
+        "\"NHS Tayside\"",
+        "\"NHS Western Isles\"",
+        "\"P: Fife\"",
+        "\"Q: Lanarkshire\"",
+        "\"Scotland forensic testing sample\"",
+        "\"Scotland national total\"",
+        "\"Scotland\"",
+        "\"U: Ayrshire\"",
+        "\"Unknown\"",
+        "\"V: Dumfries & Galloway\""
+      ],
+      "indicator_id": [
+        "\"ambulance_naloxone_activity\"",
+        "\"forensic:All Benzodiazepines\"",
+        "\"forensic:Dissociatives\"",
+        "\"forensic:Gabapentinoids\"",
+        "\"forensic:Opioids\"",
+        "\"forensic:Prescribable Benzodiazepines\"",
+        "\"forensic:Stimulants\"",
+        "\"forensic:Street Benzodiazepines\"",
+        "\"suspected_deaths\"",
+        "\"treatment:Benzodiazepines\"",
+        "\"treatment:Dissociatives\"",
+        "\"treatment:Gabapentinoids\"",
+        "\"treatment:Opioids (excluding treatment opioids)\"",
+        "\"treatment:Stimulants\""
+      ],
+      "status": [
+        "\"insufficient_data\"",
+        "\"not_applicable\"",
+        "\"ok\"",
+        "\"unavailable_observation\""
+      ]
+    }
+  },
+  {
+    "resource": "diagnostics",
+    "metadata": {
+      "resource": "diagnostics",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5c-1.0.0",
+      "executed_at_utc": "2026-11-10T01:59:46.871541+00:00",
+      "artifact_sha256": "bc6c8398799e0bd3a399080ae7f37b2c4b61724e885b0014b1cc91f868ac201e",
+      "source_path": "analysis/phase5c/outputs/statistical_diagnostics.csv",
+      "provenance_manifest": "analysis/phase5c/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 16032,
+    "api_records": 16032,
+    "pages": 17,
+    "complete": true,
+    "fields": [
+      "boundary_type",
+      "covered95",
+      "covered99",
+      "dataset",
+      "diagnostic_interpretation",
+      "direction",
+      "dispersion",
+      "error",
+      "geography",
+      "geography_id",
+      "half_window_mean_change",
+      "indicator_id",
+      "interpretation",
+      "interval_score95",
+      "lag1_correlation",
+      "linear_slope",
+      "lower95",
+      "lower99",
+      "mean",
+      "method",
+      "name",
+      "negative_log_score",
+      "notes",
+      "observation_id",
+      "observed_value",
+      "ordinal",
+      "period",
+      "period_basis",
+      "poisson_expected_zero",
+      "predicted",
+      "reference_end",
+      "reference_start",
+      "seasonal_lag_correlation",
+      "signal",
+      "source_geography",
+      "source_path",
+      "source_sha256",
+      "status",
+      "upper95",
+      "upper99",
+      "variance",
+      "window",
+      "zero_fraction"
+    ],
+    "ordered_response_fingerprint": "71c7cf982b8bcbaddcddac29e40c4f6c249cfcd476c70fc9227643c51d715b2f",
+    "numeric_field_projection_fingerprint": "a09aaf1ab3a4b0c2590269522b539667d7d74a5ec5f43a878eb2bf1e8086df26",
+    "numeric_projection_fields": [
+      "dispersion",
+      "error",
+      "half_window_mean_change",
+      "interval_score95",
+      "lag1_correlation",
+      "linear_slope",
+      "lower95",
+      "lower99",
+      "mean",
+      "negative_log_score",
+      "observation_id",
+      "observed_value",
+      "ordinal",
+      "poisson_expected_zero",
+      "predicted",
+      "seasonal_lag_correlation",
+      "upper95",
+      "upper99",
+      "variance",
+      "window",
+      "zero_fraction"
+    ],
+    "candidate_identity_fields": [
+      "observation_id",
+      "indicator_id",
+      "geography",
+      "period",
+      "method",
+      "window"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "boundary_type": 0,
+      "covered95": 50,
+      "covered99": 50,
+      "dataset": 0,
+      "diagnostic_interpretation": 0,
+      "direction": 50,
+      "dispersion": 0,
+      "error": 50,
+      "geography": 0,
+      "geography_id": 0,
+      "half_window_mean_change": 0,
+      "indicator_id": 0,
+      "interpretation": 0,
+      "interval_score95": 50,
+      "lag1_correlation": 0,
+      "linear_slope": 0,
+      "lower95": 50,
+      "lower99": 50,
+      "mean": 0,
+      "method": 0,
+      "name": 0,
+      "negative_log_score": 50,
+      "notes": 0,
+      "observation_id": 0,
+      "observed_value": 0,
+      "ordinal": 0,
+      "period": 0,
+      "period_basis": 0,
+      "poisson_expected_zero": 0,
+      "predicted": 50,
+      "reference_end": 0,
+      "reference_start": 0,
+      "seasonal_lag_correlation": 0,
+      "signal": 50,
+      "source_geography": 0,
+      "source_path": 0,
+      "source_sha256": 0,
+      "status": 0,
+      "upper95": 50,
+      "upper99": 50,
+      "variance": 0,
+      "window": 0,
+      "zero_fraction": 0
+    },
+    "definitions": {
+      "period_basis": [
+        "\"calendar_month\"",
+        "\"calendar_quarter\"",
+        "\"calendar_quarter_legacy_10_day_adjustment\"",
+        "\"week_beginning_monday\""
+      ],
+      "boundary_type": [
+        "\"country\"",
+        "\"health_board\"",
+        "\"national_testing_sample\"",
+        "\"police_division\"",
+        "\"unknown\""
+      ],
+      "method": [
+        "\"gamma_poisson\"",
+        "\"nb2_moments\"",
+        "\"seasonal_gamma_poisson\"",
+        "\"trend_poisson\""
+      ],
+      "window": [
+        "104",
+        "16",
+        "18",
+        "208"
+      ]
+    },
+    "source_scope_and_availability": {
+      "status": [
+        "\"insufficient_data\"",
+        "\"ok\""
+      ]
+    }
+  },
+  {
+    "resource": "model_metrics",
+    "metadata": {
+      "resource": "model_metrics",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5c-1.0.0",
+      "executed_at_utc": "2026-11-10T01:59:46.871541+00:00",
+      "artifact_sha256": "00d167a93bfe9add0c72b3c7d5981aea1603f79fb44a5d04ed067c334a7e8dee",
+      "source_path": "analysis/phase5c/outputs/model_evaluation_metrics.csv",
+      "provenance_manifest": "analysis/phase5c/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 336,
+    "api_records": 336,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "available_origins",
+      "boundary_type",
+      "common_participants",
+      "coverage95",
+      "coverage99",
+      "dataset",
+      "evaluated",
+      "evaluation_scope",
+      "geography",
+      "geography_id",
+      "indicator_id",
+      "mae",
+      "mean_interval_score95",
+      "mean_negative_log_score",
+      "mean_width95",
+      "method",
+      "name",
+      "rmse",
+      "selection",
+      "signal_frequency99",
+      "signals99",
+      "source_geography"
+    ],
+    "ordered_response_fingerprint": "454241035a1dfe9515777668910478b533960f69232ca6c260ad6d2de52a3eef",
+    "numeric_field_projection_fingerprint": "3f9a095388fd1d24c8d28c73cd6bfa424a85e83ea40c024dbecd7cf04caaed0d",
+    "numeric_projection_fields": [
+      "available_origins",
+      "coverage95",
+      "coverage99",
+      "evaluated",
+      "mae",
+      "mean_interval_score95",
+      "mean_negative_log_score",
+      "mean_width95",
+      "rmse",
+      "signal_frequency99",
+      "signals99"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography",
+      "method"
+    ],
+    "candidate_identity_duplicates": 168,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "available_origins": 0,
+      "boundary_type": 0,
+      "common_participants": 0,
+      "coverage95": 42,
+      "coverage99": 42,
+      "dataset": 0,
+      "evaluated": 0,
+      "evaluation_scope": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "indicator_id": 0,
+      "mae": 42,
+      "mean_interval_score95": 42,
+      "mean_negative_log_score": 42,
+      "mean_width95": 42,
+      "method": 0,
+      "name": 0,
+      "rmse": 42,
+      "selection": 0,
+      "signal_frequency99": 42,
+      "signals99": 42,
+      "source_geography": 0
+    },
+    "definitions": {
+      "boundary_type": [
+        "\"country\"",
+        "\"health_board\"",
+        "\"national_testing_sample\"",
+        "\"police_division\"",
+        "\"unknown\""
+      ],
+      "method": [
+        "\"gamma_poisson\"",
+        "\"nb2_moments\"",
+        "\"seasonal_gamma_poisson\"",
+        "\"trend_poisson\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"A: North East\"",
+        "\"C: Forth Valley\"",
+        "\"D: Tayside\"",
+        "\"E: Edinburgh City\"",
+        "\"G: Greater Glasgow\"",
+        "\"J: The Lothians & Scottish Borders\"",
+        "\"K: Renfrewshire and Inverclyde\"",
+        "\"L: Argyll & West Dunbartonshire\"",
+        "\"N: Highlands & Islands\"",
+        "\"NHS Ayrshire & Arran\"",
+        "\"NHS Borders\"",
+        "\"NHS Dumfries & Galloway\"",
+        "\"NHS Fife\"",
+        "\"NHS Forth Valley\"",
+        "\"NHS Grampian\"",
+        "\"NHS Greater Glasgow & Clyde\"",
+        "\"NHS Greater Glasgow and Clyde\"",
+        "\"NHS Highland\"",
+        "\"NHS Lanarkshire\"",
+        "\"NHS Lothian\"",
+        "\"NHS Orkney\"",
+        "\"NHS Shetland\"",
+        "\"NHS Tayside\"",
+        "\"NHS Western Isles\"",
+        "\"P: Fife\"",
+        "\"Q: Lanarkshire\"",
+        "\"Scotland forensic testing sample\"",
+        "\"Scotland national total\"",
+        "\"Scotland\"",
+        "\"U: Ayrshire\"",
+        "\"Unknown\"",
+        "\"V: Dumfries & Galloway\""
+      ],
+      "indicator_id": [
+        "\"ambulance_naloxone_activity\"",
+        "\"forensic:All Benzodiazepines\"",
+        "\"forensic:Dissociatives\"",
+        "\"forensic:Gabapentinoids\"",
+        "\"forensic:Opioids\"",
+        "\"forensic:Prescribable Benzodiazepines\"",
+        "\"forensic:Stimulants\"",
+        "\"forensic:Street Benzodiazepines\"",
+        "\"suspected_deaths\"",
+        "\"treatment:Benzodiazepines\"",
+        "\"treatment:Dissociatives\"",
+        "\"treatment:Gabapentinoids\"",
+        "\"treatment:Opioids (excluding treatment opioids)\"",
+        "\"treatment:Stimulants\""
+      ]
+    }
+  },
+  {
+    "resource": "runs",
+    "metadata": {
+      "resource": "runs",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5c-1.0.0",
+      "executed_at_utc": "2026-11-10T01:59:46.871541+00:00",
+      "artifact_sha256": "8b7b38df6639437c6eaeab428178361a58a54a67a4cad4eff2553ad50701aba9",
+      "source_path": "analysis/phase5c/outputs/signal_runs.json",
+      "provenance_manifest": "analysis/phase5c/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 392,
+    "api_records": 392,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "boundary_type",
+      "classification",
+      "configuration",
+      "dataset",
+      "deviation_unit",
+      "direction",
+      "duration_periods",
+      "end",
+      "geography",
+      "geography_id",
+      "indicator_id",
+      "method",
+      "name",
+      "observation_ids",
+      "peak_deviation",
+      "peak_period",
+      "period_basis",
+      "scientific_status",
+      "source_geography",
+      "start"
+    ],
+    "ordered_response_fingerprint": "5ed37564418e53099297616aa027813bbba081f872c13359146cdeed19521928",
+    "numeric_field_projection_fingerprint": "da9c7c5977297ba4e422b004ce1bf4921f87d5c346e822c424ecff2330a73c90",
+    "numeric_projection_fields": [
+      "duration_periods",
+      "peak_deviation"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography",
+      "method"
+    ],
+    "candidate_identity_duplicates": 275,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "boundary_type": 0,
+      "classification": 0,
+      "configuration": 0,
+      "dataset": 0,
+      "deviation_unit": 0,
+      "direction": 0,
+      "duration_periods": 0,
+      "end": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "indicator_id": 0,
+      "method": 0,
+      "name": 0,
+      "observation_ids": 0,
+      "peak_deviation": 0,
+      "peak_period": 0,
+      "period_basis": 0,
+      "scientific_status": 0,
+      "source_geography": 0,
+      "start": 0
+    },
+    "definitions": {
+      "period_basis": [
+        "\"calendar_month\"",
+        "\"calendar_quarter\"",
+        "\"calendar_quarter_legacy_10_day_adjustment\"",
+        "\"week_beginning_monday\""
+      ],
+      "boundary_type": [
+        "\"country\"",
+        "\"health_board\"",
+        "\"national_testing_sample\"",
+        "\"police_division\"",
+        "\"unknown\""
+      ],
+      "method": [
+        "\"gamma_poisson\"",
+        "\"nb2_moments\"",
+        "\"phase5_robust\"",
+        "\"seasonal_gamma_poisson\"",
+        "\"trend_poisson\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"A: North East\"",
+        "\"C: Forth Valley\"",
+        "\"D: Tayside\"",
+        "\"E: Edinburgh City\"",
+        "\"G: Greater Glasgow\"",
+        "\"K: Renfrewshire and Inverclyde\"",
+        "\"NHS Ayrshire & Arran\"",
+        "\"NHS Borders\"",
+        "\"NHS Dumfries & Galloway\"",
+        "\"NHS Fife\"",
+        "\"NHS Forth Valley\"",
+        "\"NHS Grampian\"",
+        "\"NHS Greater Glasgow & Clyde\"",
+        "\"NHS Greater Glasgow and Clyde\"",
+        "\"NHS Highland\"",
+        "\"NHS Lanarkshire\"",
+        "\"NHS Lothian\"",
+        "\"NHS Orkney\"",
+        "\"NHS Shetland\"",
+        "\"NHS Tayside\"",
+        "\"NHS Western Isles\"",
+        "\"Scotland forensic testing sample\"",
+        "\"Scotland national total\"",
+        "\"Scotland\"",
+        "\"U: Ayrshire\"",
+        "\"Unknown\"",
+        "\"V: Dumfries & Galloway\""
+      ],
+      "indicator_id": [
+        "\"ambulance_naloxone_activity\"",
+        "\"forensic:All Benzodiazepines\"",
+        "\"forensic:Dissociatives\"",
+        "\"forensic:Gabapentinoids\"",
+        "\"forensic:Opioids\"",
+        "\"forensic:Prescribable Benzodiazepines\"",
+        "\"forensic:Stimulants\"",
+        "\"forensic:Street Benzodiazepines\"",
+        "\"suspected_deaths\"",
+        "\"treatment:Benzodiazepines\"",
+        "\"treatment:Dissociatives\"",
+        "\"treatment:Gabapentinoids\"",
+        "\"treatment:Opioids (excluding treatment opioids)\"",
+        "\"treatment:Stimulants\""
+      ]
+    }
+  },
+  {
+    "resource": "evidence",
+    "metadata": {
+      "resource": "evidence",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5c-1.0.0",
+      "executed_at_utc": "2026-11-10T01:59:46.871541+00:00",
+      "artifact_sha256": "09c3465a7fc09c6fb2b51b4be162b4ca4413b7f1b3e5596a93c20f450e422012",
+      "source_path": "analysis/phase5c/outputs/cross_source_evidence.json",
+      "provenance_manifest": "analysis/phase5c/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 4512,
+    "api_records": 4512,
+    "pages": 5,
+    "complete": true,
+    "fields": [
+      "classification",
+      "comparison_id",
+      "compatibility",
+      "current_threat",
+      "left_state",
+      "limitation",
+      "method",
+      "observation_ids",
+      "period",
+      "related_geography_ids",
+      "retrospective_only",
+      "right_state"
+    ],
+    "ordered_response_fingerprint": "4cb2f4fbbc8db0b6a1e2882494da41399b8c0d2e653ab227d8355ac121264146",
+    "numeric_field_projection_fingerprint": "3efde33e7ba7b46878216e05db9448397906a3ef8be923c630d916c1db1c8603",
+    "numeric_projection_fields": [],
+    "candidate_identity_fields": [
+      "period",
+      "method"
+    ],
+    "candidate_identity_duplicates": 4446,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "classification": 0,
+      "comparison_id": 0,
+      "compatibility": 0,
+      "current_threat": 0,
+      "left_state": 0,
+      "limitation": 0,
+      "method": 0,
+      "observation_ids": 0,
+      "period": 0,
+      "related_geography_ids": 0,
+      "retrospective_only": 0,
+      "right_state": 0
+    },
+    "definitions": {
+      "method": [
+        "\"nb2_moments\"",
+        "\"phase5_robust\""
+      ]
+    },
+    "source_scope_and_availability": {}
+  },
+  {
+    "resource": "candidates",
+    "metadata": {
+      "resource": "candidates",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5c-1.0.0",
+      "executed_at_utc": "2026-11-10T01:59:46.871541+00:00",
+      "artifact_sha256": "bf9b5d7d835251e6f5087469a86a5758e6ab7b9e66a78a3bdc08d0421517197d",
+      "source_path": "analysis/phase5c/outputs/cross_source_candidates.json",
+      "provenance_manifest": "analysis/phase5c/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 2256,
+    "api_records": 2256,
+    "pages": 3,
+    "complete": true,
+    "fields": [
+      "boundary_type",
+      "comparison_id",
+      "geography",
+      "geography_id",
+      "historical_availability",
+      "independence",
+      "left_dataset",
+      "left_geography",
+      "left_indicator",
+      "left_observation_id",
+      "left_period",
+      "left_state",
+      "measurement",
+      "name",
+      "reason",
+      "right_dataset",
+      "right_geography",
+      "right_indicator",
+      "right_observation_id",
+      "right_period",
+      "right_state",
+      "shared_cases",
+      "source_geography",
+      "status",
+      "substance",
+      "temporal"
+    ],
+    "ordered_response_fingerprint": "2cd819066f549cdeea59d30fc13277bc7a3a43e4b9fbf3a06279818f22a5578e",
+    "numeric_field_projection_fingerprint": "578651487b47dfc537fc1d881cd83e1463d2941ec60bc2eaaf6881276e4d6a27",
+    "numeric_projection_fields": [],
+    "candidate_identity_fields": [
+      "geography"
+    ],
+    "candidate_identity_duplicates": 2252,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "boundary_type": 0,
+      "comparison_id": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "historical_availability": 0,
+      "independence": 0,
+      "left_dataset": 0,
+      "left_geography": 0,
+      "left_indicator": 0,
+      "left_observation_id": 0,
+      "left_period": 0,
+      "left_state": 0,
+      "measurement": 0,
+      "name": 0,
+      "reason": 0,
+      "right_dataset": 0,
+      "right_geography": 0,
+      "right_indicator": 0,
+      "right_observation_id": 0,
+      "right_period": 0,
+      "right_state": 0,
+      "shared_cases": 0,
+      "source_geography": 0,
+      "status": 0,
+      "substance": 0,
+      "temporal": 0
+    },
+    "definitions": {
+      "boundary_type": [
+        "\"unknown\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"exact\"",
+        "\"incompatible\"",
+        "\"national_sample_context_only\"",
+        "\"unresolved\""
+      ],
+      "status": [
+        "\"compatible_contextual_evidence\"",
+        "\"incompatible\"",
+        "\"unresolved_mapping\""
+      ]
+    }
+  },
+  {
+    "resource": "zero_baseline",
+    "metadata": {
+      "resource": "zero_baseline",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5c-1.0.0",
+      "executed_at_utc": "2026-11-10T01:59:46.871541+00:00",
+      "artifact_sha256": "43b78b5f3619ae9f0703524c369fd9ea67059cb5b689095865aa0aa45c84e809",
+      "source_path": "analysis/phase5c/outputs/zero_baseline_review.json",
+      "provenance_manifest": "analysis/phase5c/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 6,
+    "api_records": 6,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "geographic_interpretation",
+      "models",
+      "observation_id",
+      "observed",
+      "period",
+      "phase5_bounds",
+      "phase5_median"
+    ],
+    "ordered_response_fingerprint": "ffccd068d5bde05f9e737eac82341066e8f4bf448c124b7be2ea1e5afd9f5acc",
+    "numeric_field_projection_fingerprint": "ee736357bbbb900b35fdf3839f2b31042a6c10de7d382a7132f9eb92b763f2a7",
+    "numeric_projection_fields": [],
+    "candidate_identity_fields": [
+      "observation_id",
+      "period"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "geographic_interpretation": 0,
+      "models": 0,
+      "observation_id": 0,
+      "observed": 0,
+      "period": 0,
+      "phase5_bounds": 0,
+      "phase5_median": 0
+    },
+    "definitions": {},
+    "source_scope_and_availability": {}
+  },
+  {
+    "resource": "summary",
+    "metadata": {
+      "resource": "summary",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5c-1.0.0",
+      "executed_at_utc": "2026-11-10T01:59:46.871541+00:00",
+      "artifact_sha256": "2e3143ced65ebb25ccc71b144706ab8d76654e43f8bb666bd7a62af08fc7e459",
+      "source_path": "analysis/phase5c/outputs/summary.json",
+      "provenance_manifest": "analysis/phase5c/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 1,
+    "api_records": 1,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "compatibility",
+      "cross_source_candidates",
+      "evidence_by_method",
+      "foi",
+      "future_forecasts",
+      "interpretation",
+      "model_signals",
+      "model_statuses",
+      "observations",
+      "original_primary_flags",
+      "original_runs",
+      "sustained_original_runs"
+    ],
+    "ordered_response_fingerprint": "9b6c5dff5043809d20c19de00ac7a03392a0b342e0ed820b4ea5c022bdd8372d",
+    "numeric_field_projection_fingerprint": "49c11f8656de434ee50e49a24168c859574d8acf450b75dbb40f9ad917dd01e6",
+    "numeric_projection_fields": [
+      "cross_source_candidates",
+      "observations",
+      "original_primary_flags",
+      "original_runs"
+    ],
+    "candidate_identity_fields": [],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "compatibility": 0,
+      "cross_source_candidates": 0,
+      "evidence_by_method": 0,
+      "foi": 0,
+      "future_forecasts": 0,
+      "interpretation": 0,
+      "model_signals": 0,
+      "model_statuses": 0,
+      "observations": 0,
+      "original_primary_flags": 0,
+      "original_runs": 0,
+      "sustained_original_runs": 0
+    },
+    "definitions": {},
+    "source_scope_and_availability": {}
+  },
+  {
+    "resource": "registry",
+    "metadata": {
+      "resource": "registry",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5c-1.0.0",
+      "executed_at_utc": "2026-11-10T01:59:46.871541+00:00",
+      "artifact_sha256": "21ce312452895895f9baffbc840af8c4510362ec62605ea8b17fdd28f93e037a",
+      "source_path": "analysis/phase5c/outputs/source_compatibility_registry.json",
+      "provenance_manifest": "analysis/phase5c/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 6,
+    "api_records": 6,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "boundary_rule",
+      "completeness",
+      "dataset",
+      "denominator",
+      "first_period",
+      "geographic_scope_metadata",
+      "geographies",
+      "indicator_definitions",
+      "last_period",
+      "limitations",
+      "period_basis",
+      "possible_dependence",
+      "publication_date",
+      "reporting_lag",
+      "source_data_cutoff",
+      "source_id",
+      "source_path",
+      "source_population",
+      "source_sha256",
+      "source_url",
+      "substances",
+      "units"
+    ],
+    "ordered_response_fingerprint": "21bd31b91f2dc96692e86d370b9ebf9d92c2b429b9d2bfb2447203220ed08071",
+    "numeric_field_projection_fingerprint": "ee736357bbbb900b35fdf3839f2b31042a6c10de7d382a7132f9eb92b763f2a7",
+    "numeric_projection_fields": [],
+    "candidate_identity_fields": [],
+    "candidate_identity_duplicates": 5,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "boundary_rule": 0,
+      "completeness": 0,
+      "dataset": 0,
+      "denominator": 0,
+      "first_period": 0,
+      "geographic_scope_metadata": 0,
+      "geographies": 0,
+      "indicator_definitions": 0,
+      "last_period": 0,
+      "limitations": 0,
+      "period_basis": 0,
+      "possible_dependence": 0,
+      "publication_date": 5,
+      "reporting_lag": 0,
+      "source_data_cutoff": 0,
+      "source_id": 0,
+      "source_path": 0,
+      "source_population": 0,
+      "source_sha256": 0,
+      "source_url": 0,
+      "substances": 0,
+      "units": 0
+    },
+    "definitions": {
+      "period_basis": [
+        "\"calendar_month\"",
+        "\"calendar_quarter\"",
+        "\"calendar_quarter_legacy_10_day_adjustment\"",
+        "\"source_study_period_not_calendar_quarter\"",
+        "\"week_beginning_monday\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "source_id": [
+        "\"police_suspected_drug_deaths_Jan2017-Dec2025.xlsx\"",
+        "\"quarterly_input_table.json\"",
+        "\"radar_sas_naloxone_weekly_by_board.csv\"",
+        "\"radar_toxicology_assist.csv\"",
+        "\"radar_toxicology_forensic_2018-2026.csv\"",
+        "\"radar_toxicology_treatment_glasgow.csv\""
+      ],
+      "source_population": [
+        "\"ASSIST participating emergency-department sample\"",
+        "\"NHS Greater Glasgow and Clyde\"",
+        "\"Scotland forensic testing sample\"",
+        "\"Separate national and regional operational aggregates\""
+      ],
+      "publication_date": [
+        "\"2026-03-17\"",
+        "null"
+      ],
+      "source_data_cutoff": [
+        "\"2024-12-31\"",
+        "\"2025-12-31\"",
+        "\"2026-03-31\"",
+        "\"2026-05-31\"",
+        "\"Q15 Feb26- May26\""
+      ]
+    }
+  },
+  {
+    "resource": "gaps",
+    "metadata": {
+      "resource": "gaps",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase5c-1.0.0",
+      "executed_at_utc": "2026-11-10T01:59:46.871541+00:00",
+      "artifact_sha256": "ce51b69980f2ebe8330db79d77b649eb324c6cfe25272a29498ecc454f3af8a5",
+      "source_path": "analysis/phase5c/outputs/source_gap_register.json",
+      "provenance_manifest": "analysis/phase5c/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 10,
+    "api_records": 10,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "affected_analysis",
+      "available_workaround",
+      "gap",
+      "interpretation_consequence",
+      "potential_official_source",
+      "status"
+    ],
+    "ordered_response_fingerprint": "71575f9501203326f6615c0955c3b26053b7232fc9fd81585c4b2efb53adc028",
+    "numeric_field_projection_fingerprint": "67b68754bcb37b7a3209330d0172833c0b64778415ca30b6418ae6452b83ab13",
+    "numeric_projection_fields": [],
+    "candidate_identity_fields": [],
+    "candidate_identity_duplicates": 9,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "affected_analysis": 0,
+      "available_workaround": 0,
+      "gap": 0,
+      "interpretation_consequence": 0,
+      "potential_official_source": 0,
+      "status": 0
+    },
+    "definitions": {},
+    "source_scope_and_availability": {
+      "status": [
+        "\"partially_resolved\"",
+        "\"unresolved\""
+      ]
+    }
+  },
+  {
+    "resource": "annual",
+    "metadata": {
+      "resource": "annual",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase6-1.0.0",
+      "executed_at_utc": "2026-11-10T02:17:01.605443+00:00",
+      "artifact_sha256": "c7e0fb4b7cbcc2c4baa15be0466f2a48f007dd6381022ee746bed849ca1a3ac3",
+      "source_path": "analysis/phase6/outputs/validated_geographic_observations.csv",
+      "provenance_manifest": "analysis/phase6/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 30,
+    "api_records": 30,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "boundary_type",
+      "geography",
+      "geography_id",
+      "greenock_inference",
+      "indicator_id",
+      "name",
+      "observed_value",
+      "period_basis",
+      "period_end",
+      "period_start",
+      "publication_date",
+      "quality_status",
+      "scientific_status",
+      "sex",
+      "small_number_qualification",
+      "source_cell",
+      "source_data_cutoff",
+      "source_geography",
+      "source_path",
+      "source_raw_value",
+      "source_sha256",
+      "source_sheet",
+      "source_url",
+      "unit",
+      "year"
+    ],
+    "ordered_response_fingerprint": "0c39d3291f72330f8fd3042816f1ba0c8416e29923aad25ae2f93010c3c156c1",
+    "numeric_field_projection_fingerprint": "8e7f60af84df7def72f0261017b4ec6247cf9937dc8ca6d3e8a6f7a18c421660",
+    "numeric_projection_fields": [
+      "observed_value",
+      "source_raw_value",
+      "year"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography",
+      "year"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "boundary_type": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "greenock_inference": 0,
+      "indicator_id": 0,
+      "name": 0,
+      "observed_value": 0,
+      "period_basis": 0,
+      "period_end": 0,
+      "period_start": 0,
+      "publication_date": 0,
+      "quality_status": 0,
+      "scientific_status": 0,
+      "sex": 0,
+      "small_number_qualification": 0,
+      "source_cell": 0,
+      "source_data_cutoff": 0,
+      "source_geography": 0,
+      "source_path": 0,
+      "source_raw_value": 0,
+      "source_sha256": 0,
+      "source_sheet": 0,
+      "source_url": 0,
+      "unit": 0,
+      "year": 0
+    },
+    "definitions": {
+      "unit": [
+        "\"deaths\""
+      ],
+      "period_basis": [
+        "\"calendar_year_of_registration\""
+      ],
+      "boundary_type": [
+        "\"council\"",
+        "\"country\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"Inverclyde\"",
+        "\"Scotland\""
+      ],
+      "indicator_id": [
+        "\"nrs_registered_drug_misuse_deaths\""
+      ],
+      "quality_status": [
+        "\"observed\""
+      ],
+      "publication_date": [
+        "\"2025-09-02\""
+      ],
+      "source_data_cutoff": [
+        "\"2024-12-31\""
+      ]
+    }
+  },
+  {
+    "resource": "geographic_trends",
+    "metadata": {
+      "resource": "geographic_trends",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase6-1.0.0",
+      "executed_at_utc": "2026-11-10T02:17:01.605443+00:00",
+      "artifact_sha256": "7411f6f3f00775dc6b7e6b21254571410c855bff4e58b09ff4e747c3c063baf0",
+      "source_path": "analysis/phase6/outputs/inverclyde_trends.csv",
+      "provenance_manifest": "analysis/phase6/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 15,
+    "api_records": 15,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "annual_change",
+      "annual_change_pct",
+      "boundary_type",
+      "change_10y",
+      "change_10y_pct",
+      "change_3y",
+      "change_3y_pct",
+      "change_5y",
+      "change_5y_pct",
+      "change_since_2010",
+      "change_since_2010_pct",
+      "direction",
+      "geography",
+      "geography_id",
+      "greenock_inference",
+      "indicator_id",
+      "interpretation",
+      "name",
+      "observed_value",
+      "one_death_pct_of_previous",
+      "period_basis",
+      "period_end",
+      "period_start",
+      "previous_value",
+      "publication_date",
+      "quality_status",
+      "reference_10y",
+      "reference_3y",
+      "reference_5y",
+      "rolling_3y_complete",
+      "rolling_3y_mean",
+      "rolling_5y_complete",
+      "rolling_5y_mean",
+      "rolling_method",
+      "scientific_status",
+      "sex",
+      "small_number_qualification",
+      "source_cell",
+      "source_data_cutoff",
+      "source_geography",
+      "source_path",
+      "source_raw_value",
+      "source_sha256",
+      "source_sheet",
+      "source_url",
+      "unit",
+      "year"
+    ],
+    "ordered_response_fingerprint": "94b522b3b1290a8786d4a1a4220acaaf42dfe5688d3126b493f90b61dadb1b38",
+    "numeric_field_projection_fingerprint": "a2de21a79fef2a41999be95146c423aec972f42053f3d2d761e9380a4db816d7",
+    "numeric_projection_fields": [
+      "annual_change",
+      "annual_change_pct",
+      "change_10y",
+      "change_10y_pct",
+      "change_3y",
+      "change_3y_pct",
+      "change_5y",
+      "change_5y_pct",
+      "change_since_2010",
+      "change_since_2010_pct",
+      "observed_value",
+      "one_death_pct_of_previous",
+      "previous_value",
+      "reference_10y",
+      "reference_3y",
+      "reference_5y",
+      "rolling_3y_mean",
+      "rolling_5y_mean",
+      "source_raw_value",
+      "year"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography",
+      "year"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "annual_change": 1,
+      "annual_change_pct": 1,
+      "boundary_type": 0,
+      "change_10y": 10,
+      "change_10y_pct": 10,
+      "change_3y": 3,
+      "change_3y_pct": 3,
+      "change_5y": 5,
+      "change_5y_pct": 5,
+      "change_since_2010": 0,
+      "change_since_2010_pct": 0,
+      "direction": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "greenock_inference": 0,
+      "indicator_id": 0,
+      "interpretation": 0,
+      "name": 0,
+      "observed_value": 0,
+      "one_death_pct_of_previous": 1,
+      "period_basis": 0,
+      "period_end": 0,
+      "period_start": 0,
+      "previous_value": 1,
+      "publication_date": 0,
+      "quality_status": 0,
+      "reference_10y": 10,
+      "reference_3y": 3,
+      "reference_5y": 5,
+      "rolling_3y_complete": 0,
+      "rolling_3y_mean": 2,
+      "rolling_5y_complete": 0,
+      "rolling_5y_mean": 4,
+      "rolling_method": 0,
+      "scientific_status": 0,
+      "sex": 0,
+      "small_number_qualification": 0,
+      "source_cell": 0,
+      "source_data_cutoff": 0,
+      "source_geography": 0,
+      "source_path": 0,
+      "source_raw_value": 0,
+      "source_sha256": 0,
+      "source_sheet": 0,
+      "source_url": 0,
+      "unit": 0,
+      "year": 0
+    },
+    "definitions": {
+      "unit": [
+        "\"deaths\""
+      ],
+      "period_basis": [
+        "\"calendar_year_of_registration\""
+      ],
+      "boundary_type": [
+        "\"council\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"Inverclyde\""
+      ],
+      "indicator_id": [
+        "\"nrs_registered_drug_misuse_deaths\""
+      ],
+      "quality_status": [
+        "\"observed\""
+      ],
+      "publication_date": [
+        "\"2025-09-02\""
+      ],
+      "source_data_cutoff": [
+        "\"2024-12-31\""
+      ]
+    }
+  },
+  {
+    "resource": "comparisons",
+    "metadata": {
+      "resource": "comparisons",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase6-1.0.0",
+      "executed_at_utc": "2026-11-10T02:17:01.605443+00:00",
+      "artifact_sha256": "c7a155a8c631848f9a3bbd4f050c93ad449fd0e78a143adbf08e50acffd7e369",
+      "source_path": "analysis/phase6/outputs/registered_scotland_comparisons.csv",
+      "provenance_manifest": "analysis/phase6/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 15,
+    "api_records": 15,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "direction_agreement",
+      "indicator_id",
+      "interpretation",
+      "inverclyde_deaths",
+      "inverclyde_index_2010",
+      "inverclyde_share_of_scotland_pct",
+      "local_annual_change_pct",
+      "local_boundary",
+      "local_geography",
+      "national_boundary",
+      "national_geography",
+      "period_basis",
+      "scotland_annual_change_pct",
+      "scotland_deaths",
+      "scotland_index_2010",
+      "source_cells",
+      "source_sha256",
+      "year"
+    ],
+    "ordered_response_fingerprint": "9e176f1a05035aa5a5d9b3f4fa4bcc42e2b1f8b89e26f4b881d03136c051c68d",
+    "numeric_field_projection_fingerprint": "008b40a4b33572dfae7c62b99049b7e7164f4a2d9cd57e4e43b23b8cd2dc38f0",
+    "numeric_projection_fields": [
+      "inverclyde_deaths",
+      "inverclyde_index_2010",
+      "inverclyde_share_of_scotland_pct",
+      "local_annual_change_pct",
+      "scotland_annual_change_pct",
+      "scotland_deaths",
+      "scotland_index_2010",
+      "year"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "year"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "direction_agreement": 0,
+      "indicator_id": 0,
+      "interpretation": 0,
+      "inverclyde_deaths": 0,
+      "inverclyde_index_2010": 0,
+      "inverclyde_share_of_scotland_pct": 0,
+      "local_annual_change_pct": 1,
+      "local_boundary": 0,
+      "local_geography": 0,
+      "national_boundary": 0,
+      "national_geography": 0,
+      "period_basis": 0,
+      "scotland_annual_change_pct": 1,
+      "scotland_deaths": 0,
+      "scotland_index_2010": 0,
+      "source_cells": 0,
+      "source_sha256": 0,
+      "year": 0
+    },
+    "definitions": {
+      "period_basis": [
+        "\"calendar_year_of_registration\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "indicator_id": [
+        "\"nrs_registered_drug_misuse_deaths\""
+      ]
+    }
+  },
+  {
+    "resource": "rates",
+    "metadata": {
+      "resource": "rates",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase6-1.0.0",
+      "executed_at_utc": "2026-11-10T02:17:01.605443+00:00",
+      "artifact_sha256": "f5982b36885c7a18bcd1802cf5b64109cba1dd409a1721c78b4e301de7e4c401",
+      "source_path": "analysis/phase6/outputs/published_five_year_rates.csv",
+      "provenance_manifest": "analysis/phase6/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 22,
+    "api_records": 22,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "boundary_type",
+      "end_year",
+      "geography",
+      "geography_id",
+      "greenock_inference",
+      "indicator_id",
+      "lower95",
+      "name",
+      "period_basis",
+      "period_end",
+      "period_label",
+      "period_start",
+      "publication_date",
+      "qualification",
+      "quality_status",
+      "rate",
+      "rate_origin",
+      "scientific_status",
+      "source_cells",
+      "source_data_cutoff",
+      "source_geography",
+      "source_path",
+      "source_raw_lower95",
+      "source_raw_rate",
+      "source_raw_upper95",
+      "source_row",
+      "source_sha256",
+      "source_sheet",
+      "source_url",
+      "standard_population",
+      "start_year",
+      "total_check",
+      "total_deaths",
+      "unit",
+      "upper95"
+    ],
+    "ordered_response_fingerprint": "d164227b305848e2a1837481bb793cd9aa1d58c649deb9c47d76ec5bf70c57c8",
+    "numeric_field_projection_fingerprint": "c7690d15231dd057e2c76ac1863c6af40a7c0ea6c7bb0b158126560811138a18",
+    "numeric_projection_fields": [
+      "end_year",
+      "lower95",
+      "rate",
+      "source_raw_lower95",
+      "source_raw_rate",
+      "source_raw_upper95",
+      "source_row",
+      "start_year",
+      "total_deaths",
+      "upper95"
+    ],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography"
+    ],
+    "candidate_identity_duplicates": 20,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "boundary_type": 0,
+      "end_year": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "greenock_inference": 0,
+      "indicator_id": 0,
+      "lower95": 0,
+      "name": 0,
+      "period_basis": 0,
+      "period_end": 0,
+      "period_label": 0,
+      "period_start": 0,
+      "publication_date": 0,
+      "qualification": 0,
+      "quality_status": 0,
+      "rate": 0,
+      "rate_origin": 0,
+      "scientific_status": 0,
+      "source_cells": 0,
+      "source_data_cutoff": 0,
+      "source_geography": 0,
+      "source_path": 0,
+      "source_raw_lower95": 0,
+      "source_raw_rate": 0,
+      "source_raw_upper95": 0,
+      "source_row": 0,
+      "source_sha256": 0,
+      "source_sheet": 0,
+      "source_url": 0,
+      "standard_population": 0,
+      "start_year": 0,
+      "total_check": 0,
+      "total_deaths": 0,
+      "unit": 0,
+      "upper95": 0
+    },
+    "definitions": {
+      "unit": [
+        "\"published_age_standardised_deaths_per_100000\""
+      ],
+      "period_basis": [
+        "\"five_year_registration_period\""
+      ],
+      "boundary_type": [
+        "\"council\"",
+        "\"country\""
+      ],
+      "standard_population": [
+        "\"2013 European Standard Population\""
+      ],
+      "rate_origin": [
+        "\"NRS published; not recalculated or back-solved from total counts\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"Inverclyde\"",
+        "\"Scotland\""
+      ],
+      "indicator_id": [
+        "\"nrs_registered_drug_misuse_deaths\""
+      ],
+      "quality_status": [
+        "\"published\""
+      ],
+      "publication_date": [
+        "\"2025-09-02\""
+      ],
+      "source_data_cutoff": [
+        "\"2024-12-31\""
+      ]
+    }
+  },
+  {
+    "resource": "rate_comparisons",
+    "metadata": {
+      "resource": "rate_comparisons",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase6-1.0.0",
+      "executed_at_utc": "2026-11-10T02:17:01.605443+00:00",
+      "artifact_sha256": "8ab5e227f66fe49e21d6e0e008215d1bfb3b8d671c37f5b02c964be0f6e23dd2",
+      "source_path": "analysis/phase6/outputs/published_rate_comparisons.csv",
+      "provenance_manifest": "analysis/phase6/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 11,
+    "api_records": 11,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "descriptive_rate_ratio",
+      "interpretation",
+      "inverclyde_lower95",
+      "inverclyde_rate",
+      "inverclyde_upper95",
+      "period_end",
+      "period_label",
+      "period_start",
+      "rate_difference",
+      "scotland_lower95",
+      "scotland_rate",
+      "scotland_upper95",
+      "source_rows",
+      "source_sha256",
+      "standard_population",
+      "unit"
+    ],
+    "ordered_response_fingerprint": "98209dab9703787b2eeeb17259bd12e250e1d7584ab12a4cc7edae3d16a5a790",
+    "numeric_field_projection_fingerprint": "e7395ce069b89abfd7a5c1a1f8efdb12f95745c6e16ff2e104f45f657583b399",
+    "numeric_projection_fields": [
+      "descriptive_rate_ratio",
+      "inverclyde_lower95",
+      "inverclyde_rate",
+      "inverclyde_upper95",
+      "rate_difference",
+      "scotland_lower95",
+      "scotland_rate",
+      "scotland_upper95"
+    ],
+    "candidate_identity_fields": [],
+    "candidate_identity_duplicates": 10,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "descriptive_rate_ratio": 0,
+      "interpretation": 0,
+      "inverclyde_lower95": 0,
+      "inverclyde_rate": 0,
+      "inverclyde_upper95": 0,
+      "period_end": 0,
+      "period_label": 0,
+      "period_start": 0,
+      "rate_difference": 0,
+      "scotland_lower95": 0,
+      "scotland_rate": 0,
+      "scotland_upper95": 0,
+      "source_rows": 0,
+      "source_sha256": 0,
+      "standard_population": 0,
+      "unit": 0
+    },
+    "definitions": {
+      "unit": [
+        "\"published_age_standardised_deaths_per_100000\""
+      ],
+      "standard_population": [
+        "\"2013 European Standard Population\""
+      ]
+    },
+    "source_scope_and_availability": {}
+  },
+  {
+    "resource": "case_study",
+    "metadata": {
+      "resource": "case_study",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase6-1.0.0",
+      "executed_at_utc": "2026-11-10T02:17:01.605443+00:00",
+      "artifact_sha256": "da4a88f40bcc6771cb4a60b633c033bf31eb0986987dc046e8abec703713315b",
+      "source_path": "analysis/phase6/outputs/dashboard_data_contract.json",
+      "provenance_manifest": "analysis/phase6/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 1,
+    "api_records": 1,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "annual_count_series",
+      "annual_crude_rates",
+      "default_geography",
+      "display_rules",
+      "findings",
+      "greenock",
+      "hierarchy",
+      "matched_annual_comparisons",
+      "public_or_database_write",
+      "published_five_year_rates",
+      "published_rate_comparisons",
+      "required_labels",
+      "schema_version",
+      "source",
+      "status",
+      "title"
+    ],
+    "ordered_response_fingerprint": "956ffb2fe0b3a3930b9588169c20fae0f7248ca1473260296afea4f790a48f6d",
+    "numeric_field_projection_fingerprint": "e10808d43975dc400731053386849f864f297e6c4f7519c380f3dbaf7067a840",
+    "numeric_projection_fields": [],
+    "candidate_identity_fields": [],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "annual_count_series": 0,
+      "annual_crude_rates": 0,
+      "default_geography": 0,
+      "display_rules": 0,
+      "findings": 0,
+      "greenock": 0,
+      "hierarchy": 0,
+      "matched_annual_comparisons": 0,
+      "public_or_database_write": 0,
+      "published_five_year_rates": 0,
+      "published_rate_comparisons": 0,
+      "required_labels": 0,
+      "schema_version": 0,
+      "source": 0,
+      "status": 0,
+      "title": 0
+    },
+    "definitions": {},
+    "source_scope_and_availability": {
+      "status": [
+        "\"local_dashboard_ready_not_deployed\""
+      ]
+    }
+  },
+  {
+    "resource": "geographic_findings",
+    "metadata": {
+      "resource": "geographic_findings",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase6-1.0.0",
+      "executed_at_utc": "2026-11-10T02:17:01.605443+00:00",
+      "artifact_sha256": "b37d2147182ecb12ce1b7b375eafac2916562355e805a4ed5a4f6f2212959dfe",
+      "source_path": "analysis/phase6/outputs/research_findings.json",
+      "provenance_manifest": "analysis/phase6/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 1,
+    "api_records": 1,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "analysis_as_of",
+      "boundary_type",
+      "different_direction_years",
+      "extrema",
+      "geography",
+      "geography_id",
+      "historical_not_current",
+      "indicator_id",
+      "latest",
+      "latest_published_rate_comparison",
+      "limitations",
+      "local_anomaly_feasibility",
+      "matched_scotland_latest",
+      "name",
+      "nonoverlapping_five_year_blocks",
+      "publication_date",
+      "source_data_cutoff",
+      "source_geography",
+      "validated_annual_counts"
+    ],
+    "ordered_response_fingerprint": "60b2f6202cf315e546daf7eccf4fe7daaf35e5d709fac1ec3552cf2205ec79b6",
+    "numeric_field_projection_fingerprint": "e10808d43975dc400731053386849f864f297e6c4f7519c380f3dbaf7067a840",
+    "numeric_projection_fields": [],
+    "candidate_identity_fields": [
+      "indicator_id",
+      "geography"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "analysis_as_of": 0,
+      "boundary_type": 0,
+      "different_direction_years": 0,
+      "extrema": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "historical_not_current": 0,
+      "indicator_id": 0,
+      "latest": 0,
+      "latest_published_rate_comparison": 0,
+      "limitations": 0,
+      "local_anomaly_feasibility": 0,
+      "matched_scotland_latest": 0,
+      "name": 0,
+      "nonoverlapping_five_year_blocks": 0,
+      "publication_date": 0,
+      "source_data_cutoff": 0,
+      "source_geography": 0,
+      "validated_annual_counts": 0
+    },
+    "definitions": {
+      "boundary_type": [
+        "\"council\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"Inverclyde\""
+      ],
+      "indicator_id": [
+        "\"nrs_registered_drug_misuse_deaths\""
+      ],
+      "publication_date": [
+        "\"2025-09-02\""
+      ],
+      "source_data_cutoff": [
+        "\"2024-12-31\""
+      ]
+    }
+  },
+  {
+    "resource": "forecast",
+    "metadata": {
+      "resource": "forecast",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase2-1.0.0",
+      "executed_at_utc": "2026-11-09T10:53:16+00:00",
+      "artifact_sha256": "d1e28adf528bd7f93bae20a74896144372d807efd3fae838753a673d604774df",
+      "source_path": "analysis/outputs/forecast.json",
+      "provenance_manifest": "analysis/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 1,
+    "api_records": 1,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "boundary_type",
+      "diagnostics",
+      "forecast_origin",
+      "geography",
+      "geography_id",
+      "horizon_quarters",
+      "interpretation",
+      "interval_method",
+      "issued_at_utc",
+      "lower80",
+      "lower95",
+      "model",
+      "name",
+      "outcome",
+      "predicted",
+      "source_geography",
+      "target_period",
+      "upper80",
+      "upper95",
+      "warnings"
+    ],
+    "ordered_response_fingerprint": "f733e371d31e567b175d1a1ff9a3bb50cda77070ee9076de58132978d3172d2f",
+    "numeric_field_projection_fingerprint": "c0202b561451fe8d6a01fbbcf859cb88ec53eb2fc08af20b7972875c6468950f",
+    "numeric_projection_fields": [
+      "horizon_quarters",
+      "lower80",
+      "lower95",
+      "predicted",
+      "upper80",
+      "upper95"
+    ],
+    "candidate_identity_fields": [
+      "geography",
+      "model",
+      "target_period"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "boundary_type": 0,
+      "diagnostics": 0,
+      "forecast_origin": 0,
+      "geography": 0,
+      "geography_id": 0,
+      "horizon_quarters": 0,
+      "interpretation": 0,
+      "interval_method": 0,
+      "issued_at_utc": 0,
+      "lower80": 0,
+      "lower95": 0,
+      "model": 0,
+      "name": 0,
+      "outcome": 0,
+      "predicted": 0,
+      "source_geography": 0,
+      "target_period": 0,
+      "upper80": 0,
+      "upper95": 0,
+      "warnings": 0
+    },
+    "definitions": {
+      "boundary_type": [
+        "\"country\""
+      ],
+      "model": [
+        "\"naive\""
+      ],
+      "target_period": [
+        "\"2026 Q1\""
+      ],
+      "forecast_origin": [
+        "\"2025 Q4\""
+      ]
+    },
+    "source_scope_and_availability": {
+      "geography": [
+        "\"Scotland national total\""
+      ],
+      "outcome": [
+        "\"Police Scotland suspected drug deaths\""
+      ]
+    }
+  },
+  {
+    "resource": "forecast_models",
+    "metadata": {
+      "resource": "forecast_models",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase2-1.0.0",
+      "executed_at_utc": "2026-11-09T10:53:16+00:00",
+      "artifact_sha256": "acaa7b3a8c39f21be58266fa5affd4109f0f1f2d0730170f98766cbe67954c49",
+      "source_path": "analysis/outputs/model_metrics.json",
+      "provenance_manifest": "analysis/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 4,
+    "api_records": 4,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "coverage80",
+      "coverage95",
+      "eligible_for_selection",
+      "evaluated_origins",
+      "failed_origins",
+      "interval_score95",
+      "mae",
+      "mae_skill_vs_naive",
+      "mae_skill_vs_seasonal_naive",
+      "mase",
+      "mean_width95",
+      "model",
+      "rmse",
+      "rmsse",
+      "scaled_origins"
+    ],
+    "ordered_response_fingerprint": "09c99c24a2c247c405c2f12218f4f39d1601e7a439de1ebc27f36d54ea8c4214",
+    "numeric_field_projection_fingerprint": "5b781f2b8e57add902b1fcf2bbe77c565ef73415f568b9a244dd738f7978c091",
+    "numeric_projection_fields": [
+      "coverage80",
+      "coverage95",
+      "evaluated_origins",
+      "interval_score95",
+      "mae",
+      "mae_skill_vs_naive",
+      "mae_skill_vs_seasonal_naive",
+      "mase",
+      "mean_width95",
+      "rmse",
+      "rmsse",
+      "scaled_origins"
+    ],
+    "candidate_identity_fields": [
+      "model"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "coverage80": 0,
+      "coverage95": 0,
+      "eligible_for_selection": 0,
+      "evaluated_origins": 0,
+      "failed_origins": 0,
+      "interval_score95": 0,
+      "mae": 0,
+      "mae_skill_vs_naive": 0,
+      "mae_skill_vs_seasonal_naive": 0,
+      "mase": 0,
+      "mean_width95": 0,
+      "model": 0,
+      "rmse": 0,
+      "rmsse": 0,
+      "scaled_origins": 0
+    },
+    "definitions": {
+      "model": [
+        "\"naive\"",
+        "\"nb2_trend\"",
+        "\"seasonal_naive\"",
+        "\"ses\""
+      ]
+    },
+    "source_scope_and_availability": {}
+  },
+  {
+    "resource": "backtest",
+    "metadata": {
+      "resource": "backtest",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase2-1.0.0",
+      "executed_at_utc": "2026-11-09T10:53:16+00:00",
+      "artifact_sha256": "28ba9526cc934519f4c5d7c1bb7730bcfe727a15116e4dcb51d2971da5d4a38a",
+      "source_path": "analysis/outputs/rolling_origin_predictions.csv",
+      "provenance_manifest": "analysis/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 48,
+    "api_records": 48,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "actual",
+      "diagnostics",
+      "horizon",
+      "interval_method",
+      "lower80",
+      "lower95",
+      "mase_scale",
+      "model",
+      "origin",
+      "predicted",
+      "rmsse_scale_squared",
+      "status",
+      "target",
+      "training_count",
+      "upper80",
+      "upper95",
+      "warnings"
+    ],
+    "ordered_response_fingerprint": "3d1c55f3dae38451b5e5b7fbd3b498c297ad5570bfe5a2fa1f3bbe0875a7841d",
+    "numeric_field_projection_fingerprint": "7d133551697e46ebeb5c95a6609a458dccc03df3e94ee07b08eb217312f78b9d",
+    "numeric_projection_fields": [
+      "actual",
+      "horizon",
+      "lower80",
+      "lower95",
+      "mase_scale",
+      "predicted",
+      "rmsse_scale_squared",
+      "training_count",
+      "upper80",
+      "upper95"
+    ],
+    "candidate_identity_fields": [
+      "model",
+      "horizon"
+    ],
+    "candidate_identity_duplicates": 44,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "actual": 0,
+      "diagnostics": 0,
+      "horizon": 0,
+      "interval_method": 0,
+      "lower80": 0,
+      "lower95": 0,
+      "mase_scale": 0,
+      "model": 0,
+      "origin": 0,
+      "predicted": 0,
+      "rmsse_scale_squared": 0,
+      "status": 0,
+      "target": 0,
+      "training_count": 0,
+      "upper80": 0,
+      "upper95": 0,
+      "warnings": 0
+    },
+    "definitions": {
+      "model": [
+        "\"naive\"",
+        "\"nb2_trend\"",
+        "\"seasonal_naive\"",
+        "\"ses\""
+      ],
+      "horizon": [
+        "1"
+      ]
+    },
+    "source_scope_and_availability": {
+      "status": [
+        "\"ok\""
+      ]
+    }
+  },
+  {
+    "resource": "forecast_observations",
+    "metadata": {
+      "resource": "forecast_observations",
+      "storage": "approved_local_artifact",
+      "analytical_version": "phase2-1.0.0",
+      "executed_at_utc": "2026-11-09T10:53:16+00:00",
+      "artifact_sha256": "8466413fae42235d90b117e437b8e0bb0db58d2cbaa314d8f95efb82882a8868",
+      "source_path": "analysis/outputs/validated_mortality.csv",
+      "provenance_manifest": "analysis/outputs/run_manifest.json",
+      "limitations": [
+        "Frozen retrospective research output; not live conditions or a validated warning",
+        "Source periods, populations, geographies and measurement definitions must remain distinct"
+      ]
+    },
+    "artifact_records": 36,
+    "api_records": 36,
+    "pages": 1,
+    "complete": true,
+    "fields": [
+      "quarter",
+      "suspected_deaths",
+      "year"
+    ],
+    "ordered_response_fingerprint": "f3c6e921e8ba533fae9347b76c33d788b49cbc019547c9f1b42d81a892c4f14d",
+    "numeric_field_projection_fingerprint": "f3c6e921e8ba533fae9347b76c33d788b49cbc019547c9f1b42d81a892c4f14d",
+    "numeric_projection_fields": [
+      "quarter",
+      "suspected_deaths",
+      "year"
+    ],
+    "candidate_identity_fields": [
+      "year",
+      "quarter"
+    ],
+    "candidate_identity_duplicates": 0,
+    "candidate_identity_note": "Diagnostic projection only; not a declared canonical key.",
+    "null_by_field": {
+      "quarter": 0,
+      "suspected_deaths": 0,
+      "year": 0
+    },
+    "definitions": {},
+    "source_scope_and_availability": {}
+  }
+]

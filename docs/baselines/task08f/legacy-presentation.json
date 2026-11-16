@@ -1,0 +1,5619 @@
+{
+  "baseline_api_sha256": "4e1d75b6620fd9ca4e00070d9016ccaef697557f0e284939fcd1b5d6360dcaf6",
+  "contract_version": "legacy",
+  "observation_count": 210,
+  "selected_count": 210,
+  "categories": [
+    "All Benzodiazepines",
+    "Dissociatives",
+    "Gabapentinoids",
+    "Opioids",
+    "Prescribable Benzodiazepines",
+    "Stimulants",
+    "Street Benzodiazepines"
+  ],
+  "periods": [
+    "2018 Q4",
+    "2019 Q1",
+    "2019 Q2",
+    "2019 Q3",
+    "2019 Q4",
+    "2020 Q1",
+    "2020 Q2",
+    "2020 Q3",
+    "2020 Q4",
+    "2021 Q1",
+    "2021 Q2",
+    "2021 Q3",
+    "2021 Q4",
+    "2022 Q1",
+    "2022 Q2",
+    "2022 Q3",
+    "2022 Q4",
+    "2023 Q1",
+    "2023 Q2",
+    "2023 Q3",
+    "2023 Q4",
+    "2024 Q1",
+    "2024 Q2",
+    "2024 Q3",
+    "2024 Q4",
+    "2025 Q1",
+    "2025 Q2",
+    "2025 Q3",
+    "2025 Q4",
+    "2026 Q1"
+  ],
+  "chart": {
+    "labels": [
+      "2018 Q4",
+      "2019 Q1",
+      "2019 Q2",
+      "2019 Q3",
+      "2019 Q4",
+      "2020 Q1",
+      "2020 Q2",
+      "2020 Q3",
+      "2020 Q4",
+      "2021 Q1",
+      "2021 Q2",
+      "2021 Q3",
+      "2021 Q4",
+      "2022 Q1",
+      "2022 Q2",
+      "2022 Q3",
+      "2022 Q4",
+      "2023 Q1",
+      "2023 Q2",
+      "2023 Q3",
+      "2023 Q4",
+      "2024 Q1",
+      "2024 Q2",
+      "2024 Q3",
+      "2024 Q4",
+      "2025 Q1",
+      "2025 Q2",
+      "2025 Q3",
+      "2025 Q4",
+      "2026 Q1"
+    ],
+    "regular": true,
+    "warnings": [
+      "Separate source or reporting definitions are present; lines are not combined."
+    ],
+    "datasets": [
+      {
+        "label": "Scotland forensic testing sample · source_id: radar_toxicology_forensic_2018-2026.csv · source_path: datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv · source_sha256: ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df · indicator_id: forensic:Opioids · unit: detection_count · period_basis: calendar_quarter · boundary_type: national_testing_sample",
+        "showLine": true,
+        "metadata": {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "indicator_id": "forensic:Opioids",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "boundary_type": "national_testing_sample"
+        },
+        "points": [
+          {
+            "period": "2018 Q4",
+            "value": 42,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q1",
+            "value": 467,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q2",
+            "value": 447,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q3",
+            "value": 393,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q4",
+            "value": 420,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q1",
+            "value": 404,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q2",
+            "value": 473,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q3",
+            "value": 355,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q4",
+            "value": 444,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q1",
+            "value": 458,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q2",
+            "value": 416,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q3",
+            "value": 364,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q4",
+            "value": 417,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q1",
+            "value": 405,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q2",
+            "value": 440,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q3",
+            "value": 369,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q4",
+            "value": 468,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q1",
+            "value": 439,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q2",
+            "value": 442,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q3",
+            "value": 402,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q4",
+            "value": 454,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q1",
+            "value": 489,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q2",
+            "value": 413,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q3",
+            "value": 409,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q4",
+            "value": 410,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q1",
+            "value": 456,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q2",
+            "value": 444,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q3",
+            "value": 425,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q4",
+            "value": 459,
+            "missingPeriod": false
+          },
+          {
+            "period": "2026 Q1",
+            "value": 328,
+            "missingPeriod": false
+          }
+        ]
+      },
+      {
+        "label": "Scotland forensic testing sample · source_id: radar_toxicology_forensic_2018-2026.csv · source_path: datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv · source_sha256: ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df · indicator_id: forensic:Prescribable Benzodiazepines · unit: detection_count · period_basis: calendar_quarter · boundary_type: national_testing_sample",
+        "showLine": true,
+        "metadata": {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "indicator_id": "forensic:Prescribable Benzodiazepines",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "boundary_type": "national_testing_sample"
+        },
+        "points": [
+          {
+            "period": "2018 Q4",
+            "value": 20,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q1",
+            "value": 201,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q2",
+            "value": 192,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q3",
+            "value": 160,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q4",
+            "value": 157,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q1",
+            "value": 187,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q2",
+            "value": 195,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q3",
+            "value": 159,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q4",
+            "value": 188,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q1",
+            "value": 214,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q2",
+            "value": 178,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q3",
+            "value": 187,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q4",
+            "value": 209,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q1",
+            "value": 221,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q2",
+            "value": 247,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q3",
+            "value": 203,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q4",
+            "value": 290,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q1",
+            "value": 244,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q2",
+            "value": 286,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q3",
+            "value": 240,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q4",
+            "value": 256,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q1",
+            "value": 315,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q2",
+            "value": 245,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q3",
+            "value": 226,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q4",
+            "value": 250,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q1",
+            "value": 250,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q2",
+            "value": 273,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q3",
+            "value": 263,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q4",
+            "value": 272,
+            "missingPeriod": false
+          },
+          {
+            "period": "2026 Q1",
+            "value": 218,
+            "missingPeriod": false
+          }
+        ]
+      },
+      {
+        "label": "Scotland forensic testing sample · source_id: radar_toxicology_forensic_2018-2026.csv · source_path: datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv · source_sha256: ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df · indicator_id: forensic:Street Benzodiazepines · unit: detection_count · period_basis: calendar_quarter · boundary_type: national_testing_sample",
+        "showLine": true,
+        "metadata": {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "indicator_id": "forensic:Street Benzodiazepines",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "boundary_type": "national_testing_sample"
+        },
+        "points": [
+          {
+            "period": "2018 Q4",
+            "value": 22,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q1",
+            "value": 263,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q2",
+            "value": 249,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q3",
+            "value": 230,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q4",
+            "value": 258,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q1",
+            "value": 210,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q2",
+            "value": 351,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q3",
+            "value": 226,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q4",
+            "value": 316,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q1",
+            "value": 306,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q2",
+            "value": 289,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q3",
+            "value": 197,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q4",
+            "value": 231,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q1",
+            "value": 203,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q2",
+            "value": 173,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q3",
+            "value": 111,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q4",
+            "value": 194,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q1",
+            "value": 185,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q2",
+            "value": 180,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q3",
+            "value": 175,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q4",
+            "value": 194,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q1",
+            "value": 180,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q2",
+            "value": 167,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q3",
+            "value": 131,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q4",
+            "value": 117,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q1",
+            "value": 104,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q2",
+            "value": 98,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q3",
+            "value": 91,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q4",
+            "value": 74,
+            "missingPeriod": false
+          },
+          {
+            "period": "2026 Q1",
+            "value": 97,
+            "missingPeriod": false
+          }
+        ]
+      },
+      {
+        "label": "Scotland forensic testing sample · source_id: radar_toxicology_forensic_2018-2026.csv · source_path: datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv · source_sha256: ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df · indicator_id: forensic:All Benzodiazepines · unit: detection_count · period_basis: calendar_quarter · boundary_type: national_testing_sample",
+        "showLine": true,
+        "metadata": {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "indicator_id": "forensic:All Benzodiazepines",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "boundary_type": "national_testing_sample"
+        },
+        "points": [
+          {
+            "period": "2018 Q4",
+            "value": 34,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q1",
+            "value": 375,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q2",
+            "value": 360,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q3",
+            "value": 319,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q4",
+            "value": 344,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q1",
+            "value": 325,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q2",
+            "value": 432,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q3",
+            "value": 321,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q4",
+            "value": 413,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q1",
+            "value": 420,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q2",
+            "value": 374,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q3",
+            "value": 306,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q4",
+            "value": 362,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q1",
+            "value": 346,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q2",
+            "value": 348,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q3",
+            "value": 264,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q4",
+            "value": 370,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q1",
+            "value": 344,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q2",
+            "value": 369,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q3",
+            "value": 340,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q4",
+            "value": 371,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q1",
+            "value": 398,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q2",
+            "value": 331,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q3",
+            "value": 300,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q4",
+            "value": 304,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q1",
+            "value": 308,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q2",
+            "value": 318,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q3",
+            "value": 308,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q4",
+            "value": 306,
+            "missingPeriod": false
+          },
+          {
+            "period": "2026 Q1",
+            "value": 271,
+            "missingPeriod": false
+          }
+        ]
+      },
+      {
+        "label": "Scotland forensic testing sample · source_id: radar_toxicology_forensic_2018-2026.csv · source_path: datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv · source_sha256: ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df · indicator_id: forensic:Dissociatives · unit: detection_count · period_basis: calendar_quarter · boundary_type: national_testing_sample",
+        "showLine": true,
+        "metadata": {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "indicator_id": "forensic:Dissociatives",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "boundary_type": "national_testing_sample"
+        },
+        "points": [
+          {
+            "period": "2018 Q4",
+            "value": 0,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q1",
+            "value": 13,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q2",
+            "value": 13,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q3",
+            "value": 14,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q4",
+            "value": 7,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q1",
+            "value": 10,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q2",
+            "value": 10,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q3",
+            "value": 10,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q4",
+            "value": 13,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q1",
+            "value": 10,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q2",
+            "value": 9,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q3",
+            "value": 11,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q4",
+            "value": 7,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q1",
+            "value": 10,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q2",
+            "value": 13,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q3",
+            "value": 13,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q4",
+            "value": 21,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q1",
+            "value": 22,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q2",
+            "value": 19,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q3",
+            "value": 40,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q4",
+            "value": 17,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q1",
+            "value": 27,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q2",
+            "value": 27,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q3",
+            "value": 28,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q4",
+            "value": 27,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q1",
+            "value": 34,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q2",
+            "value": 30,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q3",
+            "value": 32,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q4",
+            "value": 25,
+            "missingPeriod": false
+          },
+          {
+            "period": "2026 Q1",
+            "value": 18,
+            "missingPeriod": false
+          }
+        ]
+      },
+      {
+        "label": "Scotland forensic testing sample · source_id: radar_toxicology_forensic_2018-2026.csv · source_path: datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv · source_sha256: ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df · indicator_id: forensic:Gabapentinoids · unit: detection_count · period_basis: calendar_quarter · boundary_type: national_testing_sample",
+        "showLine": true,
+        "metadata": {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "indicator_id": "forensic:Gabapentinoids",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "boundary_type": "national_testing_sample"
+        },
+        "points": [
+          {
+            "period": "2018 Q4",
+            "value": 23,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q1",
+            "value": 198,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q2",
+            "value": 197,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q3",
+            "value": 174,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q4",
+            "value": 194,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q1",
+            "value": 175,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q2",
+            "value": 215,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q3",
+            "value": 161,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q4",
+            "value": 193,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q1",
+            "value": 191,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q2",
+            "value": 227,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q3",
+            "value": 159,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q4",
+            "value": 190,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q1",
+            "value": 180,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q2",
+            "value": 171,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q3",
+            "value": 162,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q4",
+            "value": 209,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q1",
+            "value": 213,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q2",
+            "value": 217,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q3",
+            "value": 194,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q4",
+            "value": 192,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q1",
+            "value": 193,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q2",
+            "value": 164,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q3",
+            "value": 163,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q4",
+            "value": 175,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q1",
+            "value": 174,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q2",
+            "value": 153,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q3",
+            "value": 158,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q4",
+            "value": 168,
+            "missingPeriod": false
+          },
+          {
+            "period": "2026 Q1",
+            "value": 138,
+            "missingPeriod": false
+          }
+        ]
+      },
+      {
+        "label": "Scotland forensic testing sample · source_id: radar_toxicology_forensic_2018-2026.csv · source_path: datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv · source_sha256: ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df · indicator_id: forensic:Stimulants · unit: detection_count · period_basis: calendar_quarter · boundary_type: national_testing_sample",
+        "showLine": true,
+        "metadata": {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "indicator_id": "forensic:Stimulants",
+          "unit": "detection_count",
+          "period_basis": "calendar_quarter",
+          "boundary_type": "national_testing_sample"
+        },
+        "points": [
+          {
+            "period": "2018 Q4",
+            "value": 19,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q1",
+            "value": 175,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q2",
+            "value": 184,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q3",
+            "value": 178,
+            "missingPeriod": false
+          },
+          {
+            "period": "2019 Q4",
+            "value": 148,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q1",
+            "value": 159,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q2",
+            "value": 239,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q3",
+            "value": 161,
+            "missingPeriod": false
+          },
+          {
+            "period": "2020 Q4",
+            "value": 173,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q1",
+            "value": 176,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q2",
+            "value": 189,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q3",
+            "value": 153,
+            "missingPeriod": false
+          },
+          {
+            "period": "2021 Q4",
+            "value": 161,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q1",
+            "value": 170,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q2",
+            "value": 200,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q3",
+            "value": 165,
+            "missingPeriod": false
+          },
+          {
+            "period": "2022 Q4",
+            "value": 222,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q1",
+            "value": 205,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q2",
+            "value": 250,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q3",
+            "value": 233,
+            "missingPeriod": false
+          },
+          {
+            "period": "2023 Q4",
+            "value": 255,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q1",
+            "value": 260,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q2",
+            "value": 239,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q3",
+            "value": 208,
+            "missingPeriod": false
+          },
+          {
+            "period": "2024 Q4",
+            "value": 230,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q1",
+            "value": 222,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q2",
+            "value": 274,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q3",
+            "value": 284,
+            "missingPeriod": false
+          },
+          {
+            "period": "2025 Q4",
+            "value": 300,
+            "missingPeriod": false
+          },
+          {
+            "period": "2026 Q1",
+            "value": 194,
+            "missingPeriod": false
+          }
+        ]
+      }
+    ]
+  },
+  "heatmap": {
+    "state": "ready",
+    "periods": [
+      "2018 Q4",
+      "2019 Q1",
+      "2019 Q2",
+      "2019 Q3",
+      "2019 Q4",
+      "2020 Q1",
+      "2020 Q2",
+      "2020 Q3",
+      "2020 Q4",
+      "2021 Q1",
+      "2021 Q2",
+      "2021 Q3",
+      "2021 Q4",
+      "2022 Q1",
+      "2022 Q2",
+      "2022 Q3",
+      "2022 Q4",
+      "2023 Q1",
+      "2023 Q2",
+      "2023 Q3",
+      "2023 Q4",
+      "2024 Q1",
+      "2024 Q2",
+      "2024 Q3",
+      "2024 Q4",
+      "2025 Q1",
+      "2025 Q2",
+      "2025 Q3",
+      "2025 Q4",
+      "2026 Q1"
+    ],
+    "rows": [
+      {
+        "category": "All Benzodiazepines",
+        "values": [
+          34,
+          375,
+          360,
+          319,
+          344,
+          325,
+          432,
+          321,
+          413,
+          420,
+          374,
+          306,
+          362,
+          346,
+          348,
+          264,
+          370,
+          344,
+          369,
+          340,
+          371,
+          398,
+          331,
+          300,
+          304,
+          308,
+          318,
+          308,
+          306,
+          271
+        ]
+      },
+      {
+        "category": "Dissociatives",
+        "values": [
+          0,
+          13,
+          13,
+          14,
+          7,
+          10,
+          10,
+          10,
+          13,
+          10,
+          9,
+          11,
+          7,
+          10,
+          13,
+          13,
+          21,
+          22,
+          19,
+          40,
+          17,
+          27,
+          27,
+          28,
+          27,
+          34,
+          30,
+          32,
+          25,
+          18
+        ]
+      },
+      {
+        "category": "Gabapentinoids",
+        "values": [
+          23,
+          198,
+          197,
+          174,
+          194,
+          175,
+          215,
+          161,
+          193,
+          191,
+          227,
+          159,
+          190,
+          180,
+          171,
+          162,
+          209,
+          213,
+          217,
+          194,
+          192,
+          193,
+          164,
+          163,
+          175,
+          174,
+          153,
+          158,
+          168,
+          138
+        ]
+      },
+      {
+        "category": "Opioids",
+        "values": [
+          42,
+          467,
+          447,
+          393,
+          420,
+          404,
+          473,
+          355,
+          444,
+          458,
+          416,
+          364,
+          417,
+          405,
+          440,
+          369,
+          468,
+          439,
+          442,
+          402,
+          454,
+          489,
+          413,
+          409,
+          410,
+          456,
+          444,
+          425,
+          459,
+          328
+        ]
+      },
+      {
+        "category": "Prescribable Benzodiazepines",
+        "values": [
+          20,
+          201,
+          192,
+          160,
+          157,
+          187,
+          195,
+          159,
+          188,
+          214,
+          178,
+          187,
+          209,
+          221,
+          247,
+          203,
+          290,
+          244,
+          286,
+          240,
+          256,
+          315,
+          245,
+          226,
+          250,
+          250,
+          273,
+          263,
+          272,
+          218
+        ]
+      },
+      {
+        "category": "Stimulants",
+        "values": [
+          19,
+          175,
+          184,
+          178,
+          148,
+          159,
+          239,
+          161,
+          173,
+          176,
+          189,
+          153,
+          161,
+          170,
+          200,
+          165,
+          222,
+          205,
+          250,
+          233,
+          255,
+          260,
+          239,
+          208,
+          230,
+          222,
+          274,
+          284,
+          300,
+          194
+        ]
+      },
+      {
+        "category": "Street Benzodiazepines",
+        "values": [
+          22,
+          263,
+          249,
+          230,
+          258,
+          210,
+          351,
+          226,
+          316,
+          306,
+          289,
+          197,
+          231,
+          203,
+          173,
+          111,
+          194,
+          185,
+          180,
+          175,
+          194,
+          180,
+          167,
+          131,
+          117,
+          104,
+          98,
+          91,
+          74,
+          97
+        ]
+      }
+    ]
+  },
+  "rankings": [
+    {
+      "period": "2018 Q4",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 42,
+          "period": "2018 Q4"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 34,
+          "period": "2018 Q4"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 23,
+          "period": "2018 Q4"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 22,
+          "period": "2018 Q4"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 20,
+          "period": "2018 Q4"
+        },
+        {
+          "category": "Stimulants",
+          "value": 19,
+          "period": "2018 Q4"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 0,
+          "period": "2018 Q4"
+        }
+      ]
+    },
+    {
+      "period": "2019 Q1",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 467,
+          "period": "2019 Q1"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 375,
+          "period": "2019 Q1"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 263,
+          "period": "2019 Q1"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 201,
+          "period": "2019 Q1"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 198,
+          "period": "2019 Q1"
+        },
+        {
+          "category": "Stimulants",
+          "value": 175,
+          "period": "2019 Q1"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 13,
+          "period": "2019 Q1"
+        }
+      ]
+    },
+    {
+      "period": "2019 Q2",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 447,
+          "period": "2019 Q2"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 360,
+          "period": "2019 Q2"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 249,
+          "period": "2019 Q2"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 197,
+          "period": "2019 Q2"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 192,
+          "period": "2019 Q2"
+        },
+        {
+          "category": "Stimulants",
+          "value": 184,
+          "period": "2019 Q2"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 13,
+          "period": "2019 Q2"
+        }
+      ]
+    },
+    {
+      "period": "2019 Q3",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 393,
+          "period": "2019 Q3"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 319,
+          "period": "2019 Q3"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 230,
+          "period": "2019 Q3"
+        },
+        {
+          "category": "Stimulants",
+          "value": 178,
+          "period": "2019 Q3"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 174,
+          "period": "2019 Q3"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 160,
+          "period": "2019 Q3"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 14,
+          "period": "2019 Q3"
+        }
+      ]
+    },
+    {
+      "period": "2019 Q4",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 420,
+          "period": "2019 Q4"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 344,
+          "period": "2019 Q4"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 258,
+          "period": "2019 Q4"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 194,
+          "period": "2019 Q4"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 157,
+          "period": "2019 Q4"
+        },
+        {
+          "category": "Stimulants",
+          "value": 148,
+          "period": "2019 Q4"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 7,
+          "period": "2019 Q4"
+        }
+      ]
+    },
+    {
+      "period": "2020 Q1",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 404,
+          "period": "2020 Q1"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 325,
+          "period": "2020 Q1"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 210,
+          "period": "2020 Q1"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 187,
+          "period": "2020 Q1"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 175,
+          "period": "2020 Q1"
+        },
+        {
+          "category": "Stimulants",
+          "value": 159,
+          "period": "2020 Q1"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 10,
+          "period": "2020 Q1"
+        }
+      ]
+    },
+    {
+      "period": "2020 Q2",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 473,
+          "period": "2020 Q2"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 432,
+          "period": "2020 Q2"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 351,
+          "period": "2020 Q2"
+        },
+        {
+          "category": "Stimulants",
+          "value": 239,
+          "period": "2020 Q2"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 215,
+          "period": "2020 Q2"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 195,
+          "period": "2020 Q2"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 10,
+          "period": "2020 Q2"
+        }
+      ]
+    },
+    {
+      "period": "2020 Q3",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 355,
+          "period": "2020 Q3"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 321,
+          "period": "2020 Q3"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 226,
+          "period": "2020 Q3"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 161,
+          "period": "2020 Q3"
+        },
+        {
+          "category": "Stimulants",
+          "value": 161,
+          "period": "2020 Q3"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 159,
+          "period": "2020 Q3"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 10,
+          "period": "2020 Q3"
+        }
+      ]
+    },
+    {
+      "period": "2020 Q4",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 444,
+          "period": "2020 Q4"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 413,
+          "period": "2020 Q4"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 316,
+          "period": "2020 Q4"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 193,
+          "period": "2020 Q4"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 188,
+          "period": "2020 Q4"
+        },
+        {
+          "category": "Stimulants",
+          "value": 173,
+          "period": "2020 Q4"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 13,
+          "period": "2020 Q4"
+        }
+      ]
+    },
+    {
+      "period": "2021 Q1",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 458,
+          "period": "2021 Q1"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 420,
+          "period": "2021 Q1"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 306,
+          "period": "2021 Q1"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 214,
+          "period": "2021 Q1"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 191,
+          "period": "2021 Q1"
+        },
+        {
+          "category": "Stimulants",
+          "value": 176,
+          "period": "2021 Q1"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 10,
+          "period": "2021 Q1"
+        }
+      ]
+    },
+    {
+      "period": "2021 Q2",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 416,
+          "period": "2021 Q2"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 374,
+          "period": "2021 Q2"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 289,
+          "period": "2021 Q2"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 227,
+          "period": "2021 Q2"
+        },
+        {
+          "category": "Stimulants",
+          "value": 189,
+          "period": "2021 Q2"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 178,
+          "period": "2021 Q2"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 9,
+          "period": "2021 Q2"
+        }
+      ]
+    },
+    {
+      "period": "2021 Q3",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 364,
+          "period": "2021 Q3"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 306,
+          "period": "2021 Q3"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 197,
+          "period": "2021 Q3"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 187,
+          "period": "2021 Q3"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 159,
+          "period": "2021 Q3"
+        },
+        {
+          "category": "Stimulants",
+          "value": 153,
+          "period": "2021 Q3"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 11,
+          "period": "2021 Q3"
+        }
+      ]
+    },
+    {
+      "period": "2021 Q4",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 417,
+          "period": "2021 Q4"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 362,
+          "period": "2021 Q4"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 231,
+          "period": "2021 Q4"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 209,
+          "period": "2021 Q4"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 190,
+          "period": "2021 Q4"
+        },
+        {
+          "category": "Stimulants",
+          "value": 161,
+          "period": "2021 Q4"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 7,
+          "period": "2021 Q4"
+        }
+      ]
+    },
+    {
+      "period": "2022 Q1",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 405,
+          "period": "2022 Q1"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 346,
+          "period": "2022 Q1"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 221,
+          "period": "2022 Q1"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 203,
+          "period": "2022 Q1"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 180,
+          "period": "2022 Q1"
+        },
+        {
+          "category": "Stimulants",
+          "value": 170,
+          "period": "2022 Q1"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 10,
+          "period": "2022 Q1"
+        }
+      ]
+    },
+    {
+      "period": "2022 Q2",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 440,
+          "period": "2022 Q2"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 348,
+          "period": "2022 Q2"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 247,
+          "period": "2022 Q2"
+        },
+        {
+          "category": "Stimulants",
+          "value": 200,
+          "period": "2022 Q2"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 173,
+          "period": "2022 Q2"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 171,
+          "period": "2022 Q2"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 13,
+          "period": "2022 Q2"
+        }
+      ]
+    },
+    {
+      "period": "2022 Q3",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 369,
+          "period": "2022 Q3"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 264,
+          "period": "2022 Q3"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 203,
+          "period": "2022 Q3"
+        },
+        {
+          "category": "Stimulants",
+          "value": 165,
+          "period": "2022 Q3"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 162,
+          "period": "2022 Q3"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 111,
+          "period": "2022 Q3"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 13,
+          "period": "2022 Q3"
+        }
+      ]
+    },
+    {
+      "period": "2022 Q4",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 468,
+          "period": "2022 Q4"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 370,
+          "period": "2022 Q4"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 290,
+          "period": "2022 Q4"
+        },
+        {
+          "category": "Stimulants",
+          "value": 222,
+          "period": "2022 Q4"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 209,
+          "period": "2022 Q4"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 194,
+          "period": "2022 Q4"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 21,
+          "period": "2022 Q4"
+        }
+      ]
+    },
+    {
+      "period": "2023 Q1",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 439,
+          "period": "2023 Q1"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 344,
+          "period": "2023 Q1"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 244,
+          "period": "2023 Q1"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 213,
+          "period": "2023 Q1"
+        },
+        {
+          "category": "Stimulants",
+          "value": 205,
+          "period": "2023 Q1"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 185,
+          "period": "2023 Q1"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 22,
+          "period": "2023 Q1"
+        }
+      ]
+    },
+    {
+      "period": "2023 Q2",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 442,
+          "period": "2023 Q2"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 369,
+          "period": "2023 Q2"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 286,
+          "period": "2023 Q2"
+        },
+        {
+          "category": "Stimulants",
+          "value": 250,
+          "period": "2023 Q2"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 217,
+          "period": "2023 Q2"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 180,
+          "period": "2023 Q2"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 19,
+          "period": "2023 Q2"
+        }
+      ]
+    },
+    {
+      "period": "2023 Q3",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 402,
+          "period": "2023 Q3"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 340,
+          "period": "2023 Q3"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 240,
+          "period": "2023 Q3"
+        },
+        {
+          "category": "Stimulants",
+          "value": 233,
+          "period": "2023 Q3"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 194,
+          "period": "2023 Q3"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 175,
+          "period": "2023 Q3"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 40,
+          "period": "2023 Q3"
+        }
+      ]
+    },
+    {
+      "period": "2023 Q4",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 454,
+          "period": "2023 Q4"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 371,
+          "period": "2023 Q4"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 256,
+          "period": "2023 Q4"
+        },
+        {
+          "category": "Stimulants",
+          "value": 255,
+          "period": "2023 Q4"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 194,
+          "period": "2023 Q4"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 192,
+          "period": "2023 Q4"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 17,
+          "period": "2023 Q4"
+        }
+      ]
+    },
+    {
+      "period": "2024 Q1",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 489,
+          "period": "2024 Q1"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 398,
+          "period": "2024 Q1"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 315,
+          "period": "2024 Q1"
+        },
+        {
+          "category": "Stimulants",
+          "value": 260,
+          "period": "2024 Q1"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 193,
+          "period": "2024 Q1"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 180,
+          "period": "2024 Q1"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 27,
+          "period": "2024 Q1"
+        }
+      ]
+    },
+    {
+      "period": "2024 Q2",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 413,
+          "period": "2024 Q2"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 331,
+          "period": "2024 Q2"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 245,
+          "period": "2024 Q2"
+        },
+        {
+          "category": "Stimulants",
+          "value": 239,
+          "period": "2024 Q2"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 167,
+          "period": "2024 Q2"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 164,
+          "period": "2024 Q2"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 27,
+          "period": "2024 Q2"
+        }
+      ]
+    },
+    {
+      "period": "2024 Q3",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 409,
+          "period": "2024 Q3"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 300,
+          "period": "2024 Q3"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 226,
+          "period": "2024 Q3"
+        },
+        {
+          "category": "Stimulants",
+          "value": 208,
+          "period": "2024 Q3"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 163,
+          "period": "2024 Q3"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 131,
+          "period": "2024 Q3"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 28,
+          "period": "2024 Q3"
+        }
+      ]
+    },
+    {
+      "period": "2024 Q4",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 410,
+          "period": "2024 Q4"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 304,
+          "period": "2024 Q4"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 250,
+          "period": "2024 Q4"
+        },
+        {
+          "category": "Stimulants",
+          "value": 230,
+          "period": "2024 Q4"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 175,
+          "period": "2024 Q4"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 117,
+          "period": "2024 Q4"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 27,
+          "period": "2024 Q4"
+        }
+      ]
+    },
+    {
+      "period": "2025 Q1",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 456,
+          "period": "2025 Q1"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 308,
+          "period": "2025 Q1"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 250,
+          "period": "2025 Q1"
+        },
+        {
+          "category": "Stimulants",
+          "value": 222,
+          "period": "2025 Q1"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 174,
+          "period": "2025 Q1"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 104,
+          "period": "2025 Q1"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 34,
+          "period": "2025 Q1"
+        }
+      ]
+    },
+    {
+      "period": "2025 Q2",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 444,
+          "period": "2025 Q2"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 318,
+          "period": "2025 Q2"
+        },
+        {
+          "category": "Stimulants",
+          "value": 274,
+          "period": "2025 Q2"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 273,
+          "period": "2025 Q2"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 153,
+          "period": "2025 Q2"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 98,
+          "period": "2025 Q2"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 30,
+          "period": "2025 Q2"
+        }
+      ]
+    },
+    {
+      "period": "2025 Q3",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 425,
+          "period": "2025 Q3"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 308,
+          "period": "2025 Q3"
+        },
+        {
+          "category": "Stimulants",
+          "value": 284,
+          "period": "2025 Q3"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 263,
+          "period": "2025 Q3"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 158,
+          "period": "2025 Q3"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 91,
+          "period": "2025 Q3"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 32,
+          "period": "2025 Q3"
+        }
+      ]
+    },
+    {
+      "period": "2025 Q4",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 459,
+          "period": "2025 Q4"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 306,
+          "period": "2025 Q4"
+        },
+        {
+          "category": "Stimulants",
+          "value": 300,
+          "period": "2025 Q4"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 272,
+          "period": "2025 Q4"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 168,
+          "period": "2025 Q4"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 74,
+          "period": "2025 Q4"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 25,
+          "period": "2025 Q4"
+        }
+      ]
+    },
+    {
+      "period": "2026 Q1",
+      "rows": [
+        {
+          "category": "Opioids",
+          "value": 328,
+          "period": "2026 Q1"
+        },
+        {
+          "category": "All Benzodiazepines",
+          "value": 271,
+          "period": "2026 Q1"
+        },
+        {
+          "category": "Prescribable Benzodiazepines",
+          "value": 218,
+          "period": "2026 Q1"
+        },
+        {
+          "category": "Stimulants",
+          "value": 194,
+          "period": "2026 Q1"
+        },
+        {
+          "category": "Gabapentinoids",
+          "value": 138,
+          "period": "2026 Q1"
+        },
+        {
+          "category": "Street Benzodiazepines",
+          "value": 97,
+          "period": "2026 Q1"
+        },
+        {
+          "category": "Dissociatives",
+          "value": 18,
+          "period": "2026 Q1"
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "category": "All Benzodiazepines",
+      "source": "Forensic toxicology",
+      "definition": "Quarterly detections in the Scotland forensic testing sample. Overlapping categories are not causal death counts. Testing selection and volume may change; sample denominators are unavailable.",
+      "observations": 30,
+      "periods": [
+        "2018 Q4",
+        "2019 Q1",
+        "2019 Q2",
+        "2019 Q3",
+        "2019 Q4",
+        "2020 Q1",
+        "2020 Q2",
+        "2020 Q3",
+        "2020 Q4",
+        "2021 Q1",
+        "2021 Q2",
+        "2021 Q3",
+        "2021 Q4",
+        "2022 Q1",
+        "2022 Q2",
+        "2022 Q3",
+        "2022 Q4",
+        "2023 Q1",
+        "2023 Q2",
+        "2023 Q3",
+        "2023 Q4",
+        "2024 Q1",
+        "2024 Q2",
+        "2024 Q3",
+        "2024 Q4",
+        "2025 Q1",
+        "2025 Q2",
+        "2025 Q3",
+        "2025 Q4",
+        "2026 Q1"
+      ],
+      "units": [
+        "detection_count"
+      ],
+      "geographies": [
+        "Scotland forensic testing sample"
+      ],
+      "denominator": "Unavailable in the approved observations; no prevalence estimate.",
+      "limitations": [
+        "Overlapping substance categories; detections are not causal deaths; testing/sample changes and absent denominators preclude prevalence estimates."
+      ],
+      "provenance": [
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        }
+      ],
+      "note": "First recorded dataset appearance does not establish first occurrence in Scotland.",
+      "values": [
+        [
+          "2018 Q4",
+          34
+        ],
+        [
+          "2019 Q1",
+          375
+        ],
+        [
+          "2019 Q2",
+          360
+        ],
+        [
+          "2019 Q3",
+          319
+        ],
+        [
+          "2019 Q4",
+          344
+        ],
+        [
+          "2020 Q1",
+          325
+        ],
+        [
+          "2020 Q2",
+          432
+        ],
+        [
+          "2020 Q3",
+          321
+        ],
+        [
+          "2020 Q4",
+          413
+        ],
+        [
+          "2021 Q1",
+          420
+        ],
+        [
+          "2021 Q2",
+          374
+        ],
+        [
+          "2021 Q3",
+          306
+        ],
+        [
+          "2021 Q4",
+          362
+        ],
+        [
+          "2022 Q1",
+          346
+        ],
+        [
+          "2022 Q2",
+          348
+        ],
+        [
+          "2022 Q3",
+          264
+        ],
+        [
+          "2022 Q4",
+          370
+        ],
+        [
+          "2023 Q1",
+          344
+        ],
+        [
+          "2023 Q2",
+          369
+        ],
+        [
+          "2023 Q3",
+          340
+        ],
+        [
+          "2023 Q4",
+          371
+        ],
+        [
+          "2024 Q1",
+          398
+        ],
+        [
+          "2024 Q2",
+          331
+        ],
+        [
+          "2024 Q3",
+          300
+        ],
+        [
+          "2024 Q4",
+          304
+        ],
+        [
+          "2025 Q1",
+          308
+        ],
+        [
+          "2025 Q2",
+          318
+        ],
+        [
+          "2025 Q3",
+          308
+        ],
+        [
+          "2025 Q4",
+          306
+        ],
+        [
+          "2026 Q1",
+          271
+        ]
+      ]
+    },
+    {
+      "category": "Dissociatives",
+      "source": "Forensic toxicology",
+      "definition": "Quarterly detections in the Scotland forensic testing sample. Overlapping categories are not causal death counts. Testing selection and volume may change; sample denominators are unavailable.",
+      "observations": 30,
+      "periods": [
+        "2018 Q4",
+        "2019 Q1",
+        "2019 Q2",
+        "2019 Q3",
+        "2019 Q4",
+        "2020 Q1",
+        "2020 Q2",
+        "2020 Q3",
+        "2020 Q4",
+        "2021 Q1",
+        "2021 Q2",
+        "2021 Q3",
+        "2021 Q4",
+        "2022 Q1",
+        "2022 Q2",
+        "2022 Q3",
+        "2022 Q4",
+        "2023 Q1",
+        "2023 Q2",
+        "2023 Q3",
+        "2023 Q4",
+        "2024 Q1",
+        "2024 Q2",
+        "2024 Q3",
+        "2024 Q4",
+        "2025 Q1",
+        "2025 Q2",
+        "2025 Q3",
+        "2025 Q4",
+        "2026 Q1"
+      ],
+      "units": [
+        "detection_count"
+      ],
+      "geographies": [
+        "Scotland forensic testing sample"
+      ],
+      "denominator": "Unavailable in the approved observations; no prevalence estimate.",
+      "limitations": [
+        "Overlapping substance categories; detections are not causal deaths; testing/sample changes and absent denominators preclude prevalence estimates."
+      ],
+      "provenance": [
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        }
+      ],
+      "note": "First recorded dataset appearance does not establish first occurrence in Scotland.",
+      "values": [
+        [
+          "2018 Q4",
+          0
+        ],
+        [
+          "2019 Q1",
+          13
+        ],
+        [
+          "2019 Q2",
+          13
+        ],
+        [
+          "2019 Q3",
+          14
+        ],
+        [
+          "2019 Q4",
+          7
+        ],
+        [
+          "2020 Q1",
+          10
+        ],
+        [
+          "2020 Q2",
+          10
+        ],
+        [
+          "2020 Q3",
+          10
+        ],
+        [
+          "2020 Q4",
+          13
+        ],
+        [
+          "2021 Q1",
+          10
+        ],
+        [
+          "2021 Q2",
+          9
+        ],
+        [
+          "2021 Q3",
+          11
+        ],
+        [
+          "2021 Q4",
+          7
+        ],
+        [
+          "2022 Q1",
+          10
+        ],
+        [
+          "2022 Q2",
+          13
+        ],
+        [
+          "2022 Q3",
+          13
+        ],
+        [
+          "2022 Q4",
+          21
+        ],
+        [
+          "2023 Q1",
+          22
+        ],
+        [
+          "2023 Q2",
+          19
+        ],
+        [
+          "2023 Q3",
+          40
+        ],
+        [
+          "2023 Q4",
+          17
+        ],
+        [
+          "2024 Q1",
+          27
+        ],
+        [
+          "2024 Q2",
+          27
+        ],
+        [
+          "2024 Q3",
+          28
+        ],
+        [
+          "2024 Q4",
+          27
+        ],
+        [
+          "2025 Q1",
+          34
+        ],
+        [
+          "2025 Q2",
+          30
+        ],
+        [
+          "2025 Q3",
+          32
+        ],
+        [
+          "2025 Q4",
+          25
+        ],
+        [
+          "2026 Q1",
+          18
+        ]
+      ]
+    },
+    {
+      "category": "Gabapentinoids",
+      "source": "Forensic toxicology",
+      "definition": "Quarterly detections in the Scotland forensic testing sample. Overlapping categories are not causal death counts. Testing selection and volume may change; sample denominators are unavailable.",
+      "observations": 30,
+      "periods": [
+        "2018 Q4",
+        "2019 Q1",
+        "2019 Q2",
+        "2019 Q3",
+        "2019 Q4",
+        "2020 Q1",
+        "2020 Q2",
+        "2020 Q3",
+        "2020 Q4",
+        "2021 Q1",
+        "2021 Q2",
+        "2021 Q3",
+        "2021 Q4",
+        "2022 Q1",
+        "2022 Q2",
+        "2022 Q3",
+        "2022 Q4",
+        "2023 Q1",
+        "2023 Q2",
+        "2023 Q3",
+        "2023 Q4",
+        "2024 Q1",
+        "2024 Q2",
+        "2024 Q3",
+        "2024 Q4",
+        "2025 Q1",
+        "2025 Q2",
+        "2025 Q3",
+        "2025 Q4",
+        "2026 Q1"
+      ],
+      "units": [
+        "detection_count"
+      ],
+      "geographies": [
+        "Scotland forensic testing sample"
+      ],
+      "denominator": "Unavailable in the approved observations; no prevalence estimate.",
+      "limitations": [
+        "Overlapping substance categories; detections are not causal deaths; testing/sample changes and absent denominators preclude prevalence estimates."
+      ],
+      "provenance": [
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        }
+      ],
+      "note": "First recorded dataset appearance does not establish first occurrence in Scotland.",
+      "values": [
+        [
+          "2018 Q4",
+          23
+        ],
+        [
+          "2019 Q1",
+          198
+        ],
+        [
+          "2019 Q2",
+          197
+        ],
+        [
+          "2019 Q3",
+          174
+        ],
+        [
+          "2019 Q4",
+          194
+        ],
+        [
+          "2020 Q1",
+          175
+        ],
+        [
+          "2020 Q2",
+          215
+        ],
+        [
+          "2020 Q3",
+          161
+        ],
+        [
+          "2020 Q4",
+          193
+        ],
+        [
+          "2021 Q1",
+          191
+        ],
+        [
+          "2021 Q2",
+          227
+        ],
+        [
+          "2021 Q3",
+          159
+        ],
+        [
+          "2021 Q4",
+          190
+        ],
+        [
+          "2022 Q1",
+          180
+        ],
+        [
+          "2022 Q2",
+          171
+        ],
+        [
+          "2022 Q3",
+          162
+        ],
+        [
+          "2022 Q4",
+          209
+        ],
+        [
+          "2023 Q1",
+          213
+        ],
+        [
+          "2023 Q2",
+          217
+        ],
+        [
+          "2023 Q3",
+          194
+        ],
+        [
+          "2023 Q4",
+          192
+        ],
+        [
+          "2024 Q1",
+          193
+        ],
+        [
+          "2024 Q2",
+          164
+        ],
+        [
+          "2024 Q3",
+          163
+        ],
+        [
+          "2024 Q4",
+          175
+        ],
+        [
+          "2025 Q1",
+          174
+        ],
+        [
+          "2025 Q2",
+          153
+        ],
+        [
+          "2025 Q3",
+          158
+        ],
+        [
+          "2025 Q4",
+          168
+        ],
+        [
+          "2026 Q1",
+          138
+        ]
+      ]
+    },
+    {
+      "category": "Opioids",
+      "source": "Forensic toxicology",
+      "definition": "Quarterly detections in the Scotland forensic testing sample. Overlapping categories are not causal death counts. Testing selection and volume may change; sample denominators are unavailable.",
+      "observations": 30,
+      "periods": [
+        "2018 Q4",
+        "2019 Q1",
+        "2019 Q2",
+        "2019 Q3",
+        "2019 Q4",
+        "2020 Q1",
+        "2020 Q2",
+        "2020 Q3",
+        "2020 Q4",
+        "2021 Q1",
+        "2021 Q2",
+        "2021 Q3",
+        "2021 Q4",
+        "2022 Q1",
+        "2022 Q2",
+        "2022 Q3",
+        "2022 Q4",
+        "2023 Q1",
+        "2023 Q2",
+        "2023 Q3",
+        "2023 Q4",
+        "2024 Q1",
+        "2024 Q2",
+        "2024 Q3",
+        "2024 Q4",
+        "2025 Q1",
+        "2025 Q2",
+        "2025 Q3",
+        "2025 Q4",
+        "2026 Q1"
+      ],
+      "units": [
+        "detection_count"
+      ],
+      "geographies": [
+        "Scotland forensic testing sample"
+      ],
+      "denominator": "Unavailable in the approved observations; no prevalence estimate.",
+      "limitations": [
+        "Overlapping substance categories; detections are not causal deaths; testing/sample changes and absent denominators preclude prevalence estimates."
+      ],
+      "provenance": [
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        }
+      ],
+      "note": "First recorded dataset appearance does not establish first occurrence in Scotland.",
+      "values": [
+        [
+          "2018 Q4",
+          42
+        ],
+        [
+          "2019 Q1",
+          467
+        ],
+        [
+          "2019 Q2",
+          447
+        ],
+        [
+          "2019 Q3",
+          393
+        ],
+        [
+          "2019 Q4",
+          420
+        ],
+        [
+          "2020 Q1",
+          404
+        ],
+        [
+          "2020 Q2",
+          473
+        ],
+        [
+          "2020 Q3",
+          355
+        ],
+        [
+          "2020 Q4",
+          444
+        ],
+        [
+          "2021 Q1",
+          458
+        ],
+        [
+          "2021 Q2",
+          416
+        ],
+        [
+          "2021 Q3",
+          364
+        ],
+        [
+          "2021 Q4",
+          417
+        ],
+        [
+          "2022 Q1",
+          405
+        ],
+        [
+          "2022 Q2",
+          440
+        ],
+        [
+          "2022 Q3",
+          369
+        ],
+        [
+          "2022 Q4",
+          468
+        ],
+        [
+          "2023 Q1",
+          439
+        ],
+        [
+          "2023 Q2",
+          442
+        ],
+        [
+          "2023 Q3",
+          402
+        ],
+        [
+          "2023 Q4",
+          454
+        ],
+        [
+          "2024 Q1",
+          489
+        ],
+        [
+          "2024 Q2",
+          413
+        ],
+        [
+          "2024 Q3",
+          409
+        ],
+        [
+          "2024 Q4",
+          410
+        ],
+        [
+          "2025 Q1",
+          456
+        ],
+        [
+          "2025 Q2",
+          444
+        ],
+        [
+          "2025 Q3",
+          425
+        ],
+        [
+          "2025 Q4",
+          459
+        ],
+        [
+          "2026 Q1",
+          328
+        ]
+      ]
+    },
+    {
+      "category": "Prescribable Benzodiazepines",
+      "source": "Forensic toxicology",
+      "definition": "Quarterly detections in the Scotland forensic testing sample. Overlapping categories are not causal death counts. Testing selection and volume may change; sample denominators are unavailable.",
+      "observations": 30,
+      "periods": [
+        "2018 Q4",
+        "2019 Q1",
+        "2019 Q2",
+        "2019 Q3",
+        "2019 Q4",
+        "2020 Q1",
+        "2020 Q2",
+        "2020 Q3",
+        "2020 Q4",
+        "2021 Q1",
+        "2021 Q2",
+        "2021 Q3",
+        "2021 Q4",
+        "2022 Q1",
+        "2022 Q2",
+        "2022 Q3",
+        "2022 Q4",
+        "2023 Q1",
+        "2023 Q2",
+        "2023 Q3",
+        "2023 Q4",
+        "2024 Q1",
+        "2024 Q2",
+        "2024 Q3",
+        "2024 Q4",
+        "2025 Q1",
+        "2025 Q2",
+        "2025 Q3",
+        "2025 Q4",
+        "2026 Q1"
+      ],
+      "units": [
+        "detection_count"
+      ],
+      "geographies": [
+        "Scotland forensic testing sample"
+      ],
+      "denominator": "Unavailable in the approved observations; no prevalence estimate.",
+      "limitations": [
+        "Overlapping substance categories; detections are not causal deaths; testing/sample changes and absent denominators preclude prevalence estimates."
+      ],
+      "provenance": [
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        }
+      ],
+      "note": "First recorded dataset appearance does not establish first occurrence in Scotland.",
+      "values": [
+        [
+          "2018 Q4",
+          20
+        ],
+        [
+          "2019 Q1",
+          201
+        ],
+        [
+          "2019 Q2",
+          192
+        ],
+        [
+          "2019 Q3",
+          160
+        ],
+        [
+          "2019 Q4",
+          157
+        ],
+        [
+          "2020 Q1",
+          187
+        ],
+        [
+          "2020 Q2",
+          195
+        ],
+        [
+          "2020 Q3",
+          159
+        ],
+        [
+          "2020 Q4",
+          188
+        ],
+        [
+          "2021 Q1",
+          214
+        ],
+        [
+          "2021 Q2",
+          178
+        ],
+        [
+          "2021 Q3",
+          187
+        ],
+        [
+          "2021 Q4",
+          209
+        ],
+        [
+          "2022 Q1",
+          221
+        ],
+        [
+          "2022 Q2",
+          247
+        ],
+        [
+          "2022 Q3",
+          203
+        ],
+        [
+          "2022 Q4",
+          290
+        ],
+        [
+          "2023 Q1",
+          244
+        ],
+        [
+          "2023 Q2",
+          286
+        ],
+        [
+          "2023 Q3",
+          240
+        ],
+        [
+          "2023 Q4",
+          256
+        ],
+        [
+          "2024 Q1",
+          315
+        ],
+        [
+          "2024 Q2",
+          245
+        ],
+        [
+          "2024 Q3",
+          226
+        ],
+        [
+          "2024 Q4",
+          250
+        ],
+        [
+          "2025 Q1",
+          250
+        ],
+        [
+          "2025 Q2",
+          273
+        ],
+        [
+          "2025 Q3",
+          263
+        ],
+        [
+          "2025 Q4",
+          272
+        ],
+        [
+          "2026 Q1",
+          218
+        ]
+      ]
+    },
+    {
+      "category": "Stimulants",
+      "source": "Forensic toxicology",
+      "definition": "Quarterly detections in the Scotland forensic testing sample. Overlapping categories are not causal death counts. Testing selection and volume may change; sample denominators are unavailable.",
+      "observations": 30,
+      "periods": [
+        "2018 Q4",
+        "2019 Q1",
+        "2019 Q2",
+        "2019 Q3",
+        "2019 Q4",
+        "2020 Q1",
+        "2020 Q2",
+        "2020 Q3",
+        "2020 Q4",
+        "2021 Q1",
+        "2021 Q2",
+        "2021 Q3",
+        "2021 Q4",
+        "2022 Q1",
+        "2022 Q2",
+        "2022 Q3",
+        "2022 Q4",
+        "2023 Q1",
+        "2023 Q2",
+        "2023 Q3",
+        "2023 Q4",
+        "2024 Q1",
+        "2024 Q2",
+        "2024 Q3",
+        "2024 Q4",
+        "2025 Q1",
+        "2025 Q2",
+        "2025 Q3",
+        "2025 Q4",
+        "2026 Q1"
+      ],
+      "units": [
+        "detection_count"
+      ],
+      "geographies": [
+        "Scotland forensic testing sample"
+      ],
+      "denominator": "Unavailable in the approved observations; no prevalence estimate.",
+      "limitations": [
+        "Overlapping substance categories; detections are not causal deaths; testing/sample changes and absent denominators preclude prevalence estimates."
+      ],
+      "provenance": [
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        }
+      ],
+      "note": "First recorded dataset appearance does not establish first occurrence in Scotland.",
+      "values": [
+        [
+          "2018 Q4",
+          19
+        ],
+        [
+          "2019 Q1",
+          175
+        ],
+        [
+          "2019 Q2",
+          184
+        ],
+        [
+          "2019 Q3",
+          178
+        ],
+        [
+          "2019 Q4",
+          148
+        ],
+        [
+          "2020 Q1",
+          159
+        ],
+        [
+          "2020 Q2",
+          239
+        ],
+        [
+          "2020 Q3",
+          161
+        ],
+        [
+          "2020 Q4",
+          173
+        ],
+        [
+          "2021 Q1",
+          176
+        ],
+        [
+          "2021 Q2",
+          189
+        ],
+        [
+          "2021 Q3",
+          153
+        ],
+        [
+          "2021 Q4",
+          161
+        ],
+        [
+          "2022 Q1",
+          170
+        ],
+        [
+          "2022 Q2",
+          200
+        ],
+        [
+          "2022 Q3",
+          165
+        ],
+        [
+          "2022 Q4",
+          222
+        ],
+        [
+          "2023 Q1",
+          205
+        ],
+        [
+          "2023 Q2",
+          250
+        ],
+        [
+          "2023 Q3",
+          233
+        ],
+        [
+          "2023 Q4",
+          255
+        ],
+        [
+          "2024 Q1",
+          260
+        ],
+        [
+          "2024 Q2",
+          239
+        ],
+        [
+          "2024 Q3",
+          208
+        ],
+        [
+          "2024 Q4",
+          230
+        ],
+        [
+          "2025 Q1",
+          222
+        ],
+        [
+          "2025 Q2",
+          274
+        ],
+        [
+          "2025 Q3",
+          284
+        ],
+        [
+          "2025 Q4",
+          300
+        ],
+        [
+          "2026 Q1",
+          194
+        ]
+      ]
+    },
+    {
+      "category": "Street Benzodiazepines",
+      "source": "Forensic toxicology",
+      "definition": "Quarterly detections in the Scotland forensic testing sample. Overlapping categories are not causal death counts. Testing selection and volume may change; sample denominators are unavailable.",
+      "observations": 30,
+      "periods": [
+        "2018 Q4",
+        "2019 Q1",
+        "2019 Q2",
+        "2019 Q3",
+        "2019 Q4",
+        "2020 Q1",
+        "2020 Q2",
+        "2020 Q3",
+        "2020 Q4",
+        "2021 Q1",
+        "2021 Q2",
+        "2021 Q3",
+        "2021 Q4",
+        "2022 Q1",
+        "2022 Q2",
+        "2022 Q3",
+        "2022 Q4",
+        "2023 Q1",
+        "2023 Q2",
+        "2023 Q3",
+        "2023 Q4",
+        "2024 Q1",
+        "2024 Q2",
+        "2024 Q3",
+        "2024 Q4",
+        "2025 Q1",
+        "2025 Q2",
+        "2025 Q3",
+        "2025 Q4",
+        "2026 Q1"
+      ],
+      "units": [
+        "detection_count"
+      ],
+      "geographies": [
+        "Scotland forensic testing sample"
+      ],
+      "denominator": "Unavailable in the approved observations; no prevalence estimate.",
+      "limitations": [
+        "Overlapping substance categories; detections are not causal deaths; testing/sample changes and absent denominators preclude prevalence estimates."
+      ],
+      "provenance": [
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        },
+        {
+          "source_id": "radar_toxicology_forensic_2018-2026.csv",
+          "source_sha256": "ccba2a3158b69e38194cafb415dba8834cf080c9174721299977037c4a8bb0df",
+          "source_path": "datasets/Group3_Item2_Data/radar_toxicology_forensic_2018-2026.csv",
+          "source_url": "https://scotland.shinyapps.io/phs-drugs-radar-dashboard/",
+          "publication_date": null,
+          "source_data_cutoff": "2026-03-31"
+        }
+      ],
+      "note": "First recorded dataset appearance does not establish first occurrence in Scotland.",
+      "values": [
+        [
+          "2018 Q4",
+          22
+        ],
+        [
+          "2019 Q1",
+          263
+        ],
+        [
+          "2019 Q2",
+          249
+        ],
+        [
+          "2019 Q3",
+          230
+        ],
+        [
+          "2019 Q4",
+          258
+        ],
+        [
+          "2020 Q1",
+          210
+        ],
+        [
+          "2020 Q2",
+          351
+        ],
+        [
+          "2020 Q3",
+          226
+        ],
+        [
+          "2020 Q4",
+          316
+        ],
+        [
+          "2021 Q1",
+          306
+        ],
+        [
+          "2021 Q2",
+          289
+        ],
+        [
+          "2021 Q3",
+          197
+        ],
+        [
+          "2021 Q4",
+          231
+        ],
+        [
+          "2022 Q1",
+          203
+        ],
+        [
+          "2022 Q2",
+          173
+        ],
+        [
+          "2022 Q3",
+          111
+        ],
+        [
+          "2022 Q4",
+          194
+        ],
+        [
+          "2023 Q1",
+          185
+        ],
+        [
+          "2023 Q2",
+          180
+        ],
+        [
+          "2023 Q3",
+          175
+        ],
+        [
+          "2023 Q4",
+          194
+        ],
+        [
+          "2024 Q1",
+          180
+        ],
+        [
+          "2024 Q2",
+          167
+        ],
+        [
+          "2024 Q3",
+          131
+        ],
+        [
+          "2024 Q4",
+          117
+        ],
+        [
+          "2025 Q1",
+          104
+        ],
+        [
+          "2025 Q2",
+          98
+        ],
+        [
+          "2025 Q3",
+          91
+        ],
+        [
+          "2025 Q4",
+          74
+        ],
+        [
+          "2026 Q1",
+          97
+        ]
+      ]
+    }
+  ]
+}
