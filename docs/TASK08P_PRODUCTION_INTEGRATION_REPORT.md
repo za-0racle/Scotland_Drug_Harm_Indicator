@@ -48,6 +48,8 @@ The last verified GitHub `main` and local `HEAD` at the start of this investigat
 
 The production OpenAPI document does not expose a build SHA, and Render deployment metadata was unavailable. Therefore the exact commit running on Render is **unverified**. The production API does contain the database snapshot endpoints and the existing 14-board classification implementation, but production naloxone results cannot be verified while its snapshot endpoint returns 503.
 
+The frontend fix and this report were pushed to GitHub `main` in commit `94fcaac4900f7be961c13853fc0d7de82b7aab14`. After that push, the production Vercel bundle was confirmed to contain the guarded browser-history handler. A production browser sweep then navigated all eight primary routes and found the expected heading on each. Each screen still displayed the Render artifact-unavailable message.
+
 The local changes made for this task are:
 
 - `src/platform/dashboard.js` — avoid calling the data loader from browser-history navigation before bootstrap has initialized the filters.
@@ -77,16 +79,16 @@ No backend implementation, manifests, research outputs, or Supabase data were ch
 | Local naloxone pagination/reconciliation check | Passed: 7,024 rows over 15 pages; 7,024 unique keys; 439 weeks; 14 boards; Scotland reconciled to boards plus Unknown in 439/439 weeks |
 | Local artifact manifest SHA-256 audit | Passed |
 | Production API and CORS probes | Results recorded above; artifact-backed API coverage remains blocked |
-| Production browser route sweep | All eight primary headings were found; production backend failures remain, and the pre-fix browser-history race was observed. The fix is local and is not yet confirmed on the deployed frontend. |
+| Production browser route sweep after publishing the frontend fix | Passed route navigation and heading checks on all eight primary screens; every screen displayed the backend artifact-unavailable error |
 
-The full E2E suite result predates the focused frontend change; the focused regression and eight-screen acceptance tests were rerun afterward. Production naloxone pagination and Scotland/Unknown reconciliation remain unverified because the production naloxone endpoint returns HTTP 503. The local 7,024-row result is not a production result.
+The full E2E suite result predates the focused frontend change; the focused regression and eight-screen acceptance tests were rerun afterward. Production naloxone pagination and Scotland/Unknown reconciliation remain unverified because the production naloxone endpoint returns HTTP 503. The local 7,024-row result is not a production result. The deployed eight-route browser sweep verifies navigation and headings, not successful analytical data rendering.
 
 ## Remaining blockers and completion criteria
 
 1. Render owner access is required to inspect Root Directory, runtime artifact files, deployment logs, memory metrics, and the deployed commit SHA.
 2. After Render is corrected, verify health, overview, geographies, mortality, forensic toxicology, and all database snapshot endpoints return their expected data.
 3. Verify the production naloxone snapshot can be paged through all 7,024 records and that board-only comparisons exclude Scotland and Unknown without dropping those records from the underlying snapshot.
-4. Publish the local frontend-history fix and verify the resulting Vercel deployment on all eight routes.
-5. Re-run production browser checks after the API is healthy. Do not treat local test success as public deployment success.
+4. The frontend-history fix is published and all eight production route headings have been verified; rerun the production browser checks for successful data rendering after the API is healthy.
+5. Do not treat local test success or route-heading checks as successful public analytical rendering.
 
 Until these checks pass, the system is verified locally but production integration remains blocked. No claim is made that the Render artifact issue or production acceptance has been resolved.
