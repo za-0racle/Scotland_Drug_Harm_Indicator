@@ -1,0 +1,2 @@
+analysis/outputs/** text eol=crlf
+analysis/**/outputs/** text eol=crlf

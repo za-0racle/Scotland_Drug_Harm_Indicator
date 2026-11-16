@@ -2,6 +2,8 @@ import csv
 import io
 import json
 import logging
+import os
+import re
 from typing import Annotated,Literal
 from fastapi import FastAPI,Query,Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -20,9 +22,17 @@ logger=logging.getLogger('research_api')
 def create_app(service=None,settings=None):
     app=FastAPI(title='Scotland Drug Harm Intelligence — research API',version='1.0.0')
     app.state.service=service or PlatformService();settings=settings or Settings.load()
+    revision=os.environ.get('RENDER_GIT_COMMIT','').lower()
+    if not re.fullmatch(r'[0-9a-f]{40}',revision):revision=''
     app.include_router(mortality_v1_router)
     app.include_router(forensic_v1_router)
     app.add_middleware(CORSMiddleware,allow_origins=list(settings.origins),allow_methods=['GET'],allow_headers=['Accept','Content-Type'],allow_credentials=False)
+
+    @app.middleware('http')
+    async def revision_header(request,call_next):
+        response=await call_next(request)
+        if revision:response.headers['X-SDHI-Revision']=revision
+        return response
 
     @app.exception_handler(QueryError)
     async def query_error(request,error):return JSONResponse(status_code=422,content=dict(state='error',kind='unavailable_evidence',data=[],total=0,message=str(error),metadata={}))
@@ -31,7 +41,10 @@ def create_app(service=None,settings=None):
     async def database_error(request,error):return JSONResponse(status_code=503,content=dict(state='error',kind='database_observation',data=[],total=0,message=str(error),metadata={}))
 
     @app.exception_handler(ArtifactError)
-    async def artifact_error(request,error):return JSONResponse(status_code=503,content=dict(state='unavailable',kind='unavailable_evidence',data=[],total=0,message='Verified analytical resource unavailable; check server artifact integrity',metadata={}))
+    async def artifact_error(request,error):
+        logger.error('artifact_request_failed resource=%s failure_type=%s reason=%s',
+                     request.url.path,type(error).__name__,str(error))
+        return JSONResponse(status_code=503,content=dict(state='unavailable',kind='unavailable_evidence',data=[],total=0,message='Verified analytical resource unavailable; check server artifact integrity',metadata={}))
 
     @app.exception_handler(Exception)
     async def unexpected(request,error):

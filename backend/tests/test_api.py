@@ -7,7 +7,7 @@ from fastapi.testclient import TestClient
 from backend.main import create_app
 from backend.config import Settings,ROOT
 from backend.services.platform import PlatformService
-from backend.repositories.artifacts import ArtifactRepository,ArtifactError
+from backend.repositories.artifacts import ArtifactRepository,ArtifactError,CATALOG
 from backend.repositories.supabase import SupabaseRepository,DatabaseError
 
 class FakeDatabase:
@@ -86,12 +86,33 @@ def test_cors_and_no_filesystem_or_sql_api(client):
     assert client.get('/api/v1/health',headers={'Origin':'http://localhost:5173'}).headers['access-control-allow-origin']=='http://localhost:5173'
     assert client.get('/api/v1/private/raw_sql').status_code==404
 
-def test_artifact_corruption_rejected(tmp_path):
+def test_artifact_corruption_rejected(tmp_path,caplog):
     directory=tmp_path/'analysis/phase6/outputs';directory.mkdir(parents=True)
     (directory/'validated_geographic_observations.csv').write_text('geography,indicator_id,observed_value\nTEST,TEST,1\n')
     (directory/'run_manifest.json').write_text(json.dumps({'output_hashes':{'validated_geographic_observations.csv':'wrong'}}))
     with pytest.raises(ArtifactError):ArtifactRepository(tmp_path).load('annual')
+    assert 'resource=annual' in caplog.text and 'stage=sha256_match' in caplog.text
+    assert 'analysis/phase6/outputs/validated_geographic_observations.csv' in caplog.text
+    assert str(tmp_path) not in caplog.text
     with pytest.raises(ArtifactError):ArtifactRepository().load('../../.env.local')
+
+
+def test_all_catalog_artifacts_match_their_committed_manifests():
+    repository=ArtifactRepository()
+    for resource in CATALOG:
+        rows,metadata=repository.load(resource)
+        assert isinstance(rows,list),resource
+        assert len(metadata['artifact_sha256'])==64,resource
+
+
+def test_render_revision_header_accepts_only_a_git_sha(monkeypatch):
+    monkeypatch.setenv('RENDER_GIT_COMMIT','A'*40)
+    client=TestClient(create_app(PlatformService(database=FakeDatabase())))
+    assert client.get('/api/v1/health').headers['x-sdhi-revision']=='a'*40
+    monkeypatch.setenv('RENDER_GIT_COMMIT','not-a-commit-sha')
+    client=TestClient(create_app(PlatformService(database=FakeDatabase())))
+    assert 'x-sdhi-revision' not in client.get('/api/v1/health').headers
+
 
 def test_repository_explicit_columns_caps_and_credentials():
     seen=[]

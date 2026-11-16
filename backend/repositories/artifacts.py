@@ -1,9 +1,12 @@
 import csv
 import hashlib
 import json
+import logging
 from functools import lru_cache
 from pathlib import Path
 from backend.config import ROOT
+
+logger=logging.getLogger(__name__)
 
 CATALOG={
  'mortality_trends':('phase4','mortality_quarterly.csv'), 'forensic':('phase4','forensic_counts.csv'),
@@ -45,8 +48,22 @@ class ArtifactRepository:
         directory=self.root/'analysis'/phase/'outputs' if phase else self.root/'analysis/outputs'
         path=directory/name;manifest=directory/'run_manifest.json'
         try:
-            return self._cached(key,path.stat().st_mtime_ns,manifest.stat().st_mtime_ns)
+            artifact_mtime=path.stat().st_mtime_ns
+        except OSError as error:
+            logger.error('artifact_load_failed resource=%s path=%s exists=false stage=artifact_stat exception_type=%s',
+                         key,path.relative_to(self.root).as_posix(),type(error).__name__)
+            raise ArtifactError('Analytical artifact unavailable or failed integrity/schema validation') from error
+        try:
+            manifest_mtime=manifest.stat().st_mtime_ns
+        except OSError as error:
+            logger.error('artifact_load_failed resource=%s path=%s exists=false stage=manifest_stat exception_type=%s',
+                         key,manifest.relative_to(self.root).as_posix(),type(error).__name__)
+            raise ArtifactError('Analytical artifact unavailable or failed integrity/schema validation') from error
+        try:
+            return self._cached(key,artifact_mtime,manifest_mtime)
         except (OSError,ValueError,KeyError,TypeError) as error:
+            logger.error('artifact_load_failed resource=%s path=%s stage=manifest_parse_or_payload_read exception_type=%s',
+                         key,path.relative_to(self.root).as_posix(),type(error).__name__)
             raise ArtifactError('Analytical artifact unavailable or failed integrity/schema validation') from error
 
     @lru_cache(maxsize=40)
@@ -56,15 +73,24 @@ class ArtifactRepository:
         path=directory/name
         manifest=json.loads((directory/'run_manifest.json').read_text(encoding='utf-8'))
         digest=hashlib.sha256(path.read_bytes()).hexdigest()
-        if manifest['output_hashes'].get(name)!=digest:raise ArtifactError('Artifact checksum mismatch')
+        if manifest['output_hashes'].get(name)!=digest:
+            logger.error('artifact_integrity_failed resource=%s path=%s stage=sha256_match expected_match=false',
+                         key,path.relative_to(self.root).as_posix())
+            raise ArtifactError('Artifact checksum mismatch')
         if path.suffix=='.csv':
             with path.open(encoding='utf-8',newline='') as handle:
                 data=[{k:scalar(v) for k,v in row.items()} for row in csv.DictReader(handle)]
         else:
             obj=json.loads(path.read_text(encoding='utf-8'));data=obj if isinstance(obj,list) else [obj]
-        if not isinstance(data,list) or any(not isinstance(r,dict) for r in data):raise ArtifactError('Invalid artifact record shape')
+        if not isinstance(data,list) or any(not isinstance(r,dict) for r in data):
+            logger.error('artifact_integrity_failed resource=%s path=%s stage=record_shape status=invalid',
+                         key,path.relative_to(self.root).as_posix())
+            raise ArtifactError('Invalid artifact record shape')
         if key in ('mortality_trends','forensic','assist','treatment','naloxone','anomalies','annual','geographic_trends'):
-            if any(not {'geography','indicator_id','observed_value'}<=r.keys() for r in data):raise ArtifactError('Required observation fields absent')
+            if any(not {'geography','indicator_id','observed_value'}<=r.keys() for r in data):
+                logger.error('artifact_integrity_failed resource=%s path=%s stage=required_fields status=invalid',
+                             key,path.relative_to(self.root).as_posix())
+                raise ArtifactError('Required observation fields absent')
         meta=dict(resource=key,storage='approved_local_artifact',analytical_version=manifest.get('version',manifest.get('model_version','phase2-1.0.0')),
                   executed_at_utc=manifest.get('executed_at_utc'),artifact_sha256=digest,
                   source_path=path.relative_to(self.root).as_posix(),provenance_manifest=(directory/'run_manifest.json').relative_to(self.root).as_posix(),
