@@ -116,3 +116,26 @@ test('live database snapshots are paged, classified and remain separate from fro
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
  expect(browserErrors).toEqual([]);
 });
+
+test('browser history during backend bootstrap does not use uninitialized filters',async({page})=>{
+ let releaseGeographies,markRequestStarted;
+ const pending=new Promise(resolve=>{releaseGeographies=resolve;});
+ const requestStarted=new Promise(resolve=>{markRequestStarted=resolve;});
+ await page.route('**/api/v1/geographies*',async route=>{
+  markRequestStarted();
+  await pending;
+  await route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({
+   state:'error',kind:'unavailable_evidence',data:[],total:0,metadata:{},message:'TEST ONLY: geographic registry unavailable',
+  })});
+ });
+ await page.goto('/#overview');
+ await requestStarted;
+ await expect(page.locator('#api-status')).toHaveText('Connecting to research backend...');
+ await page.locator('[data-page="comparison"]').click();
+ await expect(page.locator('#page-title')).toHaveText('Comparison Studio');
+ await page.goBack();
+ await expect(page.locator('#page-title')).toHaveText('Intelligence Overview');
+ await expect(page.locator('#api-status')).toHaveText('Connecting to research backend...');
+ releaseGeographies();
+ await expect(page.locator('#api-status')).toContainText('TEST ONLY: geographic registry unavailable');
+});

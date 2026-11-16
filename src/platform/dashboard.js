@@ -89,7 +89,7 @@ export function mountPlatform(root,api=request){
  if(current!==ticket)return;show(response,view==='comparison'?'':resource,f);
  }catch(error){if(current!==ticket)return;q('#api-status').textContent=error.message;q('#api-status').dataset.state='error';q('#page-count').textContent='';clearChart(q('#research-chart'));}finally{if(current===ticket)q('#reset-filters').disabled=false;}}
  q('#refresh-api').onclick=()=>initialized?load():initialize();q('#previous-page').onclick=()=>{offset=Math.max(0,offset-100);load();};q('#next-page').onclick=()=>{offset+=100;load();};
- window.addEventListener('popstate',()=>{const id=location.hash.slice(1);if(isRoute(id)&&id!==page){page=id;view='';offset=0;load();}});
+ window.addEventListener('popstate',()=>{const id=location.hash.slice(1);if(isRoute(id)&&id!==page){page=id;view='';offset=0;if(initialized)load();else{shell.update(page);q('#page-title').textContent=routeTitle(page);}}});
  async function initialize(){
   q('#api-status').textContent='Connecting to research backend...';q('#api-status').dataset.state='loading';
   q('#plot-panel').hidden=true;q('.filter-panel').hidden=true;q('#page-title').textContent='Intelligence Overview';
