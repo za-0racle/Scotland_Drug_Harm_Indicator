@@ -5,7 +5,7 @@ const signature=(row,fields)=>JSON.stringify(fields.map(key=>row[key]??null));
 export const definitionKey=row=>signature(row,definitionFields);
 export const modelKey=row=>signature(row,modelFields);
 export const seriesKey=row=>signature(row,['geography_id','geography','comparison_role',...definitionFields,...modelFields]);
-export const periodLabel=row=>String(row.period??row.period_label??(row.year&&row.quarter?`${row.year} Q${String(row.quarter).replace(/^Q/,'')}`:row.year)??row.target_period??row.start??'');
+export const periodLabel=row=>String(row.period??row.period_label??(row.year&&row.quarter?`${row.year} Q${String(row.quarter).replace(/^Q/,'')}`:row.year)??row.target_period??row.target??row.start??'');
 export function valueOf(row){
  if(!row)return null;
  for(const key of ['observed_value','suspected_deaths','statistic_value','predicted','rate']){

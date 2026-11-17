@@ -38,3 +38,12 @@ test('supported regular series sort immutably; forecasts retain bounds; empty in
  const rows=[{...base,period:'2024 Q2',observed_value:2},base];const before=JSON.stringify(rows);assert.deepEqual(prepareChart(rows).datasets[0].points.map(p=>p.value),[0,2]);assert.equal(JSON.stringify(rows),before);
  const forecast={target_period:'2026 Q1',predicted:248,lower95:160,upper95:336,model:'naive'};assert.equal(prepareChart([forecast]).datasets[0].points[0].record,forecast);assert.deepEqual(prepareChart([]).datasets,[]);
 });
+
+test('rolling-origin target fields align models without substituting training quarters',()=>{
+ const rows=[{model:'naive',origin:'2022 Q4',target:'2023 Q1',predicted:295,lower80:230.0169922049435,upper80:359.9830077950565,lower95:195.61706582109136,upper95:394.3829341789086},{model:'ses',origin:'2022 Q4',target:'2023 Q1',predicted:277.9581605869514},{model:'naive',origin:'2023 Q2',target:'2023 Q3',predicted:0}];
+ const before=JSON.stringify(rows),result=prepareChart(rows);
+ assert.deepEqual(result.labels,['2023 Q1','2023 Q2','2023 Q3']);
+ assert.equal(result.datasets.length,2);assert.deepEqual(result.datasets[0].points.map(p=>p.value),[295,null,0]);
+ assert.equal(result.datasets[0].points[0].record,rows[0]);assert.equal(result.datasets[0].points[0].record.lower80,230.0169922049435);
+ assert.equal(JSON.stringify(rows),before);assert.throws(()=>prepareChart([{model:'naive',origin:'2022 Q4',predicted:295}]),/reporting period is missing/);
+});

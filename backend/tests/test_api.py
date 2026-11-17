@@ -141,3 +141,13 @@ def test_refresh_refuses_existing_or_public_destinations(tmp_path):
     with pytest.raises(ValueError):refresh('phase6',ROOT/'analysis/phase6/outputs')
     with pytest.raises(ValueError):refresh('phase6',tmp_path)
     with pytest.raises(ValueError):refresh('unreviewed',tmp_path)
+
+def test_backtest_api_preserves_verified_target_origin_values_and_intervals(client):
+    rows,meta=ArtifactRepository().load('backtest')
+    response=client.get('/api/v1/forecasting/backtest?limit=100').json()
+    assert response['total']==len(rows)==48
+    assert response['metadata']['artifact_sha256']==meta['artifact_sha256']
+    for original,returned in zip(rows,response['data']):
+        for field in ['model','origin','target','predicted','lower80','upper80','lower95','upper95']:
+            assert returned[field]==original[field]
+    assert sorted({r['target'] for r in response['data']})==[f'{year} Q{q}' for year in range(2023,2026) for q in range(1,5)]
