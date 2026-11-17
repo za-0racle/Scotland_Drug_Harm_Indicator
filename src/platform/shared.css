@@ -141,3 +141,18 @@ th,td{padding:11px 14px}td{font-variant-numeric:tabular-nums}
 #forecast-protocol,#saved-projection{margin-block:20px}
 #data-panel.analytical-lead table{min-width:0;width:100%}
 #data-panel.analytical-lead th,#data-panel.analytical-lead td{white-space:normal}
+
+/* Research explanation leads; source records remain inspectable. */
+.research-page{min-width:0}
+.research-page .study-aim,.research-finding{font-size:1.1rem;font-weight:600;max-width:70ch}
+.research-page li{margin-block:14px;line-height:1.65}
+.research-page li p{margin:5px 0}
+.research-page a{display:inline-block;margin:4px 12px 4px 0;text-underline-offset:3px}
+.research-source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+.research-source{border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;min-width:0}
+.research-source summary{font-size:.9rem}
+.research-page pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;font-size:.8rem}
+.research-page>.supporting-analysis{margin-block:20px}
+#research-technical button{margin:8px}
+.research-unavailable{border-left:3px solid var(--gold);padding-left:14px}
+@media(max-width:700px){.research-source-grid{grid-template-columns:1fr}.research-page ol,.research-page ul{padding-left:22px}}

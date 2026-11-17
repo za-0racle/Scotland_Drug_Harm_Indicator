@@ -30,9 +30,9 @@ test('all eight sections, keyboard access and no direct database requests',async
    await page.screenshot({path:join(screenshots,`${id}.png`),fullPage:true,animations:'disabled'});
  }
  expect(bypass).toEqual([]);expect(browserErrors).toEqual([]);
- await page.getByRole('button',{name:'Source-quality gaps'}).click();
+ await page.locator('#research-technical > summary').click();await page.getByRole('button',{name:'Source-quality gaps'}).click();
  await expect(page.locator('#api-status')).toContainText('10 records in this view');
- await page.locator('[data-page="methodology"]').click();await page.getByRole('button',{name:'Source inventory',exact:true}).click();
+ await page.locator('[data-page="methodology"]').click();await page.locator('#research-technical > summary').click();await page.getByRole('button',{name:'Source inventory',exact:true}).click();
  await expect(page.locator('#api-status')).toContainText('6 records in this view');
 });
 
@@ -89,13 +89,13 @@ test('Supabase outage is visible independently of available research artifacts',
 test('live database snapshots are paged, classified and remain separate from frozen reports',async({page})=>{
  const browserErrors=[];page.on('pageerror',error=>browserErrors.push(error.message));
  await page.goto('/#reports');await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
- await page.getByRole('button',{name:'Live database snapshots'}).click();
+ await page.locator('#research-technical > summary').click();await page.getByRole('button',{name:'Live database snapshots'}).click();
  await expect(page.locator('#database-snapshot-status')).toHaveAttribute('data-state','ready',{timeout:60000});
  await expect(page.locator('#database-snapshot-status')).toContainText('Export includes this page only');
  await expect(page.locator('#database-snapshot-table tbody tr')).toHaveCount(100);
  await expect(page.locator('#database-snapshot-table')).toContainText('National Aggregate — Scotland');
  await expect(page.locator('#database-snapshot-table')).toContainText('Unknown');
- await expect(page.locator('#database-snapshot-note')).toContainText('separate from the frozen Phase 4');
+ await expect(page.locator('#database-snapshot-note')).toContainText('separate from the saved analytical series');
  const firstPage=await page.locator('#database-snapshot-table tbody').textContent();
  await page.getByRole('button',{name:'Next database page'}).click();
  await expect(page.locator('#database-snapshot-status')).toContainText('100 live database records loaded');

@@ -18,7 +18,7 @@ test('monitoring retains original records, separate components, settings and his
 
 test('evaluation leads, saved values remain exact and analytical layouts fit desktop and mobile',async({page})=>{
  const errors=[];page.on('pageerror',error=>errors.push(error.message));
- await mkdir('docs/images/task08s-phase3',{recursive:true});
+ await mkdir('test-results/task08s-phase3',{recursive:true});
  for(const width of [1440,390]){
   await page.setViewportSize({width,height:1000});await page.goto('/#forecasting');await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
   await expect(page.locator('#data-panel tbody tr')).toHaveCount(4);
@@ -29,12 +29,12 @@ test('evaluation leads, saved values remain exact and analytical layouts fit des
   await expect(page.locator('#export-csv')).toHaveAttribute('href',/forecast_models/);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
   await page.evaluate(()=>{document.activeElement?.blur();window.scrollTo(0,0);});
-  await page.screenshot({path:`docs/images/task08s-phase3/forecast-${width===1440?'desktop':'mobile'}.png`,fullPage:true});
+  await page.screenshot({path:`test-results/task08s-phase3/forecast-${width===1440?'desktop':'mobile'}.png`,fullPage:true});
   await page.goto('/#anomalies');await page.getByRole('button',{name:'Statistical flags',exact:true}).click();await expect(page.locator('#api-status')).toContainText('47 records');
   await page.getByRole('button',{name:'Original monitoring results',exact:true}).click();await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
   await page.evaluate(()=>{document.activeElement?.blur();window.scrollTo(0,0);});
-  await page.screenshot({path:`docs/images/task08s-phase3/monitoring-${width===1440?'desktop':'mobile'}.png`,fullPage:true});
+  await page.screenshot({path:`test-results/task08s-phase3/monitoring-${width===1440?'desktop':'mobile'}.png`,fullPage:true});
  }
  expect(errors).toEqual([]);
 });

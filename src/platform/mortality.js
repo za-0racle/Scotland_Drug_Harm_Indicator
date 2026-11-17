@@ -73,7 +73,7 @@ export async function mountMortality({root,api,isCurrent,onStatus,onInspect,onSc
   const info=bodies.get(disclosures);const quartileNote=bodies.get(box).querySelector('.mortality-method-note');if(quartileNote)info.append(quartileNote);info.append(el('p',spec.definition),el('p',latest?.limitations??latest?.small_number_qualification??'No causal conclusions or population-rate claims follow from these descriptive counts.'));
   const other=el('a','Open retained multi-source trends workspace');other.href='#exploration';info.append(other);
   const method=el('p');method.append(document.createTextNode('Quartile reference: '));const ref=el('a','R quantile documentation (type 7)');ref.href='https://stat.ethz.ch/R-manual/R-devel/library/stats/html/quantile.html';ref.target='_blank';ref.rel='noopener noreferrer';method.append(ref,document.createTextNode('. Whiskers use the documented 1.5-IQR convention; type-7 quartiles are not R’s distinct boxplot hinges.'));info.append(method);
-  provenance(info,'Source artifact, original definition & record example',sourceResult,selected.length?[selected[0]]:[]);
+  provenance(info,'Source definition and original record',sourceResult,selected.length?[selected[0]]:[]);
  }
  function renderRanking(){
   const target=bodies.get(ranking);target.replaceChildren();const eligible=rows.filter(r=>r.boundary_type===fields.boundary.value&&r.year>=Number(fields.from.value)&&r.year<=Number(fields.to.value)),periods=[...new Set(eligible.map(period))].sort();

@@ -7,7 +7,7 @@ function unavailable(container,result,message){const node=el('p',message||result
 export function provenance(container,title,result,records=[]){
  const details=el('details',null,'overview-provenance');details.append(el('summary',title));
  const metadata=result?.metadata??{};
- if(metadata.source_path)details.append(el('p',`Research file: ${metadata.source_path}`));
+ if(metadata.source_path)details.append(el('p',`Technical research file: ${metadata.source_path}`));
  for(const record of records){
   const info=[record.source_id,record.source_sheet,record.source_cell,record.publication_date?`Published ${record.publication_date}`:null,record.source_data_cutoff?`Cutoff ${record.source_data_cutoff}`:null].filter(Boolean);
   if(info.length)details.append(el('p',info.join(' · ')));
@@ -63,7 +63,7 @@ export async function mountOverview({api,summary,before,after,isCurrent,onMortal
   const list=el('dl',null,'substance-preview');for(const row of toxicology.rows)list.append(el('dt',label(row.indicator_id.split(':').slice(1).join(':'))),el('dd',number(row.observed_value)));forensic.append(list);provenance(forensic,'Toxicology source & reporting definition',results.forensic,toxicology.rows);
  }else unavailable(forensic,toxicology);
  if(results.monitoring.state==='ready'&&Number.isInteger(results.monitoring.total)){
-  monitoring.append(el('strong',`${number(results.monitoring.total)} historical statistical flags`,'overview-stat'),el('p','Prior-only robust median/MAD count screen across the frozen source observations. Flags are correlated research measurements, not independent incidents or confirmed public-health alerts.'),el('p','Mixed source periods; review the full monitoring view for each observation’s geography, source and reporting period.','overview-source-line'));
+  monitoring.append(el('strong',`${number(results.monitoring.total)} historical statistical flags`,'overview-stat'),el('p','Historical median and median absolute deviation (MAD) screen using only earlier observations. Flags are correlated research measurements, not independent incidents or confirmed public-health alerts.'),el('p','Mixed source periods; review the full monitoring view for each observation’s geography, source and reporting period.','overview-source-line'));
   if(Number.isInteger(overview?.original_runs))monitoring.append(el('p',`${number(overview.original_runs)} saved historical runs; consecutive flags do not establish independent events.`));provenance(monitoring,'Monitoring method & provenance',results.monitoring,results.monitoring.data);
  }else unavailable(monitoring,results.monitoring,'Historical flag count unavailable; missing results do not establish no signals.');
  const validation=results.validation.state==='ready'?results.validation.data[0]:null;

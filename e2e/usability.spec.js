@@ -34,7 +34,7 @@ test('advanced and verification panels close on Escape without clearing filters'
 });
 test('forecast, source details and mobile do not imply unsupported controls',async({page})=>{
  await page.goto('/#forecasting');await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');await expect(page.locator('.filter-panel')).toBeHidden();await page.getByRole('button',{name:'Historical-origin projection',exact:true}).click();await expect(page.locator('#data-panel')).toContainText('2025 Q4');await expect(page.locator('#data-panel')).toContainText('2026 Q1');await expect(page.locator('#feature-panel')).toContainText('Not a current future prediction');
- await page.locator('#platform-nav [data-page="reports"]').click();await page.locator('[data-page="methodology"]').click();await expect(page.locator('pre:visible')).toHaveCount(0);await expect(page.locator('#data-panel')).toContainText('Methods');
+ await page.locator('#platform-nav [data-page="reports"]').click();await page.locator('[data-page="methodology"]').click();await expect(page.locator('pre:visible')).toHaveCount(0);await expect(page.locator('#research-study-methods')).toContainText('Negative Binomial');
  await page.setViewportSize({width:390,height:844});await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();await page.screenshot({path:'analysis/test_scratch.local/usability/after-mobile.png',fullPage:true});
 });
 

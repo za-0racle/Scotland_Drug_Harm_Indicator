@@ -25,7 +25,7 @@ export function overviewKpis(database,sources=[]){
   {title:'Latest quarterly suspected deaths',value:number(latest?.suspected_deaths),context:period,source:mortalitySource},
   {title:'Latest complete annual total',value:number(stats.annual?.total),context:stats.annual?`${stats.annual.year} · ${stats.change===null?'Previous-year comparison unavailable':`${stats.change>0?'+':''}${stats.change.toFixed(2)}% from preceding complete year`}`:'Four observed quarters required',source:mortalitySource},
   {title:'Mortality reporting coverage',value:rows.length?`${rows.length} quarters`:'Unavailable',context:first?`${first.year} Q${first.quarter} – ${period}; ${rows.filter(r=>r.suspected_deaths==null).length} unavailable values`:'No verified accessible coverage',source:mortalitySource},
-  {title:'Analytical source series',value:sources.length?String(sources.length):'Unavailable',context:'Frozen resource families · individual cutoffs below',source:'Research API · artifact coverage; not independent sources'},
+  {title:'Analytical source series',value:sources.length?String(sources.length):'Unavailable',context:'Saved research datasets · individual cutoffs below',source:'Research datasets; not independent sources'},
  ];
 }
 export function latestForensic(result){

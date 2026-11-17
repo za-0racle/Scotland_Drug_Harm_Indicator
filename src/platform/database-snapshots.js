@@ -3,19 +3,19 @@ const resources={
   label:'Naloxone activity — live database snapshot',
   path:'/database/v1/naloxone-activity',
   columns:[['week_beginning','Reporting week'],['geography_display','Geography'],['geography_class','Geography class'],['administrations','Administrations (count)'],['moving_average','Source-reported moving average'],['source_dataset','Source dataset']],
-  note:'This is a live database representation, separate from the frozen Phase 4 analytical series. Administrations match the frozen source; 14 first-week board moving averages are populated here but remain missing in the frozen source. The moving average is source-reported, not recalculated by this application.'
+  note:'This is a live database representation, separate from the saved analytical series. Administrations match the saved source; 14 first-week board moving averages are populated here but remain missing in the saved source. The moving average is source-reported, not recalculated by this application.'
  },
  geographic_areas:{
   label:'Geographic registry — live database snapshot',
   path:'/database/v1/geographic-areas',
   columns:[['area_code','Area code'],['area_name','Area name'],['geography_class','Geography class'],['area_type','Source area type'],['valid_from','Valid from'],['valid_to','Valid to'],['source_dataset','Source dataset']],
-  note:'Validity dates are the current database values. Frozen research outputs and their geographic identities are not changed by this registry view.'
+  note:'Validity dates are the current database values. Saved research datasets and their geographic identities are not changed by this registry view.'
  },
  data_sources:{
-  label:'Source catalog — live database snapshot',
+  label:'Source catalogue — live database snapshot',
   path:'/database/v1/data-sources',
   columns:[['dataset_name','Dataset'],['publisher','Publisher'],['source_url','Source URL'],['source_sha256','Source SHA-256'],['source_id','Source ID'],['notes','Source notes']],
-  note:'This database source catalog is metadata only. URLs and checksums do not alter or replace frozen source files.'
+  note:'This database source catalogue is metadata only. URLs and checksums do not alter or replace saved source files.'
  }
 };
 const pageSize=100;
@@ -44,8 +44,8 @@ export async function mountDatabaseSnapshots({root,api,onStatus=()=>{},isCurrent
  const live=()=>!disposed&&isCurrent();
  root.replaceChildren();root.setAttribute('aria-label','Live database snapshots');
  root.append(el('p','LIVE DATABASE · VERSIONED SEPARATELY FROM FROZEN RESEARCH','eyebrow'));
- root.append(el('h3','Approved live database snapshots'));
- root.append(el('p','These read-only pages show selected live Supabase tables through explicit API allowlists. They do not update or replace frozen analytical artifacts. Empty, unavailable and missing values are distinct from zero.'));
+ root.append(el('h3','Read-only database records'));
+ root.append(el('p','These read-only pages show selected database records. They are separate from the saved analytical datasets. Empty, unavailable and missing values are distinct from zero.'));
  const controls=el('div',null,'filter-panel database-snapshot-controls');
  const label=el('label','Database resource'),select=el('select');select.id='database-resource';
  for(const[id,spec]of Object.entries(resources))select.add(new Option(spec.label,id));
