@@ -7,7 +7,7 @@ const proxy={
    server.on('error',(_error,_request,response)=>{
     if(response&&!response.headersSent&&typeof response.writeHead==='function'){
      response.writeHead(502,{'Content-Type':'application/json'});
-     response.end(JSON.stringify({state:'error',kind:'unavailable_evidence',data:[],total:0,metadata:{},message:'Research backend is unreachable. Start FastAPI on port 8000 and retry Refresh API data.'}));
+     response.end(JSON.stringify({state:'error',kind:'unavailable_evidence',data:[],total:0,metadata:{},message:'These research results could not be loaded. Please try Refresh data.'}));
     }
    });
   },

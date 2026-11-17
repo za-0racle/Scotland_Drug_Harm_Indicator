@@ -12,14 +12,14 @@ test('all eight sections, keyboard access and no direct database requests',async
  const screenshots='test-results/final-screenshots';
  await mkdir(screenshots,{recursive:true});
  const screens=[
-  ['overview','Intelligence Overview'],
-  ['comparison','Comparison Studio'],
-  ['trends','Mortality Analytics'],
-  ['substance','Substance Intelligence'],
-  ['geography','Geographic Explorer'],
-  ['anomalies','Anomaly Detection & Surveillance Signals'],
-  ['forecasting','Forecasting Lab'],
-  ['reports','Research, Data & Exports'],
+  ['overview','Study overview'],
+  ['comparison','Compare areas and substances'],
+  ['trends','Mortality trends'],
+  ['substance','Toxicology patterns'],
+  ['geography','Geographic patterns'],
+  ['anomalies','Statistical monitoring'],
+  ['forecasting','Forecast evaluation'],
+  ['reports','Research, sources and downloads'],
  ];
  const terminalState=/^(ready|empty|unavailable)$/;
  for(const[index,[id,title]]of screens.entries()){
@@ -132,9 +132,9 @@ test('browser history during backend bootstrap does not use uninitialized filter
  await requestStarted;
  await expect(page.locator('#api-status')).toHaveText('Connecting to research backend...');
  await page.locator('[data-page="comparison"]').click();
- await expect(page.locator('#page-title')).toHaveText('Comparison Studio');
+ await expect(page.locator('#page-title')).toHaveText('Compare areas and substances');
  await page.goBack();
- await expect(page.locator('#page-title')).toHaveText('Intelligence Overview');
+ await expect(page.locator('#page-title')).toHaveText('Study overview');
  await expect(page.locator('#api-status')).toHaveText('Connecting to research backend...');
  releaseGeographies();
  await expect(page.locator('#api-status')).toContainText('TEST ONLY: geographic registry unavailable');

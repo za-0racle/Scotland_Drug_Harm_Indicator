@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="80" viewBox="0 0 280 80" role="img" aria-labelledby="title">
+<title id="title">SDHI — Scotland Drug Harm Intelligence</title>
+<g transform="translate(0 8)"><rect width="64" height="64" rx="14" fill="#252525"/>
+<path d="M14 47h36" fill="none" stroke="#FAF8F2" stroke-opacity=".35" stroke-width="2"/>
+<path d="m14 40 12-11 12 5 12-17" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#FAF8F2"><circle cx="14" cy="40" r="3"/><circle cx="26" cy="29" r="3"/><circle cx="38" cy="34" r="3"/><circle cx="50" cy="17" r="3"/></g></g>
+<g fill="#252525" font-family="Segoe UI,DejaVu Sans,sans-serif">
+<text x="80" y="38" font-size="32" font-weight="700" letter-spacing="2">SDHI</text>
+<text x="81" y="57" font-size="12">Scotland Drug Harm</text>
+<text x="81" y="73" font-size="12">Intelligence</text></g></svg>

@@ -4,20 +4,20 @@ test('white and gold shell, collapse, legacy links, completed screens and compar
  await page.goto('/#forecasting');await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
  await expect(page.locator('html')).toHaveAttribute('data-theme','light');
  await expect(page.locator('#platform-nav a')).toHaveCount(8);
- await expect(page.locator('#page-title')).toHaveText('Forecasting Lab');
+ await expect(page.locator('#page-title')).toHaveText('Forecast evaluation');
  const series=page.locator('[data-chart-legend] button').first();await expect(series).toHaveAttribute('aria-pressed','true');await series.click();await expect(series).toHaveAttribute('aria-pressed','false');await series.click();await expect(series).toHaveAttribute('aria-pressed','true');
  await page.locator('#navigation-toggle').click();await expect(page.locator('#navigation-toggle')).toHaveAttribute('aria-expanded','false');
- await expect(page.locator('#platform-nav a').first()).toHaveAccessibleName('Intelligence Overview');
+ await expect(page.locator('#platform-nav a').first()).toHaveAccessibleName('Study overview');
  await page.locator('#navigation-toggle').click();
  await page.locator('[data-page="anomalies"]').click();await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
  await page.locator('[data-page="signals"]').click();await expect(page).toHaveURL(/#signals$/);await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
  await expect(page.locator('#platform-nav [data-page="anomalies"]')).toHaveAttribute('aria-current','page');
  await page.locator('#platform-nav [data-page="reports"]').click();await page.locator('[data-page="methodology"]').click();await expect(page).toHaveURL(/#methodology$/);await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
  await page.locator('[data-page="substance"]').click();await expect(page.locator('#substance-content')).toBeVisible();await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');await expect(page.locator('#export-csv')).toBeHidden();
- await page.locator('[data-page="comparison"]').click();await expect(page.locator('#comparison-studio')).toBeVisible();await page.locator('#open-comparison').click();
- await expect(page.getByRole('dialog')).toBeVisible();await expect(page.locator('#comparison-close')).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('#open-comparison')).toBeFocused();
+ await page.locator('#open-comparison').click();await expect(page).toHaveURL(/#comparison$/);await expect(page.locator('#page-title')).toBeFocused();await expect(page.locator('#comparison-studio')).toBeVisible();await page.locator('#quick-comparison').click();
+ await expect(page.getByRole('dialog')).toBeVisible();await expect(page.locator('#comparison-close')).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('#quick-comparison')).toBeFocused();
  await page.screenshot({path:'test-results/task03-shell-desktop.png',fullPage:true});
- await page.goBack();await expect(page.locator('#page-title')).toHaveText('Substance Intelligence');
+ await page.goBack();await expect(page.locator('#page-title')).toHaveText('Toxicology patterns');
 });
 
 test('mobile drawer contains keyboard focus, closes with Escape, and layout reflows',async({page})=>{

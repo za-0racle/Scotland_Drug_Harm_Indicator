@@ -1,14 +1,14 @@
 export const screens=[
- ['overview','Intelligence Overview','overview'],
- ['comparison','Comparison Studio','compare'],
- ['trends','Mortality Analytics','mortality'],
- ['substance','Substance Intelligence','substance'],
- ['geography','Geographic Explorer','geography'],
- ['anomalies','Anomaly Detection & Surveillance Signals','signals'],
- ['forecasting','Forecasting Lab','forecast'],
- ['reports','Research, Data & Exports','research'],
+ ['overview','Study overview','overview'],
+ ['comparison','Compare areas and substances','compare'],
+ ['trends','Mortality trends','mortality'],
+ ['substance','Toxicology patterns','substance'],
+ ['geography','Geographic patterns','geography'],
+ ['anomalies','Statistical monitoring','signals'],
+ ['forecasting','Forecast evaluation','forecast'],
+ ['reports','Research, sources and downloads','research'],
 ];
-export const legacyRoutes={compare:{screen:'comparison',title:'Comparison Studio'},signals:{screen:'anomalies',title:'Surveillance Signals'},methodology:{screen:'reports',title:'Data & Methodology'},exploration:{screen:'trends',title:'Source Trends & Patterns'}};
+export const legacyRoutes={compare:{screen:'comparison',title:'Compare areas and substances'},signals:{screen:'anomalies',title:'Consecutive signals and evidence'},methodology:{screen:'reports',title:'Sources and methods'},exploration:{screen:'trends',title:'Other source trends'}};
 export const isRoute=id=>screens.some(([key])=>key===id)||Object.hasOwn(legacyRoutes,id);
 export const screenFor=id=>legacyRoutes[id]?.screen??id;
 export const routeTitle=id=>legacyRoutes[id]?.title??screens.find(([key])=>key===id)?.[1]??screens[0][1];
@@ -18,7 +18,7 @@ export const icon=name=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentCol
 export function mountShell(root,navigate){
  const nav=root.querySelector('#platform-nav'),header=root.querySelector('.platform-header');
  const sidebar=document.createElement('aside');sidebar.id='app-sidebar';sidebar.className='app-sidebar';
- sidebar.innerHTML='<a class="sdhi-brand" href="#overview" aria-label="SDHI — Intelligence Overview"><span class="brand-mark">S<span>·</span></span><span class="brand-copy"><strong>SDHI</strong><small>SCOTLAND DRUG HARM<br>INTELLIGENCE PLATFORM</small></span></a><p class="sidebar-label">RESEARCH WORKSPACE</p>';
+ sidebar.innerHTML='<a class="sdhi-brand" href="#overview" aria-label="SDHI: Study overview"><img class="brand-logo" src="/brand/sdhi-logo.svg" width="280" height="80" alt="SDHI: Scotland Drug Harm Intelligence"><img class="brand-logo brand-logo-dark" src="/brand/sdhi-logo-dark.svg" width="280" height="80" alt=""><img class="brand-icon" src="/brand/sdhi-icon.svg" width="48" height="48" alt=""></a><p class="sidebar-label">RESEARCH DASHBOARD</p>';
  nav.before(sidebar);sidebar.append(nav);
  const sidebarFoot=document.createElement('div');sidebarFoot.className='sidebar-foot';sidebarFoot.innerHTML='<span class="research-dot" aria-hidden="true"></span><span class="nav-label">Historical research<br><small>Evidence before inference</small></span>';sidebar.append(sidebarFoot);
  nav.replaceChildren();
@@ -27,6 +27,7 @@ export function mountShell(root,navigate){
  header.prepend(toggle);header.classList.add('top-toolbar');
  const breadcrumb=document.createElement('p');breadcrumb.id='toolbar-context';breadcrumb.className='toolbar-context';header.querySelector('div').append(breadcrumb);
  const backdrop=document.createElement('button');backdrop.id='navigation-backdrop';backdrop.tabIndex=-1;backdrop.setAttribute('aria-label','Close navigation');backdrop.hidden=true;root.append(backdrop);
+ const toolbarObserver=new ResizeObserver(()=>{root.style.setProperty('--toolbar-height',`${header.getBoundingClientRect().height}px`);});toolbarObserver.observe(header);
  const mobile=matchMedia('(max-width: 900px)');let collapsed=false,drawer=false,priorOverflow='';
  const close=document.createElement('button');close.className='drawer-close';close.textContent='Close navigation';close.onclick=()=>closeDrawer();sidebar.prepend(close);
  function sync(){
@@ -56,7 +57,7 @@ export function mountShell(root,navigate){
   breadcrumb.textContent=routeTitle(page);
   for(const a of nav.children){if(a.dataset.page===screenFor(page))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');}
   links.replaceChildren();
-  const related=screenFor(page)==='anomalies'?[['anomalies','Anomaly detection'],['signals','Surveillance signals']]:screenFor(page)==='reports'?[['reports','Reports & exports'],['methodology','Data & methodology']]:screenFor(page)==='trends'?[['trends','Mortality analytics'],['exploration','Other source trends']]:[];
+  const related=screenFor(page)==='anomalies'?[['anomalies','Historical statistical flags'],['signals','Consecutive signals and evidence']]:screenFor(page)==='reports'?[['reports','Research and downloads'],['methodology','Sources and methods']]:screenFor(page)==='trends'?[['trends','Mortality trends'],['exploration','Other source trends']]:[];
   for(const[id,title]of related){const a=document.createElement('a');a.href='#'+id;a.dataset.page=id;a.textContent=title;if(page===id)a.setAttribute('aria-current','page');links.append(a);}
  }};
 }

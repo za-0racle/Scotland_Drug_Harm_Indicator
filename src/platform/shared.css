@@ -1,0 +1,101 @@
+/* Shared Phase 1 presentation. Source-specific layouts and scales are preserved. */
+:root,[data-theme=light]{--bg:var(--white);--surface-alt:var(--ivory);--content-width:1480px;--panel-padding:clamp(18px,2vw,26px)}
+[data-theme=dark]{--bg:#191B20;--surface-alt:#2E3138}
+body{font-size:16px;text-rendering:optimizeLegibility}
+h2{font-size:clamp(1.65rem,2.4vw,2.15rem);line-height:1.2;letter-spacing:-.025em}
+h3{font-size:1.1rem;line-height:1.4;letter-spacing:-.01em;font-weight:650}
+p{line-height:1.65}
+#app{--sidebar-width:280px}
+#app.sidebar-collapsed{--sidebar-width:80px}
+.app-sidebar{padding:22px 16px 18px}
+.sdhi-brand{padding:0 4px 22px;min-height:92px}
+.brand-logo{display:block;width:100%;height:auto;max-width:236px}
+.brand-logo-dark,.brand-icon{display:none}
+[data-theme=dark] .brand-logo:not(.brand-logo-dark){display:none}
+[data-theme=dark] .brand-logo-dark{display:block}
+.sidebar-collapsed .brand-logo,.sidebar-collapsed .brand-logo-dark{display:none}
+.sidebar-collapsed .brand-icon{display:block;max-width:44px;height:44px}
+.sidebar-collapsed .sdhi-brand{padding:0 4px 22px;justify-content:center}
+.sidebar-label{font-size:.7rem;letter-spacing:.12em;margin-bottom:8px}
+#platform-nav{gap:4px}
+#platform-nav a{font-size:.875rem;min-height:46px;padding:10px 12px;line-height:1.4}
+#platform-nav a[aria-current=page]{background:var(--surface-alt);border-color:var(--champagne)}
+#platform-nav a[aria-current=page]::before{left:-17px;top:10px;bottom:10px;width:3px}
+.sidebar-foot{font-size:.8rem;padding-top:22px}.sidebar-foot small{font-size:.75rem}
+.top-toolbar{min-height:84px;padding:14px clamp(20px,2.5vw,36px);gap:14px}
+.top-toolbar h1{font-size:1rem;line-height:1.35;max-width:29ch}
+.toolbar-context{font-size:.8rem;line-height:1.4;margin-top:4px}
+.prototype-badge{font-size:.75rem;max-width:none;white-space:nowrap}
+.workspace-actions{margin-left:auto;gap:8px}
+.workspace-actions button{font-size:.8rem;min-height:42px;white-space:nowrap}
+#workspace{max-width:var(--content-width);padding:28px clamp(20px,3vw,44px) 40px;min-height:65vh}
+.workspace-heading{align-items:center;flex-wrap:wrap;gap:12px}
+.workspace-heading .eyebrow{font-size:.7rem;margin:0 0 8px}
+#quick-comparison{font-size:.8rem;background:var(--surface-alt);margin-left:auto}
+.page-introduction{font-size:.95rem;max-width:80ch;margin:14px 0 22px}
+.notice{font-size:.825rem;margin:16px 0;padding:10px 14px;background:var(--surface-alt)}
+.filter-panel,.chart-panel,.case-feature,.overview-card{padding:var(--panel-padding)}
+.chart-panel{margin-block:22px}.overview-grid{gap:20px}
+.summary-grid{gap:14px;margin-block:18px}
+.summary-card{padding:16px 18px;border-top:2px solid var(--champagne)}
+.summary-card span,.summary-card p,.summary-card small{font-size:.825rem;line-height:1.55}
+.summary-card strong{font-size:clamp(1.4rem,2.1vw,1.9rem);letter-spacing:-.025em}
+.overview-kpi small{font-size:.78rem;padding-top:6px}
+.overview-card p,.case-feature p,.mortality-screen .overview-card p,.chart-panel p{font-size:.875rem;line-height:1.65}
+.overview-source-line,#chart-context,[data-chart-note],#comparison-context,#studio-context,#studio-export-scope,#geo-scope{font-size:.825rem!important;line-height:1.6}
+.overview-link,.overview-provenance p,.overview-provenance a,.heatmap-key,.overview-filter-note{font-size:.8rem!important}
+label{font-size:.825rem;font-weight:550;color:var(--ink)}
+input,select{font-size:.875rem;min-height:44px;padding:10px 12px;text-overflow:ellipsis}
+button,.page-controls a{font-size:.85rem;min-height:42px;padding:10px 14px}
+button:disabled{cursor:default}
+.filter-actions p,#filter-help{font-size:.825rem}
+.view-tabs{gap:8px}.view-tabs button{font-size:.825rem;min-height:40px;padding:8px 12px}
+.view-tabs button.selected{border-color:var(--accent)}
+#section-links{gap:18px;font-size:.85rem;flex-wrap:wrap}
+summary,.overview-provenance summary{font-size:.85rem;line-height:1.5;padding:12px 0}
+details{margin-top:14px;padding-top:6px}
+pre,.overview-provenance pre{font-size:.8rem;line-height:1.6}
+.record-list{font-size:.85rem}
+table{font-size:.85rem}th{font-size:.8rem}caption{font-size:.825rem;line-height:1.6}
+th,td{padding:11px 14px}td{font-variant-numeric:tabular-nums}
+.table-scroll{overscroll-behavior-x:contain;scrollbar-gutter:stable}
+.page-controls{font-size:.85rem;gap:10px}
+.plot-wrap{height:clamp(280px,30vw,370px)}
+.chart-legend{justify-content:flex-start;gap:8px;margin-top:14px}
+.chart-legend button{font-size:.8rem;min-height:38px;align-items:center;line-height:1.5;padding:7px 10px}
+.legend-swatch{width:18px;height:3px}
+[data-chart-note]:empty{display:none}
+#api-status,#comparison-status{font-size:.85rem;line-height:1.6}
+.platform-footer{font-size:.8rem;line-height:1.6;padding:20px clamp(20px,3vw,44px);max-width:var(--content-width)}
+@media(min-width:1800px){#workspace,.platform-footer{margin-left:calc(var(--sidebar-width) + (100vw - var(--sidebar-width) - var(--content-width))/2)}}
+@media(max-width:1100px){.top-toolbar h1{max-width:22ch}.workspace-actions button{padding:9px 11px}}
+@media(max-width:900px){
+ #app,#app.sidebar-collapsed{--sidebar-width:0px}
+ .app-sidebar{top:var(--toolbar-height,84px);width:280px;max-width:calc(100vw - 32px)}
+ .top-toolbar{min-height:84px}.top-toolbar h1{max-width:29ch}
+ .toolbar-context{max-width:35ch}.workspace-actions button{font-size:.8rem}
+ #workspace{padding:24px}
+ #verification[open]{max-width:100vw}
+}
+@media(max-width:600px){
+ .top-toolbar{padding:12px 16px;gap:10px;align-items:center}
+ .top-toolbar h1{font-size:.95rem;max-width:28ch}
+ .toolbar-context{font-size:.8rem;max-width:none}
+ .top-toolbar .workspace-actions{width:100%;gap:8px}
+ .workspace-actions button{flex:1;min-height:42px;font-size:.8rem}
+ #workspace{padding:22px 16px 32px}
+ .workspace-heading h2{font-size:1.7rem}
+ #quick-comparison{margin-left:0}
+ .notice{font-size:.825rem}.page-introduction{font-size:.9rem}
+ .summary-grid{gap:10px}.summary-card{padding:14px}
+ .summary-card span,.summary-card p,.summary-card small{font-size:.8rem}
+ .summary-card strong,.overview-kpi strong{font-size:1.4rem}
+ .overview-period-controls{gap:12px}
+ .filter-actions{flex-wrap:wrap;gap:12px}
+ .chart-panel,.overview-card,.case-feature{padding:18px}
+ .plot-wrap{height:290px}.chart-legend button{width:100%;font-size:.8rem}
+ #section-links{gap:12px}.page-controls a{font-size:.825rem}
+ .platform-footer{padding:18px 16px}
+ .table-scroll{max-height:none}
+ .table-scroll th{position:static}
+}
