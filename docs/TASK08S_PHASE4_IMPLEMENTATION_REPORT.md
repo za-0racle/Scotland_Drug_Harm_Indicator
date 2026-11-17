@@ -38,7 +38,7 @@ Downloads distinguish the current analytical/database page, complete eligible se
 
 ## Editorial changes and files
 
-Added `src/platform/research.js`; integrated its existing API reads in `dashboard.js`; extended `shared.css` using the established design. Small wording corrections in `overview.js`, `overview-data.js`, `mortality.js`, `comparison-studio.js`, `substance.js` and `database-snapshots.js` replace implementation terminology in visitor-facing explanations and source-detail labels. Source terminology and technical identifiers inside original records and exports remain unchanged. The malformed baseline-year separator was corrected to 2017?2020 without changing its meaning.
+Added `src/platform/research.js`; integrated its existing API reads in `dashboard.js`; extended `shared.css` using the established design. Small wording corrections in `overview.js`, `overview-data.js`, `mortality.js`, `comparison-studio.js`, `substance.js` and `database-snapshots.js` replace implementation terminology in visitor-facing explanations and source-detail labels. Source terminology and technical identifiers inside original records and exports remain unchanged. The malformed baseline-year separator was corrected to 2017–2020 without changing its meaning.
 
 Browser updates are in `e2e/phase4.spec.js`, `acceptance.spec.js` and `usability.spec.js`. Phase 3 regression captures now go to `test-results` so its approved screenshots remain preserved. No dependencies were added. Research, backend, data contracts, model code, frozen outputs, initial metadata, branding and prior screenshots remain protected.
 
@@ -51,7 +51,7 @@ Browser updates are in `e2e/phase4.spec.js`, `acceptance.spec.js` and `usability
 | Initial focused research checks | Four passed; one new cross-screen test initially omitted Comparison Studio's required Compare action. Its setup was corrected; this was not an application or external-service failure. |
 | Full browser regression and final research checks | 56 passed in one uninterrupted final run, including all five Phase 4 cases and the eight-screen wording check. |
 | Public documentation and source links | Public GitHub visibility and seven document paths verified through unauthenticated API requests; three existing official publication URLs returned HTTP 200. |
-| Protected-tree comparison | No changes against `26c39f0` in backend, analysis, datasets, Supabase, dependencies, initial HTML, branding, `.gitattributes` or Phase 1?3 screenshots. |
+| Protected-tree comparison | No changes against `26c39f0` in backend, analysis, datasets, Supabase, dependencies, initial HTML, branding, `.gitattributes` or Phase 1–3 screenshots. |
 
 Source-specific regression checks cover separate suspected/registered deaths, non-additive forensic categories, categorical ASSIST periods, no Greenock substitution, 14 official NHS-board peers with Scotland/Unknown separate, and missing versus zero values. Monitoring flags remain historical research; forecast evaluation is retrospective and its saved 2026 Q1 projection remains elapsed. Shared non-operational and no-endorsement warnings remain accessible.
 
