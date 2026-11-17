@@ -156,3 +156,10 @@ th,td{padding:11px 14px}td{font-variant-numeric:tabular-nums}
 #research-technical button{margin:8px}
 .research-unavailable{border-left:3px solid var(--gold);padding-left:14px}
 @media(max-width:700px){.research-source-grid{grid-template-columns:1fr}.research-page ol,.research-page ul{padding-left:22px}}
+
+/* The shell's existing 900px matchMedia query owns navigation mode. */
+#navigation-toggle[hidden]{display:none!important}
+.record-inspection{min-width:0;max-width:100%}
+.record-inspection .record-list{margin-block:10px}
+.record-inspection dd,.record-inspection dt{overflow-wrap:anywhere;min-width:0}
+.record-inspection details{border-left:2px solid var(--line);padding-left:12px}

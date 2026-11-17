@@ -28,11 +28,11 @@ export function mountShell(root,navigate){
  const breadcrumb=document.createElement('p');breadcrumb.id='toolbar-context';breadcrumb.className='toolbar-context';header.querySelector('div').append(breadcrumb);
  const backdrop=document.createElement('button');backdrop.id='navigation-backdrop';backdrop.tabIndex=-1;backdrop.setAttribute('aria-label','Close navigation');backdrop.hidden=true;root.append(backdrop);
  const toolbarObserver=new ResizeObserver(()=>{root.style.setProperty('--toolbar-height',`${header.getBoundingClientRect().height}px`);});toolbarObserver.observe(header);
- const mobile=matchMedia('(max-width: 900px)');let collapsed=false,drawer=false,priorOverflow='';
+ const mobile=matchMedia('(max-width: 900px)');let drawer=false,priorOverflow='';
  const close=document.createElement('button');close.className='drawer-close';close.textContent='Close navigation';close.onclick=()=>closeDrawer();sidebar.prepend(close);
  function sync(){
-  root.classList.toggle('sidebar-collapsed',!mobile.matches&&collapsed);root.classList.toggle('navigation-open',mobile.matches&&drawer);
-  const expanded=mobile.matches?drawer:!collapsed;toggle.setAttribute('aria-expanded',String(expanded));toggle.setAttribute('aria-label',mobile.matches?(drawer?'Close navigation':'Open navigation'):(collapsed?'Expand sidebar':'Collapse sidebar'));toggle.title=toggle.getAttribute('aria-label');
+  root.classList.remove('sidebar-collapsed');root.classList.toggle('navigation-open',mobile.matches&&drawer);
+  toggle.hidden=!mobile.matches;toggle.setAttribute('aria-expanded',String(mobile.matches?drawer:true));toggle.setAttribute('aria-label',drawer?'Close navigation':'Open navigation');toggle.title=toggle.getAttribute('aria-label');
   sidebar.inert=mobile.matches&&!drawer;backdrop.hidden=!mobile.matches||!drawer;
   root.querySelector('#workspace').inert=mobile.matches&&drawer;
   root.querySelector('.workspace-actions').inert=mobile.matches&&drawer;
@@ -40,8 +40,8 @@ export function mountShell(root,navigate){
   if(mobile.matches&&drawer){sidebar.setAttribute('role','dialog');sidebar.setAttribute('aria-modal','true');sidebar.setAttribute('aria-label','Research navigation');}else{sidebar.removeAttribute('role');sidebar.removeAttribute('aria-modal');sidebar.removeAttribute('aria-label');}
  }
  function closeDrawer(restore=true){if(!drawer)return;drawer=false;document.body.style.overflow=priorOverflow;sync();if(restore)toggle.focus();}
- toggle.onclick=()=>{if(mobile.matches){if(drawer)closeDrawer();else{drawer=true;priorOverflow=document.body.style.overflow;document.body.style.overflow='hidden';sync();nav.querySelector('[aria-current="page"]')?.focus();}}else{collapsed=!collapsed;sync();}};
- backdrop.onclick=()=>closeDrawer();mobile.addEventListener('change',()=>{closeDrawer(false);sync();});
+ toggle.onclick=()=>{if(mobile.matches){if(drawer)closeDrawer();else{drawer=true;priorOverflow=document.body.style.overflow;document.body.style.overflow='hidden';sync();nav.querySelector('[aria-current="page"]')?.focus();}}};
+ backdrop.onclick=()=>closeDrawer();mobile.addEventListener('change',()=>{const hadFocus=sidebar.contains(document.activeElement)||document.activeElement===toggle;closeDrawer(false);sync();if(hadFocus){if(mobile.matches)toggle.focus();else nav.querySelector('[aria-current="page"]')?.focus();}});
  root.addEventListener('keydown',event=>{
   if(!mobile.matches||!drawer)return;
   if(event.key==='Escape'){event.preventDefault();closeDrawer();}

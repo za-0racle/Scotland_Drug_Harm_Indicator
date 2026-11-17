@@ -32,7 +32,7 @@ export async function request(path,params={},options={}){
   if(!contentType.toLowerCase().includes('application/json'))throw new ApiError('The research service returned an unexpected response. Please try Refresh data.',status,'non_json');
   let data;
   try{data=await response.json();}catch{throw new ApiError('The research service returned unreadable results. Please try Refresh data.',status,'invalid_json');}
-  if(!response.ok)throw new ApiError(typeof data.message==='string'?data.message:status===422?'Invalid filters or incompatible geography':`Research API returned HTTP ${status}.`,status,'http');
+  if(!response.ok)throw new ApiError(typeof data.message==='string'&&data.message!=='Verified analytical resource unavailable; check server artifact integrity'?data.message:status===422?'Invalid filters or incompatible geography':'These research results could not be loaded. Please try Refresh data.',status,'http');
   if(analytical){
    // This route has its own typed shape. The collector performs full validation.
    if(!data||typeof data!=='object'||Array.isArray(data))throw new ApiError('Unexpected analytical response schema.',status,'schema');

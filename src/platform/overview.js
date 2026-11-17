@@ -1,3 +1,4 @@
+import {recordView} from './record-inspection.js';
 import {disclose} from './analytical-layout.js';
 import {loadOverview,mortalityGrid,overviewKpis,latestForensic,forecastPreview,mortalitySource,number} from './overview-data.js';
 import {label} from './presentation.js';
@@ -7,13 +8,15 @@ function unavailable(container,result,message){const node=el('p',message||result
 export function provenance(container,title,result,records=[]){
  const details=el('details',null,'overview-provenance');details.append(el('summary',title));
  const metadata=result?.metadata??{};
- if(metadata.source_path)details.append(el('p',`Technical research file: ${metadata.source_path}`));
+ const overview=container.id.startsWith('overview-')||Boolean(container.closest('#overview-content'));
  for(const record of records){
-  const info=[record.source_id,record.source_sheet,record.source_cell,record.publication_date?`Published ${record.publication_date}`:null,record.source_data_cutoff?`Cutoff ${record.source_data_cutoff}`:null].filter(Boolean);
-  if(info.length)details.append(el('p',info.join(' · ')));
+  const info=[record.publication_date?`Published ${record.publication_date}`:null,record.source_data_cutoff?`Observation cutoff ${record.source_data_cutoff}`:null].filter(Boolean);
+  if(info.length)details.append(el('p',info.join(' / ')));
   if(record.source_url&&/^https?:\/\//.test(record.source_url)){const a=el('a','Source publication');a.href=record.source_url;a.target='_blank';a.rel='noopener noreferrer';details.append(a);}
  }
- const raw=el('details');raw.append(el('summary','Complete provenance and record metadata'),el('pre',JSON.stringify({metadata,records},null,2)));details.append(raw);container.append(details);
+ if(overview)details.append(link('Detailed sources and research records','reports'));
+ else{const raw=el('details');raw.append(el('summary','Complete source records'),recordView({metadata,records}));details.append(raw);}
+ container.append(details);
 }
 function card(root,id,kicker,title,route){const section=el('section',null,'overview-card');section.id=id;section.setAttribute('aria-labelledby',id+'-title');const head=el('div',null,'overview-card-heading'),copy=el('div');copy.append(el('p',kicker,'eyebrow'));const heading=el('h3',title);heading.id=id+'-title';copy.append(heading);head.append(copy);if(route)head.append(link('Explore →',route));section.append(head);root.append(section);return section;}
 export function renderMortalityHeatmap(container,grid,{geography='Scotland'}={}){

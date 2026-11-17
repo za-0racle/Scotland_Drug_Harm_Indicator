@@ -1,3 +1,4 @@
+import {recordView} from './record-inspection.js';
 import {exportUrl} from '../api/client.js';
 const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!=null)node.textContent=String(text);if(cls)node.className=cls;return node;};
 const link=(text,href)=>{const a=el('a',text);a.href=href;return a;};
@@ -31,7 +32,7 @@ const states=(parent,message)=>parent.append(el('p',message,'research-unavailabl
 function publication(parent,url,title='Source publication'){
  try{const parsed=new URL(url);if(parsed.protocol!=='https:')return;const a=link(title,parsed.href);a.target='_blank';a.rel='noopener noreferrer';parent.append(a);}catch{}
 }
-function records(parent,result){const d=el('details');d.append(el('summary','Original records and technical metadata'),el('pre',JSON.stringify(result,null,2)));parent.append(d);}
+function records(parent,result){const d=el('details');d.append(el('summary','Original records and technical metadata'),recordView(result));parent.append(d);}
 export async function mountResearch({root,api,isCurrent,onStatus,onView}){
  root.className='research-page';
  function section(id,title){const node=el('section',null,'chart-panel');node.id=id;node.append(el('h3',title));root.append(node);return node;}

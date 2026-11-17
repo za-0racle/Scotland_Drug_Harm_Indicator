@@ -1,0 +1,92 @@
+{
+  "language": "en",
+  "titles": [
+    "Scotland Drug Harm Intelligence | Research Dashboard"
+  ],
+  "canonical": [
+    "https://sdhi.cc/"
+  ],
+  "meta": {
+    "": [
+      null
+    ],
+    "viewport": [
+      "width=device-width, initial-scale=1.0"
+    ],
+    "theme-color": [
+      "#FAF8F2"
+    ],
+    "description": [
+      "Explore historical drug harm patterns in Scotland through mortality, toxicology, geographic analysis, statistical monitoring and retrospective forecasting."
+    ],
+    "og:type": [
+      "website"
+    ],
+    "og:site_name": [
+      "Scotland Drug Harm Intelligence"
+    ],
+    "og:title": [
+      "Scotland Drug Harm Intelligence"
+    ],
+    "og:description": [
+      "Explore Scotland's historical mortality, toxicology and geographic patterns, statistical monitoring and retrospective forecast evaluation."
+    ],
+    "og:url": [
+      "https://sdhi.cc/"
+    ],
+    "og:image": [
+      "https://sdhi.cc/og-image.png"
+    ],
+    "og:image:width": [
+      "1200"
+    ],
+    "og:image:height": [
+      "630"
+    ],
+    "og:image:type": [
+      "image/png"
+    ],
+    "og:image:alt": [
+      "SDHI analytical line logo, Scotland Drug Harm Intelligence, Historical Drug Harm Research Dashboard and sdhi.cc on an ivory background."
+    ],
+    "twitter:card": [
+      "summary_large_image"
+    ],
+    "twitter:title": [
+      "Scotland Drug Harm Intelligence"
+    ],
+    "twitter:description": [
+      "Historical Scottish drug harm research: mortality, toxicology, geographic analysis, statistical monitoring and retrospective forecast evaluation."
+    ],
+    "twitter:image": [
+      "https://sdhi.cc/og-image.png"
+    ],
+    "twitter:image:alt": [
+      "SDHI \u2014 Scotland Drug Harm Intelligence. Historical Drug Harm Research Dashboard. sdhi.cc."
+    ]
+  },
+  "built_files": {
+    "dist\\apple-touch-icon.png": "66b82fc0ff84a83f04247b2bd8e94c3a07b75476acb3154730adb5a01f202220",
+    "dist\\favicon.ico": "c40cff62dfc177a69e72a389a8c411a9d6be7df980b532d0b2172e126bfcd6c8",
+    "dist\\favicon.svg": "b19b0727a139255fd0f4b79f04878f631b87b13c32eb1c7001f45b58987d104d",
+    "dist\\icons.svg": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+    "dist\\index.html": "bcd8e7f105820a1796435dc4b4fe46c51f8d1bbf8cfc003f93f0eb26ea33b714",
+    "dist\\og-image.png": "54f3f83461903a83fcb4724f7ad09dc8ffc950a8cfd799bce52612d68870dc54",
+    "dist\\assets\\index-B2woepHD.js": "cdaae14a5a25e2758000d5344e547fcb646889484ee0defe14f6222ee9d71451",
+    "dist\\assets\\index-BUqiBu8-.css": "362d0da4a76f955e31eef2662c89bd08d8817d26986dc1f6ba3bd5c9626754fe",
+    "dist\\brand\\legacy-favicon.svg": "ceeac38434be7a3b4d0f68b8cd8aa2b9ae78c260d6343087c6e095f8031ce4ff",
+    "dist\\brand\\README.md": "bb787990a220f34a23e2136ef91353203ecb6c4af7319b1f081fea6f3068e96e",
+    "dist\\brand\\sdhi-icon-192.png": "f97ac0612fce68c0ba5f204476727e093b087f8296ccfe36405cac9596beac76",
+    "dist\\brand\\sdhi-icon-512.png": "7cac9877615608a415e8e1cb33d3410b7746abcb8e8f7224a926328906f7d7e0",
+    "dist\\brand\\sdhi-icon.svg": "b19b0727a139255fd0f4b79f04878f631b87b13c32eb1c7001f45b58987d104d",
+    "dist\\brand\\sdhi-logo-dark.svg": "8d6f7a6bbbb13b7fda754373921e98131d81253a25604a92f48366a7ce78a718",
+    "dist\\brand\\sdhi-logo.png": "94b636c4ddace857f1bdcb3a39a06ffa7f7e520cbf7e2745289f6bd230a5c90f",
+    "dist\\brand\\sdhi-logo.svg": "8d0565c1420c462f1e2a239669b8ae3ccea4c96d9e57aa59a95649f3ed8416fb"
+  },
+  "deployed_backend_revision": "07993a5fd2ceeccc2b326e926584ba5742d7cefe",
+  "repair_ancestor_present": true,
+  "deployed_gitattributes": [
+    "analysis/outputs/** text eol=crlf",
+    "analysis/**/outputs/** text eol=crlf"
+  ]
+}

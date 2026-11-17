@@ -34,8 +34,7 @@ test('shared shell remains readable across widths, themes and the comparison wor
  await page.setViewportSize({width:1440,height:1100});
  await page.locator('#theme-toggle').click();await expect(page.locator('html')).toHaveAttribute('data-theme','dark');await expect(page.locator('.brand-logo-dark')).toBeVisible();
  await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
- await page.locator('#navigation-toggle').click();await expect(page.locator('.brand-icon')).toBeVisible();await expect(page.locator('.brand-logo-dark')).toBeHidden();
- await page.locator('#navigation-toggle').click();await page.locator('#theme-toggle').click();
+ await expect(page.locator('#navigation-toggle')).toBeHidden();await expect(page.locator('.brand-logo-dark')).toBeVisible();await page.locator('#theme-toggle').click();
  await page.locator('#open-comparison').click();await expect(page).toHaveURL(/#comparison$/);await expect(page.locator('#page-title')).toBeFocused();await expect(page.locator('#comparison-studio')).toBeVisible();
  await page.locator('#quick-comparison').click();await expect(page.locator('#comparison-close')).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('#quick-comparison')).toBeFocused();
  expect(errors).toEqual([]);

@@ -40,12 +40,12 @@ test('unavailable research evidence stays separate and refresh restores verified
 });
 
 test('research desktop and mobile captures include evidence and accessible supporting sections',async({page})=>{
- const errors=[];page.on('pageerror',error=>errors.push(error.message));await mkdir('docs/images/task08s-phase4',{recursive:true});
+ const errors=[];page.on('pageerror',error=>errors.push(error.message));await mkdir('test-results/task08s-phase4',{recursive:true});
  for(const width of [1440,390]){
   await page.setViewportSize({width,height:1000});await page.goto('/#reports');await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
   await expect(page.locator('#research-findings')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
   await page.locator('#research-study-methods > details > summary').focus();await page.keyboard.press('Enter');await expect(page.locator('#research-study-methods > details')).toHaveAttribute('open');await page.keyboard.press('Escape');await expect(page.locator('#research-study-methods > details')).not.toHaveAttribute('open');
-  await page.evaluate(()=>{document.activeElement?.blur();window.scrollTo(0,0);});await page.screenshot({path:`docs/images/task08s-phase4/research-${width===1440?'desktop':'mobile'}.png`,fullPage:true});
+  await page.evaluate(()=>{document.activeElement?.blur();window.scrollTo(0,0);});await page.screenshot({path:`test-results/task08s-phase4/research-${width===1440?'desktop':'mobile'}.png`,fullPage:true});
  }
  expect(errors).toEqual([]);
 });

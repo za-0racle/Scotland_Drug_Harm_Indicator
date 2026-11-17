@@ -1,0 +1,6 @@
+{
+  "scope": "Runtime source, public assets and final build; no environment values logged",
+  "files_checked": 77,
+  "sensitive_pattern_findings": [],
+  "note": "Targeted exposure inspection, not penetration testing"
+}
