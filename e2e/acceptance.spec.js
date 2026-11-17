@@ -1,3 +1,4 @@
+import {openSupporting} from './supporting-evidence.js';
 import {mkdir,readFile} from 'node:fs/promises';
 import {join} from 'node:path';
 import {test,expect} from '@playwright/test';
@@ -56,7 +57,7 @@ test('same-boundary comparison retains two areas and bounded pagination',async({
 test('Inverclyde exports match selected scope and dates; failure clears stale export',async({page})=>{
  await page.goto('/#geography');await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
  await page.locator('#geo-from').selectOption('2020');await expect(page.locator('#api-status')).toContainText('5 selected-area records');
- const pending=page.waitForEvent('download');await page.getByRole('button',{name:'Export area history JSON',exact:true}).click();const exported=JSON.parse(await readFile(await (await pending).path(),'utf8'));
+ const pending=page.waitForEvent('download');await openSupporting(page,'#geo-history');await page.getByRole('button',{name:'Export area history JSON',exact:true}).click();const exported=JSON.parse(await readFile(await (await pending).path(),'utf8'));
  expect(exported.data.length).toBe(5);expect(exported.data.every(r=>r.geography==='Inverclyde'&&r.year>=2020)).toBeTruthy();expect(exported.metadata.export_scope).toContain('Complete eligible');
  await page.route('**/api/v1/mortality/annual?**',route=>route.abort());await page.locator('#refresh-api').click();await expect(page.locator('#api-status')).toHaveAttribute('data-state','error');await expect(page.getByRole('button',{name:'Export area history JSON',exact:true})).toHaveCount(0);
 });

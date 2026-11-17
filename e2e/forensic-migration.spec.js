@@ -1,3 +1,4 @@
+import {openSupporting} from './supporting-evidence.js';
 import {readFileSync} from 'node:fs';
 import {test, expect} from '@playwright/test';
 
@@ -29,14 +30,14 @@ test('Substance Intelligence uses the forensic contract and preserves filters, p
  await expect(page.locator('#substance-observations table caption')).toContainText('30 eligible');
  await category.selectOption('');
  await expect(page.locator('#substance-heatmap table tbody tr')).toHaveCount(7);
- await page.locator('#substance-heatmap table tbody button').first().click();
+ await openSupporting(page,'#substance-heatmap');await openSupporting(page,'#substance-heatmap table tbody button');await page.locator('#substance-heatmap table tbody button').first().click();
  await expect(page.locator('.substance-drawer')).toBeVisible();
  await expect(page.locator('.substance-drawer')).toContainText('does not establish first occurrence');
  await page.keyboard.press('Escape');
  await expect(page.locator('.substance-drawer')).not.toBeVisible();
 
  const downloadPromise=page.waitForEvent('download');
- await page.getByRole('button',{name:'Export all matching observations CSV'}).click();
+ await openSupporting(page,'#substance-observations');await page.getByRole('button',{name:'Export all matching observations CSV'}).click();
  const download=await downloadPromise;
  const actual=readFileSync(await download.path());
  expect(actual.equals(legacyScreenExport)).toBe(true);

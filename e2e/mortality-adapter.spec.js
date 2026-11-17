@@ -1,3 +1,4 @@
+import {openSupporting} from './supporting-evidence.js';
 import {test,expect} from '@playwright/test';
 import {readFile} from 'node:fs/promises';
 import {mortalityCsv} from '../src/platform/mortality-data.js';
@@ -13,9 +14,9 @@ test('Geographic police feed pins full history and preserves exact JSON/CSV expo
  const tokens=requests.slice(1).map(u=>u.searchParams.get('expected_collection'));expect(new Set(tokens).size).toBe(1);expect(tokens[0]).toMatch(/^[a-f0-9]{64}$/);
  await expect(page.locator('#geo-ranking .mortality-bars li')).toHaveCount(13);
  const area=await page.locator('#geo-area').inputValue();const expected=legacy.data.filter(r=>r.geography_id===area);
- const jsonDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export area history JSON',exact:true}).click();const json=JSON.parse(await readFile(await(await jsonDownload).path(),'utf8'));
+ const jsonDownload=page.waitForEvent('download');await openSupporting(page,'#geo-history');await page.getByRole('button',{name:'Export area history JSON',exact:true}).click();const json=JSON.parse(await readFile(await(await jsonDownload).path(),'utf8'));
  expect(json.data).toEqual(expected);expect(json.data).toHaveLength(36);expect(json.metadata.artifact_sha256).toBe(legacy.metadata.artifact_sha256);
- const csvDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export area history CSV',exact:true}).click();const csv=await readFile(await(await csvDownload).path(),'utf8');expect(csv).toBe(mortalityCsv(expected,json.metadata));
+ const csvDownload=page.waitForEvent('download');await openSupporting(page,'#geo-history');await page.getByRole('button',{name:'Export area history CSV',exact:true}).click();const csv=await readFile(await(await csvDownload).path(),'utf8');expect(csv).toBe(mortalityCsv(expected,json.metadata));
  await page.locator('#geo-from').selectOption('2023 Q1');await expect(page.locator('#geo-trend')).toContainText('2023 Q1');
  await page.setViewportSize({width:390,height:844});await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.locator('#geo-profile').click();await expect(page.locator('.geo-drawer')).toBeVisible();await page.keyboard.press('Escape');await expect(page.locator('#geo-profile')).toBeFocused();

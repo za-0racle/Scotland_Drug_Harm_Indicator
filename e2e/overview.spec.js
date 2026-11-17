@@ -1,3 +1,4 @@
+import {openSupporting} from './supporting-evidence.js';
 import {test,expect} from '@playwright/test';
 
 test('verified overview, mortality year selection, source disclosures and responsive screenshots',async({page})=>{
@@ -7,7 +8,7 @@ test('verified overview, mortality year selection, source disclosures and respon
  await expect(page.locator('#overview-substances')).toContainText('Overlapping broad categories');await expect(page.locator('#overview-geography')).toContainText('25 registered');await expect(page.locator('#overview-monitoring')).toContainText('47 historical statistical flags');
  await page.locator('#overview-from-year').selectOption('2024');await expect(page.locator('#overview-heatmap tbody tr')).toHaveCount(2);await expect(page.locator('#data-panel tbody tr')).toHaveCount(8);
  await page.getByRole('button',{name:'All available years',exact:true}).click();await expect(page.locator('#overview-heatmap tbody tr')).toHaveCount(9);
- await page.locator('#overview-forecast > details > summary').click();await expect(page.locator('#overview-forecast')).toContainText('analysis/outputs/forecast.json');await page.locator('#overview-forecast > details > summary').click();
+ await openSupporting(page,'#overview-forecast');await page.locator('#overview-forecast > details > summary').click();await expect(page.locator('#overview-forecast')).toContainText('analysis/outputs/forecast.json');await openSupporting(page,'#overview-forecast');await page.locator('#overview-forecast > details > summary').click();
  await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:'test-results/task04-overview-desktop.png',fullPage:true});
  await page.setViewportSize({width:900,height:1000});await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:'test-results/task04-overview-tablet.png',fullPage:true});
  await page.setViewportSize({width:390,height:844});await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();await expect(page.locator('#research-chart')).toBeVisible();await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:'test-results/task04-overview-mobile.png',fullPage:true});
@@ -17,7 +18,7 @@ test('verified overview, mortality year selection, source disclosures and respon
 test('forecast failure is explicit while independently verified overview sections remain usable',async({page})=>{
  await page.route('**/forecasting/results?**',route=>route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({message:'Saved forecast temporarily unavailable'})}));
  await page.goto('/#overview');await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');await expect(page.locator('#overview-forecast')).toContainText('Saved forecast temporarily unavailable');await expect(page.locator('#overview-heatmap tbody tr')).toHaveCount(9);await expect(page.locator('#overview-geography')).toContainText('registered drug misuse deaths');
- await page.locator('#overview-coverage').getByRole('link',{name:'Explore geographic trends',exact:true}).click();await expect(page).toHaveURL(/#geography$/);await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');await expect(page.locator('#overview-content')).toBeHidden();
+ await page.locator('#overview-geography').getByRole('link',{name:'Explore',exact:false}).click();await expect(page).toHaveURL(/#geography$/);await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');await expect(page.locator('#overview-content')).toBeHidden();
 });
 
 test('mortality failure does not fabricate zero counts or hide the saved forecast',async({page})=>{

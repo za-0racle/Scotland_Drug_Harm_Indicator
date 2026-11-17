@@ -1,3 +1,4 @@
+import {disclose,explanation} from './analytical-layout.js';
 import {completeMortality,mortalitySources,mortalityOptions,selectMortality,mortalityDistribution,mortalityRanking,mortalityTablePage,mortalityCsv,period} from './mortality-data.js';
 import {renderChart,clearChart} from './charts.js';
 import {mortalityGrid,number} from './overview-data.js';
@@ -27,9 +28,11 @@ export async function mountMortality({root,api,isCurrent,onStatus,onInspect,onSc
  for(const[key,spec]of Object.entries(mortalitySources))fields.source.add(new Option(spec.label,key));fields.source.value=saved.source??'police';
  const reset=el('button','Reset mortality filters');reset.type='button';controls.append(reset);
  const definition=el('p',null,'mortality-definition');definition.id='mortality-definition';root.append(definition);const scope=el('p',null,'overview-source-line');scope.id='mortality-scope';root.append(scope);
- const kpis=el('div',null,'summary-grid');kpis.id='mortality-summary';root.append(kpis);const grid=el('div',null,'overview-grid mortality-grid');root.append(grid);
+ const kpis=el('div',null,'evidence-summary');kpis.id='mortality-summary';root.append(kpis);const grid=el('div',null,'overview-grid mortality-grid');root.append(grid);
  const trend=card(grid,'mortality-trend','Mortality over reporting periods'),chartContext=el('p',null,'overview-source-line'),plot=el('div',null,'plot-wrap'),canvas=el('canvas');canvas.id='mortality-chart';canvas.setAttribute('role','img');canvas.setAttribute('aria-label','Selected mortality series; equivalent exact observations are in the detailed table below.');plot.append(canvas);trend.append(chartContext,plot);
- const heat=card(grid,'mortality-heatmap','Year-by-quarter suspected deaths'),box=card(grid,'mortality-distribution','Distribution across comparable periods'),ranking=card(grid,'mortality-ranking','Geographic mortality ranking'),tableCard=card(grid,'mortality-observations','Detailed mortality observations'),disclosures=card(grid,'mortality-methods','Sources, definitions & methods');
+ const heat=card(grid,'mortality-heatmap','Year-by-quarter suspected deaths'),box=card(grid,'mortality-distribution','Distribution of recorded counts (descriptive outliers, not monitoring signals)'),ranking=card(grid,'mortality-ranking','Geographic mortality ranking'),tableCard=card(grid,'mortality-observations','Detailed mortality observations'),disclosures=card(grid,'mortality-methods','Sources, definitions & methods');
+ trend.classList.add('analytical-lead');trend.querySelector('h3').after(scope);chartContext.hidden=true;trend.append(kpis);const reading=explanation(trend,'');
+ for(const panel of [heat,box,ranking,tableCard,disclosures])disclose(panel);
  const bodies=new Map();for(const section of [heat,box,ranking,tableCard,disclosures]){const body=el('div');section.append(body);bodies.set(section,body);}
  let results={},source=fields.source.value,sourceResult=null,rows=[],tableSearch='',tablePage=0,rankingPeriod='';
  const loading=el('p','Loading complete source-specific mortality histories…');loading.dataset.state='loading';root.append(loading);for(const field of Object.values(fields))field.disabled=true;reset.disabled=true;
@@ -49,14 +52,14 @@ export async function mountMortality({root,api,isCurrent,onStatus,onInspect,onSc
  function read(){return{source,boundary:fields.boundary.value,area:fields.area.value,start:fields.from.value,end:fields.to.value};}
  function render(){
   if(!isCurrent())return;
-  onScopeChange();clearChart(canvas);for(const section of [heat,box,ranking,tableCard,disclosures])body(section);kpis.replaceChildren();const spec=mortalitySources[source];definition.textContent=spec.label+'. '+spec.definition;
+  onScopeChange();reading.textContent='';clearChart(canvas);canvas.parentElement.hidden=true;for(const section of [heat,box,ranking,tableCard,disclosures])body(section);kpis.replaceChildren();const spec=mortalitySources[source];definition.textContent=spec.label+'. '+spec.definition;
   let selected=[];try{selected=selectMortality(rows,read());}catch(error){onStatus('error',error.message);scope.textContent=chartContext.textContent=error.message;for(const section of [heat,box,ranking,tableCard])state(bodies.get(section),error.message);return;}
   Object.assign(saved,read());
   const latest=selected.at(-1),valid=selected.filter(r=>Number.isFinite(r.observed_value));const coverage=selected.length?`${period(selected[0])} – ${period(latest)}`:'Unavailable';
   scope.textContent=`${spec.label} · ${fields.area.selectedOptions[0]?.textContent??'Area unavailable'} · ${coverage}. Charts use the full matching API history; table search and pagination do not change analytical scope.`;
   for(const[title,value,context]of [['Latest observation',number(latest?.observed_value),latest?period(latest):'Reporting period unavailable'],['Historical coverage',selected.length?String(selected.length)+' periods':'Unavailable',coverage],['Valid observed counts',selected.length?String(valid.length):'Unavailable',`${selected.length-valid.length} unavailable values in returned rows`],['Reporting basis',spec.basis==='quarterly'?'Quarterly':'Annual',spec.basis==='quarterly'?'Suspected-death reporting quarters':'NRS registration years']]){const c=el('article',null,'summary-card overview-kpi');c.append(el('span',title),el('strong',value),el('p',context),el('small',spec.label));kpis.append(c);}
   onStatus(sourceResult.state==='error'?'error':selected.length?'ready':'unavailable',sourceResult.state==='error'?sourceResult.message:`${selected.length} comparable mortality records in selected history; ${valid.length} observed counts.`);
-  chartContext.textContent=scope.textContent;renderChart(canvas,selected,'Deaths (count)',{total:selected.length});
+  canvas.parentElement.hidden=!selected.some(r=>Number.isFinite(r.observed_value));chartContext.textContent=scope.textContent;reading.textContent=selected.length?`This series follows ${latest.geography} within the selected source and reporting years. The latest returned observation is ${number(latest.observed_value)} deaths (${period(latest)}). Missing values are not zero; counts do not establish population-adjusted risk.`:'No observations are available for this selection.';renderChart(canvas,selected,'Deaths (count)',{total:selected.length});
   trend.querySelector('h3').textContent=spec.basis==='quarterly'?'Quarterly suspected drug deaths':'Annual registered drug misuse deaths';
   if(!selected.length){for(const section of [heat,box,ranking,tableCard])state(bodies.get(section),sourceResult.message||'No compatible observations for this selection. Missing access is not zero mortality.');}
   else{
@@ -67,7 +70,7 @@ export async function mountMortality({root,api,isCurrent,onStatus,onInspect,onSc
    boxBody.append(el('p','Quartiles: Hyndman–Fan type 7, linear interpolation at zero-based index (n−1)p. Whiskers end at observed values within Q1−1.5×IQR and Q3+1.5×IQR. Minimum eight observed periods is a display rule, not a validation threshold. Temporal dependence, missing periods and changing trends limit interpretation. Outliers are descriptive points, not alerts.','mortality-method-note'));
    renderRanking();renderTable(selected);
   }
-  const info=bodies.get(disclosures);info.append(el('p',spec.definition),el('p',latest?.limitations??latest?.small_number_qualification??'No causal conclusions or population-rate claims follow from these descriptive counts.'));
+  const info=bodies.get(disclosures);const quartileNote=bodies.get(box).querySelector('.mortality-method-note');if(quartileNote)info.append(quartileNote);info.append(el('p',spec.definition),el('p',latest?.limitations??latest?.small_number_qualification??'No causal conclusions or population-rate claims follow from these descriptive counts.'));
   const other=el('a','Open retained multi-source trends workspace');other.href='#exploration';info.append(other);
   const method=el('p');method.append(document.createTextNode('Quartile reference: '));const ref=el('a','R quantile documentation (type 7)');ref.href='https://stat.ethz.ch/R-manual/R-devel/library/stats/html/quantile.html';ref.target='_blank';ref.rel='noopener noreferrer';method.append(ref,document.createTextNode('. Whiskers use the documented 1.5-IQR convention; type-7 quartiles are not R’s distinct boxplot hinges.'));info.append(method);
   provenance(info,'Source artifact, original definition & record example',sourceResult,selected.length?[selected[0]]:[]);

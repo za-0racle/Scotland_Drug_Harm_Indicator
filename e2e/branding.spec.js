@@ -17,17 +17,17 @@ test('shared shell remains readable across widths, themes and the comparison wor
  await expect(page.locator('#research-chart')).toBeVisible();
  await expect(page.locator('.brand-logo').first()).toBeVisible();
  await expect(page.locator('#platform-nav a')).toHaveCount(8);
- await mkdir('docs/images/task08s-phase1',{recursive:true});
+ await mkdir('test-results/phase1-regression',{recursive:true});
  for(const width of [1440,1024,768,390,320]){
   await page.setViewportSize({width,height:900});
   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),{message:`Page overflow at ${width}px`}).toBeTruthy();
-  if(width===1440)await page.screenshot({path:'docs/images/task08s-phase1/shell-desktop.png',animations:'disabled'});
-  if(width===390)await page.screenshot({path:'docs/images/task08s-phase1/shell-mobile.png',animations:'disabled'});
+  if(width===1440)await page.screenshot({path:'test-results/phase1-regression/shell-desktop.png',animations:'disabled'});
+  if(width===390)await page.screenshot({path:'test-results/phase1-regression/shell-mobile.png',animations:'disabled'});
   if(width<=900){
    await page.locator('#navigation-toggle').click();await expect(page.locator('#platform-nav [aria-current]')).toBeFocused();
    const geometry=await page.locator('#app-sidebar').evaluate(n=>({top:n.getBoundingClientRect().top,header:document.querySelector('.platform-header').getBoundingClientRect().bottom}));
    expect(Math.abs(geometry.top-geometry.header)).toBeLessThan(2);
-   if(width===390)await page.screenshot({path:'docs/images/task08s-phase1/shell-mobile-navigation.png',animations:'disabled'});
+   if(width===390)await page.screenshot({path:'test-results/phase1-regression/shell-mobile-navigation.png',animations:'disabled'});
    await page.keyboard.press('Escape');await expect(page.locator('#navigation-toggle')).toBeFocused();
   }
  }

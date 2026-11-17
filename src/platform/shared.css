@@ -67,6 +67,40 @@ th,td{padding:11px 14px}td{font-variant-numeric:tabular-nums}
 [data-chart-note]:empty{display:none}
 #api-status,#comparison-status{font-size:.85rem;line-height:1.6}
 .platform-footer{font-size:.8rem;line-height:1.6;padding:20px clamp(20px,3vw,44px);max-width:var(--content-width)}
+/* Phase 2: evidence first, supporting displays remain available on request. */
+.analytical-lead,.overview-lead{border-top:3px solid var(--champagne)}
+.evidence-explanation{font-size:.9rem;line-height:1.65;max-width:85ch;margin:16px 0}
+.evidence-summary{display:flex;flex-wrap:wrap;gap:16px 28px;margin:14px 0;padding:12px 0;border-block:1px solid var(--line)}
+.evidence-summary .summary-card{flex:1 1 160px;padding:0;border:0;background:none;box-shadow:none}
+.evidence-summary .summary-card strong{font-size:1.15rem;line-height:1.4;margin:4px 0;letter-spacing:0}
+.evidence-summary .summary-card p{margin:4px 0;font-size:.825rem}
+.evidence-summary .summary-card small{display:none}
+.supporting-analysis{grid-column:1/-1;margin:12px 0;padding:0;border:1px solid var(--line);border-radius:var(--radius);min-width:0;background:var(--surface)}
+.supporting-analysis>summary{padding:15px 18px;font-weight:600;font-size:.9rem}
+.supporting-analysis>.overview-card,.supporting-analysis>.chart-panel{border:0;margin:0;padding:0 18px 18px}
+.supporting-analysis section>h3[hidden]{display:none}
+.findings-overview{display:block}
+#overview-geography{margin:22px 0}
+.research-shortcuts{padding:4px 0 16px;gap:10px 20px}
+.research-shortcuts a{font-size:.9rem}
+.overview-lead #summary-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:720px}
+.overview-lead .overview-period-controls{padding:0;border:0;margin:12px 0}
+.overview-lead .overview-period-controls label{max-width:200px}
+.mortality-controls label:first-child{grid-column:auto}
+#studio-summary{display:flex}
+#substance-summary{display:flex}
+#geo-summary{display:flex}
+#mortality-summary{display:flex}
+#geo-published{margin-block:20px}
+.published-rates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0}
+.published-rates article{padding:16px;background:var(--surface-alt);border:1px solid var(--champagne);border-radius:var(--radius)}
+.published-rates h4{margin:0 0 8px;font-size:1rem}
+.published-rates strong{display:block;font-size:1.8rem;font-weight:600;font-variant-numeric:tabular-nums}
+.published-rates p{margin:6px 0;font-size:.85rem}.published-rates small{font-size:.8rem;color:var(--muted)}
+#geo-map{margin:14px 0;font-size:.825rem}
+#substance-content>.chart-panel{margin-block:18px}
+@media(max-width:800px){.mortality-controls,.geo-filters,#comparison-studio .studio-form{grid-template-columns:repeat(2,minmax(0,1fr))}.mortality-controls label:first-child{grid-column:1/-1}}
+@media(max-width:480px){.mortality-controls,.geo-filters,#comparison-studio .studio-form{grid-template-columns:1fr 1fr}.mortality-controls label:first-child,.geo-filters label:nth-child(2),#comparison-studio .studio-form label:nth-child(2){grid-column:1/-1}.evidence-summary{gap:12px}.evidence-summary .summary-card{flex-basis:120px}.supporting-analysis>summary{padding:14px}.overview-lead #summary-grid{gap:10px}.overview-lead .summary-card{padding:10px}.overview-lead .summary-card small{display:none}.plot-wrap{height:280px}}
 @media(min-width:1800px){#workspace,.platform-footer{margin-left:calc(var(--sidebar-width) + (100vw - var(--sidebar-width) - var(--content-width))/2)}}
 @media(max-width:1100px){.top-toolbar h1{max-width:22ch}.workspace-actions button{padding:9px 11px}}
 @media(max-width:900px){
