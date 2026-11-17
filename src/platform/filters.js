@@ -13,9 +13,9 @@ export function createFilters(root,api,areas,onChange){
  options('boundary',boundaries(areas).map(v=>[v,label(v)]),'All geographic scopes');
  function visibility(){
   const scoped=['geography','exploration','anomalies','signals'].includes(page);
-  const hiddenView=page==='anomalies'&&['models','zero'].includes(view)||page==='signals'&&['validation','stored','configurations'].includes(view);
+  const hiddenView=page==='anomalies'&&['models','zero','stored','configurations'].includes(view)||page==='signals'&&['validation','stored','configurations'].includes(view);
   root.querySelector('.filter-panel').hidden=!scoped||hiddenView;
-  const hasModel=page==='anomalies'&&!['sensitivity','models','zero'].includes(view)||page==='signals'&&['','runs','evidence'].includes(view);
+  const hasModel=page==='anomalies'&&!['sensitivity','models','zero','stored','configurations'].includes(view)||page==='signals'&&['','runs','evidence'].includes(view);
   const compare=['geography','exploration'].includes(page)&&view==='comparison';
   for(const id of ids)q(id).closest('label').hidden=false;
   q('model').closest('label').hidden=!hasModel;q('compare').closest('label').hidden=!compare;
@@ -39,12 +39,12 @@ export function createFilters(root,api,areas,onChange){
  async function methods(){
   const previous=q('model').value;
   let rows=[];
-  if(['anomalies','signals'].includes(page)&&!(page==='anomalies'&&['sensitivity','models','zero'].includes(view))){
+  if(['anomalies','signals'].includes(page)&&!(page==='anomalies'&&['sensitivity','models','zero','stored','configurations'].includes(view))){
    const result=await api('/anomalies/models',{geography_id:q('area').value,indicator:q('indicator').value,limit:1000});
    rows=result.data.filter(row=>Number(row.evaluated)>0);
   }
   const supported=[...new Set(rows.map(row=>row.method))].filter(method=>page!=='signals'||view!=='evidence'||method==='nb2_moments');
-  options('model',supported.sort().map(method=>[method,label(method)]),'Historical robust screen',previous);
+  options('model',supported.sort().map(method=>[method,label(method)]),'Historical median-based screen',previous);
  }
  async function indicators(previous=''){
   const result=await api(q('area').value?`/geographies/${q('area').value}/indicators`:'/indicators',{limit:1000});metadata=result.data;

@@ -30,11 +30,11 @@ for(const [route,selector] of screens)test(`Phase 2 ${route}: lead evidence, sup
   await expect(page.locator('#geo-published')).toContainText('35.6');await expect(page.locator('#geo-published')).toContainText('22.5');
   expect(await page.locator('#geo-published').evaluate(n=>!!(n.compareDocumentPosition(document.querySelector('#geo-history'))&Node.DOCUMENT_POSITION_FOLLOWING))).toBeTruthy();
  }
- await mkdir('docs/images/task08s-phase2',{recursive:true});
+ await mkdir('test-results/task08s-phase2',{recursive:true});
  for(const [size,width] of [['desktop',1440],['mobile',390]]){
   await page.setViewportSize({width,height:1000});await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
   // Full-page capture includes filters, lead analytical evidence and exact-value support.
-  await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:`docs/images/task08s-phase2/${route}-${size}.png`,fullPage:true,animations:'disabled'});
+  await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:`test-results/task08s-phase2/${route}-${size}.png`,fullPage:true,animations:'disabled'});
  }
  expect(errors).toEqual([]);
 });

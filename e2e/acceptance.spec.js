@@ -64,6 +64,7 @@ test('Inverclyde exports match selected scope and dates; failure clears stale ex
 
 test('empty, malformed, unavailable and slow transport responses have explicit states',async({page})=>{
  await page.goto('/#forecasting');await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
+ await page.getByRole('button',{name:'Historical-origin projection',exact:true}).click();await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
  for(const body of [{state:'empty',kind:'research_result',data:[],total:0,metadata:{},message:'No accessible research records'}, {bad:'TEST ONLY'}, {state:'unavailable',kind:'unavailable_evidence',data:[],total:0,metadata:{},message:'Verified source unavailable'}]){
    await page.route('**/api/v1/forecasting/results?**',async route=>{await new Promise(resolve=>setTimeout(resolve,500));await route.fulfill({json:body});});
    await page.locator('#refresh-api').click();await expect(page.locator('#api-status')).toHaveAttribute('data-state','loading');

@@ -20,7 +20,7 @@ test('shared dependencies preserve valid choices, reset defaults and explain com
  await page.screenshot({path:'analysis/test_scratch.local/usability/after-filters.png',fullPage:true});
 });
 test('advanced and verification panels close on Escape without clearing filters',async({page})=>{
- await page.goto('/#anomalies');await expect(page.locator('#api-status')).toContainText('47 records in this view');await page.locator('#more-filters > summary').click();
+ await page.goto('/#anomalies');await page.getByRole('button',{name:'Statistical flags',exact:true}).click();await expect(page.locator('#api-status')).toContainText('47 records in this view');await page.locator('#more-filters > summary').click();
  await page.locator('#model').selectOption('nb2_moments');await expect(page.locator('#api-status')).toContainText('40 records in this view');await page.locator('#model').focus();await page.keyboard.press('Escape');await expect(page.locator('#more-filters')).not.toHaveAttribute('open');await expect(page.locator('#model')).toHaveValue('nb2_moments');
  await page.locator('#data-panel tbody tr').first().focus();await page.keyboard.press('Enter');await expect(page.locator('#verification')).toHaveAttribute('open');await expect(page.locator('pre:visible')).toHaveCount(0);
  await page.locator('#close-verification').click();await expect(page.locator('#verification')).not.toHaveAttribute('open');await expect(page.locator('#verification > summary')).toBeFocused();
@@ -33,7 +33,7 @@ test('advanced and verification panels close on Escape without clearing filters'
  await expect(page.locator('#data-panel tbody')).toContainText('Insufficient historical data');
 });
 test('forecast, source details and mobile do not imply unsupported controls',async({page})=>{
- await page.goto('/#forecasting');await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');await expect(page.locator('.filter-panel')).toBeHidden();await expect(page.locator('#data-panel')).toContainText('2025 Q4');await expect(page.locator('#data-panel')).toContainText('2026 Q1');await expect(page.locator('#feature-panel')).toContainText('Not a current future prediction');
+ await page.goto('/#forecasting');await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');await expect(page.locator('.filter-panel')).toBeHidden();await page.getByRole('button',{name:'Historical-origin projection',exact:true}).click();await expect(page.locator('#data-panel')).toContainText('2025 Q4');await expect(page.locator('#data-panel')).toContainText('2026 Q1');await expect(page.locator('#feature-panel')).toContainText('Not a current future prediction');
  await page.locator('#platform-nav [data-page="reports"]').click();await page.locator('[data-page="methodology"]').click();await expect(page.locator('pre:visible')).toHaveCount(0);await expect(page.locator('#data-panel')).toContainText('Methods');
  await page.setViewportSize({width:390,height:844});await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();await page.screenshot({path:'analysis/test_scratch.local/usability/after-mobile.png',fullPage:true});
 });

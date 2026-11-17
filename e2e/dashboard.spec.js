@@ -10,7 +10,7 @@ test('backend-connected navigation, real geographic coverage and historical evid
  await expect(page.locator('#geo-area option')).toHaveCount(14);
  await page.locator('#geo-reset').click();
  await page.locator('#platform-nav a[data-page="anomalies"]').click();
- await expect(page.locator('#api-status')).toContainText('47 records in this view');
+ await page.getByRole('button',{name:'Statistical flags',exact:true}).click();await expect(page.locator('#api-status')).toContainText('47 records in this view');
  await page.locator('#more-filters').evaluate(n=>n.open=true);
  await page.locator('#model').selectOption('nb2_moments');
  await expect(page.locator('#api-status')).toContainText('40 records in this view',{timeout:60000});
@@ -20,7 +20,7 @@ test('backend-connected navigation, real geographic coverage and historical evid
  await page.locator('#geo-from').selectOption('2020');await expect(page.locator('#api-status')).toContainText('5 selected-area records');
  await page.screenshot({path:'test-results/phase7-geography-desktop.png',fullPage:true});
  await page.locator('#platform-nav a[data-page="forecasting"]').click();
- await expect(page.locator('#feature-panel')).toContainText('Not a current future prediction');
+ await expect(page.locator('#saved-projection')).toContainText('Not a current future prediction');
  await page.locator('#platform-nav a[data-page="anomalies"]').click();await page.locator('#section-links a[data-page="signals"]').click();
  await page.getByRole('button',{name:'External validation',exact:true}).click();
  await expect(page.locator('#data-panel')).toContainText('pending');
@@ -38,7 +38,7 @@ test('mobile layout and backend errors remain explicit',async({page})=>{
 test('API changes alter visible observations, without application mock data',async({page})=>{
  await page.goto('/#forecasting');
  await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
- await expect(page.locator('#data-panel')).toContainText('248');
+ await page.getByRole('button',{name:'Historical-origin projection',exact:true}).click();await expect(page.locator('#data-panel')).toContainText('248');
  const before=await page.locator('#research-chart').evaluate(c=>c.toDataURL());
  await page.route('**/api/v1/forecasting/results?**',async route=>{
    const response=await route.fetch();const body=await response.json();

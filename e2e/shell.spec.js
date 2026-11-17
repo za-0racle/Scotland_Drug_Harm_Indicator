@@ -5,6 +5,7 @@ test('white and gold shell, collapse, legacy links, completed screens and compar
  await expect(page.locator('html')).toHaveAttribute('data-theme','light');
  await expect(page.locator('#platform-nav a')).toHaveCount(8);
  await expect(page.locator('#page-title')).toHaveText('Forecast evaluation');
+ await page.getByRole('button',{name:'Historical-origin projection',exact:true}).click();await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
  const series=page.locator('[data-chart-legend] button').first();await expect(series).toHaveAttribute('aria-pressed','true');await series.click();await expect(series).toHaveAttribute('aria-pressed','false');await series.click();await expect(series).toHaveAttribute('aria-pressed','true');
  await page.locator('#navigation-toggle').click();await expect(page.locator('#navigation-toggle')).toHaveAttribute('aria-expanded','false');
  await expect(page.locator('#platform-nav a').first()).toHaveAccessibleName('Study overview');
