@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/brand/sdhi-icon-192.png",
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 8255
+  },
+  {
+    "path": "/brand/sdhi-icon-512.png",
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 24744
+  },
+  {
+    "path": "/brand/sdhi-logo-dark.svg",
+    "status": 200,
+    "content_type": "image/svg+xml",
+    "bytes": 916
+  },
+  {
+    "path": "/brand/sdhi-logo.png",
+    "status": 200,
+    "content_type": "image/png",
+    "bytes": 19448
+  },
+  {
+    "path": "/brand/legacy-favicon.svg",
+    "status": 200,
+    "content_type": "image/svg+xml",
+    "bytes": 9523
+  }
+]

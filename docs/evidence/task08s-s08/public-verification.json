@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-11-18T15:16:06.887Z",
+  "expectedRevision": "49eba8f1f7709394577a4246b6aedea241acbe5f",
+  "screens": [
+    {
+      "route": "overview",
+      "title": "Study overview",
+      "status": "36 records in this view"
+    },
+    {
+      "route": "comparison",
+      "title": "Compare areas and substances",
+      "status": "36 periods with a reported value for both subjects; 0 missing reporting periods and 0 periods with unavailable values. count. Complete eligible API result; source history may be incomplete."
+    },
+    {
+      "route": "trends",
+      "title": "Mortality trends",
+      "status": "36 comparable mortality records in selected history; 36 observed counts."
+    },
+    {
+      "route": "substance",
+      "title": "Toxicology patterns",
+      "status": "210 source-specific records loaded across all API pages."
+    },
+    {
+      "route": "geography",
+      "title": "Geographic patterns",
+      "status": "15 selected-area records from complete eligible API history. 1 compatible Local authority / council scopes. Counts are not population-adjusted risk."
+    },
+    {
+      "route": "anomalies",
+      "title": "Statistical monitoring",
+      "status": "76 records in this view"
+    },
+    {
+      "route": "forecasting",
+      "title": "Forecast evaluation",
+      "status": "4 records in this view"
+    },
+    {
+      "route": "reports",
+      "title": "Research, sources and downloads",
+      "status": "Study evidence and source definitions loaded. Reporting periods differ by source."
+    }
+  ],
+  "errors": [],
+  "assets": [
+    {
+      "path": "/favicon.svg",
+      "status": 200
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 200
+    },
+    {
+      "path": "/apple-touch-icon.png",
+      "status": 200
+    },
+    {
+      "path": "/og-image.png",
+      "status": 200
+    },
+    {
+      "path": "/brand/sdhi-logo.svg",
+      "status": 200
+    },
+    {
+      "path": "/brand/sdhi-icon.svg",
+      "status": 200
+    }
+  ],
+  "monitoringCharts": true,
+  "backtest": {
+    "rows": 48,
+    "quarters": 12,
+    "allValuesAndIntervalsMatch": true
+  },
+  "forecastExport": true,
+  "metadata": true,
+  "backendRevision": "49eba8f1f7709394577a4246b6aedea241acbe5f",
+  "bundle": {
+    "path": "/assets/index-CrKKxNBr.js",
+    "sha256": "dae74c39ca91527170d6db2af6b621fb2c97d84fd802d844d331ecf43b99d057",
+    "containsS08": true
+  },
+  "passed": true
+}
