@@ -1,3 +1,4 @@
+import {prepareMonitoring} from './monitoring-chart.js';
 import {periodLabel} from './chart-data.js';
 import {recordView} from './record-inspection.js';
 import {mountResearch,studyAim} from './research.js';
@@ -112,7 +113,15 @@ export function mountPlatform(root,api=request){
   const control=el('label','Original monitoring configuration');control.id='original-configuration-control';const select=el('select');select.id='original-configuration';const all=el('option','All configurations on this page');all.value='';select.append(all);
   for(const [id,name]of new Map(response.data.map(row=>[String(row.configuration_id),row.configuration_label??String(row.configuration_id)]))){const option=el('option',name);option.value=id;select.append(option);}
   if([...select.options].some(option=>option.value===monitoringConfiguration))select.value=monitoringConfiguration;
-  const update=()=>{monitoringConfiguration=select.value;const selected=response.data.filter(row=>!select.value||String(row.configuration_id)===select.value);table(selected);q('#api-status').textContent=`${selected.length} stored results shown from ${response.total} records; configuration filter applies to this page.`;};select.onchange=update;control.append(select);q('#observations-disclosure').before(control);update();
+  let configurations=[];
+  try{const settings=await api('/monitoring/configurations',{limit:100});if(current!==ticket)return;configurations=settings.data;}catch{if(current!==ticket)return;}
+  const update=()=>{monitoringConfiguration=select.value;const selected=response.data.filter(row=>!select.value||String(row.configuration_id)===select.value);table(selected);
+   clearChart(q('#research-chart'));q('#plot-panel').hidden=true;
+   const configuration=configurations.find(c=>String(c.configuration_id)===select.value);
+   if(configuration){
+    try{const prepared=prepareMonitoring(selected,configuration);q('#plot-panel').hidden=false;q('#chart-title').textContent=configuration.method.toUpperCase()==='CUSUM'?'Saved CUSUM components and decision limit':'Saved EWMA statistic and control limits';q('#chart-context').textContent=`${configuration.configuration_label} | ${prepared.labels[0]??'No returned periods'} to ${prepared.labels.at(-1)??'No returned periods'}. Historical stored statistics, not death counts. ${configuration.baseline_description??''} ${configuration.notes??''}`;renderChart(q('#research-chart'),selected,configuration.method.toUpperCase()==='CUSUM'?'CUSUM (stored scale)':'EWMA (stored residual scale)',{prepared,periodAxisTitle:'Saved monitoring quarter'});}catch(error){q('#chart-context').textContent=error.message;q('#plot-panel').hidden=false;}
+   }
+   q('#api-status').textContent=`${selected.length} stored results shown from ${response.total} records; configuration filter applies to this page.`;};select.onchange=update;control.append(select);control.append(el('p','Choose one configuration to plot its saved statistics. All configurations remain available in the table; the chart and selector cover this returned page.'));if(!configurations.length)control.append(el('p','Chart settings could not be loaded. Complete result records remain available; try Refresh data.'));q('#plot-panel').before(control);update();
  }
 
  }catch(error){if(current!==ticket)return;q('#api-status').textContent=error.message;q('#api-status').dataset.state='error';q('#page-count').textContent='';clearChart(q('#research-chart'));}finally{if(current===ticket)q('#reset-filters').disabled=false;}}
