@@ -33,6 +33,8 @@ test('mobile layout and backend errors remain explicit',async({page})=>{
  await page.route('**/api/v1/overview?**',route=>route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({detail:'Test-only unavailable backend'})}));
  await page.locator('#refresh-api').click();
  await expect(page.locator('#api-status')).toHaveAttribute('data-state','error');
+ await page.unrouteAll();await page.locator('#refresh-api').click();
+ await expect(page.locator('#api-status')).toHaveAttribute('data-state','ready');
 });
 
 test('API changes alter visible observations, without application mock data',async({page})=>{

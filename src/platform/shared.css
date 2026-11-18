@@ -163,3 +163,6 @@ th,td{padding:11px 14px}td{font-variant-numeric:tabular-nums}
 .record-inspection .record-list{margin-block:10px}
 .record-inspection dd,.record-inspection dt{overflow-wrap:anywhere;min-width:0}
 .record-inspection details{border-left:2px solid var(--line);padding-left:12px}
+
+/* A chart canvas must not retain a desktop width outside its responsive parent. */
+.plot-wrap>canvas{max-width:100%}

@@ -121,3 +121,7 @@ After owner approval: publish the exact reviewed candidate through the existing 
 ## Subsequent forecasting integration correction
 
 A later review found that rolling-origin predictions used source fields not recognised by the chart period helper. The [forecast integration fix report](TASK08S_PHASE5_FORECAST_INTEGRATION_FIX_REPORT.md) records the correction, genuine-data screenshots and new verification results. Its final browser results include one intermittent Toxicology Patterns responsive failure followed by an unchanged passing retry; they must not be described as an uninterrupted clean full-suite pass. Earlier evidence above remains tied to its stated release candidate.
+
+## Subsequent readiness and resize diagnosis
+
+The [diagnostic verification report](TASK08S_PHASE5_DIAGNOSTIC_VERIFICATION_REPORT.md) records the later reproduced Supabase connection timeout, persistent canvas-sizing defect, corrections and final verification. Earlier acceptance counts above remain historical results for their stated commits.

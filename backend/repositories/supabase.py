@@ -1,5 +1,9 @@
 import base64
 import math
+import logging
+import socket
+import ssl
+from urllib.error import HTTPError,URLError
 import json
 import re
 from urllib.request import Request,urlopen
@@ -21,11 +25,41 @@ READ_ONLY_TABLES={**TABLES,**SNAPSHOT_TABLES}
 PAGED_TABLES=frozenset(SNAPSHOT_TABLES)
 
 
+logger=logging.getLogger(__name__)
+
+
+def log_read_failure(table,offset,error):
+    reason=getattr(error,'reason',error)
+    category=('http' if isinstance(error,HTTPError) else 'timeout' if isinstance(reason,TimeoutError)
+              else 'dns' if isinstance(reason,socket.gaierror) else 'tls' if isinstance(reason,ssl.SSLError)
+              else 'transport' if isinstance(error,URLError) else 'json' if isinstance(error,json.JSONDecodeError)
+              else 'unexpected')
+    # Do not log exception messages, URLs, headers, credentials or response bodies.
+    logger.error('database_read_failed table=%s offset=%s category=%s exception_type=%s reason_type=%s http_status=%s errno=%s',
+                 table,offset,category,type(error).__name__,type(reason).__name__,
+                 error.code if isinstance(error,HTTPError) else None,getattr(reason,'errno',None))
+
+
 class DatabaseError(Exception):pass
 
 
 class SupabaseRepository:
     def __init__(self,settings=None,opener=urlopen):self.settings=settings or Settings.load();self.opener=opener
+
+    def _open_read(self,request,table,offset):
+        # A single retry is limited to connection-setup timeouts on reviewed GETs.
+        # HTTP permission failures, payload reads/decoding and validation are not retried.
+        for attempt in (1,2):
+            try:
+                response=self.opener(request,timeout=12)
+                if attempt==2:logger.info('database_read_recovered table=%s offset=%s attempt=2',table,offset)
+                return response
+            except (URLError,TimeoutError) as error:
+                if attempt==1 and isinstance(getattr(error,'reason',error),TimeoutError):
+                    log_read_failure(table,offset,error)
+                    logger.warning('database_read_retry table=%s offset=%s attempt=2 reason=connection_timeout',table,offset)
+                    continue
+                raise
 
     def _headers_and_url(self,table,columns,order,limit,offset):
         if table not in READ_ONLY_TABLES:raise DatabaseError('Table is outside reviewed read-only scope')
@@ -105,7 +139,9 @@ class SupabaseRepository:
             self._validate_page_rows(table,data)
             return data,total
         except DatabaseError:raise
-        except Exception:raise DatabaseError('Supabase read failed; check backend connectivity and approved RLS access') from None
+        except Exception as error:
+            log_read_failure(table,offset,error)
+            raise DatabaseError('Supabase read failed; check backend connectivity and approved RLS access') from None
 
     def read(self,table):
         if table not in READ_ONLY_TABLES:raise DatabaseError('Table is outside reviewed read-only scope')
@@ -113,7 +149,7 @@ class SupabaseRepository:
         try:
             for offset in range(0,10000,500):
                 url,headers=self._headers_and_url(table,columns,order,500,offset)
-                with self.opener(Request(url,headers=headers),timeout=12) as response:
+                with self._open_read(Request(url,headers=headers),table,offset) as response:
                     data=json.load(response)
                     content_range=response.headers.get('Content-Range','')
                     total=int(content_range.rsplit('/',1)[1]) if '/' in content_range and content_range.rsplit('/',1)[1].isdigit() else None
@@ -125,4 +161,6 @@ class SupabaseRepository:
                     return rows
             raise DatabaseError('Database result exceeds bounded read scope')
         except DatabaseError:raise
-        except Exception:raise DatabaseError('Supabase read failed; check backend connectivity and approved RLS access') from None
+        except Exception as error:
+            log_read_failure(table,offset,error)
+            raise DatabaseError('Supabase read failed; check backend connectivity and approved RLS access') from None

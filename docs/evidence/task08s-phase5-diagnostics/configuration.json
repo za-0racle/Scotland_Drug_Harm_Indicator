@@ -1,0 +1,21 @@
+{
+  "configured_url": true,
+  "configured_key": true,
+  "credential_role_or_type": "publishable",
+  "env_files_present": {
+    ".env.local": true,
+    "backend/.env": false
+  },
+  "process_overrides_present": {
+    "SUPABASE_URL": false,
+    "SUPABASE_PUBLISHABLE_KEY": false,
+    "VITE_SUPABASE_URL": false,
+    "VITE_SUPABASE_PUBLISHABLE_KEY": false
+  },
+  "database_table_probe_statuses": {
+    "mortality_quarterly": 206,
+    "indicator_configurations": 206,
+    "indicator_results": 206
+  },
+  "historical_transport_cause": "Unrecoverable from prior generic error; raw underlying exception was discarded"
+}

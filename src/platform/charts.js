@@ -3,7 +3,27 @@ import {prepareChart} from './chart-data.js';
 import {comparisonTable} from './comparison-data.js';
 import {label as readableLabel,headings} from './presentation.js';
 const charts=new Map();
-export function clearChart(canvas){if(canvas){charts.get(canvas)?.destroy();charts.delete(canvas);canvas.parentElement?.parentElement?.querySelector('[data-chart-legend]')?.replaceChildren();}else{for(const [node,chart] of charts){chart.destroy();node.parentElement?.parentElement?.querySelector('[data-chart-legend]')?.replaceChildren();}charts.clear();}}
+const resizeCleanups=new Map();
+function releaseResize(canvas){resizeCleanups.get(canvas)?.();resizeCleanups.delete(canvas);}
+// Own responsive sizing in one observer, using current dimensions rather than
+// allowing a queued Chart.js measurement to overwrite a newer viewport size.
+function followContainer(canvas,chart){
+ let frame=0;
+ const schedule=()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{
+  if(charts.get(canvas)===chart&&canvas.isConnected){
+   const parent=canvas.parentElement,width=parent.clientWidth,height=parent.clientHeight;
+   if(chart.width!==width||chart.height!==height||chart.currentDevicePixelRatio!==devicePixelRatio){
+    chart.stop();chart.resize(width,height);chart.update('none');
+   }
+  }
+ });};
+ const observer=new ResizeObserver(schedule);
+ observer.observe(canvas.parentElement);
+ window.addEventListener('resize',schedule);
+ schedule();
+ resizeCleanups.set(canvas,()=>{observer.disconnect();window.removeEventListener('resize',schedule);cancelAnimationFrame(frame);});
+}
+export function clearChart(canvas){if(canvas){releaseResize(canvas);charts.get(canvas)?.destroy();charts.delete(canvas);canvas.parentElement?.parentElement?.querySelector('[data-chart-legend]')?.replaceChildren();}else{for(const [node,chart] of charts){releaseResize(node);chart.destroy();node.parentElement?.parentElement?.querySelector('[data-chart-legend]')?.replaceChildren();}charts.clear();}}
 export function renderChart(canvas,rows,label='Recorded value',coverage={}){
  clearChart(canvas);
  let legend=canvas.parentElement.parentElement.querySelector('[data-chart-legend]');
@@ -19,7 +39,7 @@ export function renderChart(canvas,rows,label='Recorded value',coverage={}){
  if(!datasets.some(s=>s.data.some(v=>v!==null&&Number.isFinite(v))))return;
  const reduced=globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
  const ink=style.getPropertyValue('--ink').trim()||'#252525',grid=style.getPropertyValue('--chart-grid').trim()||'#E9E5DC';
- const chart=new Chart(canvas,{type:'line',data:{labels:prepared.labels,datasets},options:{color:ink,font:{family:'Segoe UI, system-ui, sans-serif',size:13},responsive:true,maintainAspectRatio:false,animation:reduced?false:{duration:250},plugins:{legend:{display:false},tooltip:{backgroundColor:style.getPropertyValue('--surface').trim(),titleColor:ink,bodyColor:ink,borderColor:grid,borderWidth:1,padding:14,titleFont:{size:13},bodyFont:{size:12},displayColors:true,callbacks:{afterLabel(context){const record=context.dataset.records?.[context.dataIndex];return record?Object.entries(record).filter(([key])=>['source_id','indicator_id','unit','period_basis','reporting_definition','method','model','window','observation_id','result_id','lower_limit','upper_limit','lower_threshold','upper_threshold','origin','target','lower80','upper80','lower95','upper95'].includes(key)).map(([key,value])=>`${headings[key]??readableLabel(key)}: ${value}`):[];}}}},scales:{x:{grid:{display:false},ticks:{maxTicksLimit:globalThis.matchMedia?.('(max-width: 600px)').matches?6:12,maxRotation:0,color:ink,font:{size:12}},title:{display:true,text:coverage.periodAxisTitle??(prepared.regular?'Source observation period':'Source periods (categorical; elapsed time not represented)'),color:ink}},y:{grid:{color:grid},ticks:{color:ink,font:{size:12},padding:8},title:{display:true,text:label,color:ink}}}}});charts.set(canvas,chart);
+ const chart=new Chart(canvas,{type:'line',data:{labels:prepared.labels,datasets},options:{color:ink,font:{family:'Segoe UI, system-ui, sans-serif',size:13},responsive:false,maintainAspectRatio:false,animation:reduced?false:{duration:250},plugins:{legend:{display:false},tooltip:{backgroundColor:style.getPropertyValue('--surface').trim(),titleColor:ink,bodyColor:ink,borderColor:grid,borderWidth:1,padding:14,titleFont:{size:13},bodyFont:{size:12},displayColors:true,callbacks:{afterLabel(context){const record=context.dataset.records?.[context.dataIndex];return record?Object.entries(record).filter(([key])=>['source_id','indicator_id','unit','period_basis','reporting_definition','method','model','window','observation_id','result_id','lower_limit','upper_limit','lower_threshold','upper_threshold','origin','target','lower80','upper80','lower95','upper95'].includes(key)).map(([key,value])=>`${headings[key]??readableLabel(key)}: ${value}`):[];}}}},scales:{x:{grid:{display:false},ticks:{maxTicksLimit:globalThis.matchMedia?.('(max-width: 600px)').matches?6:12,maxRotation:0,color:ink,font:{size:12}},title:{display:true,text:coverage.periodAxisTitle??(prepared.regular?'Source observation period':'Source periods (categorical; elapsed time not represented)'),color:ink}},y:{grid:{color:grid},ticks:{color:ink,font:{size:12},padding:8},title:{display:true,text:label,color:ink}}}}});charts.set(canvas,chart);followContainer(canvas,chart);
  for(const[ index,dataset]of datasets.entries()){const button=document.createElement('button');button.type='button';button.setAttribute('aria-pressed','true');button.setAttribute('aria-label',dataset.label);const swatch=document.createElement('span');swatch.className='legend-swatch';swatch.style.backgroundColor=dataset.borderColor;swatch.setAttribute('aria-hidden','true');const text=document.createElement('span');text.textContent=dataset.label;button.append(swatch,text);button.onclick=()=>{const visible=!chart.isDatasetVisible(index);chart.setDatasetVisibility(index,visible);button.setAttribute('aria-pressed',String(visible));chart.update();};legend.append(button);}
 
 }

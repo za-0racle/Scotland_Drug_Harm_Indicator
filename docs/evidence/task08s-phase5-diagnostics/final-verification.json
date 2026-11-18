@@ -1,0 +1,34 @@
+{
+  "verified_on": "18 November 2026",
+  "baseline": "5a50541",
+  "playwright": {
+    "passed": 70,
+    "failed": 0,
+    "elapsed": "7.4 min",
+    "single_uninterrupted_execution": true,
+    "test_retries": 0
+  },
+  "python": {
+    "passed": 175,
+    "failed": 0,
+    "seconds": 700.53,
+    "warnings": 1
+  },
+  "javascript": {
+    "passed": 114,
+    "failed": 0
+  },
+  "production_build": {
+    "passed": true,
+    "modules": 40,
+    "assets": {
+      "index-BBTQQL8j.js": "f37128e76c4abfab5799ee04e7ceaa825bbc2206f168ec083603accbdff13d18",
+      "index-COuYk2Bq.css": "b6338a1aa1ec0ccbd1089c5e2f412ed1a12ee7fe14ed700d184fb11645f01c8b"
+    }
+  },
+  "unexpected_database_diagnostics_in_final_browser_run": false,
+  "publication_performed": false,
+  "report_capture_source": "Existing Phase 2 capture cases in the final 70-test run",
+  "report_capture_reduced_motion": true,
+  "normal_motion_point_alignment_regressions_passed": 3
+}

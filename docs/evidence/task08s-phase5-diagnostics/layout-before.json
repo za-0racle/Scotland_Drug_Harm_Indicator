@@ -1,0 +1,244 @@
+[
+  {
+    "route": "geography",
+    "i": 0,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "geography",
+    "i": 0,
+    "viewport": 390,
+    "document": 1053,
+    "items": [
+      {
+        "tag": "CANVAS",
+        "id": "geo-chart",
+        "cls": "",
+        "right": 1052.59375,
+        "width": 1019.59375,
+        "overflow": "clip",
+        "minWidth": "0px",
+        "position": "static",
+        "parent": "plot-wrap"
+      }
+    ]
+  },
+  {
+    "route": "geography",
+    "i": 0,
+    "settled": true,
+    "viewport": 390,
+    "document": 1053,
+    "items": [
+      {
+        "tag": "CANVAS",
+        "id": "geo-chart",
+        "cls": "",
+        "right": 1052.59375,
+        "width": 1019.59375,
+        "overflow": "clip",
+        "minWidth": "0px",
+        "position": "static",
+        "parent": "plot-wrap"
+      }
+    ]
+  },
+  {
+    "route": "geography",
+    "i": 1,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "geography",
+    "i": 1,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "geography",
+    "i": 2,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "geography",
+    "i": 2,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "geography",
+    "i": 3,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "geography",
+    "i": 3,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "geography",
+    "i": 4,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "geography",
+    "i": 4,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "substance",
+    "i": 0,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "substance",
+    "i": 0,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "substance",
+    "i": 1,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "substance",
+    "i": 1,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "substance",
+    "i": 2,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "substance",
+    "i": 2,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "substance",
+    "i": 3,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "substance",
+    "i": 3,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "substance",
+    "i": 4,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "substance",
+    "i": 4,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "trends",
+    "i": 0,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "trends",
+    "i": 0,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "trends",
+    "i": 1,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "trends",
+    "i": 1,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "trends",
+    "i": 2,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "trends",
+    "i": 2,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "trends",
+    "i": 3,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "trends",
+    "i": 3,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  },
+  {
+    "route": "trends",
+    "i": 4,
+    "viewport": 1440,
+    "document": 1440,
+    "items": []
+  },
+  {
+    "route": "trends",
+    "i": 4,
+    "viewport": 390,
+    "document": 390,
+    "items": []
+  }
+]

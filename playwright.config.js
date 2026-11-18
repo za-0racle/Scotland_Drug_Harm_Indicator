@@ -6,6 +6,7 @@ if(!Number.isInteger(localPort)||localPort<1024||localPort>65535)throw new Error
 
 export default defineConfig({
   testDir: './e2e',
+  globalSetup: './e2e/readiness-setup.js',
   timeout: 120000,
   expect: { timeout: 60000 },
   workers: 1,
@@ -19,18 +20,18 @@ export default defineConfig({
     {
       command: `${process.platform === 'win32' ? '".\\analysis\\.venv\\Scripts\\python.exe"' : 'analysis/.venv/bin/python'} -m uvicorn backend.main:app --host 127.0.0.1 --port 8000`,
       url: 'http://127.0.0.1:8000/api/v1/health',
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: process.env.E2E_REUSE_SERVERS==='1',
       timeout: 60000,
     },
     {
       command: 'npm run dev -- --host 127.0.0.1 --port 4173 --strictPort',
       url: 'http://127.0.0.1:4173/api/v1/health',
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: process.env.E2E_REUSE_SERVERS==='1',
     },
     {
       command: `npm run dev -- --host localhost --port ${localPort} --strictPort`,
       url: `http://localhost:${localPort}`,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: process.env.E2E_REUSE_SERVERS==='1',
     },
   ],
 });

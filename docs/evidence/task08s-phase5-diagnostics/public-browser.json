@@ -1,0 +1,50 @@
+{
+  "url": "https://www.sdhi.cc/#forecasting",
+  "bundles": [
+    "https://www.sdhi.cc/assets/index-x67rGT4o.js"
+  ],
+  "backendHost": "scotland-drug-harm-api.onrender.com",
+  "status": 200,
+  "count": 48,
+  "fields": [
+    "model",
+    "origin",
+    "target",
+    "horizon",
+    "training_count",
+    "actual",
+    "mase_scale",
+    "rmsse_scale_squared",
+    "predicted",
+    "lower80",
+    "upper80",
+    "lower95",
+    "upper95",
+    "interval_method",
+    "diagnostics",
+    "warnings",
+    "status"
+  ],
+  "targets": [
+    "2023 Q1",
+    "2023 Q2",
+    "2023 Q3",
+    "2023 Q4",
+    "2024 Q1",
+    "2024 Q2",
+    "2024 Q3",
+    "2024 Q4",
+    "2025 Q1",
+    "2025 Q2",
+    "2025 Q3",
+    "2025 Q4"
+  ],
+  "note": "",
+  "subtitle": "Historical research series | 2023 Q1 to 2025 Q4 | Deaths (count). Source: Versioned research output. Source details and limitations are available under Sources and analysis details. Missing values are not replaced.",
+  "legends": [
+    "Last-observation baseline",
+    "Same-quarter seasonal baseline",
+    "Simple exponential smoothing",
+    "Negative binomial trend"
+  ]
+}

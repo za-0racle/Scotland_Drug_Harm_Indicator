@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-11-18T09:08:31.891662+00:00",
+  "final_host": "https://www.sdhi.cc/",
+  "scripts": [
+    {
+      "path": "/assets/index-x67rGT4o.js",
+      "sha256": "6e0d9c72ad82847c017a1e3f5af2534e196316def807697a6ebd596b940fc752",
+      "target_fallback": true,
+      "target_axis_label": true
+    }
+  ],
+  "api_records": 48,
+  "target_quarters": [
+    "2023 Q1",
+    "2023 Q2",
+    "2023 Q3",
+    "2023 Q4",
+    "2024 Q1",
+    "2024 Q2",
+    "2024 Q3",
+    "2024 Q4",
+    "2025 Q1",
+    "2025 Q2",
+    "2025 Q3",
+    "2025 Q4"
+  ],
+  "all_48_saved_predictions_and_intervals_match": true
+}

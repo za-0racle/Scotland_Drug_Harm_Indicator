@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';
 import {mkdir} from 'node:fs/promises';
-const folder='docs/images/task08s-phase5';
+const folder='test-results/task08s-phase5';
 const routes=['overview','comparison','trends','substance','geography','anomalies','forecasting','reports'];
 for(const route of routes)test(`Phase 5 ${route}: clean content, real evidence and desktop/mobile acceptance`,async({page})=>{
  test.setTimeout(240000);const errors=[];page.on('pageerror',error=>errors.push(error.message));

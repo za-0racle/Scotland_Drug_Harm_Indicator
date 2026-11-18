@@ -1,0 +1,13 @@
+{
+  "final_host": "https://www.sdhi.cc/",
+  "scripts": [
+    {
+      "path": "/assets/index-x67rGT4o.js",
+      "sha256": "6e0d9c72ad82847c017a1e3f5af2534e196316def807697a6ebd596b940fc752",
+      "target_fallback": true,
+      "target_axis_label": true,
+      "missing_period_message": true
+    }
+  ],
+  "local_commit": "5a50541"
+}

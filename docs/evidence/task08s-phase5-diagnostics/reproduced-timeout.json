@@ -1,0 +1,18 @@
+{
+  "observed_on": "17 November 2026",
+  "stage": "fresh-server Playwright database preflight",
+  "health_status": 200,
+  "database_route": "/api/v1/mortality/quarterly?limit=1",
+  "database_status": 503,
+  "server_diagnostic": {
+    "table": "mortality_quarterly",
+    "offset": 0,
+    "category": "timeout",
+    "exception_type": "URLError",
+    "reason_type": "TimeoutError",
+    "http_status": null,
+    "errno": null
+  },
+  "browser_cases_started": 0,
+  "correction": "One bounded logged connection-timeout retry; persistent failures remain errors"
+}
