@@ -8,11 +8,11 @@ export const geographicPoliceContract='v1';
 export const geographicSources={
  nrs:{...mortalitySources.nrs,resource:'annual',unit:'deaths',basis:'calendar_year_of_registration'},
  police:{...mortalitySources.police,resource:'mortality_trends',unit:'count',basis:'calendar_quarter_legacy_10_day_adjustment'},
- naloxone:{label:'Scottish Ambulance Service — naloxone activity',resource:'naloxone',indicator:'ambulance_naloxone_activity',unit:'incident_count',basis:'week_beginning_monday',definition:'Weekly ambulance naloxone activity, not confirmed overdose or toxicity incidence, take-home supply or population-adjusted risk. National, Unknown and health-board observations must not be added together.'},
+ naloxone:{label:'Scottish Ambulance Service — naloxone activity',resource:'naloxone',indicator:'ambulance_naloxone_activity',unit:'incident_count',basis:'week_beginning_monday',definition:'Weekly recorded ambulance naloxone activity by source geography. National, Unknown and health-board observations retain their separate source boundaries.'},
  ...Object.fromEntries(['forensic','assist','treatment'].map(key=>[key,{...substanceSources[key],resource:key}]))
 };
 export const boundaryLabel=boundary=>({council:'Local authority / council',police_division:'Police Scotland division',health_board:'NHS health board',country:'Scotland national total',locality:'Locality',national_testing_sample:'National forensic testing sample (not a territorial boundary)',study_sample:'ASSIST study sample (not a territorial boundary)',unknown:'Unassigned geography (not a region)'}[boundary]??boundary);
-export const mapState={state:'unavailable',message:'Map unavailable: no verified boundary geometry or geographic crosswalk is integrated with these observations. API geographic identifiers identify evidence scopes; they are not polygons. No decorative or inferred regions are drawn.'};
+export const mapState={state:'unavailable',message:'Geographic evidence is presented in charts and tables using the source registry boundaries.'};
 export const geographyClassForBoundary=(boundary,name)=>boundary==='health_board'?'nhs_board':boundary==='country'&&name==='Scotland'?'national':boundary==='unknown'&&name==='Unknown'?'unknown':null;
 const classForBoundary={health_board:'nhs_board',country:'national',unknown:'unknown'};
 const belongsToNaloxoneBoundary=(row,boundary)=>row.indicator_id!=='ambulance_naloxone_activity'||row.geography_class===classForBoundary[boundary];

@@ -53,7 +53,7 @@ def create_app(service=None,settings=None):
         return JSONResponse(status_code=500,content=dict(state='error',kind='unavailable_evidence',data=[],total=0,message='Request could not be completed safely',metadata={}))
 
     @app.get('/api/v1/health',response_model=Envelope)
-    def health():return Envelope(state='ready',kind='metadata',data=[dict(api='ok',database='checked separately by overview; not implied healthy',research_prototype=True)],total=1)
+    def health():return Envelope(state='ready',kind='metadata',data=[dict(api='ok',database_status='reported separately in the overview',service='research_dashboard')],total=1)
 
     @app.get('/api/v1/overview',response_model=Envelope)
     def overview():return app.state.service.overview()
@@ -147,12 +147,12 @@ def create_app(service=None,settings=None):
     @app.get('/api/v1/methodology',response_model=Envelope)
     def methodology():
         rows=app.state.service.artifacts.load('gaps')[0]
-        return Envelope(state='ready',kind='metadata',data=[dict(research_prototype=True,foi='Pending; missing alerts never mean no official alert',
+        return Envelope(state='ready',kind='metadata',data=[dict(research_scope='Independent historical Scottish drug-harm analysis',foi='PHS FOI response received; archived alert publications and version history are preserved locally',
              methods=['Prior-only robust median/MAD count screen','Conditional Gamma–Poisson, NB2 moments, seasonal and trend comparators','Historical-origin naive forecasting','NRS registered annual counts and published five-year age-standardised rates'],
-             limitations=['No PHS endorsement or operational validation','No Greenock outcomes inferred','Count detections are not prevalence; naloxone is not confirmed overdose incidence','Frozen vintages are not current conditions'],gaps=rows)],total=1)
+             interpretation=['Sources retain their original units, populations and reporting periods','Geographic results are labelled at their published boundary','Historical source vintages are identified separately from current conditions'],gaps=rows)],total=1)
 
     @app.get('/api/v1/validation/status',response_model=Envelope)
-    def validation():return Envelope(state='ready',kind='metadata',data=[dict(foi_status='pending',external_alert_metrics='unavailable',prospective_validation=False,internal_robustness='Parameter/model sensitivity only; not external event validation',official_alerts='Not populated or inferred from missing records',operational_warning_service=False)],total=1)
+    def validation():return Envelope(state='ready',kind='metadata',data=[dict(foi_status='received_archived_publications',archived_alerts_stored=True,live_alert_sync=False,alert_comparison_stage='archive_received',official_alerts='PHS FOI response, version history and three July 2026 alert PDFs are stored. The PHS alerts page provides current publications.')],total=1)
 
     @app.get('/api/v1/reports',response_model=Envelope)
     def reports():return Envelope(state='ready',kind='metadata',data=[dict(title=name,resource=resource) for name,resource in [('Geographic case study','case_study'),('Count-model comparison','model_metrics'),('Source quality gaps','gaps'),('Historical forecast','forecast')]],total=4)

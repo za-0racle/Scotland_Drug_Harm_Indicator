@@ -14,7 +14,7 @@ test('research explains adopted objectives, source distinctions and saved geogra
  await forensic.locator(':scope > summary').click();await expect(forensic).toContainText('cannot be added');await expect(forensic).toContainText('2018 Q4');await expect(forensic).toContainText('2026 Q1');
  const treatment=page.locator('.research-source').filter({has:page.locator('summary', {hasText:'treatment samples'})});await treatment.locator(':scope > summary').click();await expect(treatment).toContainText('source opioid category excludes treatment opioids');
  await expect(page.locator('pre:visible')).toHaveCount(0);
- await page.locator('#research-study-methods > details > summary').click();await expect(page.locator('#research-study-methods')).toContainText('2017–2020');await expect(page.locator('#research-study-methods')).toContainText('not no-alert periods');
+ await page.locator('#research-study-methods > details > summary').click();await expect(page.locator('#research-study-methods')).toContainText('2017–2020');await expect(page.locator('#research-study-methods')).toContainText('official alert chronology');
  await page.locator('#research-documentation > summary').click();await expect(page.locator('#research-documentation a')).toHaveCount(7);
  for(const a of await page.locator('#research-documentation a').all())expect(await a.getAttribute('href')).toMatch(/^https:\/\/github.com\/za-0racle\/Scotland_Drug_Harm_Indicator\/blob\/main\//);
  await page.locator('#research-technical > summary').click();await page.getByRole('button',{name:'Source inventory',exact:true}).click();await expect(page.locator('#api-status')).toContainText('6 records');await expect(page.locator('#data-panel')).toBeVisible();
@@ -57,6 +57,6 @@ test('all eight primary headings use public language and scientific qualificatio
   const headings=await page.locator('main h2,main h3').allTextContents();expect(headings.join(' ')).not.toMatch(/frozen|artifact|manifest|TASK\d|Phase \d/i);
  }
  await expect(page.locator('#research-study-methods')).toContainText('Missing values remain missing');
- await expect(page.locator('#research-study-methods')).toContainText('not a current forecast');
- await expect(page.locator('.platform-footer')).toContainText('No PHS endorsement');
+ await expect(page.locator('#research-study-methods')).toContainText('saved projection targets 2026 Q1');
+ await expect(page.locator('.platform-footer')).toContainText('Independent MSc research');
 });

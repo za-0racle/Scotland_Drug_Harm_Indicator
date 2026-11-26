@@ -15,22 +15,22 @@ export const researchHeadings={origin:'Training through',target:'Target quarter'
 export const monitoringCopy={
  stored:'Original results include rolling Negative Binomial residual monitoring with EWMA and a separate opioid-share CUSUM. EWMA (exponentially weighted moving average) gives more weight to recent residuals. CUSUM (cumulative sum) tracks accumulated departures; its positive and negative components are separate. The CUSUM zero lower limit is a reset baseline, not a lower alarm limit. Select a row for its complete record.',
  configurations:'Original monitoring configurations describe the rolling Negative Binomial baseline and the EWMA and CUSUM settings. They are not the later Negative Binomial moments comparator or the forecasting trend model.',
- flags:'Additional historical screens: the median-based screen compares observations with earlier medians and median absolute deviations (MAD). Conditional count-model comparisons use different assumptions. A statistical flag is an unusual historical observation under one method, not a confirmed toxicity incident.',
- context:'All stored observations for the selected scope, including flagged, non-flagged, insufficient-history and unavailable classifications. No flags are added or recalculated.',
- sensitivity:'How results change across six parameter settings. This is parameter sensitivity, not sensitivity for detecting externally verified events.',
- models:'How well the conditional count models describe recorded values. These later comparisons are distinct from the original rolling Negative Binomial monitoring and from forecasting. Flag frequencies are not operational false-alarm rates.',
- diagnostics:'Checks on the earlier observations used by each model. Sparse history and correlated series limit interpretation; diagnostics do not establish warning performance.',
- zero:'Unknown geography and sparse-count checks retain their original classifications. Missing or unassigned observations do not establish absence of harm.',
- runs:'Consecutive flagged periods form a run within one series, method and direction. Runs and overlapping series are not separate confirmed incidents.',
- evidence:'Supporting observations from different sources retain their own populations and reporting periods. Co-occurrence does not establish a shared incident or causal relationship.',
- validation:'External validation remains pending. Missing official-alert records are not no-alert periods. Detection sensitivity, specificity and lead time have not been validated.',
+ flags:'Additional historical screens compare observations with earlier medians and median absolute deviations (MAD). Conditional count-model comparisons use separate assumptions. Each flag identifies an unusual observation under its selected method; review its source, period and direction.',
+ context:'Review all stored observations for the selected scope, including each original flag and classification. Results retain the saved source values.',
+ sensitivity:'Compare how results change across six parameter settings. This analysis describes parameter stability across the tested configurations.',
+ models:'Compare how conditional count models describe recorded values. These results are reported separately from the original monitoring methods and forecast evaluation.',
+ diagnostics:'Review model checks against earlier observations, including sparse histories and correlated series.',
+ zero:'Review how unknown geography and sparse counts are classified in the source records.',
+ runs:'Consecutive flagged periods are grouped within each series, method and direction.',
+ evidence:'Supporting observations retain their original source populations and reporting periods. Compare these records side by side with their source definitions.',
+ validation:'The PHS FOI response and archived alert publications are stored for retrospective research. This view records archive receipt and live-feed status; the version history provides the published alert chronology.',
 };
-export const forecastEvaluation='Each prediction used only earlier quarters in this retrospective dataset. Four candidates share 12 quarterly targets (2023 Q1–2025 Q4), with an expanding training window. Mean absolute error (MAE) is the average absolute prediction error, in deaths; lower is better. The last-observation baseline was selected using these same targets, so there is no independent post-selection test. Twelve targets cannot establish reliable interval calibration; revised data are not necessarily the values available at the time.';
+export const forecastEvaluation='Each prediction used only earlier quarters in the dataset. Four candidates share 12 quarterly targets (2023 Q1–2025 Q4), with an expanding training window. Mean absolute error (MAE) is the average absolute prediction error, in deaths; lower is better. The last-observation baseline was selected and scored on the same targets, so these scores describe this retrospective evaluation set. Interval calibration and historical data vintages are documented with the results.';
 export function projectionText(row){
- return `Saved estimate for ${row.target_period}, based on observations through ${row.forecast_origin}: ${row.predicted} deaths. Saved approximate 80% observation interval: ${row.lower80} to ${row.upper80}; 95% observation interval: ${row.lower95} to ${row.upper95}. The target period has elapsed. Not a current future prediction.`;
+ return `Historical-origin estimate for ${row.target_period}, based on observations through ${row.forecast_origin}: ${row.predicted} deaths. Approximate 80% observation interval: ${row.lower80} to ${row.upper80}; 95% observation interval: ${row.lower95} to ${row.upper95}.`;
 }
 
 export function forecastFinding(rows){
  const baseline=rows.find(row=>row.model==='naive');
- return rows.length===4&&rows.every(row=>row.evaluated_origins===12&&Number.isFinite(row.mae))&&baseline&&rows.every(row=>row.mae>=baseline.mae)?`The last-observation baseline had the lowest mean absolute error: ${baseline.mae.toFixed(2)} deaths across 12 common quarterly targets. These targets were also used to select the model; this is not an independent test.`:'Compare saved candidate errors on their recorded evaluation targets. Select a row to inspect the complete metrics.';
+ return rows.length===4&&rows.every(row=>row.evaluated_origins===12&&Number.isFinite(row.mae))&&baseline&&rows.every(row=>row.mae>=baseline.mae)?`The last-observation baseline had the lowest mean absolute error: ${baseline.mae.toFixed(2)} deaths across 12 common quarterly targets. The baseline was selected and scored on the same targets; this is retrospective performance on the recorded evaluation set.`:'Compare the four saved candidate scores across their common evaluation targets. Select a row to inspect the complete metrics.';
 }

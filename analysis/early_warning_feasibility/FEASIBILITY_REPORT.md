@@ -2,6 +2,12 @@
 
 Assessment date: **10 November 2026**. Scope: read-only inspection of local datasets, Phase 2-6 methods/outputs and official public references. No experiment, model fit, application development, acquisition of new observation data, database change or early-warning success is claimed.
 
+## Update — 26 November 2026
+
+PHS FOI 2026-002533 and the supplied RADAR publications have now been received and preserved under `public/research/radar-alerts/`. The response supplies a version/status chronology for three alert topics first issued during 1 July 2022–31 December 2024, states none was withdrawn during that period, and records later replacement of the bromazolam and xylazine alerts by broader alerts in February 2026. The supplied July 2026 PDFs are versions 2.0 for nitazenes, new benzodiazepines and medetomidine/xylazine-type drugs; the letter lists nitazenes v2.1 on 27 October 2026, but that PDF was not included.
+
+This improves source provenance and retrospective evaluation of **official alert communication dates**. It does not independently validate the dashboard indicator: alert publication is not an independently ascertained harm-onset label, alerts may share underlying surveillance inputs with the indicator, and the candidate alerts were already known during prior development. No alert performance metrics are computed, no untouched holdout exists, and the stored PDFs do not synchronize live alert status. A future evaluation needs a frozen matching protocol, as-of predictor vintages, explicit event/topic and geography rules, complete alert/update coverage, and an untouched prospective or otherwise genuinely held-out period. The 10 November assessment below is preserved as its original snapshot; statements labelled pending describe that snapshot.
+
 ## Decision at a glance
 
 | Capability | Decision | Defensible interpretation |
@@ -65,9 +71,9 @@ Local evidence: `g3-indicator/data/derived/ALERT_LIST_2022_2026.csv` contains si
 
 Issue evidence establishes communication existence, not complete no-event coverage, unique incidents, first market availability, chemical causation or dissemination equal to occurrence geography. Multiple publications repeating the same testing/intelligence evidence do not constitute independent case ascertainment.
 
-### FOI status
+### FOI status at the 10 November assessment
 
-The latest documented status is **pending**, without an admitted real response dataset: `analysis/phase5c/outputs/foi_staging_specification.json` and `analysis/phase5c/foi.py`. This review did not contact PHS or confirm receipt with the team; no local file does not prove that a response has not arrived elsewhere. The validator's external-metric/publication gates remain closed even for syntactically valid staging input. No alert-based sensitivity, specificity, precision, false-warning rate or lead time is calculated. Missing local alerts never establish no official alert.
+The response was pending at the time of this assessment; the 26 November update above supersedes that receipt status. The validator's external-metric/publication gates remain closed. No alert-based sensitivity, specificity, precision, false-warning rate or lead time is calculated. Missing local alerts never establish no official alert.
 
 ## 3. Historical availability and as-of classification
 

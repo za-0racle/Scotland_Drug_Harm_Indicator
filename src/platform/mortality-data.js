@@ -17,7 +17,7 @@ export async function completeMortality(api,source){
   if(offset>total||(!result.data.length&&offset<total))throw new Error('Incomplete mortality response; partial pages are not complete history.');
  }while(offset<total);
  validateMortality(rows,source);
- return{state:rows.length?'ready':'empty',data:rows,total,metadata,message:rows.length?'':'No accessible mortality observations. Empty access does not establish zero deaths.'};
+ return{state:rows.length?'ready':'empty',data:rows,total,metadata,message:rows.length?'':'No mortality observations match this source, area and period. Review source coverage or filters.'};
 }
 export function validateMortality(rows,source){
  const spec=mortalitySources[source];if(!spec)throw new Error('Unknown mortality source.');const keys=new Set();

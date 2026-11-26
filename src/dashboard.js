@@ -48,7 +48,7 @@ export function mountDashboard(root, refresh) {
       <p class="subtitle">Quarterly mortality and retrospective statistical monitoring</p></div>
       <div class="refresh"><button id="reload" type="button">Refresh data</button><p id="refresh-time" role="status">Not yet refreshed</p></div>
     </div></header>
-    <main><aside class="disclaimer"><strong>Research prototype</strong><p>Statistical signals are retrospective model flags, not validated public health warnings or confirmed clinical alerts. This dashboard does not provide operational advice.</p></aside>
+    <main><aside class="disclaimer"><strong>Historical analytics</strong><p>Explore source-aware Scottish indicators, statistical monitoring and forecasts. Each result includes its reporting period and method details.</p></aside>
     <nav aria-label="Dashboard sections"><a href="#mortality">Mortality</a><a href="#monitoring">Statistical monitoring</a><a href="#methodology">Methodology & provenance</a></nav>
     <section aria-label="Dataset summary" id="summary" class="summary-grid"></section>
     <section class="panel" id="mortality" aria-labelledby="mortality-title">
@@ -76,9 +76,9 @@ export function mountDashboard(root, refresh) {
       <article><h3>Models and interpretation</h3><p>Rolling NB2-EWMA configurations use preceding quarters as a model baseline. The two-sided opioid-share CUSUM uses 2022–2023 calibration and 2024 monitoring. Statistics, limits, component values and parameters are displayed as stored, with no new fitting, threshold calculations or signal generation.</p>
       <p>Published RADAR alerts, RADAR intelligence reports and model-generated signals are different evidence types. Neither alerts nor intelligence are retrieved or represented by this dashboard.</p></article></div>
       <h3>Selected configuration parameters</h3><dl id="parameters" class="parameters"></dl><div id="computation-references" class="muted"></div>
-      <p class="limitation">Limitations: retrospective analysis, a short monitoring series for CUSUM, possible revisions to source data and unverified model assumptions. Stored verification notes are retained. A recorded signal is not evidence of a confirmed public health event or causation.</p>
+      <p class="limitation">Method and source notes: results use retrospective source data and the CUSUM periods shown. Source revisions and model assumptions are documented for review. Statistical flags identify deviations under the selected method and reference period.</p>
       <details><summary>Database integration verification</summary><ul id="verification"></ul></details>
-    </section><footer>Scotland Drug Harm Indicator · Academic research prototype · Live, read-only Supabase data</footer></main>`;
+    </section><footer>Scotland Drug Harm Intelligence - Independent MSc research - Source definitions and methods are documented</footer></main>`;
 
   const byId = id => root.querySelector(`#${id}`);
   let states = {};
@@ -145,7 +145,7 @@ export function mountDashboard(root, refresh) {
     byId('model-notes').replaceChildren();
     if (config) byId('model-notes').append(node('strong', config.configuration_label), node('p', config.baseline_description), node('p', config.notes));
     const flagged = signals(rows);
-    byId('selected-signals').replaceChildren(node('p', rows.length ? (flagged.length ? `${flagged.length} recorded retrospective flag(s): ${flagged.map(labelOf).join(', ')}. These are not confirmed clinical or public health alerts.` : 'No recorded statistical signals for this configuration in the retrieved results.') : ''));
+    byId('selected-signals').replaceChildren(node('p', rows.length ? (flagged.length ? `${flagged.length} recorded retrospective flag(s): ${flagged.map(labelOf).join(', ')}. These are historical statistical flags for the selected configuration.` : 'No recorded statistical signals for this configuration in the retrieved results.') : ''));
     const columns = [['Quarter', labelOf], ['Stored statistic', row => row.statistic_value]];
     if (cusum) columns.push(['Positive CUSUM', row => row.cusum_positive], ['Negative CUSUM', row => row.cusum_negative]);
     columns.push([cusum ? 'Reset baseline (stored lower limit)' : 'Lower limit', row => row.lower_limit], [cusum ? 'Upper decision limit' : 'Upper limit', row => row.upper_limit], ['Recorded flag', row => row.signal_flag === true ? 'Yes — retrospective' : 'No']);
@@ -166,7 +166,7 @@ export function mountDashboard(root, refresh) {
     for (const row of flagged) {
       const config = rowsOf(states.configurations).find(item => item.configuration_id === row.configuration_id);
       const card = node('article', undefined, 'flag-card');
-      card.append(node('h3', `${labelOf(row)} · ${config?.configuration_label ?? row.configuration?.configuration_label ?? `Configuration ${row.configuration_id}`}`), node('p', `Stored statistic: ${row.statistic_value}; lower limit: ${text(row.lower_limit)}; upper limit: ${text(row.upper_limit)}.`), node('p', 'Retrospective model flag only. This is not a confirmed clinical alert or validated public health warning.'));
+      card.append(node('h3', `${labelOf(row)} · ${config?.configuration_label ?? row.configuration?.configuration_label ?? `Configuration ${row.configuration_id}`}`), node('p', `Stored statistic: ${row.statistic_value}; lower limit: ${text(row.lower_limit)}; upper limit: ${text(row.upper_limit)}.`), node('p', 'Saved statistical classification under this method and reference period. Review it with the source observations and time scope.'));
       target.append(card);
     }
   }

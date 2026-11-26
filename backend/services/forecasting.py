@@ -162,17 +162,17 @@ def generate(geography='Scotland', indicator=INDICATOR, substance=SUBSTANCE, hor
     unit = 'deaths' if is_death else 'detections'
     outcome = 'Police Scotland suspected drug deaths' if is_death else f'{substance} forensic toxicology detections'
     history = [dict(observation_period=f"{r['year']} Q{r['quarter']}", value=r['suspected_deaths'], status='historical') for r in rows]
-    limitations = ['Forecasts are research estimates based on verified historical observations, not operational warnings.',
-        'Backtesting is retrospective and does not validate prospective forecast accuracy.',
-        'Prediction intervals are approximate observation intervals; NB2 plug-in intervals exclude parameter uncertainty.']
+    limitations = ['Quarterly estimates use verified historical observations; each result reports its source, model, forecast origin and interval.',
+        'Backtesting summarizes performance on historical forecast origins. Ongoing prospective monitoring provides a separate evaluation.',
+        'Prediction intervals approximate observation uncertainty; NB2 plug-in intervals exclude parameter uncertainty.']
     if is_death:
-        limitations += ['Quarterly Police Scotland suspected deaths are distinct from registered drug-related deaths and toxicology detections.',
-                        'Substance-specific quarterly histories are not available for the suspected death outcome.']
+        limitations += ['This outcome uses quarterly Police Scotland suspected-death counts; registered death and toxicology sources have separate definitions.',
+                        'The suspected-death forecast is generated from the area-level Police Scotland series.']
         source = 'Police Scotland suspected drug deaths by Police Division'
         first = '2017 Q1'
     else:
-        limitations += ['These are overlapping toxicology detections in forensic tests, not substance-specific deaths, causal attribution, population prevalence, or unique people.',
-                        'The forensic testing sample denominator is unavailable; category counts must not be compared as population rates.']
+        limitations += ['Toxicology forecasts use detections in the Scotland forensic testing sample; category groups may overlap.',
+                        'The source reports sample detection counts; no population denominator is supplied for rate calculations.']
         source = 'Verified Scotland forensic testing sample quarterly detections'
         first = history[0]['observation_period']
     limitations.append(f'Latest source observation: {cutoff_note}; later elapsed quarters are not treated as refreshed observations.')

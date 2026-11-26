@@ -60,7 +60,9 @@ def test_case_study_forecast_and_external_validation(client):
     assert (rate['inverclyde_rate'],rate['inverclyde_lower95'],rate['inverclyde_upper95'])==(35.6,29.3,41.8)
     forecast=client.get('/api/v1/forecasting/results').json()['data'][0]
     assert forecast['forecast_origin']=='2025 Q4' and forecast['target_period']=='2026 Q1'
-    assert client.get('/api/v1/validation/status').json()['data'][0]['external_alert_metrics']=='unavailable'
+    validation=client.get('/api/v1/validation/status').json()['data'][0]
+    assert validation['alert_comparison_stage']=='archive_received'
+    assert validation['live_alert_sync'] is False
 
 def test_export_allowlist_and_preserved_metadata(client):
     r=client.get('/api/v1/exports?resource=annual&format=csv&limit=1')

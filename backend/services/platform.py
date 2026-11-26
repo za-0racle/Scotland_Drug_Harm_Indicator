@@ -47,7 +47,7 @@ class PlatformService:
                 found.setdefault(gid,dict(g,resources=set(),indicators=set(),available=True))
                 found[gid]['resources'].add(resource);found[gid]['indicators'].add(row['indicator_id'])
         greenock=geography('Greenock','locality')
-        found[greenock['geography_id']]=dict(greenock,resources=set(),indicators=set(),available=False,limitation='No compatible Greenock-specific series; wider-area outcomes cannot be attributed to this locality')
+        found[greenock['geography_id']]=dict(greenock,resources=set(),indicators=set(),available=False,limitation='Greenock-specific results require locality-level observations; wider-area series retain their published geographic boundaries')
         return {k:{**v,'resources':sorted(v['resources']),'indicators':sorted(v['indicators'])} for k,v in sorted(found.items())}
 
     def area(self,gid):
@@ -169,7 +169,7 @@ class PlatformService:
         return Envelope(state='ready',kind='metadata',data=[dict(database=database,coverage=dict(coverage),sources=latest,
                         original_flags=summary['original_primary_flags'],original_runs=summary['original_runs'],cross_source_candidates=summary['cross_source_candidates'],
                         compatible_pairs=summary['compatibility']['compatible_contextual_evidence'],joint_signal_status='No established joint directional contextual signal',
-                        research_status='Historical research prototype; no PHS endorsement or operational validation')],total=1)
+                        research_status='Independent historical Scottish drug-harm research dashboard')],total=1)
 
     def geography_data(self,gid,section,filters):
         area=self.area(gid);filters=filters.model_copy(update={'geography_id':gid})

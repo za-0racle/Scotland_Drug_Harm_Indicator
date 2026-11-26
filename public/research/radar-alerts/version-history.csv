@@ -1,0 +1,18 @@
+alert_topic,version,date,change_or_status
+Nitazenes,v1.0,2023-01-24,First publication
+Nitazenes,v1.1,2023-03-29,New detections
+Nitazenes,v1.2,2023-11-20,Post-mortem toxicology information
+Nitazenes,v1.3,2023-12-20,Increasing detections in heroin and benzodiazepines
+Nitazenes,v1.4,2024-07-09,New detections
+Nitazenes,v1.5,2025-01-16,Drug service signposting and UK legal status updated
+Nitazenes,v2.0,2025-08-12,Comprehensive update
+Nitazenes,v2.1,2026-10-27,Comprehensive update
+Bromazolam,v1.0,2023-07-05,First publication
+Bromazolam,v1.1,2023-10-13,Detection data and effects information updated
+Bromazolam,v1.2,2025-01-16,Legal status updated
+New benzodiazepines / benzos,v2.0,2026-02-05,Broader alert replaced and archived the bromazolam alert
+New benzodiazepines / benzos,v2.0 summary,2026-07-14,Changing market; bromazolam detections declining while ethylbromazolam and clonazolam increased; contamination risks noted
+Xylazine,v1.0,2024-05-09,First publication
+Xylazine,v1.1,2025-01-16,Legal status updated
+Medetomidine / xylazine-type drugs,v2.0,2026-02-05,Comprehensive update following emergence of medetomidine; replaced and archived the xylazine alert
+Medetomidine / xylazine-type drugs,v2.0 summary,2026-07-14,Updated summary publication
