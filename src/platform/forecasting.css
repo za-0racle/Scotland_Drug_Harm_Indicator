@@ -12,5 +12,6 @@
 .forecast-output th,.supporting-analysis th{background:var(--surface-alt);color:var(--muted);font-weight:600}
 .forecast-output .table-scroll{overflow:auto}
 .forecast-content-note{color:var(--muted);font-size:.78rem}
+.forecast-source-note{grid-column:1/-1;margin:0;color:var(--muted);font-size:.82rem;line-height:1.5}
 @media(max-width:900px){.forecast-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.forecast-filters{grid-template-columns:1fr}.forecast-filters .filter-actions{grid-column:auto}.forecast-filters .filter-actions button{flex:1}}

@@ -152,12 +152,15 @@ def test_backtest_api_preserves_verified_target_origin_values_and_intervals(clie
             assert returned[field]==original[field]
     assert sorted({r['target'] for r in response['data']})==[f'{year} Q{q}' for year in range(2023,2026) for q in range(1,5)]
 
-def test_interactive_forecast_options_and_horizon_generation(client):
+def test_interactive_forecast_options_and_year_quarter_generation(client):
     options=client.get('/api/v1/forecasting/options').json()['data'][0]
     assert 'Scotland' in options['geographies']
     assert 'Greater Glasgow' in options['geographies']
-    assert options['substances']==[{'id':'all','label':'All / not substance-specific'}]
-    response=client.get('/api/v1/forecasting/generate',params={'geography':'Scotland','horizon':4,'model':'auto'})
+    assert options['substances'][0]['id']=='all'
+    assert {item['id'] for item in options['substances']} >= {'Opioids','Stimulants','All Benzodiazepines'}
+    assert [item['id'] for item in options['years']]==[2026,2027,2028]
+    assert [item['id'] for item in options['quarters']]==[1,2,3,4]
+    response=client.get('/api/v1/forecasting/generate',params={'geography':'Scotland','year':2026,'quarter':4,'model':'nb2_trend'})
     assert response.status_code==200,response.text
     result=response.json()['data'][0]
     assert [row['target_period'] for row in result['forecasts']]==[f'2026 Q{q}' for q in range(1,5)]
@@ -165,7 +168,10 @@ def test_interactive_forecast_options_and_horizon_generation(client):
     assert result['forecasts'][0]['predicted']>=0
     assert result['forecasts'][0]['model_parameters']
     assert result['model_evaluation']
-    assert client.get('/api/v1/forecasting/generate?horizon=13').status_code==422
-    unsupported=client.get('/api/v1/forecasting/generate',params={'category':'opioids'})
-    assert unsupported.status_code==422
-    assert 'Substance-specific quarterly counts' in unsupported.json()['message']
+    assert client.get('/api/v1/forecasting/generate?year=2026&quarter=1&category=Opioids').status_code==422
+    tox=client.get('/api/v1/forecasting/generate',params={'category':'Opioids','year':2026,'quarter':4,'model':'nb2_trend'})
+    assert tox.status_code==200,tox.text
+    tox_result=tox.json()['data'][0]
+    assert tox_result['data_coverage']['unit']=='detections'
+    assert tox_result['data_coverage']['outcome']=='Opioids forensic toxicology detections'
+    assert tox_result['filters']['geography']=='Scotland forensic testing sample'

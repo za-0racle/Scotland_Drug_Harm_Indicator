@@ -18,9 +18,9 @@ test('one validated API base prevents HTML routes and credential-bearing overrid
  assert.equal(resolveApiBase('http://localhost:8000/api/v1/'),'http://localhost:8000/api/v1');
  for(const value of ['/','/api','http://localhost:5173','http://user:password@localhost:8000/api/v1','/api/v1?key=test'])assert.throws(()=>resolveApiBase(value),e=>e.code==='configuration'&&!e.message.includes('password'));
 });
-test('forecast geography and horizon are supported query parameters',()=>{
- assert.equal(queryString({geography:'Greater Glasgow',indicator:'police_suspected_drug_deaths',category:'all',horizon:12,model:'auto'}),
-  'geography=Greater+Glasgow&indicator=police_suspected_drug_deaths&category=all&horizon=12&model=auto');
+test('forecast geography, category and target quarter are supported query parameters',()=>{
+ assert.equal(queryString({geography:'Greater Glasgow',category:'Opioids',year:2027,quarter:3,model:'nb2_trend'}),
+  'geography=Greater+Glasgow&category=Opioids&year=2027&quarter=3&model=nb2_trend');
 });
 test('dev and preview proxy target actual API; outage gives JSON without raw errors',()=>{
  assert.equal(config.server.port,5173);assert.equal(config.server.strictPort,true);

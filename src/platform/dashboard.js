@@ -77,7 +77,7 @@ export function mountPlatform(root,api=request){
  if(page==='forecasting'){
   forecastCleanup?.();forecastCleanup=null;q('main > .filter-panel').hidden=true;
   for(const id of ['summary-grid','view-tabs','plot-panel','observations-disclosure','global-page-controls','verification'])q('#'+id).hidden=true;
-  q('#page-introduction').textContent='Generate numerical quarterly estimates from the verified Police Scotland suspected drug-death series. Forecasts are research estimates conditioned on data through 2025 Q4, not current observations or operational warnings.';
+  q('#page-introduction').textContent='Generate quarterly research estimates for suspected drug deaths or forensic substance detections. Choose a target year and quarter. Estimates use verified observations through each source’s latest available quarter; they are not current observations or operational warnings.';
   const forecastContent=el('section');forecastContent.id='forecast-content';q('#feature-panel').append(forecastContent);
   forecastCleanup=await mountForecasting({root:forecastContent,api,isCurrent:()=>current===ticket,onStatus:(state,message)=>{q('#api-status').dataset.state=state;q('#api-status').textContent=message;}});return;
  tabs([['models','Candidate scores'],['forecast','Historical-origin projection'],['history','Historical observations'],['backtest','Rolling-origin predictions']]);
