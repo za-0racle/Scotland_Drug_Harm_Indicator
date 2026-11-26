@@ -22,6 +22,10 @@ test('forecast geography, category and target quarter are supported query parame
  assert.equal(queryString({geography:'Greater Glasgow',category:'Opioids',year:2027,quarter:3,model:'nb2_trend'}),
   'geography=Greater+Glasgow&category=Opioids&year=2027&quarter=3&model=nb2_trend');
 });
+test('array filters preserve every selected value as repeated query parameters',()=>{
+ assert.equal(queryString({category:['all','Opioids'],year:[2027,2028],quarter:[3,4]}),
+  'category=all&category=Opioids&year=2027&year=2028&quarter=3&quarter=4');
+});
 test('dev and preview proxy target actual API; outage gives JSON without raw errors',()=>{
  assert.equal(config.server.port,5173);assert.equal(config.server.strictPort,true);
  assert.equal(config.server.proxy['/api'].target,'http://127.0.0.1:8000');

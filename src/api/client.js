@@ -6,7 +6,8 @@ export function queryString(params={},analytical=false){
  const query=new URLSearchParams();
  for(const[key,value]of Object.entries(params)){
   if(!allowed.has(key)&&!(analytical&&key==='expected_collection'))throw new ApiError(`Unsupported filter: ${key}`);
-  if(value!==undefined&&value!==null&&value!=='')query.set(key,String(value));
+  if(Array.isArray(value)){for(const item of value)if(item!==undefined&&item!==null&&item!=='')query.append(key,String(item));}
+  else if(value!==undefined&&value!==null&&value!=='')query.set(key,String(value));
  }
  return query.toString();
 }

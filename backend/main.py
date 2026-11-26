@@ -15,7 +15,7 @@ from backend.repositories.artifacts import ArtifactError,CATALOG
 from backend.repositories.supabase import DatabaseError
 from backend.api.mortality_v1 import router as mortality_v1_router
 from backend.api.forensic_v1 import router as forensic_v1_router
-from backend.services.forecasting import available_geographies, available_substances, generate as generate_forecast
+from backend.services.forecasting import available_geographies, available_substances, generate_many as generate_forecasts
 
 logger=logging.getLogger('research_api')
 
@@ -60,12 +60,13 @@ def create_app(service=None,settings=None):
 
     @app.get('/api/v1/forecasting/generate')
     def interactive_forecast(geography:Annotated[str,Query(min_length=1,max_length=100)]='Scotland',
-                             category:Annotated[str,Query(max_length=100)]='all',
-                             year:Annotated[int|None,Query(ge=2026,le=2028)]=None,
-                             quarter:Annotated[int|None,Query(ge=1,le=4)]=None,
+                             category:list[str]=Query(default=['all'],max_length=8),
+                             year:list[int]=Query(default=[2028]),
+                             quarter:list[int]=Query(default=[4]),
                              model:Annotated[str,Query(max_length=30)]='nb2_trend'):
         try:
-            return dict(state='ready',kind='research_result',data=[generate_forecast(geography,substance=category,year=year,quarter=quarter,model=model)],total=1)
+            results,skipped=generate_forecasts(geography,category,year,quarter,model)
+            return dict(state='ready' if results or skipped else 'empty',kind='research_result',data=results,total=len(results),metadata=dict(skipped=skipped))
         except ValueError as error:
             raise QueryError(str(error)) from None
 

@@ -169,7 +169,9 @@ def test_interactive_forecast_options_and_year_quarter_generation(client):
     assert result['forecasts'][0]['predicted']>=0
     assert result['forecasts'][0]['model_parameters']
     assert result['model_evaluation']
-    assert client.get('/api/v1/forecasting/generate?year=2026&quarter=1&category=Opioids').status_code==422
+    unavailable=client.get('/api/v1/forecasting/generate?year=2026&quarter=1&category=Opioids').json()
+    assert unavailable['state']=='ready' and unavailable['data']==[]
+    assert unavailable['metadata']['skipped'][0]['reason'].startswith('The selected quarter must be after')
     tox=client.get('/api/v1/forecasting/generate',params={'category':'All Benzodiazepines','year':2027,'quarter':3,'model':'naive'})
     assert tox.status_code==200,tox.text
     tox_result=tox.json()['data'][0]
@@ -179,3 +181,7 @@ def test_interactive_forecast_options_and_year_quarter_generation(client):
     assert len(tox_result['forecasts'])==1
     assert tox_result['forecasts'][0]['target_period']=='2027 Q3'
     assert tox_result['forecasts'][0]['horizon_quarters']==6
+    multiple=client.get('/api/v1/forecasting/generate',params=[('category','all'),('category','All Benzodiazepines'),('year','2027'),('year','2028'),('quarter','3'),('quarter','4'),('model','naive')])
+    assert multiple.status_code==200,multiple.text
+    assert len(multiple.json()['data'])==8
+    assert {row['forecasts'][0]['target_period'] for row in multiple.json()['data']}=={'2027 Q3','2027 Q4','2028 Q3','2028 Q4'}

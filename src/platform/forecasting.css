@@ -13,5 +13,22 @@
 .forecast-output .table-scroll{overflow:auto}
 .forecast-content-note{color:var(--muted);font-size:.78rem}
 .forecast-source-note{grid-column:1/-1;margin:0;color:var(--muted);font-size:.82rem;line-height:1.5}
+.forecast-multi-field{display:flex;flex-direction:column;gap:7px;min-width:0}
+.forecast-field-label{font-size:.74rem;font-weight:550;color:var(--ink)}
+.forecast-multi{position:relative;min-width:0}
+.forecast-multi>summary{min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--control-border);border-radius:6px;background:var(--surface);color:var(--ink);font-size:.83rem;font-weight:400;line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.forecast-multi>summary::after{content:'⌄';color:var(--muted);font-size:1rem;margin-left:auto}
+.forecast-multi[open]>summary{border-color:var(--accent);border-radius:6px 6px 0 0}
+.forecast-multi-menu{position:absolute;z-index:15;top:100%;left:0;right:0;max-height:320px;overflow:auto;padding:10px;background:var(--surface);border:1px solid var(--accent);border-top:0;border-radius:0 0 8px 8px;box-shadow:0 12px 26px #0003}
+.forecast-multi-actions{display:flex;gap:8px;padding-bottom:8px;margin-bottom:6px;border-bottom:1px solid var(--line)}
+.forecast-multi-actions button{min-height:32px;padding:5px 9px;font-size:.72rem}
+.forecast-multi-choices{display:grid;gap:2px}
+.forecast-option{display:flex;flex-direction:row;align-items:center;gap:9px;padding:7px 6px;border-radius:5px;color:var(--ink);font-size:.78rem;cursor:pointer}
+.forecast-option:hover{background:var(--surface-alt)}
+.forecast-option input{width:17px;height:17px;min-height:17px;margin:0;accent-color:var(--accent);flex:0 0 auto}
+.forecast-chart-groups{display:grid;grid-template-columns:1fr;gap:4px}
+.forecast-chart-group{min-width:0}
+.forecast-chart-group h4{margin:0 0 4px;font-size:.95rem}
+.forecast-chart-group>p{font-size:.78rem;color:var(--muted)}
 @media(max-width:900px){.forecast-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.forecast-filters{grid-template-columns:1fr}.forecast-filters .filter-actions{grid-column:auto}.forecast-filters .filter-actions button{flex:1}}

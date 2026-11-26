@@ -85,6 +85,12 @@ def _evaluation(geography, category):
     return rows, predictions, horizon_metrics(predictions)
 
 
+@lru_cache(maxsize=512)
+def _point_forecast(geography, category, model, horizon):
+    rows, _, _ = _evaluation(geography, category)
+    return horizon_forecast(model, [row['suspected_deaths'] for row in rows], horizon)
+
+
 def available_substances():
     return [dict(id='all', label='All suspected drug deaths', outcome='suspected_deaths', unit='deaths')]+[
         dict(id=name, label=f'{name} (forensic detections)', outcome='toxicology_detections', unit='detections') for name in SUBSTANCES]
@@ -102,8 +108,6 @@ def generate(geography='Scotland', indicator=INDICATOR, substance=SUBSTANCE, hor
         display_geography, last_label = geography, '2025 Q4'
         cutoff_note = '2025 Q4'
     else:
-        if geography not in ('Scotland', SAMPLE_GEOGRAPHY):
-            raise ValueError('Substance detection data cover the Scotland forensic testing sample only.')
         display_geography = SAMPLE_GEOGRAPHY
         last_label = None
         cutoff_note = '2026 Q1'
@@ -134,13 +138,13 @@ def generate(geography='Scotland', indicator=INDICATOR, substance=SUBSTANCE, hor
         candidates = [row['model'] for row in ranked] or ['naive']
     else:
         candidates = [model]
-    training = [row['suspected_deaths'] for row in rows]
+    forecast_geography = display_geography if substance == SUBSTANCE else 'Scotland'
     future = selected = None
     for candidate in candidates:
         try:
             generated = []
             candidate_warnings = []
-            predicted = horizon_forecast(candidate, training, horizon)
+            predicted = _point_forecast(forecast_geography, substance, candidate, horizon)
             candidate_warnings.extend(predicted.warnings)
             generated.append(dict(target_period=period(target_idx), horizon_quarters=horizon,
                 predicted=max(0, int(round(predicted.predicted))), lower80=max(0, int(predicted.lower80)),
@@ -182,3 +186,26 @@ def generate(geography='Scotland', indicator=INDICATOR, substance=SUBSTANCE, hor
         interval_note='Point counts and interval bounds are rounded for display; interval bounds are clipped at zero.',
         backtest_method='Expanding-window direct-horizon evaluation; each origin is fitted using observations through that origin only.',
         backtest_horizons=[dict(horizon=h, origins=sum(1 for p in all_predictions if p['horizon']==h and p['model']=='naive' and p['status']=='ok')) for h in (1,4,8,12)])
+
+
+def generate_many(geography, substances, years, quarters, model='nb2_trend'):
+    substances = list(dict.fromkeys(substances))
+    years = list(dict.fromkeys(years))
+    quarters = list(dict.fromkeys(quarters))
+    if not substances or any(value not in ('all', *SUBSTANCES) for value in substances):
+        raise ValueError('Select one or more supported substance categories.')
+    if not years or any(type(value) is not int or value not in (2026, 2027, 2028) for value in years):
+        raise ValueError('Select one or more years from 2026 to 2028.')
+    if not quarters or any(type(value) is not int or value not in (1, 2, 3, 4) for value in quarters):
+        raise ValueError('Select one or more quarters from Q1 to Q4.')
+    if len(substances) * len(years) * len(quarters) > 120:
+        raise ValueError('Choose up to 120 category, year and quarter combinations at a time.')
+    results, skipped = [], []
+    for substance in substances:
+        for year in sorted(years):
+            for quarter in sorted(quarters):
+                try:
+                    results.append(generate(geography, substance=substance, year=year, quarter=quarter, model=model))
+                except ValueError as error:
+                    skipped.append(dict(substance=substance, year=year, quarter=quarter, reason=str(error)))
+    return results, skipped
