@@ -140,14 +140,13 @@ def generate(geography='Scotland', indicator=INDICATOR, substance=SUBSTANCE, hor
         try:
             generated = []
             candidate_warnings = []
-            for step in range(1, horizon + 1):
-                predicted = horizon_forecast(candidate, training, step)
-                candidate_warnings.extend(predicted.warnings)
-                generated.append(dict(target_period=period(last_idx + step), horizon_quarters=step,
-                    predicted=max(0, int(round(predicted.predicted))), lower80=max(0, int(predicted.lower80)),
-                    upper80=max(0, int(round(predicted.upper80))), lower95=max(0, int(predicted.lower95)),
-                    upper95=max(0, int(round(predicted.upper95))), model=candidate,
-                    interval_method=predicted.interval_method, model_parameters=predicted.diagnostics))
+            predicted = horizon_forecast(candidate, training, horizon)
+            candidate_warnings.extend(predicted.warnings)
+            generated.append(dict(target_period=period(target_idx), horizon_quarters=horizon,
+                predicted=max(0, int(round(predicted.predicted))), lower80=max(0, int(predicted.lower80)),
+                upper80=max(0, int(round(predicted.upper80))), lower95=max(0, int(predicted.lower95)),
+                upper95=max(0, int(round(predicted.upper95))), model=candidate,
+                interval_method=predicted.interval_method, model_parameters=predicted.diagnostics))
             selected, future = candidate, generated
             warnings.extend(dict.fromkeys(candidate_warnings))
             break

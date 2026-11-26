@@ -163,15 +163,19 @@ def test_interactive_forecast_options_and_year_quarter_generation(client):
     response=client.get('/api/v1/forecasting/generate',params={'geography':'Scotland','year':2026,'quarter':4,'model':'nb2_trend'})
     assert response.status_code==200,response.text
     result=response.json()['data'][0]
-    assert [row['target_period'] for row in result['forecasts']]==[f'2026 Q{q}' for q in range(1,5)]
+    assert [row['target_period'] for row in result['forecasts']]==['2026 Q4']
+    assert result['forecasts'][0]['horizon_quarters']==4
     assert result['data_coverage']['observations']==36
     assert result['forecasts'][0]['predicted']>=0
     assert result['forecasts'][0]['model_parameters']
     assert result['model_evaluation']
     assert client.get('/api/v1/forecasting/generate?year=2026&quarter=1&category=Opioids').status_code==422
-    tox=client.get('/api/v1/forecasting/generate',params={'category':'Opioids','year':2026,'quarter':4,'model':'nb2_trend'})
+    tox=client.get('/api/v1/forecasting/generate',params={'category':'All Benzodiazepines','year':2027,'quarter':3,'model':'naive'})
     assert tox.status_code==200,tox.text
     tox_result=tox.json()['data'][0]
     assert tox_result['data_coverage']['unit']=='detections'
-    assert tox_result['data_coverage']['outcome']=='Opioids forensic toxicology detections'
+    assert tox_result['data_coverage']['outcome']=='All Benzodiazepines forensic toxicology detections'
     assert tox_result['filters']['geography']=='Scotland forensic testing sample'
+    assert len(tox_result['forecasts'])==1
+    assert tox_result['forecasts'][0]['target_period']=='2027 Q3'
+    assert tox_result['forecasts'][0]['horizon_quarters']==6
