@@ -1,4 +1,4 @@
-const allowed=new Set(['geography_id','boundary_type','indicator','category','model','start_year','end_year','start_date','end_date','offset','limit','signals_only','compare_to','resource','format']);
+const allowed=new Set(['geography_id','geography','boundary_type','indicator','category','model','horizon','start_year','end_year','start_date','end_date','offset','limit','signals_only','compare_to','resource','format']);
 export class ApiError extends Error {
  constructor(message,status=0,code='request'){super(message);this.status=status;this.code=code;}
 }

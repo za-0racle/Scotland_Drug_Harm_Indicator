@@ -98,6 +98,8 @@ def test_old_export_still_matches_baseline_and_old_openapi_paths():
         '/api/v1/database/v1/data-sources',
         '/api/v1/database/v1/geographic-areas',
         '/api/v1/database/v1/naloxone-activity',
+        '/api/v1/forecasting/generate',
+        '/api/v1/forecasting/options',
     }
 
 

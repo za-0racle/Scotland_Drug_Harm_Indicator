@@ -5,7 +5,7 @@ export const screens=[
  ['substance','Toxicology patterns','substance'],
  ['geography','Geographic patterns','geography'],
  ['anomalies','Statistical monitoring','signals'],
- ['forecasting','Forecast evaluation','forecast'],
+ ['forecasting','Forecast and prediction','forecast'],
  ['reports','Research, sources and downloads','research'],
 ];
 export const legacyRoutes={compare:{screen:'comparison',title:'Compare areas and substances'},signals:{screen:'anomalies',title:'Consecutive signals and evidence'},methodology:{screen:'reports',title:'Sources and methods'},exploration:{screen:'trends',title:'Other source trends'}};

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {request,resolveApiBase} from '../src/api/client.js';
+import {request,resolveApiBase,queryString} from '../src/api/client.js';
 import config from '../vite.config.js';
 const response=(body,type='application/json',status=200)=>({status,ok:status<400,headers:new Headers({'Content-Type':type}),json:async()=>JSON.parse(body)});
 const call=reply=>request('/health',{},{fetcher:async()=>reply});
@@ -17,6 +17,10 @@ test('one validated API base prevents HTML routes and credential-bearing overrid
  for(const value of [undefined,'',' /api/v1/ '])assert.equal(resolveApiBase(value),'/api/v1');
  assert.equal(resolveApiBase('http://localhost:8000/api/v1/'),'http://localhost:8000/api/v1');
  for(const value of ['/','/api','http://localhost:5173','http://user:password@localhost:8000/api/v1','/api/v1?key=test'])assert.throws(()=>resolveApiBase(value),e=>e.code==='configuration'&&!e.message.includes('password'));
+});
+test('forecast geography and horizon are supported query parameters',()=>{
+ assert.equal(queryString({geography:'Greater Glasgow',indicator:'police_suspected_drug_deaths',category:'all',horizon:12,model:'auto'}),
+  'geography=Greater+Glasgow&indicator=police_suspected_drug_deaths&category=all&horizon=12&model=auto');
 });
 test('dev and preview proxy target actual API; outage gives JSON without raw errors',()=>{
  assert.equal(config.server.port,5173);assert.equal(config.server.strictPort,true);

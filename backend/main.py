@@ -15,6 +15,7 @@ from backend.repositories.artifacts import ArtifactError,CATALOG
 from backend.repositories.supabase import DatabaseError
 from backend.api.mortality_v1 import router as mortality_v1_router
 from backend.api.forensic_v1 import router as forensic_v1_router
+from backend.services.forecasting import available_geographies, generate as generate_forecast
 
 logger=logging.getLogger('research_api')
 
@@ -56,6 +57,31 @@ def create_app(service=None,settings=None):
 
     @app.get('/api/v1/overview',response_model=Envelope)
     def overview():return app.state.service.overview()
+
+    @app.get('/api/v1/forecasting/generate')
+    def interactive_forecast(geography:Annotated[str,Query(min_length=1,max_length=100)]='Scotland',
+                             indicator:Annotated[str,Query(max_length=100)]='police_suspected_drug_deaths',
+                             category:Annotated[str,Query(max_length=100)]='all',
+                             horizon:Annotated[int,Query(ge=1,le=12)]=12,
+                             model:Annotated[str,Query(max_length=30)]='auto'):
+        try:
+            return dict(state='ready',kind='research_result',data=[generate_forecast(geography,indicator,category,horizon,model)],total=1)
+        except ValueError as error:
+            raise QueryError(str(error)) from None
+
+    @app.get('/api/v1/forecasting/options',response_model=Envelope)
+    def forecast_options():
+        try:
+            geographies=available_geographies()
+        except ValueError as error:
+            raise QueryError(str(error)) from None
+        return Envelope(state='ready',kind='metadata',data=[dict(
+            geographies=geographies,
+            indicators=[dict(id='police_suspected_drug_deaths',label='Police Scotland suspected drug deaths',unit='deaths')],
+            substances=[dict(id='all',label='All / not substance-specific')],
+            horizons=[dict(quarters=4,label='2026'),dict(quarters=8,label='2026–2027'),dict(quarters=12,label='2026–2028')],
+            models=[dict(id='auto',label='Select using historical backtests')]+[dict(id=name,label=name.replace('_',' ').title()) for name in ('naive','seasonal_naive','ses','nb2_trend')]
+        )],total=1)
 
     @app.get('/api/v1/geographies',response_model=Envelope)
     def geographies():

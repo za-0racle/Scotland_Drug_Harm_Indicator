@@ -151,3 +151,21 @@ def test_backtest_api_preserves_verified_target_origin_values_and_intervals(clie
         for field in ['model','origin','target','predicted','lower80','upper80','lower95','upper95']:
             assert returned[field]==original[field]
     assert sorted({r['target'] for r in response['data']})==[f'{year} Q{q}' for year in range(2023,2026) for q in range(1,5)]
+
+def test_interactive_forecast_options_and_horizon_generation(client):
+    options=client.get('/api/v1/forecasting/options').json()['data'][0]
+    assert 'Scotland' in options['geographies']
+    assert 'Greater Glasgow' in options['geographies']
+    assert options['substances']==[{'id':'all','label':'All / not substance-specific'}]
+    response=client.get('/api/v1/forecasting/generate',params={'geography':'Scotland','horizon':4,'model':'auto'})
+    assert response.status_code==200,response.text
+    result=response.json()['data'][0]
+    assert [row['target_period'] for row in result['forecasts']]==[f'2026 Q{q}' for q in range(1,5)]
+    assert result['data_coverage']['observations']==36
+    assert result['forecasts'][0]['predicted']>=0
+    assert result['forecasts'][0]['model_parameters']
+    assert result['model_evaluation']
+    assert client.get('/api/v1/forecasting/generate?horizon=13').status_code==422
+    unsupported=client.get('/api/v1/forecasting/generate',params={'category':'opioids'})
+    assert unsupported.status_code==422
+    assert 'Substance-specific quarterly counts' in unsupported.json()['message']

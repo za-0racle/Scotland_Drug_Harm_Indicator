@@ -192,6 +192,8 @@ def test_new_route_pins_pages_and_preserves_existing_forensic_and_mortality_api(
         '/api/v1/database/v1/data-sources',
         '/api/v1/database/v1/geographic-areas',
         '/api/v1/database/v1/naloxone-activity',
+        '/api/v1/forecasting/generate',
+        '/api/v1/forecasting/options',
     }
 
 
